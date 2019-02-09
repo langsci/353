@@ -1,0 +1,32 @@
+%% -*- coding:utf-8 -*-
+\documentclass[ %number=1
+                ,series=tbls,
+                %,isbn=978-3-944675-21-3,
+                %,url=http://langsci-press.org/catalog/book/14,
+	        ,output=book    % long|short|inprep              
+	        %,blackandwhite
+	        %,smallfont
+	        ,draftmode  
+%                ,bibtex
+                %,copyright=CC-BY-ND
+		  ]{langsci/langscibook}                          
+
+
+
+\usepackage{ifthen}
+\provideboolean{draft}
+\setboolean{draft}{false}
+
+\usepackage{etoolbox}
+\newtoggle{draft}\toggletrue{draft}
+
+\newtoggle{finished}\togglefalse{finished}
+
+
+%\newcommand{\NOTE}[1]{}
+\newcommand{\NOTE}[1]{\marginpar{#1}}
+
+\newcommand{\LATER}[1]{}
+
+
+\input germanic-include

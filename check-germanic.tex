@@ -1,0 +1,322 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   $RCSfile: grammatiktheorie.tex,v $
+%%  $Revision: 1.3 $
+%%      $Date: 2010/01/18 14:55:27 $
+%%     Author: Stefan Mueller (CL Uni-Bremen)
+%%    Purpose: 
+%%   Language: LaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[ %number=1
+                ,series=tbls,
+                %,isbn=978-3-944675-21-3,
+                %,url=http://langsci-press.org/catalog/book/14,
+	        ,output=long    % long|short|inprep              
+	        %,blackandwhite
+	        %,smallfont
+	        ,draftmode  
+%                ,bibtex
+                %,copyright=CC-BY-ND
+		  ]{langsci/langscibook}                          
+
+
+
+\usepackage{ifthen}
+\provideboolean{draft}
+\setboolean{draft}{false}
+
+\usepackage{etoolbox}
+\newtoggle{draft}\toggletrue{draft}
+
+\newtoggle{finished}\togglefalse{finished}
+
+%\newcommand{\NOTE}[1]{}
+\newcommand{\NOTE}[1]{\marginpar{#1}}
+
+\newcommand{\LATER}[1]{}
+
+
+%% \includeonly{germanic-overview}
+
+%% \includeonly{germanic-phenomena}
+
+%%\includeonly{germanic-valency-scrambling}
+%\includeonly{germanic-verbal-complex}
+%\includeonly{germanic-verb-position}
+%% %% \includeonly{germanic-mehr-vf}
+
+%\includeonly{germanic-passive}
+%% \includeonly{germanic-expletives}
+
+%% \includeonly{germanic-hpsg-light}
+
+%\includeonly{germanic-solutions}
+
+%\input germanic-include
+
+
+\hypersetup{bookmarksopenlevel=0}
+
+\newcommand{\page}{}
+
+% Checkmark
+%\usepackage{tikz} % Examples and documentation: http://www.texample.net/tikz
+%\usepackage{bbding}
+\makeatletter
+\newcommand{\dingfamily}{\fontencoding{U}\fontfamily{ding}\selectfont}
+\newcommand{\@chooseSymbol}[1]{{\dingfamily\symbol{#1}}}
+\newcommand{\Checkmark}{\@chooseSymbol{'041}}
+\makeatother
+
+
+\usepackage{jambox}
+
+\usepackage{eng-date,abbrev,merkmalstruktur,makros.2e,oneline,mycommands,my-theorems,article-ex}
+
+\usepackage{epsfig}
+\usepackage{tabularx}
+
+\newcommand{\rot}[1]{{\color{red}#1}}
+\newcommand{\rotbf}[1]{\rot{#1}}
+\newcommand{\rotit}[1]{\rot{#1}}
+\newcommand{\gruen}[1]{{\color{green}#1}}
+\newcommand{\gruenbf}[1]{\gruen{#1}}
+\newcommand{\gruensc}[1]{\gruen{#1}}
+\newcommand{\gruenit}[1]{\gruen{#1}}
+
+\newcommand{\blau}[1]{{\color{blue}#1}}
+\newcommand{\blaubf}[1]{\blau{#1}}
+\newcommand{\blausc}[1]{\blau{#1}}
+\newcommand{\blauit}[1]{\blau{#1}}
+
+
+\newcommand{\jgerman}{\jambox{(German)}}
+\newcommand{\jdanish}{\jambox{(Danish)}}
+\newcommand{\jicelandic}{\jambox{(Icelandic)}}
+
+\usepackage{tikz-grid}
+
+%\usepackage[T4,T1]{fontenc}
+
+% die machen \! kaputt
+%\usepackage{tipa,tipx,phonetic}
+
+%% % \TH, \th, \dh, \DH
+%% \usepackage{wasysym}
+
+%% \let\TH=\Thorn
+%% \let\th=\thorn
+
+%% % Das ʒ muss aus tipa.sty muss auf textyogh umgebogen werden, da war \textezh drin.
+
+
+%% \let\textezh=\textyogh
+%% \let\textoopen=\textopeno
+%% %\let\texteopen=\textopene gibts nicht
+%% \let\texteopen=\textepsilon
+%% \let\textgammalatinsmall=\textbabygamma
+%% \let\ng=\engma
+%% \let\textvhook=\textscriptv
+
+%% \DeclareUnicodeCharacter {720}{\textlengthmark }
+%% \DeclareUnicodeCharacter {635}{\textturnrrtail\,}
+
+
+% for subnodes in trees
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\newtcbox{\mybox}[1][]{empty,shrink tight,nobeforeafter,on line,before upper=\vphantom{gM},remember as=#1,top=2pt,bottom=2pt}
+
+
+\usepackage{pstricks,pst-node}
+%\nodemargin5pt%\treelinewidth2pt\arrowwidth6pt\arrowlength10pt
+\psset{nodesep=5pt} %,linewidth=0.8pt,arrowscale=2}
+\psset{linewidth=0.5pt}
+
+\usepackage[customcolors]{hf-tikz}
+
+%\beamertemplateemptyfootbar
+
+%\hypersetup{pdfauthor={Stefan Müller (unter Benutzung von Material von Peter Gallmann, FSU Jena)}}
+%\hypersetup{pdftitle={Head-Driven Phrase Structure Grammar für das Deutsche}}
+
+
+\iftoggle{draft}{
+\usepackage{todonotes}
+}{
+\usepackage[disable]{todonotes}
+}
+
+\newcommand{\danish}{\jambox{(Danish)}}
+\newcommand{\english}{\jambox{(English)}}
+\newcommand{\german}{\jambox{(German)}}
+\newcommand{\yiddish}{\jambox{(Yiddish)}}
+
+
+\newcommand{\todostefan}[1]{\todo[color=green!40]{\footnotesize #1}\xspace}
+
+\newcommand{\todostefaninline}[1]{\todo[color=green!40,inline]{\footnotesize #1}\xspace}
+
+\include{localcommands}
+
+
+\let\mc=\multicolumn
+
+
+\newcommand{\sigle}[1]{\tiny{#1}}
+
+
+\usepackage{langsci/styles/langsci-gb4e,langsci/styles/langsci-lgr,styles/additional-langsci-index-shortcuts}
+
+
+\usepackage{langsci/styles/langsci-forest-setup}
+
+\usepackage{german}\selectlanguage{USenglish}
+
+\vrefwarning
+
+\usepackage{bookmark}
+
+
+%% % This sets the default for the positioning
+%% % will be in the main class
+%% \makeatletter
+%% \renewcommand{\fps@figure}{htbp}
+%% \renewcommand{\fps@table}{htbp}
+%% \makeatother
+%% \renewcommand{\floatpagefraction}{0.7}	% require fuller float pages
+%% 	% N.B.: floatpagefraction MUST be less than topfraction !!
+
+\bibliography{bib-abbr,biblio}
+
+\begin{document} 
+\input{localmetadata.tex}
+
+\frontmatter
+\maketitle
+
+
+\chapter*{Preface}
+
+This book has two purposes: firstly the comparative analysis of the syntactic properties of the
+Germanic languages and secondly the introduction of a specific format for the description and
+comparison of languages. The framework in which the analyses are couched is called \emph{HPSG
+  light}. It is based on HPSG \citep{ps,ps2} in the specific version that is described in detail in
+\citew{MuellerLehrbuch3}. However HPSG light does not contain any complicated attribute value
+matrices (AVMs). If AVMs are used at all, they are reduced to the minimum containing a reduced set
+of features like \argst for argument structure, \comps for complements and \spr for specifier. All
+other aspects of the analyses are represented in syntactic trees, which are easier to read. The idea
+behind the introduction of HPSG light is to provide some tool for linguists who want to provide a
+more detailed description of a phenomenon without necessarily being forced to deal with all the
+technicalities. The degree of formalization corresponds to what is common in Government and Binding
+Theory, Minimalism, and the less formal variants of Construction Grammar. As for the one formal version
+of Construction Grammar that is a variant of HPSG, namely Sign-Based Construction Grammar (SBCG, \citealp{Sag2012a}), HPSG
+light can be regarded as a light version of SBCG as well, since the differences are neglected in the
+abbreviated representations and trees that are used in this book. The work presented here differs
+from non-formal work in GB/Minimalism and Construction Grammar in an important way: it is backed up
+by implemented grammars that use the full version of HPSG including a semantic analysis in the
+framework of Minimal Recursion Semantics (MRS, \citew*{CFPS2005a}). The detailed analyses are described in
+conference proceedings, journal articles and books and the reader is invited to consult these
+resources in case she or he is interested in the details. The implemented grammars are distributed
+with the Grammix virtual machine and can be downloaded from the author's web-page. The appendix of
+this book contains a list of sentences that were discussed in the respective chapters of this book
+and which are covered by the grammars of the respective languages. Readers are invited to enter the
+sentences into the TRALE system that comes with Grammix and inspect the complete AVMs.
+
+\section*{Acknowledgements}
+
+I want to thank all students of my course on the structure of Germanic languages. This book
+benefited enourmously from teir questions and the discussion during the lectures. 
+Carolin Ulmer %05.09. WALS falsch zitiert.
+deserves special mention for important comments. I thank Anne
+Kilgus for pointing out typos.
+
+
+\section*{On the way this book is published}
+
+Teachers at schools and universities are payed by the state, that is by the public (you). Among
+their duties is the creation of teaching material. There is no reason whatsoever to leave the
+teaching material to profit oriented publishers. On the contrary, teaching material should be open
+and adaptable to the needs of the teachers who want to use it. 
+
+A study by the American Enterprise Institute shows that the price of college books rose by 812\,\%
+from 1978 to 2012 while the general consumer prices rose a mere 250\,\%.\footnote{
+\url{http://www.aei-ideas.org/2012/12/the-college-textbook-bubble-and-how-the-open-educational-resources-movement-is-going-up-against-the-textbook-cartel/}.
+10.09.2014.%
+} Similar figures exist for scientific books in general and for university text books. My favorite example is a thin text book
+on logic \emph{Logik für Linguisten}, which is a translation of the English text book \emph{Logic for
+Linguists} \citep{AAD73a}. This book has 112 pages. It was sold for 9,40e as a paperback by the Max Niemeyer
+Verlag. This publisher was bought by De Gruyter and the book is now sold for \$126.00/89,95€ as an
+eBook and \$133,00/94,95€ for the hardcover book\footnote{
+  \url{http://www.degruyter.com/isbn/978-3-11-096350-2}. 1.09.2014.
+} (see \citealp{MuellerOA} for other examples and a general discussion). Both the eBook and the printed book are unaffordable for students. The way out of this highly
+problematic situation is to publish books open access. The PDF version of this book is free for
+everybody and the printed copy is available for a reasonable price since the book is licenced under
+a Creative Commons license and hence is not owned by a
+profit"=oriented publisher and everybody can choose his or her own print on demand service in case
+the default service provided by Language Science Press is more expensive.
+
+~\medskip
+
+\noindent
+Berlin, \today\hfill Stefan Müller
+
+
+\tableofcontents
+
+\mainmatter
+
+
+
+%% \include{germanic-overview}
+
+%% \include{germanic-phenomena}
+
+%% \include{germanic-valency-scrambling}
+%% \include{germanic-verbal-complex}
+%% \include{germanic-verb-position}
+%% %%\include{germanic-extraction}
+%% %% \include{germanic-mehr-vf}
+
+%% \include{germanic-passive}
+%% \include{germanic-expletives}
+
+%% \include{germanic-hpsg-light}
+
+\appendix
+
+\include{germanic-solutions}
+
+\backmatter
+\bookmarksetup{startatroot}
+
+
+%\bibliography{bib-abbr,biblio}
+\printbibliography[heading=references] 
+
+\cleardoublepage
+\small
+
+\phantomsection%this allows hyperlink in ToC to work
+\addcontentsline{toc}{chapter}{Index} 
+\addcontentsline{toc}{section}{Name index}
+\ohead{Name index}
+%with biblatex
+%\printindex
+%without it 
+\printindex 
+  
+\phantomsection%this allows hyperlink in ToC to work
+\addcontentsline{toc}{section}{Language index}
+\ohead{Language index} 
+\printindex[lan] 
+  
+\phantomsection%this allows hyperlink in ToC to work
+\addcontentsline{toc}{section}{Subject index}
+\ohead{Subject index}
+\printindex[sbj]
+
+\end{document}
+
+%      <!-- Local IspellDict: en_US-w_accents -->

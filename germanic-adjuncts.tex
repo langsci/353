@@ -1,0 +1,174 @@
+%% -*- coding:utf-8 -*-
+
+\chapter{Adjuncts}
+
+\if0
+
+\subsection{Adjunkte}
+
+\frame{
+\frametitle{Adjunkte}
+
+\begin{itemize}
+\item Argumente werden von ihrem Kopf ausgewählt
+\pause
+\item Adjunkte wählen sich ihren Kopf
+\pause
+\item Deutsch, Niederländisch, \ldots:\\
+      Adjunkte im Satz gehen an irgendeine Verbprojektion (Verb in Endstellung)
+\pause
+\item English, Dänisch, \ldots: Adjunkte gehen an VP (\citet{Wechsler2015a})
+
+\eal
+\ex Kim will have been [promptly [removing the evidence]].
+\ex Kim will have been [[removing the evidence] promptly].
+\zl
+\pause
+\item Wie das \spr- oder \comps-Merkmal gibt es auch ein \modm.\\
+      Wert von {\sc mod} ist eine Beschreibung des zu modifizierenden Kopfes:
+\begin{itemize}
+\item Deutsch: {\sc mod} V[{\sc ini}$-$]
+\item Englisch: {\sc mod} VP
+\end{itemize}
+
+\end{itemize}
+
+}
+
+\frame{
+\frametitle{Freie Position der Adjunkte im Deutschen}
+
+
+
+\scalebox{0.9}{\begin{tikzpicture}
+\tikzset{level 1+/.style={level distance=3\baselineskip}}
+\tikzset{frontier/.style={distance from root=14\baselineskip}}
+\Tree[.{V[\spr \eliste, \comps \eliste]}
+        [.Adv morgen ]
+        [.{V[\spr \eliste, \comps \eliste]}
+          [.{NP[\type{nom}]} {jeder} ]
+          [.V\feattab{
+              \spr \sliste{ }, \comps \sliste{ NP[\type{nom}] } }
+            [.{NP[\type{acc}]} \edge[roof]; {das Buch} ] 
+            [.V\feattab{
+              \spr \sliste{  },\\
+              \comps \sliste{ NP[\type{nom}], NP[\type{acc}]}} liest ] ]
+] ]
+\end{tikzpicture}}
+
+{}[dass] morgen jeder das Buch liest
+
+
+}
+
+
+\frame{
+\frametitle{Freie Position der Adjunkte im Deutschen}
+
+
+
+\scalebox{0.9}{\begin{tikzpicture}
+\tikzset{level 1+/.style={level distance=3\baselineskip}}
+\tikzset{frontier/.style={distance from root=14\baselineskip}}
+\Tree[.{V[\spr \eliste, \comps \eliste]}
+          [.{NP[\type{nom}]} {jeder} ]
+          [.V\feattab{
+              \spr \sliste{ }, \comps \sliste{ NP[\type{nom}] } }
+            [.Adv morgen ]
+            [.V\feattab{
+                \spr \sliste{ }, \comps \sliste{ NP[\type{nom}] } }
+              [.{NP[\type{acc}]} \edge[roof]; {das Buch} ] 
+              [.V\feattab{
+                \spr \sliste{  },\\
+                \comps \sliste{ NP[\type{nom}], NP[\type{acc}]}} liest ] ]
+] ]
+\end{tikzpicture}}
+
+{}[dass] jeder morgen das Buch liest
+
+
+}
+
+
+
+\frame{
+\frametitle{Freie Position der Adjunkte im Deutschen}
+
+
+
+\scalebox{0.9}{\begin{tikzpicture}
+\tikzset{level 1+/.style={level distance=3\baselineskip}}
+\tikzset{level 3+/.style={level distance=4\baselineskip}}
+\tikzset{frontier/.style={distance from root=14\baselineskip}}
+\Tree[.{V[\spr \eliste, \comps \eliste]}
+          [.{NP[\type{nom}]} {jeder} ]
+            [.V\feattab{
+                \spr \sliste{ }, \comps \sliste{ NP[\type{nom}] } }
+              [.{NP[\type{acc}]} \edge[roof]; {das Buch} ] 
+              [.V\feattab{
+                \spr \sliste{  },\\
+                \comps \sliste{ NP[\type{nom}], NP[\type{acc}]}} 
+                [.Adv morgen ]
+                [.V\feattab{
+                  \spr \sliste{  },\\
+                  \comps \sliste{ NP[\type{nom}], NP[\type{acc}]}} liest ] ] ] ]
+\end{tikzpicture}}
+
+{}[dass] jeder das Buch morgen liest
+
+
+}
+
+\frame{
+\frametitle{Feste Position der Adjunkte im Englischen}
+
+
+
+\scalebox{0.9}{\begin{tikzpicture}
+\tikzset{level 1+/.style={level distance=3\baselineskip}}
+\tikzset{frontier/.style={distance from root=14\baselineskip}}
+\Tree[.{V[\spr \eliste, \comps \eliste]}
+          [.{NP[\type{nom}]} {Peter} ]
+          [.V\feattab{
+              \spr \sliste{ NP[\type{nom}] }, \comps \sliste{  } }
+            [.Adv often ]
+            [.V\feattab{
+                \spr \sliste{ NP[\type{nom}] }, \comps \sliste{  } }
+              [.V\feattab{
+                \spr \sliste{ NP[\type{nom}] },\\
+                \comps \sliste{  NP[\type{acc}]}} reads ]
+              [.{NP[\type{acc}]} books ] 
+               ]
+] ]
+\end{tikzpicture}}
+
+
+}
+
+\frame{
+\frametitle{Feste Position der Adjunkte im Englischen}
+
+
+
+\scalebox{0.9}{\begin{tikzpicture}
+\tikzset{level 1+/.style={level distance=3\baselineskip}}
+\tikzset{frontier/.style={distance from root=14\baselineskip}}
+\Tree[.{V[\spr \eliste, \comps \eliste]}
+          [.{NP[\type{nom}]} {Peter} ]
+          [.V\feattab{
+              \spr \sliste{ NP[\type{nom}] }, \comps \sliste{  } }
+            [.V\feattab{
+                \spr \sliste{ NP[\type{nom}] }, \comps \sliste{  } }
+              [.V\feattab{
+                \spr \sliste{ NP[\type{nom}] },\\
+                \comps \sliste{  NP[\type{acc}]}} reads ]
+              [.{NP[\type{acc}]} books ] 
+               ]
+            [.Adv often ]
+] ]
+\end{tikzpicture}}
+
+
+}
+
+\fi

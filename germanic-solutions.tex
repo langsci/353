@@ -1,0 +1,81 @@
+%% -*- coding:utf-8 -*-
+\chapter{Solutions}
+
+
+\section{Valency, argument order and adjunct placement}
+
+\eal
+\ex weil der Mann ihm ein Buch schenkt
+\ex because the man gave the book to him
+\ex Peter saw this yesterday.
+\ex
+\gll at Bjarne læste bogen\\
+     that Bjarne read book.\textsc{def}\\
+\glt `that Bjarne read the book'
+\zl
+
+\begin{figure}
+\centerfit{%
+\begin{forest}
+sm edges
+[CP
+  [{C[\spr \eliste, \comps \sliste{ \ibox{1} }]} [weil;because]]
+  [{V[\spr \eliste, \comps \eliste]}
+      [{NP[\type{nom}]} [der Mann;the man] ]
+      [{V\feattab{
+            \spr \sliste{ }, \comps \sliste{ NP[\type{nom}] } }}
+        [{NP[\type{acc}]} [ihm;him] ] 
+        [{V\feattab{
+              \spr \sliste{ }, \comps \sliste{ NP[\type{nom}], NP[\type{dat}] } }}
+          [{NP[\type{acc}]} [ein Buch;a book] ] 
+          [V\feattab{
+              \spr \sliste{  },\\
+              \comps \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}]}} [schenkt;gives] ]]
+] ] ]
+\end{forest}}
+\caption{\label{fig-spr-german}The analysis of \emph{weil der Mann ihm ein Buch schenkt}}
+\end{figure}
+
+
+
+\section{Passive}
+
+\begin{figure}
+\begin{forest}
+sm edges
+[CP
+  [{C[\comps \sliste{ \ibox{1} }]} [that]]
+  [{\ibox{1} V\feattab{\spr \sliste{ },\\
+                       \comps \sliste{ }}}
+     [{\ibox{2} NP[nom]} [the box, roof]]
+     [V\feattab{\spr  \sliste{ \ibox{2} },\\
+                 \comps \sliste{ }}
+       [V\feattab{\spr  \sliste{ \ibox{2} },\\
+                  \comps \sliste{ \ibox{3} }} [was]]
+       [{\ibox{3} V\feattab{\spr \sliste{ \ibox{2} },\\
+                            \comps \sliste{}}} [opened]]]]]
+\end{forest}
+\caption{Analysis of the passive sentences \emph{that the box was opened}}
+\end{figure}
+The transitive verb \emph{open} takes a subject and an object. The \argst list contains two NPs with
+structural case. The passive lexical rule removes one argument. For the passive participle this
+leaves us with one element on the \argstl. This element gets mapped to the \sprl of
+\emph{opened}. The passive auxiliary takes a VP in passive form and takes over its element from
+\spr. After combination of auxiliary and passive VP, we have the VP \emph{was opened} still
+selecting for a specifier. The NP \emph{the box} functions as the specifier and the combination of
+\emph{the box} and \emph{was opened} is a complete sentence.
+
+
+%% \begin{figure}
+%% \begin{forest}
+%% sm edges
+%% [CP
+%%   [C [dass;that]]
+%%   [V
+%%      [\ibox{1} {NP[nom]} [der Kasten;the box, roof]]
+%%      [V
+%%        [{\ibox{2} V[\comps \ibox{3} \sliste{ \ibox{1} }]} [geöffnet;opened]]
+%%        [{V[\comps \ibox{3} $\oplus$ \sliste{ \ibox{2} }] [wurde;was]]]]]
+%% \end{forest}
+%% \end{figure}
+
