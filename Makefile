@@ -97,10 +97,15 @@ source:
 
 
 clean:
-	rm -f *.bak *~ *.log *.blg *.bbl *.aux *.toc *.cut *.out *.tmp *.tpm *.adx *.idx *.ilg *.ind *.and *.glg *.glo *.gls *.657pk *.adx.hyp *.bbl.old *.backup *.for *.mw *.bcf *.lnd *.ldx *.rdx *.sdx *.wdx *.xdv
+	rm -f *.bak *~ *.log *.blg *.bbl *.aux *.toc *.cut *.out *.tpm *.adx *.idx *.ilg *.ind *.and *.glg *.glo *.gls *.657pk *.adx.hyp *.bbl.old *.backup *.mw *.bcf *.lnd *.ldx *.rdx *.sdx *.wdx *.xdv *.run.xml *.aux.copy *.auxlock
 
 check-clean:
 	rm -f *.bak *~ *.log *.blg complex-draft.dvi
+
+
+cleanfor: # These files are precious, as it takes a long time to produce them all.
+	rm -f *.for *.for.tmp germanic.for.dir/*
+
 
 realclean: clean
 	rm -f *.dvi *.ps *.pdf

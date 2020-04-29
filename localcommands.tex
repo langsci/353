@@ -1,8 +1,70 @@
 %% -*- coding:utf-8 -*-
 
-\usepackage{langsci/styles/langsci-tbls}
-% do not need identation for enumerate since we are in a box anyway.
-\usepackage{enumitem}
+\hypersetup{bookmarksopenlevel=0}
+
+\setcounter{secnumdepth}{4}
+
+
+
+
+\newcommand{\rot}[1]{{\color{red}#1}}
+\newcommand{\rotbf}[1]{\rot{#1}}
+\newcommand{\rotit}[1]{\rot{#1}}
+\newcommand{\gruen}[1]{{\color{green}#1}}
+\newcommand{\gruenbf}[1]{\gruen{#1}}
+\newcommand{\gruensc}[1]{\gruen{#1}}
+\newcommand{\gruenit}[1]{\gruen{#1}}
+
+\newcommand{\blau}[1]{{\color{blue}#1}}
+\newcommand{\blaubf}[1]{\blau{#1}}
+\newcommand{\blausc}[1]{\blau{#1}}
+\newcommand{\blauit}[1]{\blau{#1}}
+
+
+
+\let\mc=\multicolumn
+
+
+\newcommand{\sigle}[1]{\tiny{#1}}
+
+
+%% now loaded by the langsci class
+%% \iftoggle{draft}{
+%% \usepackage{todonotes}
+%% }{
+%% \usepackage[disable]{todonotes}
+%% }
+
+\iftoggle{draft}{}{
+\presetkeys{todonotes}{disable}{}
+}
+
+\newcommand{\todostefan}[1]{{\tikzexternaldisable\todo[color=orange!80]{\footnotesize #1}}\xspace}
+\newcommand{\todosatz}[1]{{\tikzexternaldisable\todo[color=red!40]{\footnotesize #1}}\xspace}
+
+\newcommand{\inlinetodostefan}[1]{{\tikzexternaldisable\todo[color=green!40,inline]{\footnotesize #1}}\xspace}
+
+
+\newcommand{\addpages}{\todostefan{add pages}}
+\newcommand{\addsource}{\todostefan{add source}}
+\newcommand{\addglosses}{\todostefan{add glosses}}
+
+
+
+%% % This sets the default for the positioning
+%% % will be in the main class
+%% \makeatletter
+%% \renewcommand{\fps@figure}{htbp}
+%% \renewcommand{\fps@table}{htbp}
+%% \makeatother
+%% \renewcommand{\floatpagefraction}{0.7}	% require fuller float pages
+%% 	% N.B.: floatpagefraction MUST be less than topfraction !!
+
+
+
+
+\robustify\textsc
+\robustify\textit
 
 
 \newcommand{\questions}[1]{~\newline\vspace*{-10mm}
@@ -16,6 +78,11 @@
 \newcommand{\furtherreading}[1]{%~\newline\vspace*{-10mm}
 \tblssy{book}{Further reading}{#1}}
 
+\newcommand{\greyboxrest}[1]{
+\begin{mdframed}[style=greyexercise]
+#1
+\end{mdframed}
+}
 
 \mdfdefinestyle{greyexercisenologo}{%
 	everyline=true,ignorelastdescenders=true,
@@ -25,12 +92,15 @@
 }
 
 
-\robustify\textsc
-\robustify\textit
+% get rrid of these morewrite messages:
+% https://tex.stackexchange.com/questions/419489/suppressing-messages-to-standard-output-from-package-morewrites/419494#419494
+\ExplSyntaxOn
+\cs_set_protected:Npn \__lmorewrites_shipout_ii:
+  {
+    \__morewrites_before_shipout:
+    \__morewrites_tex_shipout:w \tex_box:D \g__morewrites_shipout_box
+    \edef\tmp{\interactionmode\the\interactionmode\space}\batchmode\__morewrites_after_shipout:\tmp
+  }
 
 
-
-% just throw them away
-\renewcommand{\questions}[1]{}
-\renewcommand{\exercises}[1]{}
-\renewcommand{\furtherreading}[1]{}
+\ExplSyntaxOff

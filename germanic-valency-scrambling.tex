@@ -32,7 +32,7 @@ Figure~\vref{fig-valency-German}, which is an example analysis of (\mex{1}).
 \ea
 \label{ex-dass-niemand-ihn-kennt}
 \gll  {}[dass] niemand ihn kennt\\
-      \spacebr{}that nobody.\nom{} him.\acc{} knows\\ 
+      \spacebr{}that nobody.\NOM{} him.\ACC{} knows\\ 
 \glt `that nobody knows him'
 \z
 \begin{figure}
@@ -81,7 +81,7 @@ arguments not necessarily beginning with the last one as it was the case in the 
 Figure~\vref{fig-scrambling-German} shows the analysis of (\mex{1}).
 \ea
 \gll {}[dass] ihn niemand kennt\\
-     \spacebr{}that him.\acc{} nobody.\nom{} knows\\
+     \spacebr{}that him.\ACC{} nobody.\NOM{} knows\\
 \glt `that nobody knows him'
 \z
 \begin{figure}
@@ -210,7 +210,7 @@ analyses. Figure~\vref{fig-spr-german} shows the adapted analysis of
 \ea
 \label{ex-dass-niemand-ihn-kennt-two}
 \gll  {}[dass] niemand ihn kennt\\
-      \spacebr{}that nobody.\nom{} him.\acc{} knows\\ 
+      \spacebr{}that nobody.\NOM{} him.\ACC{} knows\\ 
 \glt `that nobody knows him'
 \z
 \begin{figure}
@@ -349,7 +349,7 @@ sm edges
 
 \section{Scrambling and free VO/OV order}
 
-\todostefaninline{Explain Initial feature}
+\inlinetodostefan{Explain Initial feature}
 
 Now, in order to analyze languages with free constituent order, we need a more liberal variant of
 the schema in Figure~\ref{fig-head-comp}. Figure~\vref{fig-head-comp-free} splits the \compsl of a
@@ -370,7 +370,7 @@ English) and if one restricts \ibox{2} to be the empty list, one gets grammars t
 element from the \compsl for combination with a head. Scrambling languages like German allow any
 complement to be combined with its head since there is neither a restriction on \ibox{1} nor one on \ibox{2}.
 
-\todostefaninline{Yiddish VO/OV}
+\inlinetodostefan{Yiddish VO/OV}
 
 
 
@@ -407,8 +407,9 @@ For the selection of arguments the features \spr and \comps are used. In paralle
 that is part of a lexical description of a head of a phrase that can function as an adjunct (\textsc{mod} is
 an abbreviation for \emph{modified}). The value of  \textsc{mod} is a description of an appropriate head. 
 Head"=adjunct structures are licencsed by the schema in
-Figure~\vref{fig-head-adj}.\todostefaninline{explain why spr and comps are the empty list}
+Figure~\vref{fig-head-adj}.\inlinetodostefan{explain why spr and comps are the empty list}
 \begin{figure}
+\tikzexternaldisable
 \begin{forest}
 [{H[\spr \ibox{1}, \comps \ibox{2}]}
   [{[\textsc{mod} \ibox{3}, \spr \eliste, \comps \eliste]}]
@@ -420,6 +421,7 @@ For instance, attributive adjectives have \nbar as their \modv, where \nbar is a
 nominal projection that has an empty \compsl and a \sprl that contains a determiner. The analysis of the phrase
 \emph{smart woman} is shown in Figure~\vref{fig-smart-woman}.
 \begin{figure}
+\tikzexternaldisable
 \begin{forest}
 [{\nbar}
   [{Adj[\textsc{mod} \ibox{2}]} [smart]]
@@ -454,6 +456,7 @@ attachment of the adverb.
 
 
 \begin{figure}
+
 \centerfit{
 \begin{forest}
 sm edges
@@ -602,7 +605,7 @@ mentioned above is entirely parallel. Therefore it is possible to capture crossl
 generalizations. Nevertheless there are differences between the Germanic OV and VO languages. As was
 explained above the VO languages map their subject to \spr and all other arguments to \comps, while
 the finite verbs of OV languages have all arguments on \comps.
-\todostefaninline{maybe add some examples}
+\inlinetodostefan{maybe add some examples}
 %% \eal
 %% \ex Linking and argument mapping in SVO languages:\\
 %% \ms{
@@ -620,7 +623,7 @@ the finite verbs of OV languages have all arguments on \comps.
 
 \section{Alternatives}
 
-\todostefaninline{Advanced stuff. Ignore if you do not dare.}
+\inlinetodostefan{Advanced stuff. Ignore if you do not dare.}
 
 \subsection{CP/TP/VP models}
 
@@ -640,16 +643,16 @@ layers.
 \begin{forest}
 sm edges
 [CP
-[C$'$
-	[C [dass;that]]
-	[TP
-		[NP [jeder;everybody,roof]]
-		[T$'$
-			[VP
-				[V$'$
-					[NP [diesen Mann;this man, roof]]
-					[V [\trace$_j$]]]]
-			[T [kenn-$_j$ -t;know- -s]]]]]]
+  [C$'$
+    [C [dass;that]]
+    [TP
+      [NP [jeder;everybody,roof]]
+      [T$'$
+	[VP
+	  [V$'$
+	    [NP [diesen Mann;this man, roof]]
+	    [V [\trace$_j$]]]]
+	[T [kenn-$_j$ -t;know- -s]]]]]]
 \end{forest}
 \caption{\label{fig-cp-tp-vp}Sentence in the CP/TP/VP model}
 \end{figure}%
@@ -678,7 +681,7 @@ sm edges
 \caption{\label{fig-cp-tp-vp-scrambling}Scrambling has to be movement in the CP/TP/VP model}
 \end{figure}%
 
-\todostefaninline{add scope discussion here}
+\inlinetodostefan{add scope discussion here}
 
 
 
