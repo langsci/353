@@ -19,26 +19,10 @@
 % temporary fix, remove later
 %\newcount\pdftexversion \pdftexversion140 \def\pgfsysdriver{pgfsys-dvipdfm.def} \usepackage{tikz} \usetikzlibrary{tikzmark}
 
-%\usepackage[section]{placeins}
-
-%\usepackage{eurosym} % should go once Berthold fixes unicode
-
-
-% http://tex.stackexchange.com/questions/284097/subscript-like-math-but-without-the-minus-sign?noredirect=1#comment685345_284097
-% for subscripts
-\usepackage{amsmath}
-%\usepackage{unicode-math} breaks the CCG derivations, the horizontal lines are too high
 
 
 % \justify to switch of \raggedright in translations
 %\usepackage{ragged2e}
-
-% Haitao Liu
-%\usepackage{xeCJK}
-%\setCJKmainfont{SimSun}
-
-
-
 
 
 
@@ -50,46 +34,24 @@
 
 %\usepackage{my-ccg-ohne-colortbl}
 
-\usepackage{./langsci/styles/jambox}
 
-\newcommand{\danish}{\jambox{(Danish)}}
-\newcommand{\dutch}{\jambox{(Dutch)}}
-\newcommand{\english}{\jambox{(English)}}
-\newcommand{\german}{\jambox{(German)}}
-\newcommand{\yiddish}{\jambox{(Yiddish)}}
-\newcommand{\icelandic}{\jambox{(Icelandic)}}
 
 
 % This has side effects on my-ccg commands do no know why
-%\usepackage{./langsci/styles/langsci-optional}
+%\usepackage{./langsci/langsci-optional}
 
 \usepackage{./styles/oneline}
 
-\usepackage{./langsci/styles/langsci-lgr}
+\usepackage{./langsci/langsci-lgr}
 
 
 \usepackage{graphicx}
 
 
-
-%\usepackage{lastpage,float,soul,tabularx}
-
-%\usepackage{lastpage,float,tabularx}
-
-
-%\usepackage{ogonek}        % For Ewa Dabrowska
-
-
 \usepackage{./styles/mycommands}% \spacebr
 
 
-% still needed
-% for direction of government examples
-% for CoreGram classes
-% and one \Tree in mts.tex
-%\usepackage{tikz-qtree}
-
-\usepackage{./langsci/styles/langsci-gb4e}
+\usepackage{./langsci/langsci-gb4e}
 
 
 %\usepackage{subfig}
@@ -103,20 +65,12 @@
 % for reasons I do not understand this cannot be moved further down and 
 % the loading of forest further down cannot be removed. St. Mü. 26.01.2017
 % It breaks the dependency grammar trees in forest.
-\usepackage{./langsci/styles/langsci-forest-setup}
+\usepackage{./langsci/langsci-forest-setup}
 
 \tikzset{external/prefix={germanic.for.dir/}}
 \forestset{external/master=germanic}
 
-
-\forestset{
-      terminus/.style={tier=word, for children={tier=tabular}, for tree={fit=band}, for descendants={no path, align=left, l sep=0pt}},
-      sn edges original/.style={for tree={parent anchor=south, child anchor=north,align=center,base=top}},
-      no path/.style={edge path={}},
-      set me left/.style={calign with current edge, child anchor=north west, for parent={parent anchor=south west}},
-}
-
-
+\usepackage{./styles/forest-externalizetikz}
 
 
 
@@ -182,10 +136,11 @@
 
 
 
-\usepackage{./langsci/styles/langsci-tbls}
+\usepackage{./langsci/langsci-tbls}
 % do not need identation for enumerate since we are in a box anyway.
 \usepackage{enumitem}
 
 
 
-
+% for abbreviations 02.05.2020
+\usepackage{tabularx}

@@ -2,13 +2,13 @@
 \documentclass[output=book
 %                ,series=tbls,
 %		,modfonts
-		,nonflat
+%		,nonflat
 %		,multiauthors
 %	        ,collection
 %	        ,collectionchapter
 %	        ,collectiontoclongg
-% 	        ,biblatex  
-%                ,babelshorthands
+ 	        ,biblatex  
+                ,babelshorthands
 %                ,showindex
                 ,newtxmath
 %                ,colorlinks, citecolor=brown % for drafts
@@ -33,4 +33,20 @@
 \newcommand{\LATER}[1]{}
 
 
+\input{localmetadata.tex}
+\input{localpackages.tex}
+\input{localcommands.tex}
+
+% if you want externalize graphics, compile files in chapters directly
+\forestset{external/readonly}
+% you may switch this off in the final run since eternalization may cut off overlays.
+\tikzexternalize
+
+
 \input germanic-include
+
+
+
+%%% Local Variables:
+%%% TeX-command-extra-options: "-shell-escape"
+%%% End:

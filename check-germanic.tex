@@ -10,7 +10,7 @@
 \documentclass[output=book
 %                ,series=tbls,
 %		,modfonts
-		,nonflat
+%		,nonflat
 %		,multiauthors
 %	        ,collection
 %	        ,collectionchapter
@@ -23,7 +23,6 @@
                 ,draftmode
 % 	        ,coverus
 		  ]{./langsci/langscibook} 
-
 
 
 \usepackage{ifthen}
@@ -40,13 +39,22 @@
 
 \newcommand{\LATER}[1]{}
 
+\input{localmetadata.tex}
+\input{localpackages.tex}
+\input{localcommands.tex}
+
+% if you want externalize graphics, compile files in chapters directly
+%\forestset{external/readonly}
+% you may switch this off in the final run since eternalization may cut off overlays.
+\tikzexternalize\presetkeys{todonotes}{disable}{}
+
 
 %% \includeonly{germanic-overview}
 
-\includeonly{germanic-phenomena}
+%\includeonly{germanic-phenomena}
 
 %\includeonly{germanic-valency-scrambling}
-%\includeonly{germanic-verbal-complex}
+\includeonly{germanic-verbal-complex}
 %\includeonly{germanic-verb-position}
 %% %% \includeonly{germanic-mehr-vf}
 

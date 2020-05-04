@@ -17,11 +17,11 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 
 
 %.pdf: %.tex $(SOURCE)
-	xelatex -no-pdf $* |grep -v math
+	xelatex -shell-escape -no-pdf $* |grep -v math
 	biber $*
-	xelatex -no-pdf $* |grep -v math
+	xelatex -shell-escape -no-pdf $* |grep -v math
 	biber $*
-	xelatex $* -no-pdf |egrep -v 'math|PDFDocEncod' |egrep 'Warning|label|aux'
+	xelatex $* -shell-escape -no-pdf |egrep -v 'math|PDFDocEncod' |egrep 'Warning|label|aux'
 	correct-toappear
 	correct-index
 	sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' *.adx
@@ -33,7 +33,7 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	makeindex -gs index.format-plus -o $*.and $*.adx
 	makeindex -gs index.format -o $*.ind $*.idx
 	makeindex -gs index.format -o $*.lnd $*.ldx
-	xelatex $* | egrep -v 'math|PDFDocEncod' |egrep 'Warning|label|aux'
+	xelatex -shell-escape $* | egrep -v 'math|PDFDocEncod' |egrep 'Warning|label|aux'
 
 
 
@@ -111,4 +111,5 @@ realclean: clean
 	rm -f *.dvi *.ps *.pdf
 
 
+brutal-clean: realclean cleanfor
 

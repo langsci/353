@@ -12,26 +12,26 @@
 
 
 
-\input{localmetadata.tex}
-\input{localpackages.tex}
-\input{localcommands.tex}
 
 %\renewcommand{\centerfit}[1]{}
 
 \bibliography{bib-abbr,biblio}
 
-\tikzexternalize
+
 
 
 \begin{document} 
 
-\frontmatter
 \maketitle
+\frontmatter
 
-
-\include{preface}
-
+\currentpdfbookmark{Contents}{name} % adds a PDF bookmark
 \tableofcontents
+
+
+ \include{preface}
+ \include{acknowledgments}
+ \include{abbreviations} 
 
 \mainmatter
 
@@ -89,3 +89,9 @@
 \end{document}
 
 %      <!-- Local IspellDict: en_US-w_accents -->
+
+
+%%% Local Variables:
+%%% TeX-master: "check-germanic"
+%%% TeX-command-extra-options: "-shell-escape"
+%%% End:
