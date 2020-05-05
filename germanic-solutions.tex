@@ -4,13 +4,36 @@
 
 \section{Valency, argument order and adjunct placement}
 
+
+\begin{enumerate}
+\item Provide the valency lists for the following words:
+
+\ea
+\begin{tabular}[t]{@{}l@{~}ll@{\hspace{5em}}r@{}}
+a. & laugh    & \sliste{ NP[\type{nom}] }\\
+b. & eat      & \sliste{ NP[\type{nom}], NP[\type{acc}] }\\
+c. & to douse & \sliste{ NP[\type{nom}], NP[\type{acc}] }\\
+d. & bezichtigen& \sliste{ NP[\type{nom}], NP[\type{gen}] } &(German)\\
+   &  accuse\\ 
+e. & he  & \eliste\\
+f. & the & \eliste\\
+\end{tabular}
+\z
+If you are uncertain as far as case assignment is concerned, you may use the
+  Wiktionary\footnote{
+\url{https://de.wiktionary.org/}, 2018-07-02.
+}.
+
+
+\item Draw trees for the following examples:
+
 \eal
-\ex weil der Mann ihm ein Buch schenkt
-\ex because the man gave the book to him
+\ex weil der Mann ihm ein Buch schenkt \german
+\ex because the man gave a book to him
 \ex Peter saw this yesterday.
 \ex
 \gll at Bjarne læste bogen\\
-     that Bjarne read book.\textsc{def}\\
+     that Bjarne read book.\textsc{def}\\\danish
 \glt `that Bjarne read the book'
 \zl
 
@@ -19,24 +42,90 @@
 \begin{forest}
 sm edges
 [CP
-  [{C[\spr \eliste, \comps \sliste{ \ibox{1} }]} [weil;because]]
+  [{C[\spr \eliste, \comps \sliste{ S }]} [weil;because]]
   [{V[\spr \eliste, \comps \eliste]}
-      [{NP[\type{nom}]} [der Mann;the man] ]
+      [{NP[\type{nom}]} [der Mann;the man,roof] ]
       [{V\feattab{
             \spr \sliste{ }, \comps \sliste{ NP[\type{nom}] } }}
-        [{NP[\type{acc}]} [ihm;him] ] 
+        [{NP[\type{dat}]} [ihm;him] ] 
         [{V\feattab{
-              \spr \sliste{ }, \comps \sliste{ NP[\type{nom}], NP[\type{dat}] } }}
-          [{NP[\type{acc}]} [ein Buch;a book] ] 
+              \spr \sliste{ }, \comps \sliste{ NP[\type{nom}], NP[\type{dat}] }}}
+          [{NP[\type{acc}]} [ein Buch;a book,roof] ] 
           [V\feattab{
               \spr \sliste{  },\\
               \comps \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}]}} [schenkt;gives] ]]
 ] ] ]
 \end{forest}}
-\caption{\label{fig-spr-german}The analysis of \emph{weil der Mann ihm ein Buch schenkt}}
+\caption{\label{fig-weil-der-mann-ihm-ein-buch-schenkt}The analysis of \emph{weil der Mann ihm ein Buch schenkt} `because
+  the man gave him a book as a present'}
 \end{figure}
 
 
+
+\begin{figure}
+\centerfit{%
+\begin{forest}
+sm edges
+[CP
+  [{C[\spr \eliste, \comps \sliste{ S }]} [because]]
+  [{V[\spr \eliste, \comps \eliste]}
+      [{NP[\type{nom}]} [the man,roof] ]
+      [{V\feattab{
+            \spr \sliste{ NP[\type{nom}] }, \comps \sliste{ } }}
+        [{V\feattab{
+                \spr \sliste{ NP[\type{nom}] }, \comps \sliste{ PP[\type{acc}] } }}
+           [V\feattab{
+              \spr \sliste{ NP[\type{nom}] },\\
+              \comps \sliste{ NP[\type{acc}], PP[\type{acc}]}} [gave] ]
+            [{NP[\type{acc}]} [a book, roof] ] ] 
+        [{PP[\type{acc}]} [to him,roof] ] ] ] ]
+\end{forest}}
+\caption{\label{fig-because-the-man-gave-the-book-to-him}The analysis of \emph{because the man gave a book to him}}
+\end{figure}
+
+\begin{figure}
+\centerfit{%
+\begin{forest}
+sm edges
+[{V[\spr \eliste, \comps \eliste]}
+   [{NP[\type{nom}]} [Peter] ]
+   [V\feattab{
+      \spr \sliste{ NP[\type{nom}] }, \comps \sliste{}}
+     [V\feattab{
+        \spr \sliste{ NP[\type{nom}] }, \comps \sliste{}}
+       [V\feattab{
+           \spr \sliste{ NP[\type{nom}] },\\
+           \comps \sliste{ NP[\type{acc}] }} [saw] ]
+          [{NP[\type{acc}]} [this] ] ]
+     [{Adv[\textsc{mod} VP]} [yesterday] ] ] ]
+\end{forest}}
+\caption{\label{fig-peter-saw-this-yesterday}Analysis of \emph{Peter saw this yesterday.}}
+\end{figure}
+
+\begin{figure}
+\centerfit{%
+\begin{forest}
+sm edges
+[CP
+  [{C[\spr \eliste, \comps \sliste{ S }]} [at;that]]
+  [{V[\spr \eliste, \comps \eliste]}
+    [{NP[\type{nom}]} [Bjarne;Bjarne] ]
+    [V\feattab{
+       \spr \sliste{ NP[\type{nom}] }, \comps \sliste{}}
+       [V\feattab{
+           \spr \sliste{ NP[\type{nom}] },\\
+           \comps \sliste{ NP[\type{acc}] }} [læste;read] ]
+          [{NP[\type{acc}]} [bogen;book.\textsc{def}] ] ] ] ]
+\end{forest}}
+\caption{\label{fig-at-bjarne-laeste-bogen}Analysis of \emph{at Bjarne læste bogen} `that Bjarne
+  read the book'}
+\end{figure}
+
+
+
+\end{enumerate}
+
+\clearpage
 
 \section{Passive}
 

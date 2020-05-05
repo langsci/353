@@ -2,6 +2,9 @@
 \chapter{Valency, argument order and adjunct placement}
 \label{sec-valency}
 
+\settowidth\jamwidth{(German)}
+
+
 This chapter deals with the representation of valency information and sketches the basic structures that
 are assumed for SVO and SOV languages. I provide an account for scrambling in those languages that
 allow for it and discuss the fixed vs.\ free position of adjuncts.
@@ -136,7 +139,7 @@ sm edges
 [{V[\spr \eliste, \comps \eliste]}, name=S
    [{NP[\type{nom}]} [nobody] ]
    [V\feattab{
-      \spr \sliste{ NP[\type{nom}] }, \comps \sliste{} }, name=VP
+      \spr \sliste{ NP[\type{nom}] }, \comps \sliste{}}, name=VP
      [V\feattab{
          \spr \sliste{ NP[\type{nom}] },\\
          \comps \sliste{ NP[\type{acc}] }} [knows] ]
@@ -169,8 +172,7 @@ combine heads with their arguments can take the arguments from the list in any o
 with stricter constituent order requirements the rules are stricter: The arguments have to be taken
 off the list consistently from the beginning or from the end. So for English and Danish one starts
 at the beginning of the list and for head-final languages without scrambling one starts at the end
-of the list.\todostefan{provide an example of head-final language}
-Figure~\ref{fig-svo-ditrans} shows the analysis of a sentence with a ditransitive verb.
+of the list. Figure~\ref{fig-svo-ditrans} shows the analysis of a sentence with a ditransitive verb.
 \begin{figure}
 \centerfit{%
 \begin{forest}
@@ -178,7 +180,7 @@ sm edges
 [{V[\spr \eliste, \comps \eliste]}
    [{NP[\type{nom}]} [Kim] ]
    [V\feattab{
-      \spr \sliste{ NP[\type{nom}] }, \comps \sliste{} }
+      \spr \sliste{ NP[\type{nom}] }, \comps \sliste{}}
      [V\feattab{
          \spr \sliste{ NP[\type{nom}] },\\
          \comps \sliste{ PP[\type{to}] }}
@@ -334,10 +336,10 @@ sm edges
 [{V[\spr \eliste, \comps \eliste]}
    [{NP[\type{nom}]} [nobody] ]
    [V\feattab{
-      \spr \sliste{ NP[\type{nom}] }, \comps \sliste{} }
+      \spr \sliste{ NP[\type{nom}] }, \comps \sliste{}}
      [V\feattab{
          \spr \sliste{ NP[\type{nom}] },\\
-         \comps \sliste{ NP[\type{acc}]}} 
+         \comps \sliste{ NP[\type{acc}] }} 
         [V\feattab{
            \spr \sliste{ NP[\type{nom}] },\\
            \comps \sliste{ NP[\type{acc}], NP[\type{acc}]}} [gives] ]
@@ -380,13 +382,18 @@ complement to be combined with its head since there is neither a restriction on 
 While arguments are selected by their head, adjuncts select the head. The difference between
 languages like Dutch and German on the one hand and Danish and English on the other hand can be
 explained by assuming that adjuncts in the former languages are less picky as far as the element is
-concerned with which they combine.\todostefan{provide examples} Dutch and German adjuncts can attach to any verbal projection (\mex{1}),
-while Danish and English require a VP as in (\mex{2}) (\citealp{Wechsler2015a}).
+concerned with which they combine.\todostefan{provide examples} Dutch (\mex{1}) and German (\mex{2})
+adjuncts can attach to any verbal projection, while Danish (\mex{3}) and English (\mex{4}) require a VP:
+\eal
+\ex \dutch
+\ex
+\zl
+
 \eal
 \ex
 \label{ex-m-j-b-l} 
 \gll {}[dass] morgen jeder das Buch liest\\
-     \spacebr{}that tomorrow everybody the book reads\\
+     \spacebr{}that tomorrow everybody the book reads\\\german
 \glt `that everybody reads the book tomorrow'
 \ex
 \label{ex-j-m-b-l} 
@@ -398,8 +405,15 @@ while Danish and English require a VP as in (\mex{2}) (\citealp{Wechsler2015a}).
     \spacebr{}that everybody the book tomorrow reads\\
 \zl
 
+
 \eal
-\ex Kim will have been [promptly [removing the evidence]].
+\ex \danish
+\ex
+\zl
+
+\eal
+\ex Kim will have been [promptly [removing the evidence]].\footnote{
+  The examples in (\mex{0}) are from \citew{Wechsler2015a}.}
 \ex Kim will have been [[removing the evidence] promptly].
 \zl
 
@@ -568,7 +582,7 @@ sm edges
 \label{sec-linking}
 
 HPSG assumes that all arguments of a head are contained in a list that is called \textsc{argument
-  structure} (\argst).\todostefan{references} This list contains descriptions of the syntactic and semantic properties of
+  structure} (\argst, \citealp{WKD2020a}).\todostefan{references} This list contains descriptions of the syntactic and semantic properties of
 the selected arguments. For instance the \argstl of English \emph{give} and its German, Danish and
 Dutch and Icelandic variants is given in (\mex{1}):
 \ea
@@ -698,7 +712,7 @@ sm edges
 \ex to douse
 \ex 
 \gll bezichtigen\\
-     accuse\\\jambox{(German)}
+     accuse\\\german
 \ex he
 \ex the
 \zl
@@ -710,7 +724,7 @@ If you are uncertain as far as case assignment is concerned, you may use the
 \item Draw trees for the following examples:
 \eal
 \ex weil der Mann ihm ein Buch schenkt
-\ex because the man gave the book to him
+\ex because the man gave a book to him
 \ex Peter saw this yesterday.
 \ex
 \gll at Bjarne læste bogen\\
