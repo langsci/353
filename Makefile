@@ -63,6 +63,12 @@ public: germanic.pdf
 commit:
 	svn commit -m "published version to the web"
 
+forest-commit:
+	git add germanic.for.dir/*.pdf
+	git commit -m "forest trees" germanic.for.dir/*.pdf germanic.for
+	git push -u origin
+
+
 o-public: o-public-lehrbuch 
 #commit 
 #o-public-bib
