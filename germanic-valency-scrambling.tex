@@ -259,7 +259,7 @@ Throughout the remainder of this book I use the abbreviations in Table~\vref{tab
 \end{table}
 
 In Section~\ref{sec-valency} I already mentioned that the non-terminal nodes in a tree, that is, the
-nodes that do not directly dominate a lexical entry, are licensed by rules. Syntactic rules are
+nodes that do not directly dominate a lexical item, are licensed by rules. Syntactic rules are
 usually called schemata since they are rather abstract. The details about such schemata will be
 given in Chapter~\ref{chap-HPSG-light}, but Figure~\vref{fig-spr-head} and
 Figure~\vref{fig-head-comp} provide the respective tree representations.
@@ -267,35 +267,80 @@ Figure~\vref{fig-head-comp} provide the respective tree representations.
 \begin{forest}
 [{H[\spr \ibox{1}]}
   [\ibox{2}]
-  [{H[\spr \ibox{1} $\oplus$ \sliste{ \ibox{2} }]}]]
+  [H\feattab{\spr \ibox{1} $\oplus$ \sliste{ \ibox{2} },\\
+              \comps \eliste}]]
 \end{forest}
 \caption{\label{fig-spr-head}Sketch of the Specifier-Head Schema}
 \end{figure}
 The H stands for \emph{head}. \emph{append} ($\oplus$) is a relation that concatenates two lists. For instance the concatenation
-of \sliste{ \normalfont a } and \sliste{ \normalfont b } is \sliste{ \normalfont a, b }. The concatenation of the empty list \eliste{}
-with another list yields the latter list. For such a schema to apply the descriptions of the
-daughters have to match the actual daughters. For instance \emph{knows him} is compatible with the
-right daughter: It has an NP[\type{nom}] in its \sprl. When \emph{knows him} is realized as a
+of \sliste{ \normalfont a } and \sliste{ \normalfont b } is \sliste{ \normalfont a, b }. The
+concatenation of the empty list \eliste{} with another list yields the latter list. To give some
+examples that are of relevance in this chapter consider the list \sliste{ NP[\type{nom}],
+  NP[\type{dat}], NP[\type{acc} ] }. \emph{append} can be used to append two lists resulting in our list in the following
+ways:
+\eal
+\ex \eliste{} $\oplus$ \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] } = \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] }
+\ex \sliste{ NP[\type{nom}] } $\oplus$ \sliste{ NP[\type{dat}], NP[\type{acc}] } = \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] }
+\ex \sliste{ NP[\type{nom}], NP[\type{dat}] } $\oplus$ \sliste{ NP[\type{acc}] } = \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] }
+\ex \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] } $\oplus$ \eliste{} = \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] }
+\zl
+The schema in Figure~\ref{fig-spr-head} takes a list apart in such a way that a list with a
+singleton element ( \sliste{ \ibox{2} } ) and a remaining list \iboxb{1} results. Assuming the
+three-element list with nom, dat and acc elements, this would be the case in (\mex{0}c) and \ibox{2} would be NP[\type{acc}] and
+\ibox{1} would be \sliste{ NP[\type{nom}], NP[\type{dat}] }. In this book, the \sprl has at most one element.\footnote{
+  But see \citew{MOe2013b} for an analysis of \isi{object shift} in \ili{Danish} assuming multiple elements in
+  the \sprl.
+} It can be an NP[\type{nom}] in the case of verbs in the SVO languages or the determiner, if
+the head is a noun. If one splits a list with a singleton element into a list containing one element
+and a rest, the rest will always be the empty list. Hence, with the lists at the right-hand side of the equations in (\mex{1}), \ibox{1} will be the
+empty list and \ibox{2} will be NP[\type{nom}] and Det, respectively. 
+\eal
+\ex \eliste{} $\oplus$ \sliste{ NP[\type{nom}] } = \sliste{ NP[\type{nom}] }
+\ex \eliste{} $\oplus$ \sliste{ Det } = \sliste{ Det }
+\zl
+
+For a schema like the one in Figure~\ref{fig-spr-head} to apply, the descriptions of the
+daughters have to match the actual daughters. For instance \emph{sleeps} is compatible with the
+right daughter: it has an NP[\type{nom}] in its \sprl. When \emph{sleeps} is realized as a
 daughter of the schema in Figure~\ref{fig-spr-head}, \ibox{2} is instantiated as
 NP[\type{nom}]. Therefore the left daughter has to be compatible with an NP[\type{nom}]. It can be
-realized as a simple pronoun like \emph{he} or a complex NP like \emph{the man who sold the
-  world}. The \sprl of \emph{knows him} is \sliste{ NP[\type{nom}] }. If this list is split up into
-two lists, one containing \sliste{ NP[\type{nom}] } and another one containing the rest, the second
-list is the empty list. Hence \ibox{1} is instantiated as \eliste{} and \emph{Nobody knows him.}
-corresponds to a structure with an empty \sprl. See also Figure~\ref{fig-nobody-gives-him-the-book}
-below.
+realized as a simple pronoun like \emph{he} or a complex NP like \emph{the brown squirrel}. Two
+analyses are shown in Figure~\ref{fig-spr-head}.
+\begin{figure}
+\hfill
+\begin{forest}
+sm edges
+[V\feattab{\spr \eliste,\\
+           \comps \eliste}
+  [{\ibox{1} NP[\type{nom}]} [he]]
+  [V\feattab{\spr \sliste{ \ibox{1} NP[\type{nom}] },\\
+             \comps \eliste} [sleeps]]]
+\end{forest}
+\hfill
+\begin{forest}
+sm edges
+[V\feattab{\spr \eliste,\\
+           \comps \eliste}
+  [{\ibox{1} NP[\type{nom}]} [the brown squirrel,roof]]
+  [V\feattab{\spr \sliste{ \ibox{1} NP[\type{nom}] },\\
+             \comps \eliste} [sleeps]]]
+\end{forest}\hfill\mbox{}
+\caption{Head-Specifier phrases with a subject and an intransitive verb}\label{fig-spr-head}
+\end{figure}
+Figure~\ref{fig-nobody-gives-him-the-book} below shows an example analysis with a ditransitive verb
+also involving the Specifier-Head Schema.
 
-The Specifier-Head Schema is used for subject-VP combinations in the SVO languages but it is also
-used for NPs in all the Germanic languages. Figure~\ref{fig-spr-head-the-man} shows the analysis of the NP \emph{the man}.
+Apart from its use for the analysis of subject-VP combinations in the SVO languages, the Specifier-Head Schema is also
+used for the analysis of NPs in all the Germanic languages. Figure~\ref{fig-spr-head-the-squirrel} shows the analysis of the NP \emph{the squirrel}.
 \begin{figure}
 \begin{forest}
 [{N[\spr \eliste, \comps \eliste]}
   [\ibox{1} Det [the]]
-  [{N[\spr \sliste{ \ibox{1} }, \comps \eliste]} [man]]]
+  [{N[\spr \sliste{ \ibox{1} }, \comps \eliste]} [squirrel]]]
 \end{forest}
-\caption{\label{fig-spr-head-the-man}Analysis of the NP \emph{the man}}
+\caption{\label{fig-spr-head-the-squirrel}Analysis of the NP \emph{the squirrel}}
 \end{figure}
-\emph{man} selects for a determiner and the result of combining \emph{man} with a determiner is a
+\emph{squirrel} selects for a determiner and the result of combining \emph{squirrel} with a determiner is a
 complete nominal projection, that is, an NP. There are also nouns like \emph{picture} that take a
 complement:
 \ea
@@ -319,6 +364,8 @@ realized as the complement daughter to the right.\footnote{%
   like the one in Figure~\ref{fig-head-comp} would also license a tree with the daughters in a
   different order unless one head linearization rules that rule this out.
 }
+In addition it has to be ensured that the \sprv of the head daughter is identical to the \sprv of
+the mother. For explanatory purposes, this is not contained in Figure~\ref{fig-head-comp}.
 This schema licenses all the non-terminal nodes in the VP in
 Figure~\vref{fig-nobody-gives-him-the-book}, which shows the analysis of (\mex{1}).\footnote{%
   English nouns and determiners do not inflect for case. However, case is manifested at pronouns:
@@ -366,10 +413,21 @@ and a third list \ibox{2}. The element of the second list is realized as the com
 \caption{\label{fig-head-comp-free}Sketch of the Head-Complement Schema for languages with free
   constituent order}
 \end{figure}
-The length of the lists \ibox{1} and \ibox{2} is not restricted. If one restricts \ibox{1} to be the
-empty list, one gets grammars that saturate complements from the beginning of the list (like
-English) and if one restricts \ibox{2} to be the empty list, one gets grammars that take the last
-element from the \compsl for combination with a head. Scrambling languages like German allow any
+The length of the lists \ibox{1} and \ibox{2} is not restricted. For our example list containing a
+nom, a dat and an acc element, there are the following possibilities to split the list:
+
+\eal
+\ex \eliste{} $\oplus$ \sliste{ NP[\type{nom}] } $\oplus$ \sliste{ NP[\type{dat}], NP[\type{acc}] } 
+\ex \sliste{ NP[\type{nom}] } $\oplus$ \sliste{ NP[\type{dat}] } $\oplus$ \sliste{ NP[\type{acc}] } 
+\ex \sliste{ NP[\type{nom}], NP[\type{dat}] } $\oplus$ \sliste{ NP[\type{acc}] } $\oplus$ \eliste 
+\zl
+So \ibox{3} in Figure~\ref{fig-head-comp-free} would be \npnom in (\mex{0}a), \npdat in (\mex{0}b) and \npacc in (\mex{0}c).
+
+If one restricts \ibox{1} to be the
+empty list, one gets grammars that saturate complements from the beginning of the list (VO languages
+with fixed order like \ili{English}) and if one restricts \ibox{2} to be the empty list, one gets grammars that take the last
+element from the \compsl for combination with a head (OV languages with fixed order like
+\todostefan{add language here}). Scrambling languages like German allow any
 complement to be combined with its head since there is neither a restriction on \ibox{1} nor one on \ibox{2}.
 
 \inlinetodostefan{Yiddish VO/OV}
@@ -384,6 +442,7 @@ languages like Dutch and German on the one hand and Danish and English on the ot
 explained by assuming that adjuncts in the former languages are less picky as far as the element is
 concerned with which they combine.\todostefan{provide examples} Dutch (\mex{1}) and German (\mex{2})
 adjuncts can attach to any verbal projection, while Danish (\mex{3}) and English (\mex{4}) require a VP:
+
 \eal
 \ex \dutch
 \ex

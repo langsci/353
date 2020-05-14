@@ -4,7 +4,7 @@
 
 \section{Valency, argument order and adjunct placement}
 
-
+\settowidth\jamwidth{(German)}
 \begin{enumerate}
 \item Provide the valency lists for the following words:
 
@@ -127,6 +127,168 @@ sm edges
 
 \clearpage
 
+\section{The verbal complex}
+
+\section{Verb position: Verb first and verb second}
+
+
+
+\begin{enumerate}
+\item Classify the Germanic languages according to their basic constituent order (SVO, SOV, VSO,
+  \ldots) and V2 assuming that you know that one of the following patterns exist in the language:
+\eal
+\label{ex-v2-task-solution}
+\ex 
+\label{ex-acc-aux-nom-v-dat}
+NP[acc] V-Aux NP[nom] V NP[dat]   \hfill  V2 SVO 
+\ex
+\label{ex-acc-aux-nom-dat-v} 
+NP[acc] V-Aux NP[nom] NP[dat] V   \hfill  V2 SOV
+\ex 
+\label{ex-acc-nom-v-acc}
+NP[acc] NP[nom] V NP[acc]         \hfill -V2 SVO
+\ex 
+\label{ex-acc-nom-aux-v-acc}
+NP[acc] NP[nom] V-Aux V NP[acc]   \hfill -V2 SVO
+\ex 
+\label{ex-acc-aux-nom-v-pp}
+NP[acc] V-Aux NP[nom] V PP        \hfill not classifiable
+\zl
+
+The pattern in (\ref{ex-acc-aux-nom-v-dat}) cannot be Englih, since English does not have a dative. Hence it is a V2
+language. The dative object follows the verb, so it must be an SVO language. An example would be Icelandic.
+\ea
+
+\z
+
+(\ref{ex-acc-aux-nom-dat-v}) has an auxiliary and two NPs followed by a verb. Since the dative object would follow the verb
+in an SVO language, it must be a SOV language. Since all Germanic SOV languages are also V2
+languages, (\ref{ex-acc-aux-nom-dat-v}) must be a V2 language. German and Dutch would be examples.
+\ea
+\gll Den Roman hat er dem Jungen gegeben.\\
+     the novel has he the boy given\\
+\glt `He has given the boy the novel.'
+\z
+
+Ignoring multiple frontings in German \citep{Mueller2003b}, (\ref{ex-acc-nom-v-acc}) must be a non-V2 pattern. The language can only be
+English:
+\ea
+This book, Peter gave Mary.
+\z
+For the same reason, (\ref{ex-acc-nom-aux-v-acc}) is non-V2 and SVO. The language must be English:
+\ea
+This book, Peter had given Mary.
+\z
+The pattern in (\ref{ex-acc-aux-nom-v-pp}) cannot be unambiguously classified with respect to V2 and
+SOV/SVO. Since PPs can be extraposed easily, it could be an SOV langauge with extraposition (\eg
+German) or it could be English with question formation (residual V2):
+\eal
+\ex 
+\gll Wen hat Peter gesehen bei    der Demonstration.\\
+     who has Peter seen    during the rally\\
+\glt `Who has Peter seen during the rally.'
+\ex Who did Peter see during the rally?
+\zl
+\item Sketch the analysis for the following examples:
+\eal
+\ex 
+\gll dass er darüber lacht\\
+     that he there.upon laughs\\\jambox{(German)}
+
+\ex 
+\gll dass er darüber lachen wird\\
+     that he there.upon laugh will\\
+\ex
+\gll Wird er darüber lachen?\\
+     will he there.upon laugh\\
+\zl
+
+\ea
+\gll Arbejder Bjarne ihærdigt  på bogen?\\
+     works    Bjarne seriously at book.\textsc{def}\\\jambox{(Danish)}
+\glt `Does Bjarne work seriously on the book?'
+\z
+
+
+
+
+\begin{figure}
+\begin{forest}
+sm edges
+[CP
+  [C\feattab{\spr \sliste{},\\
+             \comps \sliste{ \ibox{1} }} [dass;that]]
+  [{\ibox{1} V\feattab{\spr \sliste{ },\\
+                       \comps \sliste{ }}}
+     [{\ibox{2} NP[nom]} [er;he]]
+     [V\feattab{\spr  \sliste{ },\\
+                 \comps \sliste{ \ibox{2} }}
+       [\ibox{3} PP [darüber;there.about]]
+       [V\feattab{\spr \sliste{ },\\
+                  \comps \sliste{ \ibox{2}, \ibox{3} }} [lacht;laughs]]]]]
+\end{forest}
+\caption{Analysis of \emph{dass er darüber lacht} `that he laughs about this'}
+\end{figure}
+
+
+\begin{figure}
+\begin{forest}
+sm edges
+[CP
+  [C\feattab{\spr \sliste{},\\
+             \comps \sliste{ \ibox{1} }} [dass;that]]
+  [{\ibox{1} V\feattab{\spr \sliste{ },\\
+                       \comps \sliste{ }}}
+     [{\ibox{2} NP[nom]} [er;he]]
+     [V\feattab{\spr  \sliste{ },\\
+                 \comps \sliste{ \ibox{2} }}
+       [\ibox{3} PP [darüber;there.about]]
+       [V\feattab{\spr \sliste{ },\\
+                  \comps \sliste{ \ibox{2}, \ibox{3} }}
+         [\ibox{4} V\feattab{\subj \sliste{ \ibox{2} },\\
+                             \spr \sliste{ },\\
+                             \comps \sliste{ \ibox{3} }} [lachen;laugh]]
+         [V\feattab{\spr \sliste{ },\\
+                    \comps \sliste{ \ibox{2}, \ibox{3}, \ibox{4} }} [wird;will]]]
+]]]
+\end{forest}
+\caption{Analysis of \emph{dass er darüber lachen wird} `that he will laugh about this'}
+\end{figure}
+
+
+\begin{figure}
+\begin{forest}
+sm edges
+[V\feattab{\spr \sliste{},\\
+           \comps \sliste{ \ibox{1} }}
+  [V\feattab{\spr \sliste{},\\
+             \comps \sliste{ \ibox{1} }}
+    [V
+      [wird;will]]]
+  [{\ibox{1} V//V\feattab{\spr \sliste{ },\\
+                       \comps \sliste{ }}}
+     [{\ibox{2} NP[nom]} [er;he]]
+     [V//V\feattab{\spr  \sliste{ },\\
+                 \comps \sliste{ \ibox{2} }}
+       [\ibox{3} PP [darüber;there.about]]
+       [V//V\feattab{\spr \sliste{ },\\
+                  \comps \sliste{ \ibox{2}, \ibox{3} }}
+         [\ibox{4} V\feattab{\subj \sliste{ \ibox{2} },\\
+                             \spr \sliste{ },\\
+                             \comps \sliste{ \ibox{3} }} [lachen;laugh]]
+         [V//V\feattab{\spr \sliste{ },\\
+                    \comps \sliste{ \ibox{2}, \ibox{3}, \ibox{4} }} [\trace]]]
+]]]
+\end{forest}
+\caption{Analysis of \emph{Wird er darüber lachen?} `Will he laugh about this?'}
+\end{figure}
+
+
+
+\end{enumerate}
+
+\clearpage
+
 \section{Passive}
 
 \begin{figure}
@@ -168,3 +330,8 @@ selecting for a specifier. The NP \emph{the box} functions as the specifier and 
 %% \end{forest}
 %% \end{figure}
 
+\section{Clause types and expletives}
+
+
+
+%      <!-- Local IspellDict: en_US-w_accents -->
