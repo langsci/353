@@ -1614,16 +1614,14 @@ Storage and cataloguing done by \storageinstitution\\[3ex]
   \fi
 }
 
-\AtBeginDocument{% 
-% FK 16-Jan-19: It is unclear why this was set. It conflicts with TikZ externalisation.
-% SZ 28-Apr-20: Fixed in another way, by "\tikzifexternalizing".
+% \AtBeginDocument{% FK 16-Jan-19: It is unclear why this was set. It conflicts with TikZ externalisation.
 	\makeindex
 	\newindex{lan}{ldx}{lnd}{\lsLanguageIndexTitle}
 	\newindex{sbj}{sdx}{snd}{\lsSubjectIndexTitle}
-        \tikzifexternalizing{\expandafter\newindex}{\expandafter\renewindex}{default}{adx}{and}{\lsNameIndexTitle} %biblatex can only deal with the default index
+	\renewindex{default}{adx}{and}{\lsNameIndexTitle} %biblatex can only deal with the default index
 % 	\newindex{wrd}{wdx}{wnd}{Expression index}
 % 	\newindex{rwrd}{rdx}{rnd}{Reverse expression index}
-}
+% }
 
 \indexproofstyle{\setlength{\overfullrule}{0pt}\raggedright\footnotesize}
 
