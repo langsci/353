@@ -4,14 +4,7 @@ LSP-STYLES=~/Documents/Dienstlich/Projekte/OALI/Git-HUB/latex/LSP/
 all: germanic.pdf
 
 
-SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
-	germanic.tex           \
-	germanic-include.tex   \
-	germanic-phenomena.tex\
-	germanic-passive.tex\
-	germanic-valency-scrambling.tex\
-	germanic-verbal-complex.tex\
-	germanic-verb-position.tex
+SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib $(wildcard *.tex)
 
 .SUFFIXES: .tex
 
@@ -97,6 +90,9 @@ $(PUB_FILE): ../hpsg/make_bib_header ../hpsg/make_bib_html_number  ../hpsg/.bibt
 	cat bib_header.txt $(PUB_FILE).tmp.neu > $(PUB_FILE)
 	rm $(PUB_FILE).tmp $(PUB_FILE).tmp.neu
 
+memos:
+	xelatex -shell-escape germanic
+	python3 memomanager.py split germanic.mmz
 
 source: 
 	tar chzvf ~/Downloads/germanic.tgz *.tex styles/*.sty LSP/
@@ -109,13 +105,12 @@ check-clean:
 	rm -f *.bak *~ *.log *.blg complex-draft.dvi
 
 
-cleanfor: # These files are precious, as it takes a long time to produce them all.
-	rm -f *.for *.for.tmp germanic.for.dir/*
-
+cleanmemo:
+	rm -f *.mmz chapters/*.mmz germanic.memo.dir/*
 
 realclean: clean
-	rm -f *.dvi *.ps *.pdf
+	rm -f *.dvi *.ps *.pdf chapters/*.pdf
 
+brutal-clean: realclean cleanmemo
 
-brutal-clean: realclean cleanfor
 

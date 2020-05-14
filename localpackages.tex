@@ -68,10 +68,13 @@
 % It breaks the dependency grammar trees in forest.
 \usepackage{./langsci/langsci-forest-setup}
 
-\tikzset{external/prefix={germanic.for.dir/}}
-\forestset{external/master=germanic}
+\providecommand\memoize[2][]{{#2}}
+\providecommand\memoizeset[1]{}
+\usepackage{memoize} % this is safe to comment out because of the stubs defined above
+\memoizeset{
+  memo filename prefix={germanic.memo.dir/},
+}
 
-\usepackage{./styles/forest-externalizetikz}
 
 
 

@@ -1,8 +1,10 @@
 %% -*- coding:utf-8 -*-
 
 % delete me! as soon as you can
-\newcommand{\lsptoprule}{\midrule\toprule}
-\newcommand{\lspbottomrule}{\bottomrule\midrule}
+\providecommand{\lsptoprule}{}
+\renewcommand{\lsptoprule}{\midrule\toprule}
+\providecommand{\lspbottomrule}{}
+\renewcommand{\lspbottomrule}{\bottomrule\midrule}
 
 
 \hypersetup{bookmarksopenlevel=0}
@@ -103,3 +105,14 @@
 	frametitleaboveskip=15mm, frametitlebelowskip=5mm,frametitlerule=false, repeatframetitle=false
 }
 
+
+% get rid of these morewrite messages:
+% https://tex.stackexchange.com/questions/419489/suppressing-messages-to-standard-output-from-package-morewrites/419494#419494
+\ExplSyntaxOn
+\cs_set_protected:Npn \__morewrites_shipout_ii:
+  {
+    \__morewrites_before_shipout:
+    \__morewrites_tex_shipout:w \tex_box:D \g__morewrites_shipout_box
+    \edef\tmp{\interactionmode\the\interactionmode\space}\batchmode\__morewrites_after_shipout:\tmp
+  }
+\ExplSyntaxOff
