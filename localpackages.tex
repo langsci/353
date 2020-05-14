@@ -41,6 +41,17 @@
 % This has side effects on my-ccg commands do no know why
 %\usepackage{./langsci/langsci-optional}
 
+% used to be in this package
+\providecommand{\citegen}{}
+\renewcommand{\citegen}[2][]{\citeauthor{#2}'s (\citeyear*[#1]{#2})}
+\providecommand{\lsptoprule}{}
+\renewcommand{\lsptoprule}{\midrule\toprule}
+\providecommand{\lspbottomrule}{}
+\renewcommand{\lspbottomrule}{\bottomrule\midrule}
+\providecommand{\largerpage}{}
+\renewcommand{\largerpage}[1][1]{\enlargethispage{#1\baselineskip}}
+
+
 \usepackage{./styles/oneline}
 
 \usepackage{./langsci/langsci-lgr}

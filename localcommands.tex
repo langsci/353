@@ -1,11 +1,5 @@
 %% -*- coding:utf-8 -*-
 
-% delete me! as soon as you can
-\providecommand{\lsptoprule}{}
-\renewcommand{\lsptoprule}{\midrule\toprule}
-\providecommand{\lspbottomrule}{}
-\renewcommand{\lspbottomrule}{\bottomrule\midrule}
-
 
 \hypersetup{bookmarksopenlevel=0}
 
@@ -53,10 +47,10 @@
 \presetkeys{todonotes}{disable}{}
 }
 
-\newcommand{\todostefan}[1]{{\tikzexternaldisable\todo[color=orange!80]{\footnotesize #1}}\xspace}
-\newcommand{\todosatz}[1]{{\tikzexternaldisable\todo[color=red!40]{\footnotesize #1}}\xspace}
+\newcommand{\todostefan}[1]{{\memoizeset{disable}\todo[color=orange!80]{\footnotesize #1}}\xspace}
+\newcommand{\todosatz}[1]{{\memoizeset{disable}\todo[color=red!40]{\footnotesize #1}}\xspace}
 
-\newcommand{\inlinetodostefan}[1]{{\tikzexternaldisable\todo[color=green!40,inline]{\footnotesize #1}}\xspace}
+\newcommand{\inlinetodostefan}[1]{{\memoizeset{disable}\todo[color=green!40,inline]{\footnotesize #1}}\xspace}
 
 
 \newcommand{\addpages}{\todostefan{add pages}}
