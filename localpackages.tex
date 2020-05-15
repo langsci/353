@@ -54,7 +54,8 @@
 
 \usepackage{./styles/oneline}
 
-\usepackage{./langsci/langsci-lgr}
+\usepackage{langsci-lgr}
+\newcommand{\M}{\textsc{m}{}\xspace}        % use at own risk
 
 
 \usepackage{graphicx}
@@ -63,7 +64,7 @@
 \usepackage{./styles/mycommands}% \spacebr
 
 
-\usepackage{./langsci/langsci-gb4e}
+\usepackage{langsci-gb4e}
 
 
 %\usepackage{subfig}
@@ -77,11 +78,11 @@
 % for reasons I do not understand this cannot be moved further down and 
 % the loading of forest further down cannot be removed. St. Mü. 26.01.2017
 % It breaks the dependency grammar trees in forest.
-\usepackage{./langsci/langsci-forest-setup}
+\usepackage{langsci-forest-setup}
 
 \providecommand\memoize[2][]{{#2}}
 \providecommand\memoizeset[1]{}
-\usepackage{memoize} % this is safe to comment out because of the stubs defined above
+%\usepackage{memoize} % this is safe to comment out because of the stubs defined above
 \memoizeset{
   memo filename prefix={germanic.memo.dir/},
 }
@@ -151,7 +152,7 @@
 
 
 
-\usepackage{./langsci/langsci-tbls}
+\usepackage{langsci-tbls}
 % do not need identation for enumerate since we are in a box anyway.
 \usepackage{enumitem}
 
