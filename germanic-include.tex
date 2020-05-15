@@ -22,11 +22,14 @@
 
 \begin{document} 
 
+\memoizeset{disable}
 \maketitle
 \frontmatter
+\memoizeset{enable}
 
 \currentpdfbookmark{Contents}{name} % adds a PDF bookmark
 \tableofcontents
+
 
 
  \include{preface}
@@ -57,6 +60,7 @@
 \appendix
 \include{germanic-solutions}
 
+\memoizeset{disable}
 \backmatter
 \bookmarksetup{startatroot}
 
