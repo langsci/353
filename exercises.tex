@@ -1,0 +1,1364 @@
+%% -*- coding:utf-8 -*-
+
+\documentclass{scrarticle}
+
+\usepackage{langsci-forest-setup}
+
+
+
+\usepackage{german}
+
+% does not work for the macros, strange.
+% \usepackage[ngerman]{babel}
+% \useshorthands{"}
+
+
+\usepackage{./styles/abbrev,./styles/merkmalstruktur,./styles/my-xspace,./styles/makros.2e,./styles/article-ex,langsci-gb4e,oneline,langsci-lgr}
+
+
+\newcommand{\danish}{\jambox{({Danish})}}
+\newcommand{\dutch}{\jambox{({Dutch})}}
+\newcommand{\english}{\jambox{({English})}}
+\newcommand{\german}{\jambox{({German})}}
+\newcommand{\yiddish}{\jambox{({Yiddish})}}
+\newcommand{\icelandic}{\jambox{({Icelandic})}}
+
+\usepackage{unified-biblatex}
+\let\citew\citealp
+\newcommand{\page}{}
+\bibliography{bib-abbr,biblio}
+
+\begin{document}
+
+
+
+% \begin{forest}
+% sm edges
+% [1 %{V[\spr \eliste, \comps \eliste]}
+%    [2 %{NP[\type{nom}]} 
+%       [Sandy] ]
+%    [3 %V\feattab{
+%       %\spr \sliste{ NP[\type{nom}] }, \comps \sliste{}}
+%      [4 % V\feattab{
+%         % \spr \sliste{ NP[\type{nom}] },\\
+%         % \comps \sliste{ PP[\type{to}] }} 
+%         [6 %V\feattab{
+%            %\spr \sliste{ NP[\type{nom}] },\\
+%            %\comps \sliste{ NP[\type{acc}], PP[\type{to}] }} 
+%            [donates] ]
+%         [7 %{NP[\type{acc}]} 
+%            [one Million,roof] ] ]
+%      [5 %{PP[\type{to}]} 
+%         [to the children,roof ] ] ] ]
+% \end{forest}
+
+\section{Valenz, Adjunktion und Scrambling}
+
+\begin{enumerate}
+
+%\if0
+
+\item Which of the following structures is suitable for the sentence in (\mex{1}).
+
+Welche der folgenden Strukturen ist für den Satz in (\mex{1}) sinnvoll?
+\ea
+Sandy donates one Million to the children.
+\z
+
+
+\begin{forest}
+sm edges
+[1 
+   [2 
+     [4 
+       [6 [Sandy] ]
+       [7 [donates]]]
+     [5 [one Million,roof] ] ]
+   [3 
+     [to the children,roof ] ] ]
+\end{forest}
+
+\begin{forest}
+sm edges
+[1 
+   [2 
+      [Sandy] ]
+   [3 
+     [4 
+        [6 
+           [donates] ]
+        [7 
+           [one Million,roof] ] ]
+     [5 
+        [to the children,roof ] ] ] ]
+\end{forest}
+
+
+\begin{forest}
+sm edges
+[1 
+  [2 
+    [4 [Sandy] ]
+    [5 [donates]]]
+  [3
+    [6 [one Million,roof] ] 
+    [7 [to the children,roof ] ] ] ]
+\end{forest}
+
+
+\begin{forest}
+sm edges
+[1 
+    [2 [Sandy] ]
+    [3 [donates]]
+    [4 [one Million,roof] ] 
+    [5 [to the children,roof ] ] ]
+\end{forest}
+
+\begin{forest}
+sm edges
+[1 
+  [2
+    [4 [Sandy] ]
+    [5 [6 [donates]]
+       [7 [one Million,roof] ] ] ]
+  [3 [to the children,roof ] ] ]
+\end{forest}
+
+Antwort: 2
+
+
+\item Assign categories to the numbered nodes.
+
+Ordnen Sie den Knotenzahlen Kategorien zu.
+
+Dabei können alle Kategorien, die im Lösungsbaum vorkommen, angeklickt werden. Aber auch Kategorien
+mit NP[dat] und NP[gen] und absurde Kategorien mit zwei Sachen im SPR oder acc im SPR und nom in
+COMPS, zwei acc in COMPS usw. Auch die Lösung der folgenden Aufgabe mit Adjunktion sollte hier mit
+aufgezählt werden, d.h. die Valenzlisten für ein strict transitives Verb und \modm für die PP.
+
+
+
+\begin{forest}
+sm edges
+[{V[\spr \eliste, \comps \eliste]}
+   [{NP[\type{nom}]} [Sandy] ]
+   [V\feattab{
+      \spr \sliste{ NP[\type{nom}] }, \comps \sliste{}}
+     [V\feattab{
+         \spr \sliste{ NP[\type{nom}] },\\
+         \comps \sliste{ PP[\type{to}] }} 
+        [V\feattab{
+           \spr \sliste{ NP[\type{nom}] },\\
+           \comps \sliste{ NP[\type{acc}], PP[\type{to}] }} [donates] ]
+        [{NP[\type{acc}]} [one Million,roof] ] ]
+     [{PP[\type{to}]} [to the children,roof ] ] ] ]
+\end{forest}
+
+
+\item Which of the following structures is suitable for the sentence in (\mex{1}).
+
+Welche der folgenden Strukturen ist für den Satz in (\mex{1}) sinnvoll?
+\ea
+Sandy read the book in the garden.
+\z
+
+
+\begin{forest}
+sm edges
+[1 
+   [2 
+     [4 
+       [6 [Sandy] ]
+       [7 [read]]]
+     [5 [the book,roof] ] ]
+   [3 
+     [in the garden,roof ] ] ]
+\end{forest}
+
+\begin{forest}
+sm edges
+[1 
+   [2 
+      [Sandy] ]
+   [3 
+     [4 
+        [6 
+           [read] ]
+        [7 
+           [the book,roof] ] ]
+     [5 
+        [in the garden,roof ] ] ] ]
+\end{forest}
+
+
+\begin{forest}
+sm edges
+[1 
+  [2 
+    [4 [Sandy] ]
+    [5 [read]]]
+  [3
+    [6 [the book,roof] ] 
+    [7 [in the garden,roof ] ] ] ]
+\end{forest}
+
+
+\begin{forest}
+sm edges
+[1 
+    [2 [Sandy] ]
+    [3 [read]]
+    [4 [the book,roof] ] 
+    [5 [in the garden,roof ] ] ]
+\end{forest}
+
+\begin{forest}
+sm edges
+[1 
+  [2
+    [4 [Sandy] ]
+    [5 [6 [read]]
+       [7 [the book,roof] ] ] ]
+  [3 [in the garden,roof ] ] ]
+\end{forest}
+
+\begin{forest}
+sm edges
+[1
+  [2 [Sandy] ]
+  [3 
+    [4 [read]]
+    [5 
+      [6 [the]]
+      [7 [8 [book] ]
+         [9 [in the garden,roof ] ] ] ]]]
+\end{forest}
+
+
+Antwort: 2 und 6
+
+\item Ordnen Sie den Knotenzahlen Kategorien zu.
+
+Dabei können alle Kategorien, die im Lösungsbaum vorkommen, angeklickt werden. Aber auch Kategorien
+mit NP[dat] und NP[gen] und absurde Kategorien mit zwei Sachen im SPR oder acc im SPR und nom in
+COMPS, zwei acc in COMPS usw. Auch die Lösung der vorigen Aufgabe sollte hier mit
+aufgezählt werden, d.h. die Valenzlisten für ein Verb mit Akkusativ- und Präpositionalobjekt.
+
+
+\begin{forest}
+sm edges
+[{V[\spr \eliste, \comps \eliste]}
+          [{NP[\type{nom}]} [Sandy] ]
+          [V\feattab{
+              \spr \sliste{ NP[\type{nom}] }, \comps \sliste{  } }
+            [V\feattab{
+                \spr \sliste{ NP[\type{nom}] }, \comps \sliste{  } }
+              [V\feattab{
+                \spr \sliste{ NP[\type{nom}] },\\
+                \comps \sliste{ NP[\type{acc}] }} [reads] ]
+              [{NP[\type{acc}]} [the book,roof] ] 
+               ]
+            [{PP[\textsc{mod} VP]} [in the garden,roof] ]
+] ]
+\end{forest}
+
+%\fi
+\item Which of the following structures is suitable for the sentence in (\mex{1}), provided phrases
+  may be abbreviated?
+
+Welche der folgenden Strukturen ist für den Satz in (\mex{1}) sinnvoll, wenn Phrasen abgekürzt
+  werden können?
+\ea
+\gll dass die Vorsitzende des Vereins Conny der Urkundenfälschung bezichtigt\\
+     that the chairwoman  of.the society Conny the forgery accuses\\
+\glt `that the chairwoman of the society accuses Conny of forgery'
+\z
+
+
+\begin{forest}
+sm edges
+[x
+  [x [dass;that]]
+  [x
+    [x [die Vorsitzende;the chairwoman,roof]]
+    [x
+      [x [des Vereins;of.the society,roof]]
+      [x
+        [x [Conny;Conny]]
+        [x
+          [x [der Urkundenfälschung;the forgery,roof]]
+          [x [bezichtigt;accuses]]]]]]]
+\end{forest}
+
+\begin{forest}
+sm edges
+[x
+  [x [dass;that]]
+  [x
+    [x [die Vorsitzende;the chairwoman,roof]]
+    [x
+      [x [des Vereins;of.the society,roof]]
+      [x%, calign child=2
+        [x [Conny;Conny]]
+        [x [der Urkundenfälschung;the forgery,roof, calign with current]]
+        [x [bezichtigt;accuses]]]]]]
+\end{forest}
+
+\begin{forest}
+sm edges
+[x
+  [x [dass;that]]
+  [x
+    [x [die Vorsitzende des Vereins;the chairwoman of.the society,roof]]
+    [x
+      [x [Conny;Conny]]
+      [x
+        [x [der Urkundenfälschung;the forgery,roof]]
+        [x [bezichtigt;accuses]]]]]]
+\end{forest}
+
+\begin{forest}
+sm edges
+[x
+  [x [dass;that]]
+  [x
+    [x [die Vorsitzende;the chairwoman,roof]]
+    [x
+      [x [des Vereins;of.the society,roof]]
+      [x [Conny;Conny]]
+      [x [der Urkundenfälschung;the forgery,roof, calign with current]]
+      [x [bezichtigt;accuses]]]]]
+\end{forest}
+
+\begin{forest}
+sm edges
+[x
+  [x [dass;that]]
+  [x 
+    [x
+      [x
+        [x [die Vorsitzende des Vereins;the chairwoman of.the society,roof]]
+        [x [Conny;Conny]]]
+      [x [der Urkundenfälschung;the forgery,roof]]]
+    [x [bezichtigt;accuses]]]]
+\end{forest}
+
+Antwort: 3
+
+\clearpage
+
+\item Ordnen Sie den Knotenzahlen Kategorien zu. Gehen Sie dabei davon aus, dass eine unmarkierte
+  Stellung vorliegt. %NPen können abgekürzt werden. 
+
+\begin{forest}
+sm edges
+[1
+  [2 [dass;that]]
+  [3
+    [4 [die Vorsitzende des Vereins;the chairwoman of.the society,roof]]
+    [5
+      [6 [Conny;Conny]]
+      [7
+        [8 [der Urkundenfälschung;the forgery,roof]]
+        [9 [bezichtigt;accuses]]]]]]
+\end{forest}
+
+
+Dabei können alle Kategorien, die im Lösungsbaum vorkommen, angeklickt werden. Aber auch Kategorien
+mit NP[dat] und NP[gen]. Auch die Lösung der vorigen Aufgabe sollte hier mit
+aufgezählt werden, d.h. die Valenzlisten für ein Verb mit Akkusativ- und Präpositionalobjekt.
+
+Hier können \comps \sliste{ \npnom, \npgen, \npacc, \npgen{}  } mit aufgeführt werden.
+
+\oneline{%
+\begin{forest}
+sm edges
+[C\feattab{ \spr \sliste{},\\
+            \comps \sliste{} }
+  [C\feattab{ \spr \sliste{},\\
+              \comps \sliste{ S } } [dass;that]]
+  [V\feattab{ \spr \sliste{},\\
+              \comps \sliste{  } }
+    [{NP[\type{nom}]} [die Vorsitzende des Vereins;the chairwoman of.the society,roof]]
+    [V\feattab{ \spr \sliste{},\\
+                \comps \sliste{ \npnom{} } }
+      [{NP[\type{acc}]} [Conny;Conny]]
+      [V\feattab{ \spr \sliste{},\\
+                  \comps \sliste{ \npnom, \npacc{}  } }
+        [{NP[\type{gen}]} [der Urkundenfälschung;the forgery,roof]]
+        [V\feattab{ \spr \sliste{},\\
+                    \comps \sliste{ \npnom, \npacc, \npgen{}  } } [bezichtigt;accuses]]]]]]
+\end{forest}}
+
+
+\item Welche der folgenden Strukturen ist für den Satz in (\mex{1}) sinnvoll?
+\ea
+\gll dass dem Kind jemand schnell hilft\\
+     that the child somebody quickly helps\\
+\glt `that somebody helps the child quickly'
+\z
+
+\begin{forest}
+sm edges
+[x
+  [x  [dass;that]]
+  [x
+    [x [dem Kind;the child,roof]]
+    [x
+      [x [jemand;somebody]]
+      [x
+        [x [schnell;quickly]]
+        [x [hilft;helps]]]]]]
+\end{forest}
+
+
+\begin{forest}
+sm edges
+[x,before drawing tree={x-=1em}
+  [x [dass;that]]
+  [x,name=s,before drawing tree={x-=1.4em}
+    [x,name=vp,before drawing tree={x+=3.1em}
+      [x
+        [x [dem Kind;the child,roof]]
+        [jemand;somebody, no edge,name=jemand]
+        [schnell;quickly, no edge,name=schnell]
+        [x [hilft;helps]]]]]]
+\draw (vp.south) -- (schnell.north);
+\draw (s.south) -- (jemand.north);
+\end{forest}
+
+
+
+\begin{forest}
+sm edges
+[x
+  [x
+    [x
+      [x
+        [x  [dass;that]]
+        [x [dem Kind;the child,roof]]]
+      [x [jemand;somebody]]]
+    [x [schnell;quickly]]]
+  [x [hilft;helps]]]
+\end{forest}
+
+
+\begin{forest}
+sm edges
+[x
+  [x  [dass;that]]
+    [x
+      [x
+        [x [dem Kind;the child,roof]]
+        [x,calign with current [jemand;somebody]]
+        [x [schnell;quickly]]]
+    [x [hilft;helps]]]]
+\end{forest}
+
+
+
+\item Ordnen Sie den Knotenzahlen Kategorien zu. NPen können abgekürzt werden. 
+
+Bei den Knotenbeschriftungen auch Adj[\textsc{mod} VP] mit dazu nehmen.
+
+\begin{forest}
+sm edges
+[1
+  [2 [dass;that]]
+  [3
+    [4 [dem Kind;the child,roof]]
+    [5
+      [6 [jemand;somebody]]
+      [7
+        [8 [schnell;quickly]]
+        [9 [hilft;helps]]]]]]
+\end{forest}
+
+%\oneline{%
+\begin{forest}
+sm edges
+[C\feattab{ \spr \sliste{},\\
+            \comps \sliste{} }
+  [C\feattab{ \spr \sliste{},\\
+              \comps \sliste{ S } } [dass;that]]
+  [V\feattab{ \spr \sliste{},\\
+              \comps \sliste{  } }
+    [\npdat [dem Kind;teh child,roof]]
+    [V\feattab{ \spr \sliste{},\\
+                \comps \sliste{ \npdat{} } }
+      [\npnom [jemand;somebody]]
+      [V\feattab{ \spr \sliste{},\\
+                  \comps \sliste{ \npnom, \npdat{}  } }
+        [{Adj[\textsc{mod} V[\textsc{ini}$-$]]} [schnell;quickly]]
+        [V\feattab{ \spr \sliste{},\\
+                    \comps \sliste{ \npnom, \npdat{}  } } [hilft;helps]]]]]]
+\end{forest}
+%}
+
+\end{enumerate}
+
+\section{Verbalkomplex}
+
+\begin{enumerate}
+
+
+\item
+Welche der folgenden Strukturen ist für den Satz in (\mex{1}) sinnvoll?
+\ea
+\gll dass sie das Lied singen dürfen wird\\
+     that she the song sing   be.allowed.to will\\
+\glt `that she will be allowed to sing the song'
+\z
+
+
+\begin{forest}
+sm edges
+[x
+  [x [dass;that]]
+  [x
+     [x [sie;she]]
+     [x
+       [x
+         [x
+           [x [das Lied;the song,roof]]
+           [x [singen;sing]]]
+         [x [dürfen;be.allowed.to]]]
+       [x [wird;will]]]]]
+\end{forest}
+
+
+\begin{forest}
+sm edges
+[x
+  [x
+    [x
+      [x
+        [x
+          [x [dass;that]]
+          [x [sie;she]]]
+        [x [das Lied;the song,roof]]]
+      [x [singen;sing]]]
+    [x [dürfen;be.allowed.to]]]
+  [x [wird;will]]]
+\end{forest}
+
+\begin{forest}
+sm edges
+[x
+      [x
+        [x
+          [x [dass;that]]
+          [x [sie;she]]]
+        [x [das Lied;the song,roof]]]
+      [x [x [singen;sing]]
+         [x [dürfen;be.allowed.to]]
+         [x [wird;will]]]]]
+\end{forest}
+
+
+\begin{forest}
+sm edges
+[x
+  [x [dass;that]]
+  [x
+     [x [sie;she]]
+     [x
+       [x [das Lied;the song,roof]]
+       [x
+         [x
+           [x [singen;sing]]
+           [x [dürfen;be.allowed.to]]]
+         [x [wird;will]]]]]]
+\end{forest}
+
+\begin{forest}
+sm edges
+[x
+   [x [dass;that]]
+   [x
+     [x [sie;she]]
+     [x
+       [x [das Lied;the song,roof]]
+       [x [x [singen;sing]]
+          [x [dürfen;be.allowed.to]]
+          [x [wird;will]]]]]]
+\end{forest}
+
+Antwort: 4
+
+\item Ordnen Sie den Knotenzahlen Kategorien zu. NPen können abgekürzt werden. 
+
+Hier wieder Kategorien wie bei \spr machen, also mit mehreren NPen in \subj und leerer \subjl.
+
+
+\oneline{%
+\begin{forest}
+sm edges
+[1
+  [2 [dass;that]]
+  [3
+     [4 [sie;she]]
+     [5
+       [6 [das Lied;the song,roof]]
+       [7
+         [8
+           [10 [singen;sing]]
+           [11 [dürfen;be.allowed.to]]]
+         [9 [wird;will]]]]]]
+\end{forest}}
+
+
+\oneline{%
+\begin{forest}
+sm edges
+[C\feattab{%\spr \sliste{},\\
+             \comps \sliste{ }}
+  [C\feattab{%\spr \sliste{},\\
+             \comps \sliste{ S }} [dass;that]]
+  [V\feattab{%\spr \sliste{ },\\
+             \comps \sliste{ }}
+     [\npnom [sie;she]]
+     [V\feattab{%\spr  \sliste{ },\\
+                \comps \sliste{ \npnom{} }},s sep+=1em
+       [\npacc [das Lied;the song,roof]]
+       [V\feattab{%\spr \sliste{ },\\
+                  \comps \sliste{ \npnom, \npacc{} }}
+           [V\feattab{\subj \sliste{ \npnom{} },\\
+                   %            \spr \sliste{ },\\
+                               \comps \sliste{ \npacc{} }}
+             [V\feattab{\subj \sliste{ \npnom{} },\\
+                    %             \spr \sliste{ },\\
+                                 \comps \sliste{ \npacc{} }} [singen;sing]]
+             [V\feattab{\subj \sliste{ \npnom{} },\\
+                     %   \spr \sliste{ },\\
+                        \comps \sliste{ \npacc, V[\lex+] }} [dürfen;be.allowed.to]]]
+         [V\feattab{%\spr \sliste{ },\\
+                    \comps \sliste{ \npnom, \npacc, V[\lex+] }} [wird;will]]]]]]
+\end{forest}}
+
+
+\item
+Welche der folgenden Strukturen ist für den Satz in (\mex{1}) sinnvoll?
+\ea
+\gll dass sie das Lied wird singen dürfen\\
+     that she the song will sing   be.allowed.to\\
+\glt `that she will be allowed to sing the song'
+\z
+
+
+\begin{forest}
+sm edges
+[x
+  [x [dass;that]]
+  [x
+     [x [sie;she]]
+     [x
+       [x
+         [x
+           [x [das Lied;the song,roof]]
+           [x [wird;will]]]
+         [x [singen;sing]]]
+       [x [dürfen;be.allowed.to]]]]]
+\end{forest}
+
+
+\begin{forest}
+sm edges
+[x
+  [x
+    [x
+      [x
+        [x
+          [x [dass;that]]
+          [x [sie;she]]]
+        [x [das Lied;the song,roof]]]
+      [x [wird;will]]]
+    [x [singen;sing]]]
+  [x [dürfen;be.allowed.to]]]
+\end{forest}
+
+\begin{forest}
+sm edges
+[x
+  [x [dass;that]]
+  [x
+     [x [sie;she]]
+     [x
+       [x [das Lied;the song,roof]]
+       [x
+         [x [wird;will]]
+           [x
+             [x [singen;sing]]
+             [x [dürfen;be.allowed.to]]]]]]]
+\end{forest}
+
+\begin{forest}
+sm edges
+[x
+      [x
+        [x
+          [x [dass;that]]
+          [x [sie;she]]]
+        [x [das Lied;the song,roof]]]
+      [x [x [wird;will]]
+         [x [singen;sing]]
+         [x [dürfen;be.allowed.to]]]]]
+\end{forest}
+
+\begin{forest}
+sm edges
+[x,before drawing tree={x-=.7em}
+  [x [dass;that]]
+  [x,before drawing tree={x-=1.7em}
+     [x [sie;she]]
+     [x,name=wird-vp,before drawing tree={x-=3.9em}
+       [x
+         [x,before drawing tree={x-=1.2em}
+           [x [das Lied;the song,roof]]
+           [wird;will,no edge,name=wird]
+           [x [singen;sing]]]
+         [x [dürfen;be.allowed.to]]]]]]
+\draw (wird-vp.south) -- (wird.north);
+\end{forest}
+
+Antwort: 3
+
+\item Ordnen Sie den Knotenzahlen Kategorien zu. NPen können abgekürzt werden. 
+
+Hier wieder Kategorien wie bei \spr machen, also mit mehreren NPen in \subj und leerer \subjl.
+
+
+\oneline{%
+\begin{forest}
+sm edges
+[1
+  [2 [dass;that]]
+  [3
+     [4 [sie;she]]
+     [5
+       [6 [das Lied;the song,roof]]
+       [7
+         [8 [wird;will]]
+           [9
+             [10 [singen;sing]]
+             [11 [dürfen;be.allowed.to]]]]]]]
+\end{forest}}
+
+
+\oneline{%
+\begin{forest}
+sm edges
+[C\feattab{%\spr \sliste{},\\
+             \comps \sliste{ }}
+  [C\feattab{%\spr \sliste{},\\
+             \comps \sliste{ S }} [dass;that]]
+  [V\feattab{%\spr \sliste{ },\\
+                       \comps \sliste{ }}
+     [\npnom [sie;she]]
+     [V\feattab{%\spr  \sliste{ },\\
+                 \comps \sliste{ \npnom{} }}
+       [\npacc [das Lied;the song,roof]]
+       [V\feattab{%\spr \sliste{ },\\
+                  \comps \sliste{ \npnom, \npacc{} }}
+         [V\feattab{%\spr \sliste{ },\\
+                    \comps \sliste{ \npnom, \npacc, V[\lex+] }} [wird;will]]
+           [V\feattab{\subj \sliste{ \npnom{} },\\
+                     %          \spr \sliste{ },\\
+                               \comps \sliste{ \npacc{} }}
+             [V\feattab{\subj \sliste{ \npnom{} },\\
+                      %           \spr \sliste{ },\\
+                                 \comps \sliste{ \npacc{} }} [singen;sing]]
+             [V\feattab{\subj \sliste{ \npnom{} },\\
+                       % \spr \sliste{ },\\
+                        \comps \sliste{ \npacc, V[\lex+] }} [dürfen;be.allowed.to]]]]]]]
+\end{forest}}
+
+\end{enumerate}
+
+
+\section{Verb position and fronting}
+
+\begin{enumerate}
+
+
+\item Which of the following structures is appropriate for English? (answer may be any number
+  including zero) S stands for \spr \sliste{}, \comps \sliste{}, VP
+for \spr \sliste{ \npnom{} }, \comps \sliste{}  and V$'$ for all other V projections.
+
+Welche der folgenden Strukturen ist für englische Sätze angemessen? (mehrere Strukturen oder keine
+Struktur sind mögliche Antworten) In den Abbildungen stehen S für \spr \sliste{}, \comps \sliste{}, VP
+für \spr \sliste{ \npnom{} }, \comps \sliste{}  und V$'$ für alle anderen V-Projektionen.
+
+\begin{forest}
+[S
+  [NP]
+  [VP
+    [V]
+    [NP]]]
+\end{forest}
+
+\begin{forest}
+[S
+  [NP]
+  [S/NP
+    [NP]
+    [VP/NP
+      [V]
+      [NP/NP [\trace]]]]]
+\end{forest}
+
+\begin{forest}
+[S
+  [NP]
+  [S/NP
+    [V]
+    [S//V/NP
+      [NP/NP [\trace]]
+      [VP//V
+        [V//V [\trace]]
+        [NP]]]]]
+\end{forest}
+
+
+\begin{forest}
+[S
+  [NP]
+  [S/NP
+    [V]
+    [S//V/NP
+      [NP]
+      [VP//V/NP
+        [V//V [\trace]]
+        [NP/NP [\trace]]]]]]
+\end{forest}
+
+\begin{forest}
+[S
+  [NP]
+  [S/NP
+    [V]
+    [S//V/NP
+      [NP]
+      [V$'$//V/NP
+        [NP/NP [\trace]]
+        [V//V [\trace]]]]]]
+\end{forest}
+
+\begin{forest}
+[S
+  [NP]
+  [S/NP
+    [V]
+    [S//V/NP
+      [NP/NP [\trace]]
+      [V$'$//V
+        [NP]
+        [V//V [\trace]]]]]]
+\end{forest}
+
+Antwort: die erste und die zweite    Bäume bitte mischen, \dash nicht in dieser Reihenfolge.
+
+\item Which of the following structures is appropriate for Icelandic? (answer may be any number
+  including zero) S stands for \spr \sliste{}, \comps \sliste{}, VP
+for \spr \sliste{ \npnom{} }, \comps \sliste{}  and V$'$ for a V projection with empty \spr list.
+
+Welche der folgenden Strukturen ist für isländische Sätze angemessen? (mehrere Strukturen oder keine
+Struktur sind mögliche Antworten) In den Abbildungen stehen S für \spr \sliste{}, \comps \sliste{}, VP
+für \spr \sliste{ \npnom{} }, \comps \sliste{}  und V$'$ für eine V-Projektion mit leerer \sprl.
+
+Bäume wie oben. Lösung: dritter und vierter Baum.
+
+\item Which of the following structures is appropriate for Dutch? (answer may be any number
+  including zero) S stands for \spr \sliste{}, \comps \sliste{}, VP
+for \spr \sliste{ \npnom{} }, \comps \sliste{}  and V$'$ for a V projection with empty \spr list.
+
+Welche der folgenden Strukturen ist für niederländische Sätze angemessen? (mehrere Strukturen oder keine
+Struktur sind mögliche Antworten) In den Abbildungen stehen S für \spr \sliste{}, \comps \sliste{}, VP
+für \spr \sliste{ \npnom{} }, \comps \sliste{}  und V$'$ für eine V-Projektion mit leerer \sprl.
+
+Bäume wie oben. Lösung: fünfter und sechster Baum.
+
+\item Which of the following structures is suitable for the sentence in (\mex{1}). \emph{these
+    delicious bagels} is suposed to correspond to one x. Please, assume the analysis layed out in \citet{MuellerGermanic}.
+
+Welche der folgenden Strukturen ist für den Satz in (\mex{1}) sinnvoll? \emph{these
+    delicious bagels} entspricht dabei einem x. Bitte legen Sie die Analyse von
+  \citet{MuellerGermanic} zugrunde.
+\ea
+These delicious bagels, Sandy ordered yesterday.
+\z
+
+\begin{forest}
+sm edges
+[x 
+  [x
+    [x [x [x]]
+       [x [x]]]
+    [x [x]]]
+  [x [x]]]]
+\end{forest}
+\begin{forest}
+sm edges
+[x
+  [x [x [x]]
+     [x [x]]]
+  [x
+    [x [x]]
+    [x [x]]]]
+\end{forest}
+\begin{forest}
+sm edges
+[x
+  [x [x [x]]
+     [x [x]]]
+  [x
+    [x [x]]
+    [x [x]]
+    [x [x]]]]
+\end{forest}
+\begin{forest}
+sm edges
+[x
+  [x [x]]
+  [x [x [x]]
+     [x
+       [x [x]]
+       [x [x]]]]]
+\end{forest}
+\begin{forest}
+sm edges
+[x
+  [x [x]]
+  [x [x [x]]
+     [x [x
+          [x [x]]
+          [x [x]]]
+        [x [x]]]]]
+\end{forest}
+\begin{forest}
+sm edges
+[x
+  [x [x]]
+  [x [x [x]]
+     [x 
+        [x [x]]
+        [x
+          [x [x]]
+          [x [x]]]]]]
+\end{forest}
+
+Antwort: (5)
+
+
+
+\item Assign categories to the numbered nodes.
+
+Ordnen Sie den Knotenzahlen Kategorien zu.
+
+Dabei gibt es auch die Wörter zur Auswahl, weil Teil der Aufgabe ist, die Spur richtig zu platzieren.
+
+Labels: NP, PP, AP, VP, S, CP, Adv, S/NP, VP/NP NP/NP, AP/NP, V$'$, CP/NP
+
+\begin{forest}
+sm edges
+[1
+  [2 [10] ]
+  [3 
+    [4 [11] ]
+    [5 
+      [6  
+        [8 [12] ]
+        [9 [13] ] ]
+      [7 [14] ] ] ]]
+\end{forest}
+
+\begin{forest}
+sm edges
+[S
+  [NP$_i$ [these delicious bagels,roof] ]
+  [S/NP 
+    [NP [Sandy] ]
+    [VP/NP 
+      [VP/NP  
+        [V [ordered] ]
+        [NP/NP [\_$_i$] ] ]
+      [Adv [yesterday] ] ] ]]
+\end{forest}
+
+
+%\fi
+\item Which of the following structures is suitable for the sentence in (\mex{1}). \emph{the
+    children} is suposed to correspond to one x. 
+
+Welche der folgenden Strukturen ist für den Satz in (\mex{1}) sinnvoll? \emph{the children} entspricht dabei einem x.
+\ea
+Kim bought the children books.
+\z
+
+\begin{forest}
+sm edges
+[x
+  [x [x]]
+  [x
+    [x 
+      [x [x]]
+      [x [x]]]
+    [x [x]]]]
+\end{forest}
+\hspace{2em}
+\begin{forest}
+sm edges
+[x
+   [x [x] ]
+   [x
+      [x
+        [x] ]
+      [x
+          [x [x] ]
+          [x
+             [x
+               [x  [x] ]
+               [x [x] ]]
+             [x [x ] ] ] ] ] ]
+\end{forest}
+\hspace{2em}
+\begin{forest}
+sm edges
+[x
+   [x [x] ]
+   [x
+      [x
+        [x] ]
+      [x
+          [x [x] ]
+          [x
+             [x [x ] ] 
+             [x
+               [x  [x] ]
+               [x [x] ]]] ] ] ]
+\end{forest}
+\hspace{2em}
+\begin{forest}
+sm edges
+[x
+  [x [x]]
+  [x
+    [x [x]]
+    [x 
+      [x [x]]
+      [x [x]]]]]
+\end{forest}
+
+Answer: 1
+
+%\if0
+\item Assign categories to the numbered nodes.
+
+Ordnen Sie den Knotenzahlen Kategorien zu.
+
+Dabei gibt es auch die Wörter zur Auswahl, weil Teil der Aufgabe ist, die Spur richtig zu platzieren.
+
+Labels: NP, PP, AP, VP, S, CP, Adv, S/NP, VP/NP NP/NP, AP/NP, V$'$, CP/NP
+
+\begin{forest}
+sm edges
+[1
+  [2 [8]]
+  [3
+    [4 
+      [6 [9]]
+      [7 [10]]]
+    [5 [11]]]]
+\end{forest}
+
+
+\begin{forest}
+sm edges
+[S
+  [NP [Kim]]
+  [VP
+    [V$'$ 
+      [V [bought]]
+      [NP [the children,roof]]]
+    [NP [books]]]]
+\end{forest}
+
+%\fi
+
+\item Which of the following structures is suitable for the sentence in (\mex{1}).
+
+Welche der folgenden Strukturen ist für den Satz in (\mex{1}) sinnvoll?
+\ea
+\gll Attackiert der        Delphin jetzt den        Hai?\\
+     attacs     the.\NOM{} dolphin now   the.\ACC{} shark\\\german
+\glt `Does the dolphin attack the shark now?'
+\z
+
+
+\begin{forest}
+sm edges
+[x
+  [x
+    [x] ]
+  [x
+    [x [x] ]
+    [x
+       [x [x]]
+       [x
+          [x [x] ]
+          [x [x] ] ] ] ] ] 
+\end{forest}
+\hspace{2em}
+\begin{forest}
+sm edges
+[x
+  [x 
+    [x 
+      [x [x] ]
+      [x [x] ] ]
+    [x [x]]]
+  [x [x]]]
+\end{forest}
+\hspace{2em}
+\begin{forest}
+sm edges
+[x
+  [x
+    [x] ]
+  [x
+    [x [x] ]
+    [x
+       [x [x]]
+       [x [x] ] ] ] ]
+\end{forest}
+\hspace{2em}
+\begin{forest}
+sm edges
+[x
+  [x
+    [x 
+      [x 
+        [x [x] ]
+        [x [x] ] ]
+      [x [x]]]
+    [x [x]]]
+  [x [x]]]
+\end{forest}
+
+Antwort: 1
+
+\item Assign categories to the numbered nodes.
+
+Ordnen Sie den Knotenzahlen Kategorien zu.
+
+Dabei gibt es auch die Wörter zur Auswahl, weil Teil der Aufgabe ist, die Spur richtig zu platzieren.
+
+Labels: NP, PP, AP, VP, S, CP, Adv, S/NP, VP/NP NP/NP, AP/NP, V$'$, CP/NP
+
+\begin{forest}
+sm edges
+[1
+  [2
+    [4 [11] ] ]
+  [3
+    [5 [12] ]
+    [6
+       [7 [13]]
+       [8
+          [9 [14] ]
+          [10 [15] ] ] ] ] ] 
+\end{forest}
+
+\begin{forest}
+sm edges
+[S
+  [{V \sliste{ S$/\!/$V }} 
+    [V [attackiert$_k$;attacks] ] ]
+       [{S$/\!/$V}
+           [NP [der Delphin;the dolphin, roof] ]
+           [{V$'$$\!/\!/$V}
+             [Adv [jetzt;now]]
+             [{V$'$$\!/\!/$V}
+               [NP [den Hai;the shark, roof] ]
+               [{V$\!/\!/$V} [\_$_k$] ] ] ] ] ] 
+\end{forest}
+
+\item Which of the following structures is suitable for the sentence in (\mex{1}).
+
+Welche der folgenden Strukturen ist für den Satz in (\mex{1}) sinnvoll?
+\ea
+\gll Billedet             viser  Kim nu  Gert.\\
+     picture.\textsc{def} shows Kim now Gert\\\danish
+\glt `Kim now shows Gert the picture.'
+\z
+
+\begin{forest}
+sm edges
+[x
+   [x [x] ]
+   [x
+      [x
+        [x] ] 
+      [x
+          [x [x] ]
+          [x
+             [x
+               [x
+                 [x  [x] ]
+                 [x [x] ]]
+               [x [x ] ] ]
+             [x [x]] ] ] ] ]
+\end{forest}
+\hspace{2em}
+\begin{forest}
+sm edges
+[x
+   [x [x] ]
+   [x
+     [x
+       [x
+         [x [x] ] 
+         [x [x] ] ]
+       [x [x] ]]
+     [x [x] ]]]
+\end{forest}
+\hspace{2em}
+\begin{forest}
+sm edges
+[x
+   [x [x] ]
+   [x
+     [x
+       [x
+         [x
+           [x [x] ] 
+           [x [x] ] ]
+         [x [x] ]]
+       [x [x] ]]
+     [x [x] ]]]
+\end{forest}
+\hspace{2em}
+\begin{forest}
+sm edges
+[x
+   [x [x] ]
+   [x
+      [x [x] ]
+      [x
+          [x [x] ]
+          [x
+             [x [x]]
+             [x
+               [x
+                 [x [x] ]
+                 [x [x] ]]
+               [x [x ] ] ] ] ] ] ]
+\end{forest}
+
+\item Assign categories to the numbered nodes.
+
+Ordnen Sie den Knotenzahlen Kategorien zu.
+
+Dabei gibt es auch die Wörter zur Auswahl, weil Teil der Aufgabe ist, die Spur richtig zu platzieren.
+
+Labels: NP, PP, AP, VP, S, CP, Adv, S/NP, VP/NP NP/NP, AP/NP, V$'$, CP/NP
+
+
+\begin{forest}
+sm edges
+[1
+   [2 [15] ]
+   [3
+      [4
+        [6 [16] ] ]
+      [5
+          [7 [17] ]
+          [8
+             [9 [18]]
+             [10
+               [11
+                 [13  [19] ]
+                 [14 [20] ]]
+               [12 [21 ] ] ] ] ] ] ]
+\end{forest}
+
+
+\begin{forest}
+sm edges
+[S
+   [NP$_i$ [Billedet;picture.\textsc{def}] ]
+   [S/NP
+      [V \sliste{ S$/\!/$V }
+        [V [viser$_j$;shows] ] ]
+        [S$/\!/$V$\!$/NP
+          [NP [Kim;Kim] ]
+          [VP$\!/\!/$V$\!$/NP
+             [Adv [nu;now]]
+             [VP$\!/\!/$V$\!$/NP
+               [V$'$$\!/\!/$V
+                 [V$\!/\!/$V  [\_$_j$] ]
+                 [NP [Gert;Gert] ]]
+               [NP/NP [\_$_i$ ] ] ] ] ] ] ]
+\end{forest}
+
+
+
+\item Danish allows the following two orderings. Dänisch erlaubt die beiden folgenden Abfolgen:
+\eal
+\ex 
+\gll Billedet             viser Kim nu  Gert.\\
+     picture.\textsc{def} shows Kim now Gert\\\danish
+\glt `Kim now shows Gert the picture.'
+\ex 
+\gll Billedet             viser Kim Gert nu.\\
+     picture.\textsc{def} shows Kim Gert now\\
+\glt `Kim shows Gert the picture now.'
+\zl
+
+Which one coresponds to the following structure? Welche entspricht der folgenden Struktur?
+
+
+\begin{forest}
+sm edges
+[1
+   [2 [15] ]
+   [3
+      [4
+        [6 [16] ] ]
+      [5
+          [7 [17] ]
+          [8
+             [9
+               [11
+                 [13  [18] ]
+                 [14 [19] ]]
+               [12 [20 ] ] ]
+             [10 [21]] ] ] ] ]
+\end{forest}
+
+Answer: (\mex{0}b) The full tree is:
+
+\begin{forest}
+sm edges
+[S
+   [NP$_i$ [Billedet;picture.\textsc{def}] ]
+   [S/NP
+      [V \sliste{ S$/\!/$V }
+        [V [viser$_j$;shows] ] ]
+        [S$/\!/$V$\!$/NP
+          [NP [Kim;Kim] ]
+          [VP$\!/\!/$V$\!$/NP
+             [VP$\!/\!/$V$\!$/NP
+               [V$'$$\!/\!/$V
+                 [V$\!/\!/$V  [\_$_j$] ]
+                 [NP [Gert;Gert] ]]
+               [NP/NP [\_$_i$ ] ] ]
+             [Adv [nu;now]] ] ] ] ]
+\end{forest}
+
+%\fi
+\end{enumerate}
+
+
+\end{document}

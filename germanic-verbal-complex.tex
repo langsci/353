@@ -1,47 +1,58 @@
 %% -*- coding:utf-8 -*-
 
 \chapter{The verbal complex}
+\label{chap-verbal-complex}
 
 
 SOV languages like Dutch and German form verbal complexes. There are several indicators for this
 that were worked out in detail by Gunar \citet{Bech55a}. One way to analyze such verbal
 complexes is to assume that the verbs in a sentence form a unit that basically behaves like a
-simplex verb. This explains for instance why the arguments of the three verbs in Haider's example \citeyearpar{Haider90b} in (\mex{1}) can be scrambled:
-\ea\label{ex-weil-es-ihm-jemand-zu-lesen-versprochen-hat}
-\gll weil es ihm jemand zu lesen versprochen hat\\
-     because it him somebody to read promised has\\
-\glt `because somebody promised him to read it'
+simplex verb. This explains for instance why the arguments of the three verbs in Haider's example (\citeyear[\page
+  110]{Haider86c}; \citeyear[\page 128]{Haider90b}) in (\mex{1}) can be scrambled:
+\ea\label{ex-weil-es-ihr-jemand-zu-lesen-versprochen-hat}
+\gll weil es ihr jemand zu lesen versprochen hat\\
+     because it her somebody to read promised has\\
+\glt `because somebody promised her to read it'
 \z
-\emph{es} depends on \emph{zu lesen} `to read', \emph{ihm} `him' depends on \emph{versprochen}
+\emph{es} depends on \emph{zu lesen} `to read', \emph{ihr} `her' depends on \emph{versprochen}
 `promised' and \emph{jemand} is the subject and agrees with the finite verb \emph{hat} `has'
 (usually it is also treated as a dependent of the auxiliary \emph{hat}).
 
 It should be said that there is extreme variation in the German dialects as far as the serialization
-of elements in the verbal complex ist concerned. The governing verb is realized to the right of the
+of elements in the verbal complex is concerned. The governing verb is realized to the right of the
 embedded verb in Standard German: V$_3$ V$_2$ V$_1$ as in (\mex{0}), but there are examples like
 (\mex{2}) taken from \citew[376]{Mueller99a}.\footnote{
 Interview partner in: \emph{Insekten und andere Nachbarn -- ein Haus in Berlin}, ARD 15.11.1995.
 }
 \eal
-\ex Ich hätte stapelweise Akten kön\-nen haben.
-\ex weil ich mir das nich hab' lassen gefallen
-\ex wenn se mir hier würden rausschmeißen, \ldots
+\ex 
+\gll Ich hätte stapelweise Akten kön\-nen haben.\\
+     I   had   by.the.pile files can      have\\\hfill (German, Berlin dialect)
+\glt `I could have had files by the pile.'
+\ex 
+\gll weil ich mir das  nich hab' lassen gefallen\\
+     because I me that not  have let    please\\
+\glt `because I did not put up with it'
+\ex 
+\gll wenn se   mir hier würden rausschmeißen, \ldots\\
+     if   they me  here would  out.throw\\
+\glt `if they would kick me out here'
 \zl
 The orders in (\mex{0}) correspond to the order that is most natural in Dutch. (\mex{1}) shows some
 Dutch examples: 
 \eal
 \ex
-\gll dat Jan het boek wil lezen\\
-     that John the book wants read\\
-\glt 'that John wants to read the book' 
+\gll dat   Kim het boek wil lezen\\
+     that  Kim the book wants read\\
+\glt 'that Kim wants to read the book' 
 \ex
-\gll dat Jan Marie het boek laat lezen\\
-     that John Mary the book lets read\\
-\glt 'that John lets Mary read the book'
+\gll dat  Kim Sandy het boek laat lezen\\
+     that Kim Sandy the book lets read\\
+\glt 'that Kim lets Sandy read the book'
 \ex 
-\gll dat Jan Marie het boek wil laten lezen\\
-     that John Mary the book wants let read \\
-\glt 'that John wants to let Mary read the book'
+\gll dat Kim Sandy het boek wil laten lezen\\
+     that Kim Sandy the book wants let read \\
+\glt 'that Kim wants to let Sandy read the book'
 \zl
 
 SVO languages like Danish and English do not allow the arguments of embedded verbs to be scrambled
@@ -70,16 +81,29 @@ sm edges
               \sliste{ NP[\type{nom}], NP[\type{acc}]} }, name=lesen [lesen;read] ]
         [V\feattab{
 %              \vform \type{fin},\\
-              \sliste{ NP[\type{nom}], NP[\type{acc}]}, V}, name=wird [wird;will] ]
+              \sliste{ NP[\type{nom}], NP[\type{acc}], V }}, name=wird [wird;will] ]
 ]
 \draw[semithick,->] (lesen)..controls +(south east:2) and +(south west:2)..(wird);
 \end{forest}
 \caption{\label{fig-lesen-wird}Analysis of the verbal complex formation of \emph{lesen wird} `read
-  will' using argument composition}
+  will' using argument composition (preliminary version)}
 \end{figure}
 \emph{wird} `will' selects an infinitive without \emph{zu} and in addition its arguments. This
-infinitive (\emph{lesen} `read') is combined with the verb and hence is not contained in the valency list
+infinitive (\emph{lesen} `read') is combined with the verb and hence is not contained in the valence list
 of the mother node.
+
+Returning to our meal-shopping analogy from p.\,\pageref{page-shopping-analogy}, the verbal complex
+formation can be envisaged by imagining a young and helpful auxiliary verb helping out a person of
+the high risk group in the middle of a pandemic. Since high risk persons are not supposed to do
+shopping, the helpful person takes over their shopping list and does the shopping for them. In the
+case of auxiliary verbs the auxiliary verb just selects the main verb and apart from this does not
+require any further arguments apart from the ones taken over from the embedded verb. This means the
+auxiliary verb just does the shopping for the main verb. A very altruistic verb it is. Later we will
+have a look at verbs like \emph{try} and \emph{let} that do require their own arguments in addition
+to the ones of the embedded verb. This will be parallel to a shopping event where the helping person
+buys its own goods in addition to buying goods for somebody else.
+
+%Now, back to linguistics and to some details of the analysis: 
 The combination of \emph{lesen} and \emph{wird} behaves like a simplex verb in that it can be
 combined with its arguments in any order. Figure~\vref{fig-vc-nom-acc} shows the analysis of (\mex{1}a) and
 Figure~\vref{fig-vc-acc-nom} shows the analysis of (\mex{1}b).
@@ -102,11 +126,11 @@ sm edges
               \sliste{ }}
         [{NP[\type{nom}]} [keiner;nobody] ]
         [V\feattab{
-              \sliste{ NP[\type{nom}] }}
+              \sliste{ NP[\type{nom}] }}, s sep+=1em
           [{NP[\type{acc}]} [das Buch;the book, roof] ]
           [V\feattab{
 %              \vform \type{fin},\\
-              \sliste{ NP[\type{nom}], NP[\type{acc}]}} 
+              \sliste{ NP[\type{nom}], NP[\type{acc}]}}
              [V\feattab{
 %              \vform \type{bse},\\
               \sliste{ NP[\type{nom}], NP[\type{acc}]}} [lesen;read] ]
@@ -114,7 +138,8 @@ sm edges
 %              \vform \type{fin},\\
                 \sliste{ NP[\type{nom}], NP[\type{acc}], V }} [wird;will] ] ] ] ]
 \end{forest}}
-\caption{\label{fig-vc-nom-acc}Formation of a verbal complex and realization of arguments in normal order}
+\caption{\label{fig-vc-nom-acc}Formation of a verbal complex and realization of arguments in normal
+  order (preliminary version)}
 \end{figure}
 
 
@@ -140,27 +165,28 @@ sm edges
 %              \vform \type{fin},\\
                 \sliste{ NP[\type{nom}], NP[\type{acc}], V }} [wird;will] ] ] ] ]
 \end{forest}}
-\caption{\label{fig-vc-acc-nom}Formation of a verbal complex and scrambling of arguments}
+\caption{\label{fig-vc-acc-nom}Formation of a verbal complex and scrambling of arguments (preliminary version)}
 \end{figure}
 
-I follow \citet[Section~3.1.1]{Kiss95a} and represent the subject of non-finite verbs as the value of a special
-feature \subj. \subj differs from \spr and \comps in that it is not a valency feature. The reason
-for this special treatment is that the subject cannot be realized as a part of a non-finite verb
-phrase:
+I follow
+\citet[Section~3.1.1]{Kiss95a} and represent the subject of non-finite verbs as the value of a
+special feature \subj. \subj differs from \spr and \comps in that it is not a valence feature. The
+reason for this special treatment is that the subject cannot be realized as a part of a non-finite
+verb phrase:
 \eal
 \judgewidth{?*}
 \ex[]{
-\gll Das Buch lesen wird der Mann morgen.\\
-     the book read  will the man  tomorrow\\
-\glt `The man will read the book tomorrow.'
+\gll [Das Buch lesen] wird Aicke morgen.\\
+     \spacebr{}the book read  will Aicke  tomorrow\\
+\glt `Aicke will read the book tomorrow.'
 }
 \ex[*]{
-\gll [Der Mann lesen] wird das Buch morgen.\\
-     \spacebr{}the man  read  will the book tomorrow\\
+\gll [Aicke lesen] wird das Buch morgen.\\
+     \spacebr{}Aicke  read  will the book tomorrow\\
 }
 \ex[?*]{
-\gll [Der Mann das Buch lesen] wird morgen.\\
-     \spacebr{}the man  the book read will tomorrow\\
+\gll [Aicke das Buch lesen] wird morgen.\\
+     \spacebr{}Aicke  the book read will tomorrow\\
 }
 \zl
 The lexical item for the non-finite form of \emph{lesen} `to read' is given in (\mex{1}):
@@ -173,13 +199,13 @@ comps & \sliste{ NP[\type{acc}] }\\
 \z
 
 The following Attribute Value Matrix (AVM)\is{Attribute Value Matrix (AVM)} is a representation of the auxiliary verb \emph{werden} `will':
-\ea
+\eas
 \emph{werden} `will' non-finite form:\\
 \ms{
 subj  & \ibox{1}\\
-comps & \ibox{2} $\oplus$ \sliste{ V[ \vform \type{bse}, \textsc{lex}+, \subj \ibox{1}, \comps \ibox{2} ] }\\
+comps & \ibox{2} $\oplus$ \sliste{ V[\vform \type{bse}, \textsc{lex}+, \subj \ibox{1}, \comps \ibox{2}] }\\
 }
-\z
+\zs
 \emph{werden} selects a verb that has the \type{bse} form, that is an infinitive without \emph{zu}
 `to'. The embedded element has to be lexical (\textsc{lex}+), that is, a single word or a verbal
 complex. All phrases that are licensed by the Head-Complement Schema and the Specifier-Head Schema
@@ -191,17 +217,17 @@ which takes a nominative and a dative object.
 
 Before I turn to the details of the analysis, I have to provide the lexical items for the finite
 form of auxiliaries. Since the subject of finite verbs can of course be realized it has to be
-represented in one of the valency lists. As was discussed in Section~\ref{sec-intro-spr-comps},
+represented in one of the valence lists. As was discussed in Section~\ref{sec-intro-spr-comps},
 German subjects are represented in the \compsl of finite verbs. Hence the lexical item for
 \emph{wird} `will' has the following form:
-\ea
+\eas
 \emph{wird} `will' finite form:\\
 \ms{
 subj  & \sliste{}\\
-comps & \ibox{1} $\oplus$ \ibox{2} $\oplus$ \sliste{ V[ \vform \type{bse}, \textsc{lex}+, \subj \ibox{1}, \comps \ibox{2} ] }\\
+comps & \ibox{1} $\oplus$ \ibox{2} $\oplus$ \sliste{ V[\vform \type{bse}, \textsc{lex}+, \subj \ibox{1}, \comps \ibox{2}] }\\
 }
-\z
-This basically says that the valency of \emph{wird} consists of an embedded verb and whatever the
+\zs
+This basically says that the valence of \emph{wird} consists of an embedded verb and whatever the
 \subjl of this verb is plus whatever the \compsl of this verb is. This is exemplified for
 \emph{lesen wird} in Figure~\vref{fig-lesen-wird-details}.
 \begin{figure}
@@ -232,8 +258,8 @@ three verbs. Figure~\vref{fig-lesen-koennen-wird} shows the analysis of the verb
 can will' in sentences like (\mex{1}):
 \ea
 \label{ex-lesen-koennen-wird}
-\gll [dass] er das Buch lesen können wird\\
-     \spacebr{}that he the book read can will\\
+\gll [dass] sie das Buch lesen können wird\\
+     \spacebr{}that she the book read can will\\
 \z
 
 
@@ -272,8 +298,8 @@ Flip\is{Auxiliary Flip} or \emph{Oberfeldumstellung}\is{Oberfledumstellung@\emph
 to the left of the verbal complex rather than to the right of the modal. So instead of
 (\ref{ex-lesen-koennen-wird}) one can also use the order in (\mex{1}):
 \ea
-\gll [dass] er das Buch wird lesen können\\
-     \spacebr{}that he the book will read can\\
+\gll [dass] sie das Buch wird lesen können\\
+     \spacebr{}that she the book will read can\\
 \z
 \begin{figure}
 \centerfit{%
@@ -308,15 +334,15 @@ sm edges
 
 After having discussed the analysis of verbal complexes as they are known from the OV languages like
 German, Dutch, and Afrikaans, I want to briefly comment on the SVO languages like Danish and English
-and so on. Usually a head requires its argument to be fully saturated, that is the \sprv and the
-\compsv has to be the empty list. Verbal complexes are different: Words are combined directly. The
+and so on. Usually a head requires its argument to be saturated, that is, the
+\compsv has to be the empty list for NP, PPs, APs, CPs and sentential and VP arguments. Verbal complexes are different: words are combined directly. The
 VO languages differ from the OV languages in not allowing this. In VO languages the verb forms a
 phrase with its complements and this verb phrase may be embedded under another verb. (\mex{1}a)
 shows an example with auxiliary verbs, (\mex{1}b) is an example with a full verb that takes an
 infinitive verb phrase with \emph{to} and an object in addition.
 \eal
-\ex Peter [will [have [read the book]]].
-\ex Peter [promises Mary [to read the book]].
+\ex Kim [will [have [read the book]]].
+\ex Somebody [promised her [to read it]].
 \zl
 Languages like Danish and English only have the Head-Complement Schema and the Specifier-Head
 Schema, while languages like Dutch and German have an additional schema that can combine unsaturated
@@ -324,15 +350,21 @@ words.\todostefan{check whether this has to be explained better} The schema for 
 \begin{figure}
 \begin{forest}
 [{[\comps \ibox{1}]}
-  [\ibox{2} {[\textsc{lex}+]}]
+  [\ibox{2} ]
   [{[\comps \ibox{1} $\oplus$ \sliste{ \ibox{2} }]}]]
 \end{forest}
 \caption{\label{fig-pred-complex}Sketch of the Predicate Complex Schema}
 \end{figure}
 This schema is very similar to the Head-Complement Schema that was given on
-page~\pageref{fig-head-comp}. The difference is that the daughter in \ibox{2} has to be lexical ({\sc
-  lex}+)\isfeat{lex}. Therefore words and verbal complexes are compatible with this daughter while full phrases
-like \emph{das Buch lesen} `read the book' are not.
+page~\pageref{fig-head-comp}. The difference is that this schema does not license \lex$-$ elements
+as the Specifier-Head and Head-Compelement Schema do. Therefore, the combination of two verbs is
+compatible with \lex+ requirements by governing verbs and an embedding in even more complex verbal
+complexes is possible. Figure~\ref{fig-lesen-koennen-wird} is an example: the combination of
+\emph{lesen} `read' and \emph{können} `can' is compatible with the \lex+ requirement of \emph{wird}
+`will'. The Predicate Complex Schema also differs from the Head-Complement Schema in German in that
+it combines the head with the last element of the valence list. This is the embedded verb and it ha
+to be combined with the head before any other argument since one would not know what the other
+arguments are because they are taken over from the embedded verb.
 
 Before turning to the next phenomenon, I want to briefly discuss the alternative to the verb complex
 analysis presented here. One alternative suggestion was to analyze auxiliaries in German as VP
@@ -350,10 +382,11 @@ extracted from the VP and moved to the left periphery of the clause. This is sho
 \glt `that nobody will read the book'
 \z
 However, analyses that treat scrambling as movement are problematic since they predict additional
-readings of sentences that have quantifiers in their NPs (\citealp[\page 146]{Kiss2001a}; \citealp[Abschnitt~2.6]{Fanselow2001a}).
+readings of sentences that have quantifiers in their NPs (\citealp[\page 146]{Kiss2001a}; \citealp[Section~2.6]{Fanselow2001a}).
 
 
 Before I turn to the analysis of the verb position, I want to show how sentences with several verbs
+\label{page-English-Aux-VPs}
 in SVO languages can be analyzed. Figure~\vref{fig-vp-embedding-svo} shows the analysis of the English version of sentence
 (\ref{ex-dass-keiner-das-buch-lesen-wird}).
 \begin{figure}
@@ -385,15 +418,15 @@ licensed by the Head-Complement Schema that was sketched in Figure~\vref{fig-hea
 The equivalent of \emph{lesen können wird} `read can will' cannot be given here, since English modal
 verbs do not have non-finite forms, but one can construct examples with modals as the highest verb:
 \ea
-He [must [have [seen him]]]
+She [must [have [seen it]]].
 \z
 This sentence has a structure that is similar to the one in Figure~\ref{fig-vp-embedding-svo}:
 \emph{must} and \emph{have} both embedd VPs.
 
 Finally, Figure~\vref{fig-somebody-has-promised-him-to-read-it} shows the translation of
-(\ref{ex-weil-es-ihm-jemand-zu-lesen-versprochen-hat}):
+(\ref{ex-weil-es-ihr-jemand-zu-lesen-versprochen-hat}):
 \ea
-Somebody has promised him to read it.
+Somebody has promised her to read it.
 \z
 \emph{promise} is a verb that takes a subject, an object, and a VP complement. 
 \begin{figure}
@@ -403,21 +436,28 @@ sm edges
 [S
         [{NP[\type{nom}]} [somebody] ]
         [VP
-          [\vbar [V [promised] ]
-                 [{NP[\type{acc}]} [him] ] ]
-          [VP [V [to]]
-              [VP
-                [V [read] ]
-                [{NP[\type{acc}]} [the book, roof] ] ] ] ] ]
+            [V [has]]
+            [VP 
+              [\vbar [V [promised] ]
+                     [{NP[\type{acc}]} [her] ] ]
+              [VP [V [to]]
+                [VP
+                  [V [read] ]
+                  [{NP[\type{acc}]} [the book, roof] ] ] ] ] ] ]
 \end{forest}}
 \caption{\label{fig-somebody-has-promised-him-to-read-it}Embedding of a VP with verbs that take an
   additional object}
 \end{figure}
-Like in the analysis of (\ref{ex-nobody-gives-him-the-book}) on
-page~\pageref{ex-nobody-gives-him-the-book} -- which is repeated here as (\mex{1}) for convenience
+Like in the analysis of (\ref{ex-nobody-gave-the-child-a-book}) on
+page~\pageref{ex-nobody-gave-the-child-a-book} -- which is repeated here as (\mex{1}) for convenience
 -- the verb \emph{promised} is combined with its NP complement first and then with its VP
-argument. The VP consists of \emph{to} and another VP with an infinitive in base form. \emph{to} is
-analyzed as an auxiliary verb.\todostefan{add references} 
+argument.
+\ea
+\label{ex-nobody-gave-the-child-a-book-three}
+Nobody gave the child a book.
+\z 
+The VP argument of \emph{promised} in Figure~\ref{fig-somebody-has-promised-him-to-read-it} consists of \emph{to} and another VP with an infinitive in base form. \emph{to} is
+analyzed as an auxiliary verb \parencites[\page 600]{GPS82a-u}[\page 147]{Sag2020a}.
 It is important to note that the object \emph{him} cannot appear in any other position (appart from
 extraction to the left periphery). For instance, it cannot appear in the position of \emph{the book}
 and the same holds for \emph{the book}: This phrase cannot appear in any other place than in the
@@ -430,20 +470,41 @@ object position.
 \begin{enumerate}
 \item Sketch the analysis of the verbal complexes in the following examples:
 \eal
-\ex dass er darüber lachen wird
-\ex dass er darüber wird lachen müssen
-\ex dass er über diesen Witz wird haben lachen müssen
+\ex
+\gll dass sie darüber lachen muss\\
+     that she there.about laugh must\\\german
+\glt `that she has to laugh about it' 
+\ex 
+\gll dass sie darüber hat lachen müssen\\
+     that she there.about has laugh  must\\
+\glt `that she had to laugh about it' 
+\ex 
+\gll dass sie darüber     wird haben lachen müssen\\
+     that she there.about will have  laugh  must\\
+%\glt `that there will be a state in the future where she had to laugh about it'
 \zl
-\item Search for two sentences with a verbal complex in a newspaper or in corpora (COSMAS\footnote{%
-\url{https://cosmas2.ids-mannheim.de}, 2020-05-11.},
-  COW\footnote{%
-\url{https://corporafromtheweb.org/}, 2020-05-11.}) and
+You may omit the \spr values, since they are the empty list for all German verbs anyway.
+
+
+\item Search for two sentences with a verbal complex in a newspaper or in corpora (for example the
+  COSMAS corpus\footnote{%
+\url{https://cosmas2.ids-mannheim.de}, 2020-05-11.}) and
   analyze the verbal complexes.
 
 \item Search for verbal complexes with more than four verbs in a corpus and document your search.
 \end{enumerate}
 
 }
+
+\furtherreading{The analysis of verbal complexes in HPSG was first developed by \citet{HN89b,HN89a}.
+\citew{HN94a} is the first peer reviewed publication on this topic by Hinrichs \&
+Nakazawa. \citew{Kiss95a} is a monograph dealing with verbal complexes. \citet{Meurers2000b} also
+deals with verbal complexes including difficult cases like the so-called \emph{Zwischenstellung},
+which is no treated here. \citet{Mueller2002b} treats not just verbal complex but also other types
+of complex predicates like adjective verb complexes, resultative constructions and particle verbs.
+
+\citet{GS2021a} provide an overview about analyses of complex predicates in HPSG.}
+
 
 
 %      <!-- Local IspellDict: en_US -->

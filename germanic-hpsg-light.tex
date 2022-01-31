@@ -1,3 +1,75 @@
 %% -*- coding:utf-8 -*-
 \chapter{HPSG Light}
 \label{chap-HPSG-light}
+
+
+The theory behind what was explained in this book is Head-Driven Phrase Structure Grammar (HPSG)
+\parencites{ps}{ps2}{MuellerLehrbuch3}{HPSGHandbook}. However, HPSG is a rather complex theory and
+going into all the relevant details would be too much for an introduction into syntax at BA
+level. Hence, I simplyfied wherever possible. For example, I have been using sketchy schemata like
+the one in Figure~\ref{fig-spr-head-head-comps-final-rep} for Specifier-Head structures and Head-Complement structures. 
+\begin{figure}
+\hfill
+\begin{forest}
+[H\feattab{\spr \ibox{1},\\
+           \comps \ibox{2}}
+  [\ibox{3}]
+  [H\feattab{\spr \ibox{1} $\oplus$ \sliste{ \ibox{3} },\\
+              \comps \ibox{2} \eliste}]]
+\end{forest}
+\hfill
+\begin{forest}
+[H\feattab{\spr \ibox{1},\\
+           \comps \ibox{2}}
+  [H\feattab{\spr \ibox{1},\\
+             \comps  \sliste{ \ibox{3} } $\oplus$ \ibox{2}  ]}]
+  [\ibox{3}]]
+\end{forest}
+\hfill\mbox{}
+\caption{\label{fig-spr-head-head-comps-final-rep}Sketch of the Specifier-Head and Head-Complement Schema}
+\end{figure}
+While attribute-value matrices (AVMs) in HPSG are complex nested representations, I used rather
+simple lists of feature-value pairs throughout the book so far. The intention was to keep things
+simple and hence I used this way to depict schemata as little partial trees. However, not much is
+needed to extend what you have seen so far to what is standard in the fully worked out theory of
+Head-Driven Phrase Structure Grammar. 
+
+In what follows I first show how feature-value pairs can be used to encode constituent structure (Section~\ref{sec-HPSG-constituent-structure}) and
+then talk about the general makeup of linguistic descriptions in HPSG.
+
+\section{Constituent structure}
+
+
+\section{Structure of linguistic objects}
+
+\ea
+Lexical item for the word \emph{Grammatik} `grammar':\\
+\onems[word]{
+phonology    \phonliste{ Grammatik } \\[1mm]
+syntax-semantics  \ldots \ms[local]{ category  & \ms[category]{ head & \ms[noun]{ case & \ibox{1}
+                                                                                               }\\[3mm]
+                                                                               spr & \sliste{ Det[\textsc{case}~\ibox{1}] }\\
+                                                                               \ldots\\
+                                                                             } \\[10mm]
+                                          content & \ldots \ms[grammatik]{ inst & X 
+                                                                                    }
+            }
+}
+\z
+
+
+\section{Some details}
+
+
+Nonlocal depenendecies.
+
+
+
+
+
+
+
+
+
+
+%      <!-- Local IspellDict: en_US-w_accents -->

@@ -54,18 +54,50 @@
 
 \usepackage{./styles/oneline}
 
+
+\usepackage{./styles/biblatex-series-number-checks}
+
 \usepackage{langsci-lgr}
 \newcommand{\M}{\textsc{m}{}\xspace}        % use at own risk
 
-
 \usepackage{graphicx}
 
+\usepackage{soul}
 
-\usepackage{./styles/mycommands}% \spacebr
+%\usepackage{./styles/mycommands}% \spacebr
 
 
 \usepackage{langsci-gb4e}
 
+% fixes problem with to much vertical space between \zl and \eal due to the \nopagebreak
+% command.
+\makeatletter
+\def\@exe[#1]{\ifnum \@xnumdepth >0%
+                 \if@xrec\@exrecwarn\fi%
+                 \if@noftnote\@exrecwarn\fi%
+                 \@xnumdepth0\@listdepth0\@xrectrue%
+                 \save@counters%
+              \fi%
+                 \advance\@xnumdepth \@ne \@@xsi%
+                 \if@noftnote%
+                        \begin{list}{(\thexnumi)}%
+                        {\usecounter{xnumi}\@subex{#1}{\@gblabelsep}{0em}%
+                        \setcounter{xnumi}{\value{equation}}}
+% this is commented out here since it causes additional space between \zl and \eal 06.06.2020
+%                        \nopagebreak}%
+                 \else%
+                        \begin{list}{(\roman{xnumi})}%
+                        {\usecounter{xnumi}\@subex{(iiv)}{\@gblabelsep}{\footexindent}%
+                        \setcounter{xnumi}{\value{fnx}}}%
+                 \fi}
+\makeatother
+
+
+\makeatletter
+\def\eas{\ifnum\@xnumdepth=0\begin{exe}[(34)]\else\begin{xlist}[iv.]\fi\ex\begin{tabular}[t]{@{}p{.99\linewidth}@{}}}
+\makeatother
+
+\settowidth\jamwidth{(German)}
 
 %\usepackage{subfig}
 
@@ -80,12 +112,13 @@
 % It breaks the dependency grammar trees in forest.
 \usepackage{langsci-forest-setup}
 
-\providecommand\memoize[2][]{{#2}}
-\providecommand\memoizeset[1]{}
-\usepackage{memoize} % this is safe to comment out because of the stubs defined above
+\usepackage{memoize} 
+%\usepackage{nomemoize} % use this if memoize caues chaos.
 \memoizeset{
   memo filename prefix={germanic.memo.dir/},
 }
+% uncomment this if your figures change frequently and you do not want memoize to externalize them.
+%\memoizeset{readonly}
 
 
 
@@ -93,12 +126,66 @@
 % has to be loaded after forest-setup because of incompatibilities with the dg-style.
 \usepackage{german}\selectlanguage{USenglish}
 
-\usepackage{./styles/merkmalstruktur,./styles/abbrev,./styles/makros.2e,./styles/my-xspace,./styles/article-ex,./styles/additional-langsci-index-shortcuts,
+\usepackage{./styles/merkmalstruktur,./styles/abbrev,./styles/makros.2020,./styles/my-xspace,./styles/article-ex,./styles/additional-langsci-index-shortcuts,
 ./styles/eng-date,./styles/my-theorems}
+
+\usepackage{langsci-avm}
 
 % loaded in macros.2e \usepackage[english]{varioref}
 % do not stop and warn! This will be tested in the final version
-%\vrefwarning
+\usepackage[english]{varioref}
+\vrefwarning
+
+\newcommand\thefiguresref[2]{%
+ \vrefpagenum\firstnum{#1}%
+ \vrefpagenum\secondnum{#2}%
+\ifthenelse{\equal\firstnum\secondnum}%
+{the Figures~\ref{#1} and~\ref{#2}\vpageref[]{#1}}%
+{the Figures~\ref{#1} and~\ref{#2}}}
+
+\newcommand\figuresref[2]{%
+ \vrefpagenum\firstnum{#1}%
+ \vrefpagenum\secondnum{#2}%
+\ifthenelse{\equal\firstnum\secondnum}%
+{\iflanguage{german}{%
+die Abbildungen~\ref{#1} und~\ref{#2} \vpageref[]{#1}%
+}% end German
+{s~\ref{#1} and~\ref{#2} \vpageref[]{#1}}}%
+{\iflanguage{german}{%
+Abbildung~\ref{#1}\vpageref[]{#1} und Abbildung~\ref{#2} \vpageref{#2}%
+}% end German
+{%
+~\ref{#1}\vpageref[]{#1} and Figure~\ref{#2} \vpageref{#2}}}%
+}
+
+
+\newcommand\pagerefonlyifdifferent[2]{%
+\vrefpagenum\firstnum{#1}%
+\vrefpagenum\secondnum{#2}%
+\ifthenelse{\equal\firstnum\secondnum}%
+{}
+{\vpageref{#2}}}
+
+
+
+\newcommand\figuretwoonsamepagesref[2]{%
+ \vrefpagenum\firstnum{#1}%
+ \vrefpagenum\secondnum{#2}%
+\ifthenelse{\equal\firstnum\secondnum}%
+%{ on the same page as Figure~\ref{#1}}%
+{}%
+{ on page~\vpageref{#2}}%
+}
+\renewcommand{\reftextcurrent}{}
+
+\newcommand\refORregion[2]{%
+ \vrefpagenum\firstnum{#1}%
+ \vrefpagenum\secondnum{#2}%
+\ifthenelse{\equal\firstnum\secondnum}%
+{\pageref{#1}}%
+{\pageref{#1}--\pageref{#2}}%
+}
+
 
 
 % draw a grid for getting the coordinates

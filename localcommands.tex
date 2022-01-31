@@ -5,25 +5,39 @@
 
 \setcounter{secnumdepth}{4}
 
-\newcommand{\danish}{\jambox{(Danish)}}
-\newcommand{\dutch}{\jambox{(Dutch)}}
-\newcommand{\english}{\jambox{(English)}}
-\newcommand{\german}{\jambox{(German)}}
-\newcommand{\yiddish}{\jambox{(Yiddish)}}
-\newcommand{\icelandic}{\jambox{(Icelandic)}}
+\newcommand{\danish}{\jambox{(\ili{Danish})}}
+\newcommand{\dutch}{\jambox{(\ili{Dutch})}}
+\newcommand{\english}{\jambox{(\ili{English})}}
+\newcommand{\german}{\jambox{(\ili{German})}}
+\newcommand{\yiddish}{\jambox{(\ili{Yiddish})}}
+\newcommand{\icelandic}{\jambox{(\ili{Icelandic})}}
 
 
 
 
-\newcommand{\rot}[1]{{\color{red}#1}}
+%\newcommand{\rot}[1]{{\color{red}#1}}
+% like Lab Phon
+%\newcommand{\rot}[1]{{\color{lsLightWine}#1}}
+% like Niger Congo
+\newcommand{\rot}[1]{{\color{lsRed}#1}}
 \newcommand{\rotbf}[1]{\rot{#1}}
 \newcommand{\rotit}[1]{\rot{#1}}
-\newcommand{\gruen}[1]{{\color{green}#1}}
+%\newcommand{\gruen}[1]{{\color{green}#1}}
+% like OGS
+\newcommand{\gruen}[1]{{\color{lsDarkGreenOne}#1}}
 \newcommand{\gruenbf}[1]{\gruen{#1}}
 \newcommand{\gruensc}[1]{\gruen{#1}}
 \newcommand{\gruenit}[1]{\gruen{#1}}
 
-\newcommand{\blau}[1]{{\color{blue}#1}}
+%\newcommand{\blau}[1]{{\color{blue}#1}}
+
+% Topics at the grammar icours interface
+% lsMidDarkBlue
+
+% EOTMS
+% lsMidBlue
+\newcommand{\blau}[1]{{\color{lsMidBlue}#1}}
+
 \newcommand{\blaubf}[1]{\blau{#1}}
 \newcommand{\blausc}[1]{\blau{#1}}
 \newcommand{\blauit}[1]{\blau{#1}}
@@ -52,10 +66,18 @@
 
 \newcommand{\inlinetodostefan}[1]{{\memoizeset{disable}\todo[color=green!40,inline]{\footnotesize #1}}\xspace}
 
+\let\todostefaninline\inlinetodostefan
 
-\newcommand{\addpages}{\todostefan{add pages}}
-\newcommand{\addsource}{\todostefan{add source}}
-\newcommand{\addglosses}{\todostefan{add glosses}}
+\newcommand{\inlinetodoopt}[1]{\todo[color=green!40,inline]{\footnotesize #1}\xspace}
+\newcommand{\inlinetodoobl}[1]{\todo[color=red!40,inline]{\footnotesize #1}\xspace}
+
+\newcommand{\itd}[1]{\iftoggle{draft}{\inlinetodoobl{#1}}}
+\newcommand{\itdobl}[1]{\iftoggle{draft}{\inlinetodoobl{#1}}}
+\newcommand{\itdopt}[1]{\iftoggle{draft}{\inlinetodoopt{#1}}}
+
+\newcommand{\addpages}{\iftoggle{draft}{\todostefan{add pages}}}
+\newcommand{\addsource}{\iftoggle{draft}{\todostefan{add source}}}
+\newcommand{\addglosses}{\iftoggle{draft}{\todostefan{add glosses}}}
 
 
 
@@ -75,22 +97,56 @@
 \robustify\textit
 
 
+% https://tex.stackexchange.com/questions/95014/aligning-overline-to-italics-font/95079#95079
+\newbox\usefulbox
+
+\makeatletter
+    \def\getslant #1{\strip@pt\fontdimen1 #1}
+
+    \def\skoverline #1{\mathchoice
+     {{\setbox\usefulbox=\hbox{$\m@th\displaystyle #1$}%
+        \dimen@ \getslant\the\textfont\symletters \ht\usefulbox
+        \divide\dimen@ \tw@ 
+        \kern\dimen@ 
+        \overline{\kern-\dimen@ \box\usefulbox\kern\dimen@ }\kern-\dimen@ }}
+     {{\setbox\usefulbox=\hbox{$\m@th\textstyle #1$}%
+        \dimen@ \getslant\the\textfont\symletters \ht\usefulbox
+        \divide\dimen@ \tw@ 
+        \kern\dimen@ 
+        \overline{\kern-\dimen@ \box\usefulbox\kern\dimen@ }\kern-\dimen@ }}
+     {{\setbox\usefulbox=\hbox{$\m@th\scriptstyle #1$}%
+        \dimen@ \getslant\the\scriptfont\symletters \ht\usefulbox
+        \divide\dimen@ \tw@ 
+        \kern\dimen@ 
+        \overline{\kern-\dimen@ \box\usefulbox\kern\dimen@ }\kern-\dimen@ }}
+     {{\setbox\usefulbox=\hbox{$\m@th\scriptscriptstyle #1$}%
+        \dimen@ \getslant\the\scriptscriptfont\symletters \ht\usefulbox
+        \divide\dimen@ \tw@ 
+        \kern\dimen@ 
+        \overline{\kern-\dimen@ \box\usefulbox\kern\dimen@ }\kern-\dimen@ }}%
+     {}}
+    \makeatother
+
+
+
 \newcommand{\questions}[1]{~\newline\vspace*{-10mm}
-\tblssy{people}{Comprehension questions}{\setlist{leftmargin=*}#1}}
+{\memoizeset{disable}%
+\tblssy{people}{Comprehension questions}{\setlist{leftmargin=*}#1}}}
 %\tblssy{people}{Comprehension questions}{#1}}
 
-\newcommand{\exercises}[1]{
-\tblssy{pencil}{Exercises}{\setlist{leftmargin=*}#1}}
+\newcommand{\exercises}[1]{{\memoizeset{disable}%
+\tblssy{pencil}{Exercises}{\setlist{leftmargin=*}#1}}}
 %\tblssy{pencil}{Exercises}{#1}}
 
 \newcommand{\furtherreading}[1]{%~\newline\vspace*{-10mm}
-\tblssy{book}{Further reading}{#1}}
+{\memoizeset{disable}%
+\tblssy{book}{Further reading}{#1}}}
 
 \newcommand{\greyboxrest}[1]{
+{\memoizeset{disable}%
 \begin{mdframed}[style=greyexercise]
 #1
-\end{mdframed}
-}
+\end{mdframed}}}
 
 \mdfdefinestyle{greyexercisenologo}{%
 	everyline=true,ignorelastdescenders=true,
@@ -110,3 +166,22 @@
     \edef\tmp{\interactionmode\the\interactionmode\space}\batchmode\__morewrites_after_shipout:\tmp
   }
 \ExplSyntaxOff
+
+\newcommand{\term}[1]{\emph{\isi{#1}}}
+
+
+
+% Felix 09.06.2020: copy code from the third line into localcommands.tex: https://github.com/langsci/langscibook#defined-environments-commands-etc
+\patchcmd{\mkbibindexname}{\ifdefvoid{#3}{}{\MakeCapital{#3} }}{\ifdefvoid{#3}{}{#3 }}{}{\AtEndDocument{\typeout{mkbibindexname could not be patched.}}}
+
+
+
+% This does a linebreak for \gll for long sentences leaving space for the language at the right
+% margin.
+% St.Mü. 17.06.2021
+\newcommand{\longexampleandlanguage}[2]{
+\begin{tabularx}{.999\linewidth}[t]{@{}X@{}p{\widthof{(#2)}}@{}}
+\begin{minipage}[t]{\linewidth-1em}
+#1
+\end{minipage} & (\ili{#2})
+\end{tabularx}}

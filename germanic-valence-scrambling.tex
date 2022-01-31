@@ -1,0 +1,1390 @@
+%% -*- coding:utf-8 -*-
+\chapter{Valence, argument order and adjunct placement}
+\label{chap-valence}
+
+
+%\if0
+This chapter deals with the representation of valence information and sketches the basic structures that
+are assumed for SVO and SOV languages. I provide an account for scrambling in those languages that
+allow for it and discuss the fixed vs.\ free position of adjuncts.
+
+\section{Valence representations}
+\label{sec-valence}
+
+The word sequences in (\mex{1}) were already discussed in footnote~\ref{fn-ex-das-kind-erwartet} on
+page~\pageref{fn-ex-das-kind-erwartet}.
+\eal
+\ex[*]{
+\gll der        Delphin erwartet\\
+     the.\NOM{} dolphin expects\\
+}
+\ex[*]{
+\gll des        Kindes       der       Delphin den        Ball dem        Kind  gibt\\
+     the.\GEN{} child.\GEN{} the.\NOM{} dolphin the.\ACC{} ball the.\DAT{} child gives\\
+}
+\zl
+The problem is that there are too few (\mex{0}a) or too many NPs (\mex{0}b) present. The concept
+that is needed here is valence: like in chemistry it is assumed that heads have a certain potential
+to enter into stable relations with other material \citep[\page 239]{Tesniere2015a-u}. For example, the verb \emph{erwarten} `to
+expect' requires an NP in the nominative and one in the accusative. \emph{geben} `to give' is the
+prototypical ditransitive verb: it can be combined with an NP in the nominative, an NP in the dative
+and an NP in the accusative, but as (\mex{0}b) shows, a genitive object could not be integrated into
+a sentence. 
+
+The NPs in the examples in (\mex{1}) are arguments of the respective verbs:
+\eal
+\ex[]{
+\gll {}[dass] der        Delphin den        Menschen erwartet\\
+     \that{}  the.\NOM{} dolphin den.\ACC{} human   expects\\
+\glt `that the dolphin expects the human'
+}
+\ex[]{
+\gll {}[dass] der        Delphin dem        Kind  den        Ball gibt\\
+     \that{}  the.\NOM{} dolphin the.\DAT{} child the.\ACC{} ball gives\\
+\glt `that the dolphin gives the child the ball'
+}
+\zl
+Most syntactic arguments also fill a so-called \term{semantic role} in the semantic representation of the
+head. For example, the dolphin is the giver, the child is the recipient, and the ball is the item
+given. \citet[Chapter~48]{Tesniere2015a-u} suggested using the analogy of dramas for the explanation of valence: if we
+imagine the scene of giving, what has to happen on stage to call an event that is acted out a giving
+event? There have to be the three participants, a giver, a recipient and something that is
+given. Without these participants, we do not have a proper giving event. 
+
+In addition to elements like the NPs in the examples above, which are called arguments\is{argument},
+there are also so-called adjuncts. \emph{schnell} `quickly' and \emph{quickly} are examples for adjuncts:
+\eal
+\ex
+\gll \dass{} der        Delphin dem        Kind  schnell den        Ball gibt\\
+     \that{} the.\NOM{} dolphin the.\DAT{} child quickly the.\ACC{} ball gives\\
+\glt `that the dolphin gives the child the ball quickly'
+\ex that the dolphin gives the child the ball quickly
+\zl
+The adverbials provide additional information about the giving event, but they do not fill a
+semantic role.
+
+To make things complicated not all arguments have to be realized in a sentence. The ditransitive verb \emph{geben} can be
+realized with any subset of its arguments, provided the context fills in the missing information.
+\eal
+\ex 
+\gll Sie gibt Geld.\\
+     she gives money\\
+\glt `She gives money.'
+\ex 
+\gll Sie gibt den Armen.\\
+     she gives the poor\\
+\glt `She gives to the poor.'
+\ex\label{ex-sie-gibt} 
+\gll Sie gibt.\\
+     she gives\\
+\ex 
+\gll Gib!\\
+     give\\
+\zl
+In the case of (\mex{0}a), a certain charity setting could have been established and one can either
+donate food or money or contribute some voluntary work. In such a situation, (\mex{0}a) is perfectly
+fine. The transfered object in (\mex{0}b) is probably money. A possible context for (\mex{0}c) and
+(\mex{0}d) is the card game skat where the person who deals out is rotating among the
+players. (\mex{0}d) is an imperative. Even subjects can be dropped in imperatives since the referent
+of the subject is obvious: it is the addressee of the utterance. 
+
+The examples in (\mex{0}) show that the arguments of \emph{geben} `to give' may be omitted. This is
+not the case for the accusative object of \emph{erwarten} `to expect': it is obligatory. So
+arguments may be optional or obligatory, but adjuncts are always optional. While the number of
+argument is limited (by the number of available slots), the number of adjuncts is not: there can be
+arbitrarily many adjuncts in a phrase. (\mex{1}) shows an example with two adjuncts:
+\ea
+\gll \dass{} der        Delphin jetzt dem        Kind  schnell den        Ball gibt\\
+     \that{} the.\NOM{} dolphin now   the.\DAT{} child quickly the.\ACC{} ball gives\\
+\glt `that the dolphin now gives the child the ball quickly'
+\z
+
+The analogy to chemistry and drama may be confusing since H$_2$O is a very nice and stable molecule
+and it is helpful to imagine the parallel combination of a verb with its two
+arguments. Figure~\vref{fig-chemistry-valence} shows H$_2$O and the parallel combination of a verb
+with its arguments corresponding to (\mex{1}a). The problem is that a single H and an O do not form
+a stable combination, while (\mex{1}b) is fine: 
+\eal
+\ex Kirby helps Sandy.
+\ex Kirby helps.
+\zl
+\begin{figure}
+\centering
+\begin{forest}
+[O
+  [H] 
+  [H] ]
+\end{forest}
+\hspace{5em}
+\begin{forest}
+[helps
+ [Kirby]
+ [Sandy] ]
+\end{forest}
+\caption{\label{fig-chemistry-valence}Combination of hydrogen and oxygen and the combination
+of a verb with its arguments}
+\end{figure}%
+Of course one can simply assume that there is a version of \emph{helps} that has a valence different
+from the two-place valence usually assumed. Here is were the parallel breaks down since we do not
+have an oxygen atom with just one open slot for the hydrogen atom. The drama analogy adds to the
+confusion since the helping event described in (\mex{0}b) of course involves somebody who is
+helped. The solution to this problem is to distinguish between syntactic and semantic valence. The
+drama analogy helps us to find the semantic valence, the chemistry analogy is more about syntactic valence.
+
+Given that chemistry and drama have their problems, we may go for
+another\label{page-shopping-analogy} analogy: food. Let's assume you want to prepare a meal with pasta, tofu and a
+tomato sauce. For the tomato sauce you also need some onions. You put all the ingredients onto a
+shopping list and go to the shop. Once in the shop you realize that they run out of tofu. Your meal
+will work without tofu. Tofu is optional. Fortunately, the shop has plenty of pasta. You may choose
+between the different types and select the pasta type and brand you prefer. Some onions, tomatoes
+and your done. Wait, next to the cashier there are these gummy bears. OK, you take some of these as
+well although you did not want to and they have nothing to do with your meal and your shopping
+list. The gummy bears are the adjuncts.
+
+
+Back to linguistics: there are two ways of ensuring that arguments are realized together with their heads. The first one
+uses techniques that were introduced in Chapter~\ref{chap-psg-xbar}. If one uses flat phrase
+structure rules, one can make sure that certain arguments appear together with certain heads. A
+schema similar to the one in (\mex{1}) was discussed as (\ref{ditrans-schema}) on page~\pageref{ditrans-schema}.
+
+\ea
+\label{ditrans-schema-two}
+\begin{tabular}[t]{@{}l@{ }l@{ }l}
+S  & $\to$ & NP[\type{nom}] NP[\type{dat}] NP[\type{acc}] V[\type{ditransitive}]\\
+\end{tabular}
+\z
+
+Such schemata have been used in Generalized Phrase Structure Grammar \citep*{GKPS85a,Uszkoreit87a}, but they were
+abandoned later in favor of lexicalist models, that is, models assuming that information about
+arguments of a head is encoded in the lexical description of the head rather than in phrase
+structure rules \parencites{Jacobson87b}[Section~5.5]{MuellerGT-Eng1}{MWArgSt}. Reasons for abandoning the phrasal
+approach of GPSG were problems with so-called partial verb phrase frontings \citep{Nerbonne86a,Johnson86a} and with accounting for
+interactions with morphology \citep[Section~5.5.1]{MuellerGT-Eng1}.\footnote{%
+  Starting with influential work by Adele \citet{Goldberg95a} in the framework of \isi{Construction
+  Grammar}, the phrasal approaches had a revival \citep{GJ2004a}. Phrasal approaches are wide-spread
+  and also assumed in other frameworks 
+\cites{Haugereid2007a,Haugereid2009a,CJ2005a,Alsina96a,Christie2010a,% resultative constructions as phrasal constructions and 
+ADT2008a,ADT2013a}.            % argue for a phrasal analysis of the (Swedish) caused motion construction. 
+The problems that lead to the abandonment of GPSG are
+  ignored in the literature and newly introduced ones are not properly addressed. See
+  \cites{Mueller2006d,MuellerPersian,MuellerUnifying,MWArgSt,MWArgStReply,MuellerFCG,MuellerLFGphrasal,MuellerPotentialStructure,MuellerGT-Eng4,MuellerCxG}
+  for some discussion. Note that there are also lexical variants of Construction
+  Grammar. \citet*{SBK2012a}, introducing \sbcg, explicitly argue for a
+  lexical view citing some of the references just given. I am working in the framework of
+  Constructional HPSG \citep{Sag97a}, which is also underlying the proposals sketched in this book.
+} 
+ 
+In lexical approaches, the valence of a head is represented in its lexical entry in the form of a list with descriptions of
+the elements that belong to the head's valence. (\mex{1}) provides some prototypical examples:
+\ea
+\label{valence-specifications-German}
+\begin{tabular}[t]{@{}l@{~}l@{~}l}
+a. & \emph{schläft} `sleeps':        & \sliste{ NP[\type{nom}] }\\
+b. & \emph{kennt} `knows':           & \sliste{ NP[\type{nom}], NP[\type{acc}] }\\
+%b. & \emph{unterstützt} `supports':  & \sliste{ NP[\type{nom}], NP[\type{acc}] }\\
+c. & \emph{hilft} `helps':           & \sliste{ NP[\type{nom}], NP[\type{dat}] }\\
+d. & \emph{gibt} `gives':            & \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] }\\
+e. & \emph{wartet} `waits':          & \sliste{ NP[\type{nom}], PP[\type{auf}] }\\
+\end{tabular}
+\z
+The elements in such lists come with a fixed order. The order corresponds to the order of the
+elements in English and to the so-called unmarked order in German, that is, for ditransitive verbs
+the order is usually nom, dat, acc (see \citew{Hoehle82a} for comments on the unmarked order). This
+fixed order is needed for establishing the link between syntax and
+semantics\is{semantics}.\is{linking} This will be briefly discussed in Section~\ref{sec-linking}.
+
+Given such a valence representation for a verb like \emph{kennen} `know', one can assume a schema
+that combines an element from the valence list with the respective head and passes all unsaturated
+elements on to the result of the combination. The first step of the analysis of (\mex{1}) is
+provided in Figure~\vref{fig-ihn-kennt}.\footnote{%
+  Note that this sounds as if there were an order in which things have to be combined. This is not
+  the case. HPSG grammars are sets of constraints that can be applied in any order. It is for
+  explanatory purposes only that analyses are explained in a bottom up fashion throughout the book.%
+}
+\ea
+\label{ex-dass-niemand-ihn-kennt}
+\gll  {}[dass] niemand ihn kennt\\
+      \spacebr{}that nobody.\NOM{} him.\ACC{} knows\\ 
+\glt `that nobody knows him'
+\z
+\begin{figure}
+\centerfit{%
+\begin{forest}
+sm edges
+[{V \sliste{ NP[\type{nom}] } }
+  [{NP[\type{acc}]} [ihn;him] ]
+  [{V \sliste{ NP[\type{nom}], NP[\type{acc}] }} [kennt;knows]] ] ]
+\end{forest}}
+\caption{\label{fig-ihn-kennt}Analysis of \emph{ihn kennt} `him knows', valence information is represented in a list}
+\end{figure}
+The lexical item for \emph{kennt} `knows' has a valence description containing two NPs. In a first
+step \emph{kennt} is combined with its accusative object. The resulting phrase \emph{ihn kennt} `him
+knows' is something whose most importent constituent is a verb. Therefore it has V as its category
+label. Certain important properties of linguistic objects are called \emph{head features}\is{head feature}. Part of speech
+is one of these properties. It is assumed that all head features are passed up from the head in the tree
+automatically.
+
+The element that is not yet combined with \emph{kennt} `knows' is the \npnom. It is still
+represented in the valence list of \emph{ihn kennt} `him knows'. Figure~\vref{fig-niemand-ihn-kennt}
+shows the next step combining \emph{ihn kennt} with the subject \emph{niemand} `nobody'.
+\begin{figure}
+\centerfit{%
+\begin{forest}
+sm edges
+[V \eliste
+  [{NP[\type{nom}]} [niemand;nobody] ]
+  [{V \sliste{ NP[\type{nom}] } }
+    [{NP[\type{acc}]} [ihn;him] ]
+    [{V \sliste{ NP[\type{nom}], NP[\type{acc}] }} [kennt;knows]] ] ]
+\end{forest}}
+\caption{\label{fig-niemand-ihn-kennt}Analysis of (\emph{dass}) \emph{niemand ihn kennt} `that nobody
+  knows him'}
+\end{figure}
+The result is a linguistic object of category verb with the empty list as valence representation.
+
+As will be shown shortly, the schema that licenses structures like the V \eliste{} and V \sliste{ NP[\type{nom}] }  in
+Figure~\ref{fig-niemand-ihn-kennt} is a more abstract version of the rule in (\ref{psg-binaer}) on page~\pageref{psg-binaer}.
+
+% This can be depicted as in
+% Figure~\vref{fig-valence-German}, which is an example analysis of (\mex{1}).
+% \ea
+% \label{ex-dass-niemand-ihn-kennt}
+% \gll  {}[dass] niemand ihn kennt\\
+%       \spacebr{}that nobody.\NOM{} him.\ACC{} knows\\ 
+% \glt `that nobody knows him'
+% \z
+% \begin{figure}
+% \centerfit{%
+% \begin{forest}
+% sm edges
+% [{S \eliste}
+%   [{NP[\type{nom}]} [niemand;nobody] ]
+%   [{V$'$\sliste{ NP[\type{nom}] } }
+%     [{NP[\type{acc}]} [ihn;him] ]
+%     [{V \sliste{ NP[\type{nom}], NP[\type{acc}]}} [kennt;knows]] ] ]
+% \end{forest}}
+% \caption{\label{fig-valence-German}Analysis of (\emph{dass}) \emph{niemand ihn kennt} `that nobody
+%   knows him', valence information is represented in a list}
+% \end{figure}
+
+% The lexical item for \emph{kennt} `knows' has a valence description containing two NPs. In a first
+% step \emph{kennt} is combined with its accusative object. The resulting phrase \emph{ihn kennt} `him
+% knows' is something whose most importent constituent is a verb. Therefore it has a V in its category
+% label. Since \emph{ihn kennt} is not a sentence but something intermediate, it gets the label
+% V$'$.\footnote{%
+%   These labels are abbreviations for complex categories. Their internal makeup is given in
+%   Table~\ref{tab-abbreviations-v-vbar-s} on p.\,\pageref{tab-abbreviations-v-vbar-s}. The labels are
+%   similar to what is known from \xbart, but -- as was already mentioned in the previous chapter --
+%   the theory developed here is not following all the tenets of \xbart. For example, simple nouns
+%   like \emph{house} are N$'$ and there is no \nnull in the analysis of NPs like \emph{the house}.
+
+%   Section~\ref{sec-intro-spr-comps} explains why the abbreviation for \emph{ihn kennt} `him knows' is V$'$ rather than VP.
+% }
+%
+% The nodes for V$'$ and S are licensed by a schema that combined a head with one element of its
+% valence list. The full schema will be given in Chapter~\ref{chap-HPSG-light}, but we will discuss a
+% simplified version of it in Section~\ref{sec-intro-schemata}.
+
+It is probably helpful to return to our meal-shopping analogy. Assume we are using an app to
+organize our shopping lists. For our current meal we need pasta and tomatoes. They are listed in the
+app in a certain order (tomatoes, pasta) and there are little images attached to the products. Once
+we found something matching the pasta, we remove the pasta from the list and the remaining list
+contains an icon reminding us of the tomatoes. Once we have those, we remove them from the list and
+since nothing is left on the list, we pay. Linguistic structures are similar: we start
+with a verb selecting two NPs, we combine it with one NP and then with the second one. The result is
+a complete structure, something with an empty valence list.
+
+There are various ways to deal with optional arguments. The most simple one is to assume further
+lexical items selecting fewer arguments. For the example in (\ref{ex-sie-gibt}) one would assume the valence
+representation in (\mex{1}a) and for sentences with \emph{warten} `to wait' without prepositional
+object, one would assume (\mex{1}b) in addition to the representations in (\ref{valence-specifications-German}):
+\ea
+\begin{tabular}[t]{@{}l@{~}l@{~}l}
+a. & \emph{gibt} `gives':            & \sliste{ NP[\type{nom}] }\\
+b. & \emph{wartet} `waits':          & \sliste{ NP[\type{nom}] }\\
+\end{tabular}
+\z
+
+
+\section{Scrambling}
+\label{sec-scrambling}
+
+As we already saw in the data discussion in Chapter~\ref{sec-phenomenon-scrambling}, some languages allow for
+scrambling of arguments. For those languages one can assume that heads can combine with any of its
+arguments not necessarily beginning with the last one as it was the case in the analysis in Figure~\ref{fig-niemand-ihn-kennt}.
+Figure~\vref{fig-scrambling-German} shows the analysis of (\mex{1}).
+\ea
+\gll {}[dass] ihn niemand kennt\\
+     \spacebr{}that him.\ACC{} nobody.\NOM{} knows\\
+\glt `that nobody knows him'
+\z
+\begin{figure}
+\centerfit{%
+\begin{forest}
+sm edges
+[{V \eliste}
+   [{NP[\type{acc}]} [ihn;him] ]
+   [{V \sliste{ NP[\type{acc}] } }
+      [{NP[\type{nom}]} [niemand;nobody] ]
+      [{V \sliste{ NP[\type{nom}], NP[\type{acc}] }} [kennt;knows] ] ] ]
+\end{forest}}
+\caption{\label{fig-scrambling-German}Analysis of (\emph{dass}) \emph{ihn niemand kennt} `that nobody
+  knows him', languages that allow for scrambling permit the saturation of arguments in any order}
+\end{figure}
+Rather than combining the verb with the accusative argument (the object) first, it is combined with
+the nominative (the subject) and the accusative (the object) is added in a later step.
+
+
+\section{SVO: Languages with fixed SV order and valence features}
+\label{sec-intro-schemata}
+\label{sec-intro-spr-comps}
+
+The last section demonstrated how verb-final sentences in German can be analyzed. Of course it is
+easy to imagine how this extends to VSO languages: The head is initial and combines with the first
+element in the valence list first and then with all the other elements. However, nothing has been
+said about the SVO languages so far. In languages like Danish, English, and so on all objects are
+realized after the verb as in (\mex{1}), it is just the subject that preceedes the verb.
+\ea
+Kim gave Sandy the book.
+\z
+The verb together with its objects forms a unit in a certain sense: it can be fronted (\mex{1}a). It can be
+selected by dominating verbs (\mex{1}b), it can be coordinated (\mex{1}c), and it is the place where adjuncts attach to (\mex{1}d--e).
+\eal
+\ex John promised to read the book and [read the book], he will.
+\ex He will [read the book].
+\ex Kim [[sold the car] and [bought a bicycle]]. 
+\ex He often [reads the book].
+%\ex He [reads the book] often.
+\ex \ldots{} [often [read the book] slowly], he will.
+\zl
+This can be modeled adequately by assuming two valence lists: one for the complements (\comps short for \textsc{complements}\isfeat{comps}) and
+one for the subject. The list for the subject is called \textsc{specifier} list
+(\spr).\isfeat{spr}\footnote{%
+  There are various versions of HPSG: \citet[Chapter~3.2]{ps} assumed that all arguments of a head are
+  represented in one list. This list was called \subcatl. \citet{Borsley87a} argued that one should
+  use several valence features (\subj, \spr, and \comps) and this was adopted in
+  \citew[Chapter~9]{ps2}: subjects of verbs were selected via \subj and determiners via
+  \spr. \citet*[Chapter~4.3]{SWB2003a} assume that both subjects and determiners are selected via \spr, which is
+  what is assumed in the grammars developed here too. \citet[Section~3.3]{Sag2012a} presents a versions of HPSG
+  called Sign-Based Construction Grammar (SBCG) which assumes one valence list for all arguments a
+  it was common in 1987. This return to an abandoned approach came without any argumentation. Hence, I do not adopt this
+  variant of HPSG but stick to the separation of subjects and other arguments to \spr and \comps. I
+  will not use \subj as a valence feature, but it will be introduced in the analysis of verbal
+  complexes in Chapter~\ref{chap-verbal-complex}.
+} The specifier list plays a role both in the analysis of sentences and in the analysis of noun phrases. Nouns
+select their determiner via \spr and all their other arguments via \comps. Figure~\vref{fig-svo}
+shows the analysis of the sentence (\mex{1}) using the features \spr and \comps.
+\ea
+Nobody knows him.
+\z
+\begin{figure}
+\centerfit{%
+\begin{forest}
+sm edges
+[{V[\spr \eliste, \comps \eliste]}, name=S
+   [{NP[\type{nom}]} [nobody] ]
+   [V\feattab{
+      \spr \sliste{ NP[\type{nom}] }, \comps \sliste{}}, name=VP
+     [V\feattab{
+         \spr \sliste{ NP[\type{nom}] },\\
+         \comps \sliste{ NP[\type{acc}] }} [knows] ]
+        [{NP[\type{acc}]} [him] ] ] ]
+\node [right=4cm] at (S)
+    {
+        = S
+    };
+\node [right=4cm] at (VP)
+    {
+        = VP
+    };
+\end{forest}}
+\caption{\label{fig-svo}Analysis of the SVO order with two separate valence features}
+\end{figure}
+The \compsl of \emph{knows} contains a description of the accusative object and the accusative
+\emph{him} is combined in a first step with \emph{knows}. In addition to the accusative object
+\emph{knows} selects for a subject. This selection is passed on to the mother node, the VP. Hence,
+the \sprv of \emph{knows him} is identical to the \sprv of \emph{knows}. The VP \emph{knows him}
+selects for a nominative NP. This NP is realized as \emph{nobody} in Figure~\ref{fig-svo}. The
+result of the combination of \emph{knows him} with \emph{nobody} is \emph{nobody knows him}, which
+is complete: It has both an empty \sprl and an empty \compsl. The two rules that are responsible for
+the combinations in Figure~\ref{fig-svo} are called the Specifier-Head Schema and the
+Head-Complement Schema. I use VP as abbreviation for something with a verbal head and an empty \compsl and at least
+one element in the \sprl and S as abbreviation for something with a verbal head and empty lists for
+both the \spr and the \compsv.
+
+In Section~\ref{sec-scrambling} it was explained how scrambling can be accounted for: the rules that
+combine heads with their arguments can take the arguments from the list in any order. For languages
+with stricter constituent order requirements the rules are stricter: the arguments have to be taken
+off the list consistently from the beginning or from the end. So for English and Danish one starts
+at the beginning of the list and for head-final languages without scrambling one starts at the end
+of the list. Figure~\ref{fig-svo-ditrans} shows the analysis of a sentence with a ditransitive verb.
+\begin{figure}
+\centerfit{%
+\begin{forest}
+sm edges
+[{V[\spr \eliste, \comps \eliste]}
+   [{NP[\type{nom}]} [Kim] ]
+   [V\feattab{
+      \spr \sliste{ NP[\type{nom}] }, \comps \sliste{}}
+     [V\feattab{
+         \spr \sliste{ NP[\type{nom}] },\\
+         \comps \sliste{ PP[\type{to}] }}
+       [V\feattab{
+           \spr \sliste{ NP[\type{nom}] },\\
+           \comps \sliste{ NP[\type{acc}], PP[\type{to}] }} [gave] ]
+         [{NP[\type{acc}]} [a book, roof] ] ]
+       [{PP[\type{to}]} [to Sandy, roof] ] ] ]
+\end{forest}}
+\caption{\label{fig-svo-ditrans}Analysis of the SVO order with two separate valence features and two
+  elements in \comps}
+\end{figure}
+The accusative object is the first element in the \compsl and it is combined with the verb
+first. The result of the combination is a verbal projection that has the PP[\type{to}] as the sole
+element in the \compsl. It is combined with an appropriate PP in the next step resulting in a verbal
+projection that has an empty \compsl (a VP).
+
+
+The analysis of our first German example in Figure~\ref{fig-niemand-ihn-kennt} did not use a name
+for the valence list. So the question is: How does the analysis of German relate to the analysis of
+English using \spr and \comps. A lot of researchers from various frameworks argued that it is not
+useful to distinguish the subjects of finite verbs from other arguments. All the tests that have
+been used to show that subjects in English differ from complements do not apply to the arguments of
+finite verbs in German. Hence, researchers like \citet{Pollard90a}, \citet{Haider93a}, 
+\citet[\page 376]{Eisenberg94b}, and \citet{Kiss95a} argued for so-called subject as complement
+analyses.\itdopt{Provide examples.} Figure~\vref{fig-spr-german} shows the adapted analysis of
+(\ref{ex-dass-niemand-ihn-kennt}) -- repeated here as
+(\ref{ex-dass-niemand-ihn-kennt-two}):
+\ea
+\label{ex-dass-niemand-ihn-kennt-two}
+\gll  {}[dass] niemand ihn kennt\\
+      \spacebr{}that nobody.\NOM{} him.\ACC{} knows\\ 
+\glt `that nobody knows him'
+\z
+\begin{figure}
+\centerfit{%
+\begin{forest}
+sm edges
+[{V[\spr \eliste, \comps \eliste]}, name=S
+        [{NP[\type{nom}]} [niemand;nobody] ]
+        [{V\feattab{
+              \spr \sliste{ }, \comps \sliste{ NP[\type{nom}] } }}, name = Vs
+          [{NP[\type{acc}]} [ihn;him] ] 
+          [V\feattab{
+              \spr \sliste{  },\\
+              \comps \sliste{ NP[\type{nom}], NP[\type{acc}]}} [kennt;knows] ]
+] ]
+\node [right=4cm] at (S)
+    {
+        = S
+    };
+\node [right=4cm] at (Vs)
+    {
+        = V$'$
+    };
+\end{forest}}
+\caption{\label{fig-spr-german}The analysis of a German sentence with \spr and \compsl}
+\end{figure}
+The difference between German and English is that German contains all arguments in the \compsl of
+the finite verb and no arguments in the \sprl. Since the elements in the \compsl can be combined
+with the head in any order, it is explained why all permutations of arguments are
+possible. Specifiers are realized to the left of their head. This is the same for German and
+English. For German this is not relevant in the verbal domain, but the Specifier-Head Schema, which
+is introduced shortly, is used in the analysis of noun phrases.
+
+Throughout the remainder of this book I use the abbreviations in Table~\vref{tab-abbreviations-v-vbar-s}.
+\begin{table}
+ \begin{tabular}[t]{@{}l@{ = }l}\lsptoprule
+             S  & V[\spr \eliste, \comps \eliste]\\
+             VP & V[\spr \sliste{ NP[\type{nom}] }, \comps \sliste{}]\\
+             V$'$ & all other V projections apart from verbal complexes\\[2pt]
+             NP & N[\spr \eliste, \comps \eliste]\\
+             N$'$ & N[\spr \sliste{ Det }, \comps \sliste{}]\\\lspbottomrule
+             \end{tabular}
+\caption{\label{tab-abbreviations-v-vbar-s}Abbreviations for S, VP, and V$'$ and NP, N$'$}
+\end{table}
+
+\section{Immediate dominance schemata}
+
+In Section~\ref{sec-valence} I already mentioned that the non-terminal nodes in a tree, that is, the
+nodes that are not the leaves of the tree, are licensed by schemata similar to those introduced in
+Chapter~\ref{sec-PSG-Merkmale} and~\ref{sec-xbar}. In fact, the schemata are even more abstract than
+\xbar schemata since they do not make any statements about linear order of the daughters. The
+two schemata discussed in this section are sketched here as (\mex{1}):
+\ea\label{schema-head-spr-and-head-comps-preliminary}
+Specifier-Head Schema and Head-Complement Schema (preliminary)
+\begin{tabular}[t]{@{}l@{ }l@{}}
+H[\spr \ibox{1}]   & $\to$ H[\spr \ibox{1} $\oplus$ \sliste{ \ibox{2} }, \comps \eliste]\hspace{1em}\ibox{2}  \\
+H[\comps \ibox{1}] & $\to$ H[\comps \sliste{ \ibox{2} } $\oplus$ \ibox{1}]\hspace{1em}\ibox{2} \\
+\end{tabular}
+\z
+
+
+Syntactic rules are usually called schemata since they are rather abstract. 
+%The details about such schemata will be given in Chapter~\ref{chap-HPSG-light}, 
+The details about such schemata are given in more formal HPSG literature like
+\citew[Chapter~4]{MuellerLehrbuch3} or \citew{AB2021a}, 
+but Figure~\vref{fig-spr-head} and
+Figure~\vref{fig-head-comp} provide the respective tree representations.
+\begin{figure}
+\begin{forest}
+[H\feattab{\spr \ibox{1}}%,\\
+           %\comps \eliste}
+  [\ibox{2}]
+  [H\feattab{\spr \ibox{1} $\oplus$ \sliste{ \ibox{2} },\\
+             \comps \eliste}
+  ]]
+\end{forest}
+\caption{\label{fig-spr-head}Sketch of the Specifier-Head Schema (preliminary)}
+\end{figure}
+The H stands for \emph{head}. The term \term{head daughter} is used for the daughter that either is
+the head of a phrase or contains the head of the phrase (\eg the verb in a sentence or the noun in a
+noun phrase). \emph{append} ($\oplus$) is a relation that concatenates two 
+lists. For instance the concatenation of \sliste{ \normalfont a } and \sliste{ \normalfont b } is
+\sliste{ \normalfont a, b }. The concatenation of the empty list \eliste{} with another list yields
+the latter list. To give some examples that are of relevance in this chapter consider the list
+\sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc} ] }. \emph{append} can be used to append two
+lists resulting in our list in the following ways:
+\eal
+\ex \eliste{} $\oplus$ \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] } = \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] }
+\ex \sliste{ NP[\type{nom}] } $\oplus$ \sliste{ NP[\type{dat}], NP[\type{acc}] } = \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] }
+\ex \sliste{ NP[\type{nom}], NP[\type{dat}] } $\oplus$ \sliste{ NP[\type{acc}] } = \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] }
+\ex \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] } $\oplus$ \eliste{} = \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] }
+\zl
+The schema in Figure~\ref{fig-spr-head} takes a list apart in such a way that a list with a
+singleton element ( \sliste{ \ibox{2} } ) and a remaining list \iboxb{1} results. Assuming the
+three-element list with nom, dat and acc elements, this would be the case in (\mex{0}c) and \ibox{2} would be NP[\type{acc}] and
+\ibox{1} would be \sliste{ NP[\type{nom}], NP[\type{dat}] }. In this book, the \sprl has at most one element.\footnote{
+  But see \citew{MOe2013b} for an analysis of \isi{object shift} in \ili{Danish} assuming multiple elements in
+  the \sprl.
+} It can be an NP[\type{nom}] in the case of verbs in the SVO languages or the determiner, if
+the head is a noun. If one splits a list with a singleton element into a list containing one element
+and a rest, the rest will always be the empty list. Hence, with the lists at the right-hand side of the equations in (\mex{1}), \ibox{1} will be the
+empty list and \ibox{2} will be NP[\type{nom}] and Det, respectively. 
+\eal
+\ex \eliste{} $\oplus$ \sliste{ NP[\type{nom}] } = \sliste{ NP[\type{nom}] }
+\ex \eliste{} $\oplus$ \sliste{ Det } = \sliste{ Det }
+\zl
+
+For a schema like the one in Figure~\ref{fig-spr-head} to apply, the descriptions of the
+daughters have to match the actual daughters. For instance \emph{sleeps} is compatible with the
+right daughter: it has an NP[\type{nom}] in its \sprl. When \emph{sleeps} is realized as a
+daughter of the schema in Figure~\ref{fig-spr-head}, \ibox{2} is instantiated as
+NP[\type{nom}]. Therefore the left daughter has to be compatible with an NP[\type{nom}]. It can be
+realized as a simple pronoun like \emph{she} or a complex NP like \emph{the brown squirrel}. Two
+analyses are shown in Figure~\vref{fig-she-sleeps-the-brown-squirrel-sleeps}.
+\begin{figure}
+\hfill
+\begin{forest}
+sm edges
+[V\feattab{\spr \eliste,\\
+           \comps \eliste}
+  [{\ibox{1} NP[\type{nom}]} [she]]
+  [V\feattab{\spr \sliste{ \ibox{1} NP[\type{nom}] },\\
+             \comps \eliste} [sleeps]]]
+\end{forest}
+\hfill
+\begin{forest}
+sm edges
+[V\feattab{\spr \eliste,\\
+           \comps \eliste}
+  [{\ibox{1} NP[\type{nom}]} [the brown squirrel,roof]]
+  [V\feattab{\spr \sliste{ \ibox{1} NP[\type{nom}] },\\
+             \comps \eliste} [sleeps]]]
+\end{forest}\hfill\mbox{}
+\caption{Head-Specifier phrases with a subject and an intransitive verb}\label{fig-she-sleeps-the-brown-squirrel-sleeps}
+\end{figure}
+The \ibox{1} in Figure~\ref{fig-she-sleeps-the-brown-squirrel-sleeps} says that whatever is in the
+\sprl is identified with whatever is the other element in the tree. I wrote down \npnom following
+the \ibox{1} in both the NP node and within the \sprl, but it would have been sufficient to mention
+\npnom at one of the two places. The actual number in the box does not matter. What matters is where the same
+number appears in the trees or structures. I usually start with \ibox{1} at the top of the tree and
+use consecutive number for the following sharings.
+
+Figure~\ref{fig-nobody-gave-the-child-a-book} on p.\,\pageref{fig-nobody-gave-the-child-a-book}
+below shows an example analysis with a ditransitive verb also involving the Specifier-Head
+Schema. The specification of the \compsv of the head daughter in the Specifier-Head Schema ensures
+that the verb is combined with its complements before the specifier is added.
+
+Apart from its use for the analysis of subject--VP combinations in the SVO languages, the Specifier-Head Schema is also
+used for the analysis of NPs in all the Germanic languages. Figure~\ref{fig-spr-head-the-squirrel} shows the analysis of the NP \emph{the squirrel}.
+\begin{figure}
+\begin{forest}
+[{N[\spr \eliste, \comps \eliste]}
+  [\ibox{1} Det [the]]
+  [{N[\spr \sliste{ \ibox{1} }, \comps \eliste]} [squirrel]]]
+\end{forest}
+\caption{\label{fig-spr-head-the-squirrel}Analysis of the NP \emph{the squirrel}}
+\end{figure}
+\emph{squirrel} selects for a determiner and the result of combining \emph{squirrel} with a determiner is a
+complete nominal projection, that is, an NP. There are also nouns like \emph{picture} that take a
+complement:
+\ea
+a picture of Kim
+\z
+The combination of \emph{picture} and its complement \emph{of Kim} is parallel to the combination of
+a verb with its object in VO languages with fixed constituent order. For such combinations we need a separate schema: the Head-Complement Schema,
+which is given in Figure~\ref{fig-head-comp}.
+\begin{figure}
+\begin{forest}
+[{H[\comps \ibox{1}]}
+  [{H[\comps  \sliste{ \ibox{2} } $\oplus$ \ibox{1}  ]}]
+  [\ibox{2}]]
+\end{forest}
+\caption{\label{fig-head-comp}Sketch of the Head-Complement Schema (preliminary)}
+\end{figure}
+The schema splits the \compsl of a head into an initial list with one element \iboxb{2}, which is
+realized as the complement daughter to the right.\footnote{%
+  In principle daughters are unordered in HPSG as they were in GPSG \citep{GKPS85a}. Special linearization rules are
+  used to order a head with respect to its siblings in a local tree. So a schema licensing a tree
+  like the one in Figure~\ref{fig-head-comp} would also license a tree with the daughters in a
+  different order unless one had linearization rules that rule this out. See
+  \citew{MuellerOrder} for an overview of approaches to constituent order in HPSG. Linear precedence
+  rules are discussed in more detail in Section~\ref{sec-lp-rules}.
+}
+This schema licenses both the combination of \emph{gave} and \emph{the child} and the combination of
+\emph{gave the child} and \emph{a book} in Figure~\vref{fig-nobody-gave-the-child-a-book}, which shows the
+analysis of (\mex{1}).\footnote{%
+  English nouns and determiners do not inflect for case. However, case is manifested at pronouns:
+  \emph{he} (nominative), \emph{his} (genitive), \emph{him} (accusative). Hence, verbs in double object
+  constructions select for two accusatives rather than for dative and accusative as in German. 
+}
+\ea
+\label{ex-nobody-gave-the-child-a-book}
+Nobody gave the child a book.
+\z
+\begin{figure}
+\centerfit{%
+\begin{forest}
+sm edges
+[{V[\spr \eliste, \comps \eliste]}
+   [{\ibox{1} NP[\type{nom}]} [nobody] ]
+   [V\feattab{
+      \spr \sliste{ \ibox{1} NP[\type{nom}] }, \comps \sliste{}}
+     [V\feattab{
+         \spr \sliste{ NP[\type{nom}] },\\
+         \comps \sliste{ \ibox{2} NP[\type{acc}] }} 
+        [V\feattab{
+           \spr \sliste{ NP[\type{nom}] },\\
+           \comps \sliste{ \ibox{3} NP[\type{acc}], \ibox{2} NP[\type{acc}]}} [gave] ]
+        [{\ibox{3} NP[\type{acc}]} [the child,roof] ] ]
+     [{\ibox{2} NP[\type{acc}]} [a book,roof ] ] ] ]
+\end{forest}}
+\caption{\label{fig-nobody-gave-the-child-a-book}Analysis of the sentences with a ditransitive verb}
+\end{figure}
+
+To keep things simple, the Specifier-Head Schema did not mention the \compsv of the mother. The
+Head-Complement Schema did neither mention the \sprv of the head daughter nor the one of the mother. But the
+respective values are important, since something has to be said about these values in structures
+that are licensed by these schemata. If the \sprv in the combination of \emph{gave} and \emph{the
+  child} would not be constrained by the Head-Complement Schema, an value would be possible. This
+includes a \sprl containing two genitive NPs and an accusative NP. Sequences like (\mex{1}) would be
+licensed:
+
+\ea[*]{
+his his him gave the child a book
+}
+\z
+To avoid such unspecified \sprvs, the \sprv of the head daughter is identified with the \sprv of the
+mother node in the schema. This is the \ibox{1} in (\mex{1}b). Similarly, the \compsv of the mother
+in Specifier-Head phrases has to be specified to be identical to the \compsv of the head daughter
+(\ibox{2} in (\mex{1}a)) and hence the empty list.
+
+\ea\label{schema-head-spr-and-head-comps}
+Specifier-Head Schema and Head-Complement Schema (final)
+\begin{tabular}[t]{@{}l@{~}l@{ }l@{}}
+a. & H[\spr \ibox{1}, \comps \ibox{2}] & $\to$ H[\spr \ibox{1} $\oplus$ \sliste{ \ibox{3} }, \comps \ibox{2} \eliste]\hspace{1em}\ibox{3}  \\
+b. & H[\spr \ibox{1}, \comps \ibox{2}] & $\to$ H[\spr \ibox{1}, \comps \ibox{2} $\oplus$ \sliste{ \ibox{3} }]\hspace{1em}\ibox{3} \\
+\end{tabular}
+\z
+Figure~\vref{fig-spr-head-head-comps-final} shows the final versions of the two schemata.
+\begin{figure}
+\hfill
+\begin{forest}
+[H\feattab{\spr \ibox{1},\\
+           \comps \ibox{2}}
+  [\ibox{3}]
+  [H\feattab{\spr \ibox{1} $\oplus$ \sliste{ \ibox{3} },\\
+              \comps \ibox{2} \eliste}]]
+\end{forest}
+\hfill
+\begin{forest}
+[H\feattab{\spr \ibox{1},\\
+           \comps \ibox{2}}
+  [H\feattab{\spr \ibox{1},\\
+             \comps  \sliste{ \ibox{3} } $\oplus$ \ibox{2}  ]}]
+  [\ibox{3}]]
+\end{forest}
+\hfill\mbox{}
+\caption{\label{fig-spr-head-head-comps-final}Sketch of the Specifier-Head and Head-Complement Schema}
+\end{figure}
+
+
+
+
+\section{Scrambling and free VO/OV order}
+
+Now, in order to analyze languages with free constituent order, we need a more liberal variant of
+the schema in Figure~\ref{fig-head-comp}. Figure~\vref{fig-head-comp-free} splits the \compsl of a
+head into three parts: a list \ibox{1}, a list containing exactly one element \sliste{ \ibox{3} }
+and a third list \ibox{2}. The element of the second list is realized as the complement of the head.
+\begin{figure}
+\begin{forest}
+[{H[\comps \ibox{1} $\oplus$ \ibox{2}]}
+  [\ibox{3}]
+  [{H[\comps  \ibox{1} $\oplus$ \sliste{ \ibox{3} } $\oplus$ \ibox{2}  ]}]]
+\end{forest}
+\caption{\label{fig-head-comp-free}Sketch of the Head-Complement Schema for languages with free
+  constituent order}
+\end{figure}
+The length of the lists \ibox{1} and \ibox{2} is not restricted. For our example list containing a
+nom, a dat and an acc element, there are the following possibilities to split the list:
+
+\eal
+\ex \eliste{} $\oplus$ \sliste{ NP[\type{nom}] } $\oplus$ \sliste{ NP[\type{dat}], NP[\type{acc}] } 
+\ex \sliste{ NP[\type{nom}] } $\oplus$ \sliste{ NP[\type{dat}] } $\oplus$ \sliste{ NP[\type{acc}] } 
+\ex \sliste{ NP[\type{nom}], NP[\type{dat}] } $\oplus$ \sliste{ NP[\type{acc}] } $\oplus$ \eliste 
+\zl
+So \ibox{3} in Figure~\ref{fig-head-comp-free} would be \npnom in (\mex{0}a), \npdat in (\mex{0}b) and \npacc in (\mex{0}c).
+
+If one restricts \ibox{1} to be the
+empty list, one gets grammars that saturate complements from the beginning of the list (VO languages
+with fixed order like \ili{English}) and if one restricts \ibox{2} to be the empty list, one gets grammars that take the last
+element from the \compsl for combination with a head (this would be an OV languages with fixed
+order, if such a language would exist). Scrambling languages like German allow any
+complement to be combined with its head since there is neither a restriction on \ibox{1} nor one on \ibox{2}.
+
+
+\inlinetodostefan{Yiddish VO/OV}
+
+
+
+
+\section{Linear precedence rules}
+\label{sec-lp-rules}
+
+The abstract schemata are similar to the schemata that we gained by abstracting over simple phrase
+structure rules in Chapter~\ref{chap-psg}. They are similar to abstract \xbar rules. However, there
+is an important difference: the elements at the right-hand side of a rule and the daughters in the
+corresponding treelets in the figures visualizing the schemata are not ordered. This means that a
+schema like the one in (\mex{1}) can be used to analyze configurations with a preceeding b and with
+b preceeding a.
+\ea
+m $\to$ a b
+\z
+As will be shown shortly, this comes handy in situations in which one wants to leave the actual
+order underspecified.
+
+For the Head Complement Schema discussed above this means that actually two orders can be analyzed:
+head-daughter before complement and complement before head-daughter. Hence the Head-Complement
+Schema is general enough to analyze the German and English phrases in (\mex{1}):
+\eal
+\ex
+\gll dem Kind  ein Buch gibt\\
+     the child the book gives\\
+\ex gives the child the book
+\zl
+But such a general schema without restrictions would also allow an analysis for (\mex{1}b) and (\mex{1}c):
+\eal
+\ex[]{
+\gll \dass{} niemand dem Kind  ein Buch vorliest\\
+     \that{} nobody  the child a book \partic.reads\\
+\glt `that nobody reads a book to the child'
+}
+\ex[*]{ 
+\gll \dass{} dem Kind  niemand vorliest ein Buch\\
+     \that{} the child nobody  \partic.reads a book\\
+}
+\ex[*]{
+\gll \dass{} niemand vorliest dem Kind   ein Buch\\
+     \that{} nobody  \partic.reads the child a book\\
+}
+\zl
+The structures licensed by the Head-Complement Schema without any restrictions are shown in \thefiguresref{fig-dem-kind-niemand-gab-ein-buch-head-comp}{fig-niemand-gab-dem-kind-ein-buch-head-comp}
+\begin{figure}
+\begin{forest}
+sm edges
+[{V[\comps \sliste{ }]},s sep+=1em
+  [{V[\comps \sliste{ \ibox{1} }]}
+    [\ibox{2} \npdat [dem Kind;the child,roof]]
+    [{V[\comps \sliste{ \ibox{2}, \ibox{1} }]} [\ibox{3} \npnom [niemand;nobody]]
+       [{V[\comps \sliste{ \ibox{3}, \ibox{2}, \ibox{1} }]}  [vorliest;\textsc{part}.reads]]]]
+  [\ibox{1} \npacc [ein Buch;a book,roof]]]]
+\end{forest}
+\caption{\label{fig-dem-kind-niemand-gab-ein-buch-head-comp}Unwanted analysis using the
+  Head-Complement Schema without linearization constraints}
+\end{figure} 
+\begin{figure}
+\begin{forest}
+sm edges
+[{V[\comps \sliste{ }]}
+  [{V[\comps \sliste{ \ibox{1} }]},s sep+=1em
+    [{V[\comps \sliste{ \ibox{2}, \ibox{1} }]} [\ibox{3} \npnom [niemand;nobody]]
+       [{V[\comps \sliste{ \ibox{3}, \ibox{2}, \ibox{1} }]}  [vorliest;\textsc{part}.reads]]]
+    [\ibox{2} \npdat [dem Kind;the child,roof]]] 
+  [\ibox{1} \npacc [ein Buch;a book,roof]]]]
+\end{forest}
+\caption{\label{fig-niemand-gab-dem-kind-ein-buch-head-comp}Unwanted analysis using the
+  Head-Complement Schema without linearization constraints}
+\end{figure} 
+
+Now, this problem is easy to fix: what is needed is binary feature specifying whether a head is
+initial or not. The feature is called \textsc{initial} (abbreviated as \textsc{ini}). All
+head-daughters that are \ini{}+ are always serialized to the left of their complement and all those
+that are \ini{}$-$ are serialized to the right. The linearization rules are provided in (\mex{1}):
+\eal
+\label{lp-regeln}
+\ex HEAD [\textsc{initial}+] $<$ COMPLEMENT
+\ex COMPLEMENT $<$  HEAD [\textsc{initial}$-$]
+\zl
+German verbs are specified to be \textsc{initial}$-$, while English verbs are
+\textsc{initial}$+$. Because of this specification and the linearization rules in (\mex{0}), verbs
+are always ordered after their complements in German (and other SOV languages) and before their
+complements in English (and other SVO languages). Of course, there are sentences in German in which
+the verb is in first or second position and there are sentences in the Germanic SVO languages in
+which the object precedes the verb. These sentences will be covered in Chapter~\ref{chap-verb-position}.
+
+
+\section{Adjuncts}
+
+While arguments are selected by their head, adjuncts select the head. The difference between
+languages like Dutch and German on the one hand and Danish and English on the other hand can be
+explained by assuming that adjuncts in the former languages are less picky as far as the element is
+concerned with which they combine. Dutch (\mex{1}) and German (\mex{2})
+adjuncts can attach to any verbal projection, while Danish (\mex{3}) and English (\mex{4}) require a
+VP (see also Section~\ref{sec-phenomena-position-of-adverbials}):
+
+\eal
+% todo check
+\ex 
+\gll [dat] onmiddellijk iedereen het boek leest\\
+     \spacebr{}that promptly everybody the book reads\\\dutch
+\glt `that everybody reads the book promptly'
+\ex
+\gll [dat] iedereen onmiddellijk het boek leest\\ 
+     \spacebr{}that everybody promptly the book reads\\ 
+\ex
+\gll [dat] iedereen het boek onmiddellijk leest\\ 
+    \spacebr{}that everybody the book promptly reads\\
+\zl
+
+\eal
+\ex
+\label{ex-m-j-b-l} 
+\gll {}[dass] sofort jeder das Buch liest\\
+     \spacebr{}that promptly everybody the book reads\\\german
+\glt `that everybody reads the book promptly'
+\ex
+\label{ex-j-m-b-l} 
+\gll {}[dass] jeder sofort das Buch liest\\
+     \spacebr{}that everybody promptly the book reads\\ 
+\ex
+\label{ex-j-b-m-l}
+\gll {}[dass] jeder das Buch sofort liest\\
+    \spacebr{}that everybody the book promptly reads\\
+\zl
+
+
+\eal
+% todo check
+\ex 
+\gll at hver læst bogen straks\\
+     that everybody reads book.\textsc{def} promptly\\ \danish
+\glt `that everybody reads the book promptly'
+\ex 
+\gll at hver straks læst bogen\\
+     that everybody promptly reads book.\textsc{def}\\
+\glt `that everybody promptly reads the book'
+\zl
+
+\eal
+\ex that everybody reads the book promptly
+\ex that everybody promptly reads the book
+\zl
+
+% \eal
+% \ex Kim will have been [promptly [removing the evidence]].\footnote{
+%   The examples are due to Stephen Wechsler (p.\,c.\, 2013).}
+% %from \citew{Wechsler2015a}. in the draft but now gone.}
+% \ex Kim will have been [[removing the evidence] promptly].
+% \zl
+
+For the selection of arguments the features \spr and \comps are used. In parallel there is a \modf
+that is part of a lexical description of a head of a phrase that can function as an adjunct (\textsc{mod} is
+an abbreviation for \emph{modified}). The value of  \textsc{mod} is a description of an appropriate head. 
+Head"=adjunct structures are licencsed by the schema in
+Figure~\vref{fig-head-adj}.
+\begin{figure}
+\begin{forest}
+[{H[\spr \ibox{1}, \comps \ibox{2}]}
+  [{[\textsc{mod} \ibox{3}, \spr \eliste, \comps \eliste]}]
+  [{\ibox{3} H[\spr \ibox{1}, \comps  \ibox{2}]}]]
+\end{forest}
+\caption{\label{fig-head-adj}Sketch of the Head-Adjunct Schema}
+\end{figure}
+For instance, attributive adjectives have \nbar as their \modv, where \nbar is an abbreviation for a
+nominal projection that has an empty \compsl and a \sprl that contains a determiner. (\mex{1}) shows
+the lexical item for \emph{brown}:
+\eas
+Lexical item for \emph{brown}:\\
+\avm{
+[ phon & \phonliste{ brown }\\
+  mod  & \nbar\\
+  spr  & <>\\
+  comps & <> ]
+}
+\zs
+The analysis of the phrase \emph{brown squirrel} is shown in Figure~\vref{fig-brown-squirrel}.
+\begin{figure}
+\begin{forest}
+sm edges
+[{\nbar}
+  [{Adj[\textsc{mod} \ibox{2}]} [brown]]
+  [{\ibox{2} \nbar} [squirrel]]]
+\end{forest}
+\caption{\label{fig-brown-squirrel}Analysis of the head-adjunct structure \emph{brown squirrel}}
+\end{figure}
+In languages like German in which the adjective agrees with the noun in gender, number, and
+inflection class, the properties that the noun must have can be specified inside the \modv. For
+instance, \emph{kleiner} selects a male noun and \emph{kleine} selects a female one:
+\eal
+\ex 
+\gll ein kleiner Hund\\
+     a   little  dog\\
+\ex 
+\gll eine kleine Katze\\
+     a    little cat\\
+\zl
+
+
+For German adverbials the value restricts the part of speech of the head to be verb (or rather
+verbal since -- as (\mex{1}b) shows -- adjectival participles can be modified as
+well) and the value of \textsc{initial} to be $-$. 
+\eal
+\ex
+\gll dass es oft lacht\\
+     that it often laughs\\\german
+\glt `that he/she laughs often'
+\ex 
+\gll des oft lachende Kind\\
+     the often laughing child\\
+\glt `the child who laughs often'
+\zl
+The specification of the modified element to be \initial$-$ ensures that the adjunct attaches to
+verbs in final position only (Verb initial sentences are discussed in
+Chapter~\ref{chap-verb-position}). A linearization rule has to make sure that adverbials are
+serialized to the left of the verb, that is, somewhere in the \mf. The \modv of English adverbials
+is simply VP. Without any further restrictions, this allows for a pre- and a post-VP attachment of
+adjuncts.
+\begin{itemize}
+\item SOV (Dutch, German, \ldots): \textsc{mod} V[\textsc{ini}$-$]
+\item SVO (Danish, English, \ldots): \textsc{mod} VP
+\end{itemize}
+
+The analysis of (\ref{ex-m-j-b-l}) is shown in Figure~\vref{fig-m-j-b-l}, the one of
+(\ref{ex-j-m-b-l}) in Figure~\vref{fig-j-m-b-l}, and the one of (\ref{ex-j-b-m-l}) in
+Figure~\vref{fig-j-b-m-l}. The only difference between the figures is the respective place of
+attachment of the adverb. I marked the parts of the tree that are licensed by the Head-Adjunct
+Schema by including them into a box. All other nodes in the tree are licensed by the Head-Complement
+Schema in Figure~\ref{fig-head-comp}.
+
+
+\begin{figure}
+
+\centerfit{
+\begin{forest}
+sm edges
+[{V[\spr \eliste, \comps \eliste]}, schema
+        [{Adv[\textsc{mod} \ibox{3} V]} [morgen;tomorrow] ]
+        [{\ibox{3} V[\spr \eliste, \comps \eliste]}
+          [{\ibox{1} NP[\type{nom}]} [Aicke;Aicke] ]
+          [V\feattab{
+              \spr \sliste{ }, \comps \sliste{ \ibox{1} } }
+            [{\ibox{2} NP[\type{acc}]} [das Buch;the book, roof] ] 
+            [V\feattab{
+              \spr \sliste{  },\\
+              \comps \sliste{ \ibox{1}, \ibox{2} }} [liest;reads] ] ]
+] ]
+\end{forest}}
+\caption{\label{fig-m-j-b-l}Analysis of [\emph{dass}] \emph{morgen jeder das Buch liest} `that everybody will read the
+  book tomorrow' with the adjunct attaching above subject and object}
+\end{figure}
+
+
+\begin{figure}
+\centerfit{%
+\begin{forest}
+sm edges
+[{V[\spr \eliste, \comps \eliste]},s sep+=1.5em
+          [{\ibox{1} NP[\type{nom}]} [Aicke;Aicke] ]
+          [V\feattab{
+              \spr \sliste{ }, \comps \sliste{ \ibox{1} } }, schema
+            [{Adv[\textsc{mod} \ibox{3} V]} [morgen;tomorrow] ]
+            [\ibox{3} V\feattab{
+                \spr \sliste{ }, \comps \sliste{ \ibox{1} } }
+              [{\ibox{2} NP[\type{acc}]} [das Buch;the book, roof] ] 
+              [V\feattab{
+                \spr \sliste{  },\\
+                \comps \sliste{ \ibox{1}, \ibox{2} }} [liest;reads] ] ]
+] ]
+\end{forest}}
+
+\caption{\label{fig-j-m-b-l}Analysis of [\emph{dass}] \emph{jeder morgen das Buch liest} `that everybody will read the
+  book tomorrow' with the adjunct attaching between subject and object}
+\end{figure}
+
+
+\begin{figure}
+\centerfit{%
+\begin{forest}
+sm edges
+[{V[\spr \eliste, \comps \eliste]}
+    [{\ibox{1} NP[\type{nom}]} [Aicke;Aicke] ]
+      [V\feattab{
+         \spr \sliste{ }, \comps \sliste{ \ibox{1} } }, s sep+=1em
+         [{\ibox{2} NP[\type{acc}]} [das Buch;the book, roof] ] 
+           [V\feattab{
+              \spr \sliste{  },\\
+              \comps \sliste{ \ibox{1}, \ibox{2} }}, schema 
+             [{Adv[\textsc{mod} \ibox{3} V]} [morgen;tomorrow] ]
+             [\ibox{3} V\feattab{
+                 \spr \sliste{  },\\
+                 \comps \sliste{ \ibox{1}, \ibox{2} }} [liest;reads] ] ] ] ]
+\end{forest}}
+\caption{\label{fig-j-b-m-l}Analysis of [\emph{dass}] \emph{jeder das Buch morgen liest} `that everybody will read the
+  book tomorrow' with the adjunct attaching between object and verb}
+\end{figure}
+The attentive reader will notice that there is a description following the \ibox{3} in the \modv of
+the adverbials, while there is no such description in the \modvs of the English examples that
+follow. Of course this is purely notational since the numbered boxes identify all values with the
+same numbers, but the convention behind this is to state the description if it differs from what is
+given at other places where the box occurs. In the case of German, the \modv of adverbials is just
+\type{verb} without any restrictions regarding valence features. The valence features are given at
+the modified node (\eg \spr \eliste, \comps \sliste{ \ibox{1}, \ibox{2} } in
+Figure~\ref{fig-j-b-m-l}), but not in the \modv. Since English adverbials modify VPs and since the
+modified node is a VP, the value of the \modv is not given in detail in the Figures below, but is just shared with the
+properties of the modified node.
+
+
+The Figures~\ref{fig-adj-vp} and~\ref{fig-vp-adj} show the analysis of adjunction with the adverb in
+pre-VP and post-VP position respectively.
+\begin{figure}
+\centerfit{%
+\begin{forest}
+sm edges
+[{V[\spr \eliste, \comps \eliste]}, s sep+=1.5em % puts more space between the NP[nom] and the VP,
+                                    % otherwise the box would overlap
+          [{\ibox{1} NP[\type{nom}]} [Kim] ]
+          [V\feattab{
+              \spr \sliste{ \ibox{1} }, \comps \sliste{  } }, schema
+            [{Adv[\textsc{mod} \ibox{3}]} [often] ]
+            [\ibox{3} V\feattab{
+                \spr \sliste{ \ibox{1} }, \comps \sliste{  } }
+              [V\feattab{
+                \spr \sliste{ \ibox{1} },\\
+                \comps \sliste{  \ibox{2} }} [reads] ]
+              [{\ibox{2} NP[\type{acc}]} [books] ] ]
+] ]
+\end{forest}}
+\caption{\label{fig-adj-vp}Analysis of adjuncts in SVO languages: the adjunct is realized left-adjacent to the VP.}
+\end{figure}
+\begin{figure}
+\centerfit{%
+\begin{forest}
+sm edges
+[{V[\spr \eliste, \comps \eliste]},s sep+=1em
+          [{\ibox{1} NP[\type{nom}]} [Kim] ]
+          [V\feattab{
+              \spr \sliste{ \ibox{1} }, \comps \sliste{  } }, schema
+            [\ibox{3} V\feattab{
+                \spr \sliste{ \ibox{1} }, \comps \sliste{  } }
+              [V\feattab{
+                \spr \sliste{ \ibox{1} },\\
+                \comps \sliste{ \ibox{2} }} [reads] ]
+              [{\ibox{2} NP[\type{acc}]} [books] ] 
+               ]
+            [{Adv[\textsc{mod} \ibox{3}]} [often] ]
+] ]
+\end{forest}}
+\caption{\label{fig-vp-adj}Analysis of adjuncts in SVO languages: the adjunct is realized right-adjacent to the VP.}
+\end{figure}
+
+The values of \spr and \comps in the schema in Figure~\ref{fig-head-adj} on
+page~\pageref{fig-head-adj} have not been explained so far. First there is the sharing of the \spr
+and \compsvs between mother and head-daughter. Whatever element an adjunct attaches to, the valence
+requirements of the mother are always identical to the valence requirement of the
+head-daughter. Nothing is added, nothing is missing. Adjuncts are additional elements that are not
+selected for via valence features, hence nothing has to be discharged. This can be seen by looking
+at the German examples in Figures~\ref{fig-m-j-b-l} to~\ref{fig-j-b-m-l}: \emph{morgen} `tomorrow'
+attaches to a node with certain valence requirements and the dominating node has exactly the same
+valence requirements. In principle the figures should have little numbered boxes in them indicating
+the identity of the valence requirements of mother and head daughter in head-adjunct combinations. I
+omitted these so-called structure sharings to keep things simple and readable. 
+
+The adjunct itself has to have empty valence lists, that is, it has to be complete. Without this
+requirement, sentences like the one in (\mex{1}) would be licensed:
+\ea[*]{
+Sandy read the book in.
+}
+\z
+\emph{in} is a preposition that has an \npacc in its \compsl. If the Head-Adjunct Schema would not
+specify the \compsl of the adjunct daughter to be empty, a preposition could function as the adjunct
+daughter and a structure for ungrammatical sentence like (\mex{0}) would be licensed by the
+grammar. 
+
+The specifier specification is as important as the specification of the \compsl. If non-empty \sprls
+were allowed, the contrast in (\mex{1}) could not be explained:
+
+\eal
+\ex[]{
+\gll dass Aicke eine Stunde liest\\ 
+     that Aicke an   hour reads\\\german
+\glt `Aicke is reading for an hour.'
+}
+\ex[*]{
+\gll dass Aicke Stunde liest\\ 
+     that Aicke hour reads\\
+%\glt `Aicke is reading for an hour.'
+}
+\zl
+The analysis of (\mex{0}a) is shown in Figure~\vref{fig-dass-Aicke-eine-Stunde-liest}. The adjunct
+is a full NP. The schema requires the adjunct daughter to be fully complete. If it did not have this
+requirement, a noun without determiner like \emph{Stunde} `hour' in (\mex{0}b) could enter the
+schema as adjunct daughter and ungrammatical sentences like (\mex{0}b) would be licensed.
+\begin{figure}
+\begin{forest}
+sm edges
+[{V[\comps \eliste]}, s sep+=.5em
+  [\ibox{1} NP [Aicke;Acike]]
+  [{V[\comps \sliste{ \ibox{1} }]} ,schema
+    [{NP[\textsc{mod} \ibox{2} V]} [eine Stunde;one hour,roof]]
+    [{\ibox{2} V[\comps \sliste{ \ibox{1} }]}  [liest;reads]]]]
+\end{forest}
+\caption{Analysis of an adverbial NP in \emph{dass Aicke eine Stunde liest} `that Aicke is reading
+  for an hour'}\label{fig-dass-Aicke-eine-Stunde-liest}
+\end{figure}
+
+\section{Linking between syntax and semantics}
+\label{sec-linking}
+
+
+HPSG assumes that all arguments of a head are contained in a list that is called \textsc{argument
+  structure} (\argst, \citealp*{WKD2021a}).\footnote{%
+See \citealp[\page 28--29]{ps2}; \citealp{Wechsler95a-u};
+\citealp{Davis2001a-u}; \citealp[Section~5.6]{MuellerLehrbuch1} for argument
+linking in HPSG. \citew*{WKD2021a} is a handbook article on linking in HPSG.
+} This list contains descriptions of the syntactic and semantic properties of
+the selected arguments. For instance the \argstl of English \emph{give} and its German, Danish and
+Dutch and Icelandic variants is given in (\mex{1}):
+\ea
+\sliste{ NP, NP, NP }
+\z
+The case systems of the involved languages vary a bit as will be explained in
+Chapter~\ref{chap-case}, but nevertheless the orders of the NPs in the \argstl are the same across these
+languages. They correspond to nom, dat, acc in German (\mex{1}a) and subject, primary object, secondary object
+in English (\mex{1}b):
+\eal
+\ex 
+\gll dass das Kind dem Eichhörnchen die Nuss gibt\\
+    that the child  the squirrel    the nut gives\\
+\glt `that the child gives the squirrel the nut'
+\ex that the child gives the squirrel the nut
+\zl
+In addition to the syntactic features we have seen so far semantic features are used to describe the
+semantic contribution of linguistic objects. (\mex{1}) shows some aspects of the description of the English verb
+\emph{gives}:
+\ea
+lexical item for \emph{gives}:\\*
+\ms{
+arg-st & \sliste{ NP\ind{1}, NP\ind{2}, NP\ind{3} }\\[2mm]
+cont   & \ms[give]{
+          agens & \ibox{1}\\
+          goal  & \ibox{2}\\
+          trans-obj & \ibox{3}\\
+        }\\
+}
+\z
+The lowered boxes refer to the referential indices of the NPs. One can imagine these indices as
+variables that refer to the object in the real world that the NP is referring to. These indices are
+identified to semantic roles of the verb \emph{give}. Finding reasonable role names is not trivial
+and some authors just use \argone, \argtwo and \argthree to avoid the problems (see \citealp{Dowty91a}
+for discussion).
+
+The representations for the other languages mentioned above is entirely parallel. Therefore it is
+possible to capture crosslinguistic generalizations. Nevertheless there are differences between the
+Germanic OV and VO languages. As was explained above the VO languages map their subject to \spr and
+all other arguments to \comps, while the finite verbs of OV languages have all arguments on \comps. 
+\inlinetodostefan{maybe add some examples}
+%% \eal
+%% \ex Linking and argument mapping in SVO languages:\\
+%% \ms{
+%% spr    & \sliste{ \ibox{1} }\\
+%%        & 
+%% arg-st & \sliste{ NP\ind{1}, NP\ind{2}, NP\ind{3} }\\
+%% cont   & \ms[give]{
+%%           agens & \ibox{1}\\
+%%           goal  & \ibox{2}\\
+%%           trans-obj & \ibox{3}\\
+%%         }\\
+%% }
+
+
+
+\section{Alternatives}
+
+\inlinetodostefan{Advanced stuff. Ignore if you do not dare.}
+
+\subsection{CP/TP/VP models}
+\label{sec-cp-tp-vp}
+\label{sec-discussion-scope}
+
+\citet{Grewendorf88a,Grewendorf93}, \citet{Lohnstein2014a} and many others assume that German has a
+structure that is parallel to the one that is assumed for English. As for English the verb is
+assumed to form a phrase with its objects and this VP functions as the argument of a Tense head to
+form a maximal projection together with the subject of the verb, which is realized in the specifier
+position of the TP. Figure~\ref{fig-cp-tp-vp} shows the analysis of (\mex{1}) with the respective
+layers.
+\ea
+\gll dass jeder dieses Buch kennt\\
+     that everbody this book knows\\
+\glt `that everybody knows this book'
+\z
+\begin{figure}
+\centering
+\begin{forest}
+sm edges
+[CP
+  [C$'$
+    [C [dass;that]]
+    [TP
+      [NP [jeder;everybody,roof]]
+      [T$'$
+	[VP
+	  [V$'$
+	    [NP [dieses Buch;this book, roof]]
+	    [V [\trace$_j$]]]]
+	[T [kenn-$_j$ -t;know- -s]]]]]]
+\end{forest}
+\caption{\label{fig-cp-tp-vp}Sentence in the CP/TP/VP model}
+\end{figure}%
+
+The problem with such proposals is that the subject does not depend on the verb but on T. Therefore
+there is no way of serializing the accusative object before the subject unless one assumes that the
+object is moved to a higher position in the tree, \eg adjoined to TP as in Figure~\ref{fig-cp-tp-vp-scrambling}.
+\begin{figure}
+\centering
+\begin{forest}
+sm edges
+[CP
+[C$'$
+	[C [dass;that]]
+        [TP
+          [NP$_i$ [dieses Buch;this book, roof]]
+	  [TP
+	    [NP [jeder;everybody,roof]]
+	    [T$'$
+	      [VP
+		[V$'$
+		  [NP [\trace$_i$]]
+		  [V [\trace$_j$]]]]
+	      [T [kenn-$_j$ -t;know- -s]]]]]]]
+\end{forest}
+\caption{\label{fig-cp-tp-vp-scrambling}Scrambling has to be movement in the CP/TP/VP model}
+\end{figure}%
+
+While researchers like \citet[\page 185]{Frey93a} argued that quantifier scopings are actually
+evidence for movement-based approaches, the argument backfires. Let us consider Frey's examples. Frey
+argues that sentences without movement have only one reading and sentences like (\mex{1}b) in which
+-- according to the movement-based theory -- movement is involved have two readings: one corresponding to
+the visible order and one to the order before movement, the so-called underlying order. 
+\eal
+\ex 
+\gll Es ist nicht der Fall, daß er mindestens einem Verleger fast jedes Gedicht anbot.\\
+     it is not the case that he at.least one publisher almost every poem offered\\
+\glt `It is not the case that he offered at least one publisher almost every poem.'
+\ex 
+\gll Es ist nicht der Fall, daß er fast jedes Gedicht$_i$ mindestens einem Verleger \_$_i$ anbot.\\
+	 it is not the case that he almost every poem at.least one publisher {} offered\\
+\glt `It is not the case that he offered almost every poem to at least one publisher.'
+\zl
+
+\noindent
+However, \citet[\page 146]{Kiss2001a} and \citet[Section~2.6]{Fanselow2001a} pointed out that such
+approaches have problems with multiple moved constituents. For instance in an example such as
+(\mex{1}), it should be possible to interpret \emph{mindestens einem Verleger} `at least one
+publisher' at the position of \_$_i$, which would lead to a reading where \emph{fast jedes Gedicht}
+`almost every poem' has scope over \emph{mindestens einem Verleger} `at least one
+publisher'. However, this reading does not exist.
+
+
+\ea
+\gll Ich glaube, dass mindestens einem Verleger$_i$ fast jedes Gedicht$_j$ nur dieser Dichter \_$_i$ \_$_j$ angeboten hat.\\
+     I believe that at.least one publisher almost every poem only this poet {} {} offered has\\
+\glt `I think that only this poet offered almost every poem to at least one publisher.'
+\z
+
+This means that one needs some way to determine the deviation with respect to an unmarked order, but
+movement is not the solution. See \citew[Section~3.5]{MuellerGT-Eng4} for further discussion and
+\citet{Kiss2001a} for an approach to scope within the framework assumed here.
+
+\exercises{
+
+
+\begin{enumerate}
+\item Provide the valence lists for the following words:
+
+\eal
+\ex laugh
+\ex eat
+\ex to douse
+\ex 
+\gll bezichtigen\\
+     accuse\\\german
+\ex he
+\ex the
+\ex 
+\gll Ankunft\\
+     arrival\\\german
+\zl
+If you are uncertain as far as case assignment is concerned, you may use the
+  Wiktionary\footnote{
+\url{https://de.wiktionary.org/}, 2018-07-02.
+}.
+
+\item Draw trees for the NPs that were also used in exercise~\ref{exercise-NP-PSG} on page~\pageref{exercise-NP-PSG} in Chapter~\ref{chap-psg}.
+\eal
+\ex 
+\gll eine Stunde vor der Ankunft des Zuges\\
+     one  hour   before the arrival of.the train\\
+\glt `one  hour   before the arrival of the train'
+\ex 
+\gll kurz    nach  der Ankunft in Paris\\
+     shortly after the arrival in Paris\\
+\glt `shortly after the arrival in Paris'
+\ex
+\gll das ein Lied singende Kind aus dem Allgäu\\
+     this a song  singing child from the Allgäu\\
+\glt `the child from the Allgäu singing a song'
+\zl
+
+
+\item Draw trees for the following examples. NPs can be abbreviated.
+\eal
+\ex 
+\gll weil    Aicke dem        Kind  ein      Buch schenkt\\
+     because Aicke the.\DAT{} child a.\ACC{} book gives.as.a.present\\ \german
+\glt `because Aicke gives the child a book as a present'
+\ex because Kim gave a book to him
+\ex Sandy saw this yesterday.
+\ex
+\gll at Bjarne læste bogen\\
+     that Bjarne read book.\textsc{def}\\
+\glt `that Bjarne read the book'
+\zl
+\end{enumerate}
+
+}
+
+
+
+
+%      <!-- Local IspellDict: en_US-w_accents -->

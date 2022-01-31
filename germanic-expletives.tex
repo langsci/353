@@ -2,251 +2,1007 @@
 \chapter{Clause types and expletives}
 \label{chap-expletives}
 
-Yiddish besseres Beispiel nehmen, das wirklich V2 zeigt.
+%Yiddish besseres Beispiel nehmen, das wirklich V2 zeigt.
+
+Chapter~\ref{chap-verb-position} discussed the analysis of verb-initial and verb-second sentences. This chapter deals
+with embedded sentences with complementizers (\eg \emph{that} in English) and embedded interrogative
+sentences. 
+
+
+\section{The phenomena}
+
+
+The phenomenon section consists of three parts: Section~\ref{sec-complementizer} deals with embedded
+clauses introduced by a complementizer, Section~\ref{sec-phen-interrogatives} describes the
+structure of interrogative clauses and Section~\ref{sec-phen-use-of-expletives} deals with expletives in V2 and interrogative clauses.
+
+
+\subsection{Embedded clauses introduced by a complementizer}
+\label{sec-complementizer}
+
+As was already mentioned Afrikaans, Dutch, German are SOV languages and this is also shown in embedded
+clauses that are introduced by a complementizer. (\mex{1}) is an example:
+
+\ea
+\gll Ich weiß, dass Aicke das Buch heute gelesen hat.\\
+     I know that Aicke the book today read has\\\german
+\glt `I know that Aicke read the book today.'
+\z
+
+
+%% Stellung der anderen Konstituenten ist frei:
+%% \eal
+%% \ex Ich weiß, dass das Buch Max heute gelesen hat.
+%% \ex Ich weiß, dass das Buch heute Max gelesen hat.
+%% \zl
+
+English, beeing an SVO non-V2 language, allows for SVO order only.
+\ea[]{
+I  know that Kim has read the book yesterday. \jambox{(English)}
+}
+\z
+\itdopt{Topicalization in \emph{that} clauses?}
+
+Interestingly, Danish, also an SVO languauge, allows both SVO order (\mex{1}) and V2 order (\mex{2}) in clauses
+preceeded by a complementizer:
+\ea[]{
+\label{ex-at-max-ikke-har-3}
+\gll Jeg  ved, at   Gert ikke  har læst   bogen          {i dag}.\\
+     I know that Gert not has read book.\textsc{def} today\\\jambox{(Danish)}
+\glt `I know that Gert did not read the book today.'
+}
+\z
+%(Negation hilft, Verbstellung zu bestimmen)
+
+\eal
+\ex[]{
+\gll Jeg  ved, at   {i dag} har Gert ikke læst bogen.\\
+     I    know that today   has Gert not read book.\textsc{def}\\\jambox{(Danish)}
+}
+\ex[]{
+\gll Jeg  ved, at   bogen          har Gert ikke  læst {i dag}.\\
+     I know that book.\textsc{def} has Gert not read today\\
+}
+\zl
+The example in (\ref{ex-at-max-ikke-har-3}) includes the negation in order to show that we indeed deal
+with the SVO order here. Without the negation it is not clear whether non-V2 clauses are allowed in
+clauses that are introduced by a complementizer since (\mex{1}a) has the finite verb in second
+position. With the negation present, it is clear that we have a V2 clause if the negation follows
+the finite verb as in (\mex{1}b) and that we do not have a V2 clause if the finite verb follows the negation as in
+(\mex{-1}) and hence is in third position.
+\eal
+\settowidth\jamwidth{(V2 or SVO)}
+\ex 
+\gll at Gert har læst bogen\\
+     that Gert has read book.\textsc{def}\\\jambox{(V2 or SVO)}
+\ex 
+\gll at   Gert har ikke læst bogen\\
+     that Gert has not  read book.\textsc{def}\\\jambox{(V2)}
+\zl 
+For complementizerless sentences the V2 order is the only one that is possible:
+\eal
+\settowidth\jamwidth{(V2 or SVO)}
+\ex[]{ 
+\gll Gert har ikke læst bogen\\
+     Gert has not read book.\textsc{def}\\\jambox{(V2)}
+}
+\ex[*]{ 
+\gll Gert ikke har læst bogen\\
+     Gert not  has read book.\textsc{def}\\\jambox{(SVO)}
+}
+\zl 
+
+
+Yiddish and Icelandic are SVO languages as well. The clauses that are combined with a
+complementizer are V2:
+\eal
+\ex
+\gll Ikh meyn  az   haynt hot Max geleyent dos bukh.\footnotemark\\
+     I think that today has Max read the book\\\yiddish
+\footnotetext{\citew[\page 58]{Diesing90a}}
+\glt `I think that Max read the book today.'
+
+\ex% check!
+\gll Ikh meyn  az   dos bukh hot Max geleyent.\\
+     I think that the book has Max read\\
+
+\zl
+\ea 
+\longexampleandlanguage{
+\gll Engum         datt í hug,  að   vert  væri að reyna til     að kynnast honum.\footnotemark\\
+     no.one.\DAT{} fell to mind that worth was  to try   \PREP{} to know    him\\}{Icelandic}
+\footnotetext{\citew[\page 75]{Maling90a-u}}
+\glt `It didn't occur to anyone that it was worth trying to get to know him.'
+\z
+
+\subsection{Interrogative clauses}
+\label{sec-phen-interrogatives}
+
+The OV languages form subordinated interrogative clauses by preposing a phrase containing an
+interrogative pronoun\footnote{
+Most interrogative pronouns start with \emph{w} in German and \emph{wh} in English. Phrases
+containing an interrogative pronoun are called \emph{w}"=phrases or \emph{wh}"=phrases,
+respectively. Interrogative clauses are sometimes called \emph{w}"=clauses or \emph{wh}"=clauses.
+} from an
+otherwise SOV clause. (\mex{1}) shows a German example:
+\eal
+\ex 
+\gll Ich weiß, wer heute das Buch gelesen hat.\\
+     I know    who today the book read has\\\jambox{(German)}
+\glt `I know who read the book today.'
+\ex 
+\gll Ich weiß, was Aicke heute gelesen hat.\\
+     I know    what Aicke today read has\\
+\glt `I know what Aicke has read today.'
+\zl
+Since languages like German allow for scrambling, senteces like those in (\mex{0}) could just be due
+to the permutation of arguments of a head. However, the generalization about these \emph{w}"=clauses
+is that an arbitrary \emph{w}"=element can be fronted. (\mex{1}) gives a German example involving a nonlocal dependency:
+\ea
+\label{ex-wissen-Vortrag-halen-nonlocal}
+\longexampleandlanguage{
+\gll Ich weiß nicht, [über welches Thema]$_i$ sie versprochen hat, [[einen Vortrag \_$_i$] zu halten].\\
+     I know not      \spacebr about which topic she promised has \hspaceThis{[[}a talk to  hold\\}{German}
+\glt `I do not know about which topic she promised to give a talk.'
+\z
+Here, the phrase \emph{über welches Thema} `about which topic' is an argument of \emph{Vortrag},
+which is embedded in the VP containing \emph{zu halten} `to hold', which is in turn embedded under
+\emph{versprochen hat} `promised has'. The generalization about interrogative clauses is that an
+interrogative clause consists of a interrogative phrase (\emph{über welches Thema} `about which
+topic') and a clause in which this interrogative phrase is missing somewhere (\emph{sie versprochen
+  hat, einen Vortrag zu halten} `she promised to give a talk').
+
+In German the order of the other constituents is free as in assertive main clauses and embedded
+clauses with a complementizer that were discussed earlier. 
+\eal
+\ex
+\gll Ich weiß, was keiner diesem Eichhörnchen geben würde.\\
+     I know    what nobody this squirrel give would\\\jambox{(German)}
+\glt `I know what nobody would give this man.'
+\ex 
+\gll Ich weiß, was diesem Eichhörnchen keiner geben würde.\\
+     I know what this squirrel nobody give would\\
+\zl
+This follows from that we said so far, since interrogatives are just SOV sentences with one
+constituent extracted. The possibility of scrambling constituents is not affected by extracting a phrase.
+
+In Danish and English the interrogative clauses consist of an interrogative phrase and an SVO clause
+in which it is missing:
+\eal
+\ex 
+\gll Gert har givet ham bogen.\\
+     Gert has given him book.\textsc{def}\\\jambox{(Danish)}
+\glt `Gert gave him the book.'
+\ex
+\gll Jeg ved, hvad$_i$ [Gert har givet ham \_$_i$].\\
+     I know what \spacebr{}Gert has given him\\
+\glt `I know what Gert gave him.'
+\ex
+\gll Jeg ved, hvem$_i$ [Gert har givet \_$_i$   bogen].\\
+     I know who        \spacebr{}Gert has given {} book.\textsc{def}\\
+\glt `I know who Gert has given the book.'
+\zl
+(\mex{0}a) shows the clause with SVO order and (\mex{0}b) is an example with the secondary object as
+interrogative ponoun and (\mex{0}c) is an example with the primary object as interrogative
+pronoun. The position that the respective objects have in non-interrogative clauses like (\mex{0}a)
+is marked with \_$_i$.
+
+Yiddish is special in that it has a V2 order in interrogative clauses as well \citep[Sections~4.1, 4.2]{Diesing90a}: interrogatives
+consist of a interrogative phrase that is extracted from a V2 clause:
+
+\ea
+\gll Ir veyst efsher [avu            do    voynt Roznblat   der goldshmid]?\footnotemark\\
+     you know maybe  \spacebr{}where there lives Roznblat the goldsmith\\
+\glt `Do you perhaps know where Roznblat the goldsmith lives?' 
+% The gollsing an translation differes in the original Rozenblatt
+\footnotetext{
+\citew[\page 65]{Diesing90a}. Quoted from Olsvanger, \emph{Royte Pomerantsn}, 1949.
+}
+\z
+%
+%% \eal 
+%% \ex
+%% \label{vosmaks}
+%% \gll Ikh veys nit   vos$_i$ [Max hot gegesn \_$_i$].\footnotemark\\
+%%      I know not     what \hspaceThis{[}Max has eaten\\
+%% \footnotetext{\citew[\page 68]{Diesing90a}.}
+%% \glt `I do not know what Max has eaten.'
+
+%% \ex%check
+%% \gll Ikh veys nit   [vos                    hot Max gegesn].\footnotemark\\
+%%      ich weiß nicht \hspaceThis{[}was heute hat Max gegessen\\
+%% \footnotetext{\citew[S.\,68]{Diesing90a}.}
+%% \glt `Ich weiß nicht, was Max heute gegessen hat.'
+%\zl
+So the variation is \emph{w}-phrase + SOV, \emph{w}-phrase + SVO, and \emph{w}-phrase + V2.
+
+In addition to the question regarding the order within the embedded clause (SOV, SVO, V2), there is
+variation in finiteness of the embedded clause:
+\eal
+\label{ex-what-to-read}
+\ex[]{
+I wonder what to read.
+}
+\ex[]{
+I wonder what I should read.
+}
+\ex[*]{
+\gll Ich frage mich, was zu lesen.\\
+     I   ask   myself what to read\\\german
+}
+\ex[]{
+\gll Ich frage mich, was   ich lesen soll / kann.\\
+     I   ask   myself what I   read  shall {} can\\\german
+\glt `I wonder what I shall/can read.' or `I wonder what to read.'
+}
+\zl
+English allows for infinitives with \emph{to}. In comparison to finite interrogative clauses the
+infinitival form adds a modal meaning. German does not allow for non-finite interrogatives as
+(\mex{0}c) shows.
+
+
+
+\subsection{The use of expletives to mark the clause type}
+\label{sec-phen-use-of-expletives}
+
+The Germanic languages use constituent order to code the clause type: V2 main clauses can be
+assertions or questions, depending on the content of the preverbal material and
+intonation. Similarly embedded interrogative clauses consist of a \emph{w}"=phrase and an SVO, SOV,
+or V2 clause. The fronting of a constituent in a V2 clause comes with certain information structural
+effects: something is the topic or the focus of an utterance. For embedded sentences it is important
+for some languages that the structure is transparent that is, that we have the \emph{w} + SVO or
+\emph{w} + V2 order. There are situations in which it is inappropriate to front an element and in
+such situations the Germanic languages use expletives, that is, pronouns that do not contribute
+semantically, to maintain a certain order.
+
+German uses the expletive \emph{es} to fill the position in front of the finite verb, if no other
+constituent is to be fronted.
+\eal
+\ex 
+\gll Drei Reiter ritten zum Tor hinaus.\\
+     three riders rode  to.the gate out\\\german
+\glt `Three riders rode out of the gate.'
+\ex 
+\gll Es ritten drei Reiter zum Tor hinaus.\\
+     \expl{} rode   three riders to.the gate out\\
+\zl
+
+Danish uses the expletive to make it clear that an extraction of a consituent took place
+\citep[\page 169]{MOe2011a}:\footnote{
+  Examples marked with DK are extracted from KorpusDK, a corpus of 56 Million words documenting
+  contemporary Danish (\url{http://ordnet.dk/korpusdk}).
+}
+\eal
+\label{ex-danish-interrogative-expletive}
+\ex[]{
+\longexampleandlanguage{
+\gll Politiet            ved   ikke,  hvem der           havde placeret bomben.\footnotemark\\
+     police.\textsc{def} knows not    who  \textsc{expl} has placed bomb.\textsc{def}\\}{Danish}
+\footnotetext{DK}%
+\glt `The police does not know who placed the bomb.'
+}
+\ex[*]{
+\gll Politiet ved ikke,  hvem havde placeret bomben.\\
+     police.\textsc{def} knows not who has placed bomb.\textsc{def}\\
+}
+\zl
+Without the expletive one would have a pattern like the one in (\mex{0}b). In (\mex{0}b) we have the
+normal SVO order and it is not obvious to the hearer that the pattern consists of an extracted
+element (the subject) and an SVO clause from which it is missing. This is more transparent if an
+expletive is inserted into the subject position as in (\mex{0}a). (\mex{1}) shows this using the
+analysis that will be suggested in Section~\ref{sec-analysis-expletives}: (\mex{1}a) shows the hypothetical
+structure that would result if one assumed that the subject \emph{hvem} `who' is
+extracted. So-called \emph{string-vacuous movement} would result: the subject is moved to a place
+right next to it. In (\mex{1}b) on the other hand the subject position is taken by the expletive and
+hence it is clear that the embedded sentence has a special structure. There is an overt marker for
+the hearer or reader of the sentence marking it as an embedded interrogative clause.
+\eal
+\ex[*]{ 
+\gll [hvem$_i$     [\trace$_i$ havde placeret bomben]]\\
+     \spacebr{}who {}          has placed bomb.\textsc{def}\\\danish
+}
+\ex[]{
+\gll [hvem$_i$     [der                    havde \trace$_i$ placeret bomben]]\\
+     \spacebr{}who \spacebr{}\textsc{expl} has   {}         placed bomb.\textsc{def}\\
+}
+\zl
+
+Similarly Yiddish uses an expletive in embedded interrogatives (\emph{w} + V2) if 
+%the subject is extracted and 
+there is no other element that is information structurally appropriate for the preverbal position.
+%% \ea
+%% \label{vosmaks}
+%% \gll Ikh veys nit   [vos Max hot gegesn].\footnotemark\\
+%%      ich weiß nicht \hspaceThis{[}was Max hat gegessen\\
+%% \footnotetext{\citew[S.\,68]{Diesing90a}.}
+%% \glt `Ich weiß nicht, was Max gegessen hat.'
+%% \z
+%% 
+%% \item 
+(\mex{1}) shows examples from \citet[\page 403--404]{Prince89a}:
+
+\eal
+\label{ex-Yiddish-interrogatives-expletive}
+\ex[]{
+\gll ikh hob  zi  gefregt ver es         iz beser  far ir\\
+     I   have her asked   who \textsc{expl} is better for her\\\yiddish
+\glt `I have asked her who is better for her.'}
+\ex[]{
+\gll ikh hob  im  gefregt vemen es        kenen ale dayne khaverim\\
+     I   have him asked   whom \textsc{expl} know  all your friends\\
+\glt `I asked him whom all your friends know.'}
+\zl
+(\mex{0}a) is an example involving an interrogative pronoun that is the subject and (\mex{0}b) is an
+example in which the preverbal position is not filled by an argument of \emph{kenen} `know' but by
+an expletive. The subject \emph{ale dayne khaverim} `all your friends' stays behind and the object
+\emph{vemen} `whom' is extracted since it is the interrogative pronoun.
+
 
 \if0
+\subsection{Dependent clauses introduced by a complementizer}
 
 
-\subsection{Eingebettete Sätze}
+The SOV languages (Afrikaans, Dutch, German, \ldots) combine a complementizer with a verb-last sentence.
+\ea
+\gll Ich weiß, dass Aicke das Buch heute gelesen hat.\\
+     I   know  that Aicke the book today read    has\\
+\glt `I know that Aicke has read the book today.'
+\z
 
-\subsubsection{Sätze mit Komplementierer}
+As in V1 or V2 sentences the order of the consituents in the \mf is free in languages like German:
+\eal
+\ex Ich weiß, dass das Buch Aicke heute gelesen hat.
+\ex Ich weiß, dass das Buch heute Aicke gelesen hat.
+\zl
 
-\frame{
-\frametitle{Deutsch: Komplementierer + Verbletzt, ohne Inversion}
+In English, the complemenizer is combined with a clause in SVO order.
+\ea
+I  know that Kim has read the book yesterday.
+\z
 
-\vfill
-\centerfit{\begin{tikzpicture}
-\tikzset{level 1+/.style={level distance=2\baselineskip}}
-\tikzset{frontier/.style={distance from root=9\baselineskip}}
-\Tree[.CP
-       [.C dass ]
-       [.S
-        [.{NP[\type{nom}]} niemand ]
-        [.V$'$
-          [.{NP[\type{acc}]} ihn ]
-          [.V kennt ]
+%% 
+%% Andere Stellungen sind nicht möglich:
+%% \eal
+%% \ex[*]{
+%% I know that has Max read the book yesterday.
+%% }
+%% \ex[*]{
+%% I know that yesterday Max has read the book.
+%% }
+%% \zl
+
+Danish is interesting since it is SVO like English but it has two options for complementizer
+phrases: \emph{at} `that' can combine with a clause in SVO order or with a V2 clause:
+\ea[]{
+\label{ex-at-max-ikke-har-2}
+\gll Jeg  ved, at   Gert ikke  har læst   bogen          {i dag}.\\
+     I know that Gert not has read book.\textsc{def} today\\\jambox{(Danish)}
+\glt `I know that Gert did not read the book today.'
+}
+\z
+
+The negation \emph{ikke} can be used to determine the verb position. Since we assumed that adverbial
+material adjoins to VPs the negation in (\mex{0}) is assumed to combine with \emph{har læst bogen i
+  dag} `has read the book today'. The finite verb is to the left of the negation in (\mex{1}). This
+fits well with the analysis of verb placement introduced in Chapter~\ref{chap-verb-position}: the
+finite verb \emph{har} `has' forms a constituent with \emph{læst  bogen i dag} to which the negation can attach, but
+due to verb movement the verb is put into initial position and then the subject \emph{Gert} is fronted.
+\ea[]{
+\gll Jeg  ved, at   Gert har ikke  læst  bogen          {i dag}.\\
+     I    know that Gert has not   read  book.\textsc{def} today\\\jambox{(V2)}
+}
+\z
+
+If one is not ready to believe that data like (\mex{0}) are evidence for embedded V2 clauses, the
+following examples may be even more convincing:
+\eal
+\ex[]{
+\gll Jeg  ved, at   {i dag} har Gert ikke læst bogen.\\
+     I    know that today   has Gert not read book.\textsc{def}\\\jambox{(Danish)}
+}
+\ex[]{
+\gll Jeg  ved, at   bogen          har Gert ikke  læst {i dag}.\\
+     I know that book.\textsc{def} has Gert not read today\\
+}
+\zl
+(\mex{0}a) shows a complementizer + V2 clause with \emph{i dag} `today' fronted and (\mex{0}b) shows
+a complementizer with a V2 clause with \emph{bogen} `the book' fronted. \emph{har} `has' is clearly
+in second position and the first position is occupied by something that is not the subject.
+
+
+%% \ex[*]{
+%% \gll Jeg  ved, at   {i dag} Gert har læst bogen.\\
+%%      ich weiß dass heute   Gert hat gelesen Buch.{\sc def}\\
+%% }
+%%
+%% \ex[*]{
+%% \gll Jeg  ved, at   bogen          Gert har læst {i dag}.\\
+%%      ich weiß dass Buch.{\sc def} Gert hat gelesen heute\\
+%% }
+%% \zl
+%%
+
+
+% Isländisch: Wikipedia (en)
+
+\begin{itemize}
+\item Jiddish: eingebettete Sätze sind V2 \citep[]{Diesing90a}:
+\eal
+\ex
+\gll Ikh meyn  az   haynt hot Max geleyent dos bukh.\footnotemark\\
+     ich   denke dass heute hat Max gelesen   das Buch\\
+\footnotetext{\citew[\page 58]{Diesing90a}}
+\glt `Ich denke, dass Max heute das Buch gelesen hat.'
+
+\ex% check!
+\gll Ikh meyn  az   dos bukh hot Max geleyent.\\
+     ich denke dass das Buch hat Max gelesen\\
+
+\zl
+
+
+Isländisch:
+\ea 
+\gll Engum         datt í hug,  að   vert  væri að reyna til     að kynnast honum.\footnotemark\\
+     no.one.\DAT{} fell to mind that worth was  to try   \PREP{} to know    him\\%\icelandic
+\footnotetext{\citew[\page 75]{Maling90a-u}}
+\glt `It didn't occur to anyone that it was worth trying to get to know him.'
+\z
+
+
+
+\end{itemize}
+
+
+
+
+
+\section{Interrogative Clauses}
+
+
+
+\begin{itemize}
+\item Deutsch, Niederländisch, \ldots: \emph{w} + V-letzt:
+
+\eal
+\ex Ich weiß, wer heute das Buch gelesen hat.
+\ex Ich weiß, was Aicke heute gelesen hat.
+\zl
+
+Interrogativnebensätze beginnen mit einer \emph{w}-Phrase.
+
+
+\item Die \emph{w}-Phrase kann von weit her kommen:
+\ea
+Ich weiß nicht, [\gruen{über welches Thema}]$_i$ sie versprochen hat,\\
+{}[[einen Vortrag \_$_i$] zu halten].
+\z
+
+
+\item Stellung der anderen Konstituenten ist frei:
+\eal
+\ex Ich weiß, was keiner diesem Eichhörnchen geben würde.
+\ex Ich weiß, was diesem Eichhörnchen keiner geben würde.
+\zl
+
+
+\end{itemize}
+
+
+
+\begin{itemize}
+\item Dänisch: Interrogativnebensätze sind \emph{w} + SVO
+
+\eal
+\ex
+\gll Jeg ved, hvad Gert har givet ham.\\
+     ich weiß was Gert  hat gegeben ihm\\
+\glt `Ich weiß, was Gert ihm gegeben hat.'
+\ex
+\gll Jeg ved, hvem Gert har givet   bogen.\\
+     ich weiß wem  Gert hat gegeben Buch.{\sc def}\\
+\glt `Ich weiß, wem Gert das Buch gegeben hat.'
+\zl
+
+\end{itemize}
+
+
+\begin{itemize}
+\item Jiddish: Interrogativnebensätze \emph{w} + V2 \citep[Abschnitte~4.1, 4.2]{Diesing90a}
+
+%% \ea
+%% %\ex
+%% \label{vosmaks}
+%% \gll Ikh veys nit   [vos Max hot gegesn].\footnotemark\\
+%%      ich weiß nicht \hspaceThis{[}was Max hat gegessen\\
+%% \footnotetext{\citew[S.\,68]{Diesing90a}.}
+%% \glt `Ich weiß nicht, was Max gegessen hat.'
+
+%% %% \ex%check
+%% %% \gll Ikh veys nit   [vos              hot Max gegesn].\footnotemark\\
+%% %%      ich weiß nicht \hspaceThis{[}was heute hat Max gegessen\\
+%% %% \footnotetext{\citew[S.\,68]{Diesing90a}.}
+%% %% \glt `Ich weiß nicht, was Max heute gegessen hat.'
+
+
+\ea
+\gll Ir veyst efsher [avu            do    voynt Roznblat   der goldshmid]?\footnotemark\\
+     Sie wissen vielleicht  \spacebr{}wo da wohnt Roznblat der Goldschmied\\
+\glt `Wissen Sie vielleicht, wo Roznblat der Goldschmied wohnt?' 
+\footnotetext{
+\citew[\page 65]{Diesing90a}. Quoted from Olsvanger, \emph{Royte Pomerantsn}, 1949.
+}
+\z
+\end{itemize}
+
+\fi
+
+\section{The analysis}
+
+\subsection{Embedded clauses introduced by a complementizer}
+
+
+The analysis of Afrikaans, Dutch, German and English complementizer phrases is straightforward: the
+complementizer is combined with an uninverted verbal projection. For the first languages this is a
+verb last clause (SOV) and for English it is an SVO clause. The respective analyses are given in
+Figure~\ref{fig-german-cp} and~\ref{fig-english-cp}.
+\begin{figure}
+\begin{forest}
+sm edges
+[CP
+       [C [dass;that] ]
+       [S
+        [{NP[\type{nom}]} [niemand;nobody] ]
+        [V$'$
+          [{NP[\type{acc}]} [ihn;him] ]
+          [V [kennt;knows] ]
            ] ] ]
-\end{tikzpicture}}
+\end{forest}
+\caption{Analysis of German complementizer phrase as C + VL}\label{fig-german-cp}
+\end{figure}
+\begin{figure}
+\begin{forest}
+sm edges
+[CP
+       [C [that] ]
+       [S
+        [{NP[\type{nom}]} [nobody] ]
+        [VP
+          [V  [knows] ]
+          [{NP[\type{acc}]} [him] ] ] ] ]
+\end{forest}
+\caption{Analysis of English complementizer phrase as C + SVO}\label{fig-english-cp}
+\end{figure}
 
-
-}
-
-
-\frame{
-\frametitle{Englisch: Komplementierer + SVO}
-
-
-\vfill
-
-
-\centerfit{\begin{tikzpicture}
-\tikzset{level 1+/.style={level distance=2\baselineskip}}
-\tikzset{frontier/.style={distance from root=9\baselineskip}}
-\Tree[.CP
-       [.C that ]
-       [.S
-        [.{NP[\type{nom}]} nobody ]
-        [.VP
-          [.V  knows ]
-          [.{NP[\type{acc}]} him ] ] ] ]
-\end{tikzpicture}}
-
-
-
-
-
-}
-
-
-\frame{
-\frametitle{Jiddisch: Komplementierer + V2}
-
-
-
-\centerfit{\scalebox{.6}{\begin{tikzpicture}[
-level 1+/.style={level distance=2\baselineskip},
-frontier/.style={distance from root=16\baselineskip},
-connect/.style={semithick,<->,color=green}]
-\tikzset{every tree node/.style={align=center,anchor=north}}
-%\draw (-3,-5) to[grid with coordinates] (4,0);
-\Tree[.CP
-        [.C az\\dass ]
-        [.S
-          [.\node (Adv) {Adv}; haynt$_i$\\heute ]
-          [.\node (S/Adv) {S/Adv};
-            [.{V \sliste{ S/\!/V }} 
-              [.V hot$_k$\\hat ] ]
-            [.\node (S//V/Adv) {S$/\!/$V/Adv};
-              [.NP Max\\Max ]
-              [.\node (V/V/Adv) {V$'\!/\!/$V/Adv};
-                [.{V$\!/\!/$V}  \_$_k$ ]
-                [.\node (VP/Adv) {VP/Adv}; 
-                  [.VP
-                    [.V geleyent\\gelesen ]
-                    [.NP \edge[roof]; {dos bukh}\\{das Buch} ] ]
-                  [.\node (Adv/Adv) {Adv/Adv}; \_$_i$ ] ] ] ] ] ] ]
+Yiddish complementizers select for a V2 clause. The analysis of the example in (\mex{1}) is shown in Figure~\ref{fig-yiddish-cp}.
+\ea
+\gll Ikh meyn  az   haynt hot Max geleyent dos bukh.\footnotemark\\
+     I think that today has Max read the book\\\yiddish
+\footnotetext{\citew[\page 58]{Diesing90a}}
+\glt `I think that Max read the book today.'
+\z
+\begin{figure}
+\begin{forest}
+sm edges
+[CP
+        [C [az;dass] ]
+        [S
+          [{Adv$_i$} [haynt;today] ]
+          [{S/Adv}
+            [{V \sliste{ S/$\!$/V }} 
+              [V [hot$_k$;has] ] ]
+            [{S$/\!/$V/Adv}
+              [NP [Max;Max] ]
+              [{VP$\!/\!/$V/Adv}
+                [{V$\!/\!/$V}  [\_$_k$] ]
+                [VP/Adv 
+                  [VP
+                    [V [geleyent;read] ]
+                    [NP [dos bukh;the book,roof] ] ]
+                  [Adv/Adv [\_$_i$] ] ] ] ] ] ] ]
 %% \draw[connect] (Adv/Adv.north east)   [bend right] to (VP/Adv.south east);
 %% \draw[connect] (VP/Adv.north east)    [bend right] to (V/V/Adv.south east);
 %% \draw[connect] (V/V/Adv.north east)   [bend right] to (S//V/Adv.south east);
 %% \draw[connect] (S//V/Adv.north east)  [bend right] to (S/Adv.east);
 %% \draw[connect] (S/Adv.north east)     [bend right] to (Adv);
-\end{tikzpicture}}}
+\end{forest}
+\caption{Analysis of the Yiddish complementizer phrase as C + V2}\label{fig-yiddish-cp}
+\end{figure}
+The analysis looks complicated but it is really just the combination of a complementizer with a V2
+clause. The V2 clause has \emph{haynt} `today' extracted and the finite auxiliary \emph{hot} `has'
+is moved to V1 position.
+
+The differences between languages can be accounted for by letting the complementizer select Ses with
+different feature–value combinations. While complementizers in SOV languages select for verb-final
+projections (\textsc{initial}$-$), Yiddish selects for V2$+$ sentences (the result of applying the
+Filler-Head Schema) and Danish does not specify any of such features on the selected clause. Since
+nothing is specified in Danish, the embedded clause can have the form that the rest of the Danish
+grammar permits: it can be SVO or V2.
 
 
+
+\subsection{Interrogative clauses}
+
+As the data discussion showed, the phrase containing the interrogative pronoun is extracted from the
+remaining clause. The fronting of the \emph{w}"=phrase is like fronting in V2 sentences. In the
+topological fields model, the fronted phrase in German relative clauses and interrogative clauses is
+assigned to the \vf \citep[\page 47--49]{MuellerGT-Eng4}. The difference between interrogative clauses and V2 clauses is the position of
+the verb: V2 sentences have the verb in initial position while it is in final position in
+interrogatives and relatives. Figure~\ref{fig-interrog-clause-simple} shows the analysis of the
+interrogative clause in (\mex{1}). The pronominal adverb \emph{worüber} `about what' is extracted
+from the rest of the clause.
 
 \ea
-\gll Ikh meyn  az   haynt hot Max geleyent dos bukh.\footnotemark\\
-     ich   denke dass heute hat Max gelesen   das Buch\\
-\footnotetext{\citew[\page 58]{Diesing90a}.}
-\glt `Ich denke, dass Max heute das Buch gelesen hat.'
+\gll Ich weiß, [worüber]$_i$ [ \trace$_i$ sie spricht].\\
+     I know    \spacebr{}where.about {} {} she speaks\\
+\glt `I know what she speaks about.'
+\z
+\begin{figure}
+\begin{forest}
+sm edges
+[S
+  [PP [worüber;where.about]]
+  [S/PP
+    [PP/PP [\trace]]
+    [V\rlap{$'$}
+      [NP [sie;she]]
+      [V [spricht;speaks]]]]]
+\end{forest}
+\caption{Analysis of simple interrogative clause}\label{fig-interrog-clause-simple}
+\end{figure}
+
+Figure~\ref{fig-interrog-clause-simple} uses the slash notation that I have been using so far. In
+order to account for more complex \emph{w}"=phrases I will use the same trick as for other nonlocal
+dependencies and pass information about \emph{w}"=pronouns on to mother nodes. For modeling this I
+will use list"=valued features like \spr and \comps. Figure~\ref{fig-interrog-clause-simple-slash} shows the same sentence as
+Figure~\ref{fig-interrog-clause-simple} but with two features that are traditionally used in the
+analysis of nonlocal dependencies \citep[Chapter~4 and 5]{ps2}: \que and \slasch. By convention, the boxed numbers
+are put in front of XPs if the XP is an argument and they follow the XP if the XP is involved in a
+nonlocal dependency. The reason for this is that different parts of information are shared. A full explanation
+of the difference requires some deeper understanding of the mechanisms and cannot be given here. The
+interested reader is referred to \citew[Chapter~10]{MuellerLehrbuch3} or to \citew{BC2021a}.
+%has to wait until
+%Chapter~\ref{chap-HPSG-light}. 
+PP\ibox{1}[\slasch \sliste{ \ibox{1} }] means that the relevant information
+about the PP is put into \slasch, that is, into the list that is percolated upwards until a matching
+filler is found (a PP whose relevant properties can be identified with the element in the
+\slashl). Once a filler has been found no \slasch element is passed upwards. The \slashl of the
+top-most node is the empty list.
+
+\begin{figure}
+\begin{forest}
+sm edges
+[{S[\slasch \sliste{ }]}
+  [PP\ibox{1} [worüber;where.about]]
+  [{S[\slasch \sliste{ \ibox{1} }]}
+    [{PP\ibox{1}[\slasch \sliste{ \ibox{1} }]} [\trace]]
+    [V\rlap{$'$}
+      [NP [sie;she]]
+      [V [spricht;speaks]]]]]
+\end{forest}
+\caption{Analysis of simple interrogative clause using the \slasch feature}\label{fig-interrog-clause-simple-slash}
+\end{figure}
+
+Now, this machinery can be extended to cover nonlocal dependencies for interrogative
+pronouns. Figure~\ref{fig-interrog-clause-simple-que-slash} shows how the information about the
+interrogative within the complex \emph{w}"=phrase can be passed upwards in a tree by using the \que feature.
+\ea
+\gll Ich weiß, [über welches Thema]$_i$ [ \trace$_i$ sie spricht].\\
+     I know    \spacebr{}about which topic {} {} she speaks\\
+\glt `I know which topic she speaks about.'
+\z
+%
+Figure~\ref{fig-interrog-clause-simple-que-slash} is completely parallel to
+Figure~\ref{fig-interrog-clause-simple} except that information about the \emph{w}"=word is
+added. The content of \que is not provided here but the \que list of \emph{w}"=words contains information
+that is needed for semantics: the \emph{w}"=word indicates what is asked for and this information is
+passed up to the level of the complete clause (see \citealt{GSag2000a-u} on interrogatives in general and on their
+semantics in particular).
+
+\begin{figure}
+\centerline{\begin{forest}
+sm edges
+[{S[\textsc{que} \sliste{ }, \slasch \sliste{ }]}
+  [{PP\ibox{1}[\textsc{que} \sliste{ \ibox{2} }]} 
+     [P [über]]
+     [{NP[\textsc{que} \sliste{ \ibox{2} }]}
+       [{Det[\textsc{que} \sliste{ \ibox{2} }]} [welches]]
+       [N [Thema]]]]
+  [{S[\slasch \sliste{ \ibox{1} }]}
+    [{PP\ibox{1}[\slasch \sliste{ \ibox{1} }]} [\trace]]
+    [V\rlap{$'$}
+      [NP [sie]]
+      [V [spricht]]]]]
+\end{forest}}
+\caption{Analysis of simple interrogative clause using \slasch and \que}\label{fig-interrog-clause-simple-que-slash}
+\end{figure}
+
+Interrogative clauses are licensed by a special variant of the Filler-Head Schema, namely a schema
+that requires the initial daughter (the filler) to have something in its \que list (Figure~\ref{fig-interrogative-clause-schema}). This entails
+that the filler has to contain a \emph{w}"=word.
+
+\begin{figure}
+\centerline{
+\begin{forest}
+[{H[\textsc{que} \sliste{ }, \slasch \sliste{ }]}
+  [\ibox{1}{[\textsc{que} \sliste{ \etag{} }]}]
+  [H{[\slasch \sliste{ \ibox{1} }]} ]]
+\end{forest}
+}
+\caption{Interrogative Clause Schema}\label{fig-interrogative-clause-schema}
+\end{figure}
+
+The languages differ as far as the order of the verb and its arguments are concerned, so further
+specifications have to be added to what is given in
+Figure~\ref{fig-interrogative-clause-schema}. For example, German interrogative clauses are verb
+final, while Yiddish interrogatives involve an extraction out of a V2 clause. In addition,
+constraints regarding the verb form have to be specified. German allows for finite verbs only, while
+English allows for finite verbs and infinitives with \emph{to} (see (\ref{ex-what-to-read}) on p.\,\pageref{ex-what-to-read}).
+
+Up to now, we have looked at German examples with prepositional objects
+fronted. Figure~\ref{fig-wer-das-buch-liest} shows the analysis of (\mex{1}) with a subject as a
+\emph{w}"=phrase: 
+\ea
+\gll wer das Buch liest\\
+     who the books reads\\\german
+\glt `who reads the book'
+\z
+\begin{figure}
+\centerline{\begin{forest}
+sm edges
+[S
+       [{NP[\snom]} [wer;who] ]
+       [S/NP 
+         [NP/NP [\trace] ]
+         [V$'$
+           [{NP[\sacc]}  [das Buch;the book,roof] ]
+           [V [liest;reads] ] ] ] ]
+\end{forest}}
+\caption{Analysis of German interrogative clause with the subject as \emph{w}"=word}\label{fig-wer-das-buch-liest}
+\end{figure}
+
+So, with what we have so far, we can analyze interrogatives in German and other SOV languages but
+there are still open questions in languages like Danish where expletive insertion in subject
+position is required when a subject is questioned (see
+(\ref{ex-danish-interrogative-expletive})). Similarly, Yiddish may insert expletives in the
+preverbal position in interrogatives (see (\ref{ex-Yiddish-interrogatives-expletive})). So, to
+account for this data, we have to deal with expletives. Expletives are the topic of the next section.
+
+
+
+\subsection{A lexical rule for the introduction of expletives}
+\label{sec-analysis-expletives}
+
+The various types of expletives introduced in Section~\ref{sec-phen-use-of-expletives} can -- maybe somewhat surprisingly -- be
+accounted for by a simple lexical rule that adds an expletive to the \argstl of lexical items
+\citep[\page 180]{MOe2011a}:
+\ea
+\label{positional-expl-lr}
+Expletive Insertion Lexical Rule:\\
+\ms{
+head & \ms[verb]{
+       vform & fin \\
+       }\\
+arg-st & \ibox{1}\\
+} $\mapsto$
+\ms{
+arg-st & \sliste{ NP[\type{lnom}]\upshape \sub{\type{expl}} } $\oplus$ \ibox{1}\\
+}
+\z
+The application of the lexical rule is restricted to finite verbs since positional expletives occur
+in V2 sentences and these are always finite. Expletives in interrogative clauses are used to fill
+the subject position to mark extraction and of course this is something that is necessary in finite
+clauses only.
+
+The case of the expletive pronoun is specified as lexical nominative, which means that it is
+invisible to case assignment principles. Nominative is assigned to the first NP with structural case
+(see p.\,\pageref{case-p}) and since the expletive has lexical case, nothing changes. The same is
+true for structural accusatives: the first NP with structural gets nominative and all others
+accusative. The expletive does not interfere with this.
+
+Similarly, the theory of agreement entertained so far is not affected: the verb agrees with the
+first NP with structural case. This makes the right predictions for agreement in Icelandic, where
+the verb agrees with objects in the nominative \citep[\page 460]{ZMT85a}.
+\eal
+\ex
+\gll Hefur henni      alltaf þótt    Ólafur      leibinlegur?\footnotemark\\
+     has   she.\DAT{} always thought Olaf.\NOM{} boring.\NOM{}\\\icelandic
+\footnotetext{
+\citew*[\page 451]{ZMT85a}
+}
+\glt `Has she always considered Olaf boring?'
+\ex
+\label{ex-dat-subj-passive-ditransitive-icelandic-two}
+\gll Konunginum voru gefnar ambáttir.\footnotemark\\
+     the.king.\DAT{} were given.\F.\PL{} maidservants.\NOM.\F.\PL\\
+\footnotetext{
+\citew*[\page 460]{ZMT85a}
+}
+\glt `The king was given female slaves.'
+\zl
+
+And the approach to agreement also works for cases of remote passive in German, where the subject is not the first element
+in an \argstl. One of the examples in (\ref{bsp-auskosten-fernpassiv}) on
+p.\,\pageref{bsp-auskosten-fernpassiv} is repreated below:
+\eal
+\ex 
+\gll Sie erlauben uns nicht, den Erfolg auszukosten.\\
+     they permitted us.\DAT{} not the.\ACC{} success to.enjoy\\
+\glt `They did not permit us to enjoy the success.'
+\ex\iw{auskosten}
+\gll Der Erfolg         wurde uns      nicht auszukosten erlaubt.\footnotemark\\
+     the success.\NOM{} was   us.\DAT{} not   to.enjoy                  permitted\\
+\footnotetext{
+        \citew[\page 110]{Haider86c}%
+}
+\glt `We were not permitted to enjoy our success.'%
+\label{bsp-auskosten-fernpassiv-haider-zwei}
+\zl
+See p.\,\pageref{ex-arg-st-fernpassiv-object-control} for the respective \argst lists.
+
+As far as the position in the clause is concerned, the expletive is a subject in Danish. This is
+exactly what we want and what follows from the general mapping from \argst to \spr and \comps in SVO
+languages. The analysis of (\mex{1}) is shown in
+Figure~\ref{fig-interrogative-Danish-subject-extraction}.
+\ea
+\gll hvem det læser bogen\\
+     who  \expl{} reads book.\textsc{def}\\
+\glt `who reads the book'
+\z
+The lexical item for \emph{læser} `to read' is given in (\mex{1}):
+\ea
+Lexical item for \emph{læser} `to read' with expletive subject:
+\ms{
+spr    & \sliste{ NP[\type{lnom}]\upshape \sub{\type{expl}} }\smallskip\\
+comps  & \sliste{ NP[\type{str}], NP[\type{str}] } \smallskip\\
+arg-st & \sliste{ NP[\type{lnom}]\upshape \sub{\type{expl}}, NP[\type{str}], NP[\type{str}] } 
+}
+\z
+The case assignment principles assign nominative to the first NP with structural case and accusative
+to the second. As Figure~\ref{fig-interrogative-Danish-subject-extraction} shows, the expletive
+subject is realized as specifier in the subject position and the nominative and accusative on the
+\compsl are realized as objects. The ``nominative object'' is extracted and realized as the
+interrogative pronoun.
+
+\begin{figure}
+\centerline{\begin{forest}
+sm edges
+[S
+       [{NP[\snom]} [hvem;who] ]
+       [{S/NP[\snom]}
+         [{NP[\lnom]} [det;\textsc{expl}] ]
+         [{VP/NP[\snom]}
+           [{V$'$/NP[\snom]}
+             [V [læser;reads] ]
+             [{NP[\snom]/NP[\snom]} [\trace] ] ]
+           [{NP[\sacc]} [bogen;book.\textsc{def} ] ] ] ] ]
+\end{forest}}
+\caption{Analysis of interrogative clauses in Danish with subject extraction}\label{fig-interrogative-Danish-subject-extraction}
+\end{figure}
+
+Similarly, the analysis of interrogatives in Yiddish may involve an initial expletive in the V2
+clause if the speaker finds the subject or any other element inappropriate for this position for
+information structural reasons. Figure~\ref{fig-Yiddish-interrogative-expletive} shows the analysis of (\mex{1}):
+\ea
+\gll ver es leyent dos bukh\\
+     who \expl{} reads the book\\\yiddish
+\glt `who reads the book' 
 \z
 
-}
+\begin{figure}
+\centerline{{\begin{forest}
+sm edges
+[S
+       [{NP[\snom]} [ver$_i$;who] ]
+       [{S/NP[\snom]}
+         [{NP[\lnom]} [es$_j$;\textsc{expl}] ]
+         [{S/NP[\snom]/NP[\lnom]}
+           [{V \sliste{S//V}}
+             [V [leyent$_k$;reads] ] ]
+           [{S//V/NP[\snom]/NP[\lnom]}
+             [{NP[\lnom]/NP[\lnom]} [\trace$_j$] ] 
+             [{VP//V/NP[\snom]}, s sep+=1em
+               [{V$'$//V} 
+                 [V//V [\trace$_k$] ]
+                 [{NP[\snom]/NP[\snom]} [\trace$_i$] ] ]
+               [{NP[\sacc]} [dos bukh;the book,roof] ] ] ] ] ] ]
+\end{forest}}}
+\caption{Analysis of a Yiddish interrogative clause involving a fronted expletive pronoun}\label{fig-Yiddish-interrogative-expletive}
+\end{figure}
+The analysis is more complex than the Danish one, but this is due to the fact that Yiddish has V2
+sentences in interrogatives involving verb movement in addition to extraction. Interrogatives have
+two extracted elements: one for V2, the expletive in the example, and another one which is the
+interrogative phrase (\emph{ver} `who' in the example). The figure shows two elements after a /. In
+the notation using the \slasch feature, there would be a list with two elements.
 
+This completes the analysis of finite interrogative clauses with and without expletives,
+but there is more to be said about expletives in general. I stipulated a lexical rule adding an
+expletive element above and this accounts for expletives in Yiddish interrogatives. It not just
+works for interrogatives but for V2 in general. Yiddish declarative V2 clauses can have initial
+expletives as well, as can German V2 clauses. (\mex{1}a) is a German example. As (\mex{1}b) shows,
+the expletive is not allowed to appear in the \mf.
 
-\subsubsection{Positionionale Expletiva}
-
-\frame{
-\frametitle{Positionale Expletiva}
-
-\begin{itemize}
-\item Deutsch, Dänisch, Jiddish, \ldots erlauben Expletiva vor dem finiten Verb:
-
-\ea[]{
-Es ritten drei Reiter zum Tor hinaus.
-}
-\z
-
-
-
-\end{itemize}
-
-}
-
-
-\subsubsection{Interrogativnebensätze}
-
-\frame{
-\frametitle{Deutsch: \emph{w} + SOV}
-
-\vfill
-
-\centerfit{\begin{tikzpicture}[
-level 1+/.style={level distance=2\baselineskip},
-frontier/.style={distance from root=10\baselineskip},
-connect/.style={semithick,<->,color=green}]
-\tikzset{every tree node/.style={align=center,anchor=north}}
-%\draw (-3,-5) to[grid with coordinates] (4,0);
-\Tree[.S
-       [.{NP[\snom]} wer ]
-       [.S/NP 
-         [.NP/NP \trace{} ]
-         [.V$'$
-           [.{NP[\sacc]} \edge[roof]; {das Buch} ]
-           [.V liest ] ] ] ]
-\end{tikzpicture}}
-
-}
-
-\frame{
-\frametitle{Danish: \emph{w}-Subjekt + Expl + VO}
-
-\vfill
-
-\centerfit{\scalebox{0.9}{\begin{tikzpicture}[
-level 1+/.style={level distance=3\baselineskip},
-frontier/.style={distance from root=15\baselineskip},
-connect/.style={semithick,<->,color=green}]
-\tikzset{every tree node/.style={align=center,anchor=north}}
-%\draw (-3,-5) to[grid with coordinates] (4,0);
-\Tree[.S
-       [.{NP[\snom]} hvem\\wer ]
-       [.{S/NP[\snom]}
-         [.{NP[\lnom]} det\\{\sc expl} ]
-         [.{VP/NP[\snom]}
-           [.{V$'$/NP[\snom]}
-             [.V læser\\liest ]
-             [.{NP[\snom]/NP[\snom]} \trace{} ] ]
-           [.{NP[\sacc]} bogen\\Buch.{\sc def} ] ] ] ]
-\end{tikzpicture}}}
-
-
-
-}
-
-
-\frame{
-\frametitle{Jiddish: \emph{w}-Subjekt + V2 mit Expletivum im VF}
-
-
-
-
-
-\vfill
-
-\centerfit{\scalebox{0.65}{\begin{tikzpicture}[
-level 1+/.style={level distance=3\baselineskip},
-frontier/.style={distance from root=21\baselineskip},
-connect/.style={semithick,<->,color=green}]
-\tikzset{every tree node/.style={align=center,anchor=north}}
-%\draw (-3,-5) to[grid with coordinates] (4,0);
-\Tree[.S
-       [.{NP[\snom]} ver$_i$\\wer ]
-       [.{S/NP[\snom]}
-         [.{NP[\lnom]} es$_j$\\{\sc expl} ]
-         [.{S/NP[\snom]/NP[\lnom]}
-           [.{V \sliste{S//V}}
-             [.V leyent$_k$\\liest ] ]
-           [.{S//V/NP[\snom]/NP[\lnom]}
-             [.{NP[\lnom]/NP[\lnom]} \trace$_j$ ] 
-             [.{VP//V/NP[\snom]}
-               [.{V$'$//V} 
-                 [.V//V \trace$_k$ ]
-                 [.{NP[\snom]/NP[\snom]} \trace$_i$ ] ]
-               [.{NP[\sacc]} bogen\\Buch.{\sc def} ] ] ] ] ] ]
-\end{tikzpicture}}}
-
-
-}
-
-
-\frame{
-\frametitle{Expletiva im Deutschen und Jiddischen}
-
-
-\begin{itemize}
-\item Diese können nicht im Mittelfeld stehen:
 \eal
 \ex[]{
-Es arbeiten noch drei Männer.
+\gll Es lachen drei Kinder.\\
+     \expl{} laugh three children\\
+\glt `Three children laugh.'
 }
 \ex[*]{
-dass es noch drei Männer arbeiten
+\gll dass es      drei Kinder lachen\\
+     that \expl{} three children laugh\\
 }
 \zl
-\pause
-\item Beschränkung, die verlangt, dass diese Elemente extrahiert sein müssen.
-
-\pause
-\item Aber:
-\ea[*]{
-Es$_i$ glaube ich, dass \_$_i$ noch drei Männer arbeiten.
+In German grammars, this expletive is called ``positional \emph{es}'' and it is emphasized that it is
+not the subject and not an argument of the verb \parencites[\page 129, 177, 371]{Eisenberg2004a}[§1263]{Duden2005}. The fact that the \emph{es} cannot appear in the
+\mf is seen as support for the non-argumenthood of it. However, we have seen that the expletive is
+realized in the subject position in Danish, so there is some appeal to the idea to treat it
+uniformly as the initial element of the \argstl across the Germanic languages. Nevertheless it is
+undeniable that the \vf is the only place in which this expletive can appear in German and Yiddish.\itdopt{check Yiddish}  
+The problem can be solved by adding the following constraint to the Expletive Insertion Lexical Rule
+in the grammars of German and Yiddish:
+\ea
+Constraint on the output of the Expletive Insertion Lexical Rule for German and Yiddish:\\
+\ms{
+arg-st & \sliste{ NP\ibox{1}[\slasch \sliste{ \ibox{1} }] } $\oplus$ \etag\\
 }
 \z
-\pause
-\item Voranstellung von Expletivpronomina über Satzgrenzen muss ohnehin ausgeschlossen werden:
+This constraint says that the first element in the \argstl (the expletive) has to have a \slasch
+element with the relevant properties of the expletive. Since the expletive pronoun does not have
+anything in \slasch, it cannot be combined directly with the respective lexical items. The trace has
+something in \slasch, this is its very nature. So a trace can combine with the lexical item for
+\emph{lachen} `to laugh' and then the expletive can function as the filler.
+
+One problem remains: extraction of expletives must be clause-bound:
 \ea[*]{
-Es$_i$ glaube ich, dass \_$_i$ regnet.
+\gll Es$_i$ glaube ich, dass \_$_i$ drei Kinder lachen.\\
+     \expl{} believe I that {} three children laugh\\\german
+\glt Intended: `I believe that three children laugh.'
 }
 \z
-
-
-\end{itemize}
-
-
-
-
-
-
+While extraction may cross clause boundaries in principle (see
+(\ref{ex-wissen-Vortrag-halen-nonlocal}) on p.\,\pageref{ex-wissen-Vortrag-halen-nonlocal}), this is excluded in
+(\mex{0}). However, this is not a particular problem of the analysis of the positional \emph{es} at
+hand but it is a general property of expletive elements. (\mex{1}) shows an example with the weather
+\emph{es}, which clearly is an argument of the verb \emph{regnen} `to rain':
+\ea[*]{
+\gll Es$_i$ glaube ich, dass \_$_i$ regnet.\\
+     \expl{} believe I that {} rains\\
+\glt Intended: `I believe that it rains.'
 }
-\fi
+\z
+So, whatever rules out examples like (\mex{0}) also accounts for (\mex{-1}).
+
+
+Finally, there is one problem left: I provided a lexical rule that licenses lexical item for interrogatives with an expletive
+in subject position, but what is still missing is a constraint that rules out sentences without the
+expletive. There is nothing in the grammar so far that does this. It is possible to formulate
+something like this but the formal tools have not been introduced in this book. The reader is
+refered to \citew[\page 185]{MOe2011a} for details.
+
+
+
+\section{Summary}
+
+This chapter provided an analysis of dependent clauses introduced by a complementizer and of
+interrogative clauses. Together with the V1 and V2 clauses dealt with in Chapter~\ref{chap-verb-position} this covers
+the main clause types in the Germanic languages. The variation in these subordinated clauses is
+connected to what we saw before: the SOV languages have SOV order in embedded languages and some SVO
+languages have SVO order, some allow for both SVO and V2 and some allow for V2 only. Interrogative
+clauses involve a clause with a gap and the filler is the interrogative phrase containing a
+\emph{wh}-word in English and a corresponding word in the other Germanic languages. The \emph{wh}
+phrase may consist of a single interrogative pronoun or may be internally complex. The information
+about the interrogative pronoun has to be present at the top-most node of the interrogative phrase
+for semantic and syntactic reasons. The syntactic reason is of course that one has to make sure that
+the fronted phrase contains an interrogative pronoun at all. The information is passed up from the
+interrogative pronoun by the same mechanism that is also used for extraction: like \slasch, \que is used
+to pass the information up. Danish and Yiddish use expletive pronouns in interrogatives. To
+account for this, \citew{MOe2011a} suggested a lexical rule that introduced the expletive into the
+\argstl. This expletive can function as subject in Danish and as positional expletive in German and
+Yiddish.
+
+
+\itdopt{Add excercises}
+
+
+%      <!-- Local IspellDict: en_US-w_accents -->
