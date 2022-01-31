@@ -1,15 +1,15 @@
 %% -*- coding:utf-8 -*-
-\chapter*{Preface}
+\chapter{Preface}
 
-This book has two purposes: firstly the comparative analysis of the syntactic properties of the
+This book has two purposes: firstly the comparative analysis of the major syntactic properties of the
 Germanic languages and secondly the introduction of a specific format for the description and
 comparison of languages. The framework in which the analyses are couched is called \emph{HPSG
-  light}. It is based on HPSG \citep{ps,ps2} in the specific version that is described in detail in
+  light}. It is based on Head-Driven Phrase Structure Grammar (HPSG) \citep{ps,ps2} in the specific version that is described in detail in
 \citew{MuellerLehrbuch3}. However HPSG light does not contain any complicated attribute value
 matrices (AVMs). If AVMs are used at all, they are reduced to the minimum containing a reduced set
 of features like \argst for argument structure, \comps for complements and \spr for specifier. All
 other aspects of the analyses are represented in syntactic trees, which are easier to read. The idea
-behind the introduction of HPSG light is to provide some tool for linguists who want to provide a
+behind the introduction of HPSG light is to provide a tool for linguists who want to provide a
 more detailed description of a phenomenon without necessarily being forced to deal with all the
 technicalities. The degree of formalization corresponds to what is common in Government and Binding
 Theory, Minimalism, and the less formal variants of Construction Grammar. As for the one formal version
@@ -19,14 +19,55 @@ abbreviated representations and trees that are used in this book. The work prese
 from non-formal work in GB/Minimalism and Construction Grammar in an important way: it is backed up
 by implemented grammars that use the full version of HPSG including a semantic analysis in the
 framework of Minimal Recursion Semantics (MRS, \citew*{CFPS2005a}). The detailed analyses are described in
-conference proceedings, journal articles and books and the reader is invited to consult these
+conference proceedings, journal articles and books, and the reader is invited to consult these
 resources in case she or he is interested in the details. The implemented grammars are distributed
-with the Grammix virtual machine and can be downloaded from the author's web-page. The appendix of
+with the Grammix virtual machine \citep{MuellerGrammix} and can be downloaded from the author's
+web-page.\footnote{
+\url{https://hpsg.hu-berlin.de/Software/Grammix/}, \today.} The appendix of
 this book contains a list of sentences that were discussed in the respective chapters of this book
-and which are covered by the grammars of the respective languages. Readers are invited to enter the
-sentences into the TRALE system that comes with Grammix and inspect the complete AVMs.
+and which are covered by the grammars of the respective languages.\itdopt{This is still missing.} Readers are invited to enter the
+sentences into the TRALE system \citep{DKMM2004a-u,Penn2004a-u} that comes with Grammix and inspect the complete AVMs.
 
+The book starts with two introductiory chapters: the first chapter introduces the Germanic languages
+providing basic facts like number of speakers, areas where they are spoken, and some historical
+facts. Chapter two discusses the phenomena that are treated in the rest of the book, \eg scrambling,
+placement of adverbials, passive, clause types, nonlocal dependencies. The third chapter is an
+introduction to Phrase Structure Grammars, which are the foundations of almost all theories since
+\citegen{Chomsky57a} formalization of structuralist ideas
+\citep{Bloomfield33a-u}. Chapter~\ref{chap-psg-xbar} introduces not just phrase structure grammars
+but also grammars using abstractions over phrase structure rules, ultimately resulting in very
+abstract grammars of the type also known from \xbart
+\citep{Jackendoff77a}. Chapter~\ref{chap-valence} explains how the concept of valence is combined
+with abstract phrase structure rules to make sure that the right number and the right kind of
+elements is combined with a certain word. For example, a word like \emph{laugh} needs a subject and
+a word like \emph{read} needs a subject and an object. This has to be represented somewhere in a
+grammar, and Chapter~\ref{chap-valence} explains how it is done in HPSG (light). The basic differences
+in the analyses of SVO and SOV languages are explained. This chapter also
+explains how the various orders of subject and objects can be explained in a language like German
+(so-called \emph{scrambling}) and how one can account for the various placement possibilities in languages like English
+and the North Germanic languages on the one hand, and German, Dutch and Afrikaans on the other hand. Verbal complexes are dealt with in Chapter~\ref{chap-verbal-complex}, verb
+first position (used for question formation) and verb second position (for assertions) are explained
+in Chapter~\ref{chap-verb-position}. Passive and case assignment in general are treated in
+Chapter~\ref{chap-case}. The Germanic languages are especially interesting here as Icelandic
+belongs to this language group and is known for its quirky subjects (subjects in the genitive, dative, or
+accusative case, \citealp{ZMT85a}). Chapter~\ref{chap-expletives} deals with expletive pronouns and how they are used
+throughout the Germanic languages to help mark clause types. For example, expletives are used in
+German main clauses to fill the initial position so that the clause is an assertion. Danish uses
+expletives in embedded sentences with subjects as interrogative elements. Again the differences in
+general grammatical properties influence the grammar in other parts such as the placements of expletives. 
 
+% The final chapter, Chapter~\ref{chap-HPSG-light}, is for advanced readers. It tries to relate the simplified version
+% of HPSG that was used throughout the earlier chapters to HPSG as it is used in full-fledged HPSG publications.
+
+The final chapter, Chapter~\ref{chap-outlook}, is a brief summary of what was done in the book and
+points the interested reader to some further literature on HPSG.
+
+German slides developed for the course I am teaching with this book are available on GitHub.\footnote{
+\url{https://github.com/stefan11/germanic-syntax-slides}, 2021-09-14.
+}
+Lectures in German corresponding to the chapters can also be found on youtube.\footnote{
+\url{https://www.youtube.com/playlist?list=PLXwGGsuPxWRp4AB2LsWH6LKc0II7uc6tg}
+}
 
 \section*{On the way this book is published}
 
@@ -44,7 +85,7 @@ on logic \emph{Logik für Linguisten}, which is a translation of the English tex
 Linguists} \citep{AAD73a}. This book has 112 pages. It was sold for 9,40e as a paperback by the Max Niemeyer
 Verlag. This publisher was bought by De Gruyter and the book is now sold for \$126.00/89,95€ as an
 eBook and \$133,00/94,95€ for the hardcover book\footnote{
-  \url{http://www.degruyter.com/isbn/978-3-11-096350-2}. 1.09.2014.
+  \url{http://www.degruyter.com/isbn/978-3-11-096350-2}. 2014-09-01.
 } (see \citealp{MuellerOA} for other examples and a general discussion). Both the eBook and the printed book are unaffordable for students. The way out of this highly
 problematic situation is to publish books open access. The PDF version of this book is free for
 everybody and the printed copy is available for a reasonable price since the book is licenced under
@@ -52,7 +93,162 @@ a Creative Commons license and hence is not owned by a
 profit"=oriented publisher and everybody can choose his or her own print on demand service in case
 the default service provided by Language Science Press is more expensive.
 
+\section*{Gender issues}
+
+\citet{MB97a} did a study on ten textbooks in syntax published between 1969 and 1994. They showed
+that some of the textbooks used examples describing violence against women. Examples like \emph{John
+  beats Mary.} or \emph{John hits Mary.} were frequent in the 70ies and 80ies. I know of a paper
+written by two female authors and one male author containing a \emph{John hits Mary} example. \citet[\page
+812]{MB97a} discus some even more extreme cases from the textbooks they examined. Furthermore, females were
+depicted in stereotypical situations like teaching children, never in work situations with the
+exception of work as secretaries. Some examples were explicitly sexist referring to women as stupid
+and to men as intelligent. 
+
+
+\citeauthor{MB97a} examined the semantic roles in which women and men appeared, checked for
+usage of full NPs, proper names and pronouns. They found that men appear more often than women
+in example sentences and they appear more often as agents then as experiencers/patients. While
+openly sexist examples disappeared from textbooks in the time since the 80ies, \citet{PCKSDMC2017a}
+repeated the studies of \citeauthor{MB97a} and noticed that not much has changed in respect to the
+women/men distribution in examples. 
+
+I think that such biased examples contribute to the stereotypes regarding genders that most of us
+have since they are deeply entrenched in our societies. Mikaela Wapman and Deborah Belle did a study
+asking students of psychology about the following situation: a father and son are in a horrible car
+crash and the father gets killed. The son is brought to the hospital and has to undergo an emergency
+surgery but the surgeon refuses to do it and say, ``I can’t operate—that boy is my son!''. Question:
+How is this possible? People came up with all sorts of explanations like gay fathers, ghost surgeons
+and so on, overlooking the possibility of the surgeon being the mother of the child. This shows that
+the idea that surgeons are male is deeply entrenched in our societies (the same experiment works in
+German and it works in the other direction with nurses). The obvious solution to such problems is to
+change the employment of women and to change the payment of jobs usually taken by women. This is a
+political problem and it would be helpful if women were in at least 50\,\% of the positions in
+political systems. Many of the problems that women have can be traced back to a lack of economic
+independence. There is a good portray of East German women showing the consequences of economic
+independence: \url{https://www.mdr.de/zeitreise/schwerpunkte/ostfrauen-106.html}. When the wall came
+down and East German women and West German women united there was much confusion since the issues
+they wanted to address were totally different (see also the MDR video documentation). Almost all women in
+East Germany worked, child care was available everywhere and so on.
+
+What we seem to have here is an hen egg problem: society and stereotypes would be different if women
+would be in other jobs and better payed, but stereotypes prevent women from even trying because they
+feel not welcome in certain jobs. Here is where language plays an important role. German marks
+gender for professions: one can talk about \emph{Kindergärtner} and
+\emph{Kindergärtnerinnen}. Looking at the German grammatical system, the plural is unmarked for
+gender, but there is the form \emph{Kindergärtnerinnen} that makes gender explicit. Studies show
+that recipients do not consider women if the unmarked form is used. For instance, \citet{SSB2001a}
+showed that people come up with more males when asked for their favorite \emph{Musiker} rather than
+their favorite \emph{Musiker} `musician' or \emph{Musikerin} `female musician'. Germans solved this
+problem by using abbreviations for fusing both variants: \emph{MusikerIn}. Further more inclusive
+forms have been developed including people with diverse genders: \emph{Musiker*in}. These forms are
+standard in the communication of the German Research Foundation and some universities (\eg the
+Humboldt-Universität zu Berlin, where I am currently working).    
+
+While the so-called \emph{Binnen-I} helps to make women visible in communication this does not help
+as far as textbooks are concerned since respective forms are rather rarely used in examples. So, to
+make non-male readers feel more welcome, other means have to be employed. One has to work on the
+referents that are used in examples. The names used most frequently in examples in the papers/textbooks from which I was learning syntax
+(written in the 80ies and 90ies) were \emph{John} and \emph{Mary} or \emph{Karl} and \emph{Maria} in
+German publications. (Books on HPSG using gender neutral names like \emph{Kim} and \emph{Sandy} were an early exception \citep{ps,ps2}.)
+I never used discriminating examples in my publications and I avoided stereotypes, but I also used
+\emph{Karl} and \emph{Maria} and I had \emph{den Mann} `the man' reading books and \emph{der Mann}
+`the man' giving books to \emph{der Frau} `the woman' or \emph{dem Kind} (neuter, `the child'). One
+reason for having more male referents in German examples is that the masculine inflection paradigm
+differentiates between all four cases while the feminine one collapses nominative and accusative as
+well as genitive and dative. The neuter is somewhere in the middle: nominative and accusative are syncretic. Table~\ref{table-German-case-syncretism} gives an overview of the situation.
+\begin{table}
+\begin{tabular}{llll}\lsptoprule
+           & the man    & the woman & the child\\\midrule
+nominative & der Mann   & die Frau  & das Kind\\
+genitive   & des Mannes & der Frau  & des Kindes\\
+dative     & dem Mann   & der Frau  & dem Kind\\
+accusative & den Mann   & die Frau  & das Kind\\
+\lspbottomrule
+\end{tabular}
+\caption{\label{table-German-case-syncretism}Inflectional marking within noun phrases of feminine and masculine gender. Only the masculine
+  paradigm is unambiguously marked for case.}
+\end{table}  
+If one wants to avoid male referents, one could use animals, but depending on the verb one
+uses, a dolphin as subject would not make sense. So, one way to solve this problem, is to use proper
+names like \emph{Kim}, \emph{Sandy}, and \emph{Chris} that are unisex. This is of course only
+possible if case is unimportant since proper names do not inflect for case in almost all of the Germanic
+languages (Icelandic being the exception, \citealp[\page 443]{ZMT85a}). 
+
+As mentioned above there is some tradition of what names are used in linguistic examples: for
+English it was \emph{John} and \emph{Mary}, for German \emph{Karl} and \emph{Maria}, Dutch authors
+used \emph{Jan} and \emph{Piet} and \emph{Marie}. Since this book is about Germanic languages I
+thought I collect names that are typical for the languages under discussion. It is clear that the
+names trick does not work globally. I learned that \emph{Gert} can be used both for women and
+men in the Scandinavian countries, but in Germany this name exclusively refers to
+males.\footnote{%
+See Bernadette La Hengst's song \emph{Ein Mädchen namens Gerd} `A girl named Gerd', which is a parallel to \emph{A boy
+  named Sue} by Johnny Cash: \url{https://www.youtube.com/watch?v=Y6WVcOk4D3c}, 2020-06-26.
+} In
+addition speaker communities may associate certain names with women and girls since there are more females
+than males with this name in a certain community and vice versa. And finally there are differences
+on the individual level: you may happen to know three female Connys and no male one but this may
+change during the course of your live. So an example about Conny reading a book or feeding a child
+could work for or against a certain stereotype, depending on the experiences of the reader. And of course the assignment to a certain gender may change in
+time: a name that is given more often to girls may be given more often to boys some decades later. 
+So, what I did is not perfect but since I state here that all names are meant to be unisex including
+non-binary people, it is a step into the right direction.
+
+In a discussion on twitter, XY pointed out to me that names do not necessarily fit the gender of the
+referent. There are famous examples of a male US American lawyer with the name Sue\footnote{
+\url{https://en.wikipedia.org/wiki/Sue_K._Hicks}, 2020-07-06.
+%\emph{Johnny Cash Is Indebted to a Judge Named Sue}. The New York Times, July 12, 1970, p.\ 66.
+} and of women with the name Michael (the columnist Michael Sneed, Chicago Sun-Times, and The
+Bangles' bassist Michael Steele).\footnote{
+  \url{https://en.wikipedia.org/wiki/Michael_Burnham}, 2020-07-06.
+}
+So in principle
+one would have to make the gender of the referent explicit. But this is exactly what I want to avoid
+by using unisex names: I do not want to entrench stereotypes. By not using \emph{Sue}, I do not have to say
+that Sue may be a man.
+
+A special case are non-binary people. They may not feel represented in examples with unisex
+names like \emph{Kim} and \emph{Sandy}. This is the reason why they sometimes choose names that are
+not used by binary people. Kirby Conrod suggested that non-binary people give permission to use their names and allowed me to
+use theirs (Kirby's), which I do at some places in the book. 
+% https://nonbinary.miraheze.org/wiki/Names
+
+%Kim Gerdes (German linguist), Kim Wilde (British pop singer).
+
+Table~\ref{table-given-names-used-in-the-book} shows the names I am using throughout the book.
+
+\begin{table}
+\begin{tabular}{llp{4cm}p{4cm}}\lsptoprule
+language    & name      & female basis         & male basis\\\midrule
+Danish      & Gert/Gerd & Asgjerd, Hallgerd, Hildegard, Ingjerd        & Gerhard\\
+Dutch       & Robin     &                      & Robrecht, Robert\\ %https://nl.wikipedia.org/wiki/Robin_(voornaam)
+            & Benedikt \\
+German      & Conny     & Constanze, Cornelia  & Conrad, Constantin\\
+            & Aicke     & & Eckehard \\
+English     & Chris     & Christina, Christine & Christian, Christoph(er)\\
+            & Kim       & Kimberly             & Kimberly, Kimball,\newline Joachim, Joakim\\
+            & Sandy     & Sandra               & Alexander, Sander, Alasdair\\
+non-binary  & Kirby\\
+            & Elvan\\% from Wiki
+\lspbottomrule
+\end{tabular}
+\caption{\label{table-given-names-used-in-the-book}This table lists the names used in the book for
+  the languages given}
+\end{table}
+%\end{sideways}
+
+
+\if0
+
+
+
+\fi
+
 ~\medskip
 
 \noindent
 Berlin, \today\hfill Stefan Müller
+
+
+
+
+%      <!-- Local IspellDict: en_US-w_accents -->
