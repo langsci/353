@@ -30,12 +30,21 @@
 
 \newcommand{\LATER}[1]{}
 
+% load memoize before german.sty
+
+\usepackage{memoize} 
+%\memoizeset{readonly}
+% see below for further settings
 
 \input{localmetadata.tex}
 \input{localpackages.tex}
 \input{localcommands.tex}
 
-\memoizeset{readonly}
+\memoizeset{
+  memo filename prefix={germanic.memo.dir/},
+  register=\todo{O{}+m},
+  prevent=\todo,
+}
 
 
 % \renewcommand{\itd}[1]{}

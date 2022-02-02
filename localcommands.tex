@@ -5,6 +5,8 @@
 
 \setcounter{secnumdepth}{4}
 
+\let\citew\citet
+
 \newcommand{\danish}{\jambox{(\ili{Danish})}}
 \newcommand{\dutch}{\jambox{(\ili{Dutch})}}
 \newcommand{\english}{\jambox{(\ili{English})}}
@@ -51,11 +53,11 @@
 
 
 %% now loaded by the langsci class
-%% \iftoggle{draft}{
-%% \usepackage{todonotes}
-%% }{
-%% \usepackage[disable]{todonotes}
-%% }
+\iftoggle{draft}{
+\usepackage{todonotes}
+}{
+\usepackage[disable]{todonotes}
+}
 
 \iftoggle{draft}{}{
 \presetkeys{todonotes}{disable}{}
