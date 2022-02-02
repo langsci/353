@@ -9,7 +9,7 @@ theories that were developed since \citew{Chomsky57a}. The phrase structure gram
 this chapter will be the basis for more complicated phenomena covered in the chapters to come. This
 chapter deals mainly with German and English, which is sufficient for the introduction of the formal apparatus
 of phrase structure grammars. The result of this chapter is a phrase structure grammar that is
-similar to \xbar grammars of the style that was developed in the late 1970ies and the early 1980ies
+similar to \xbar grammars (pronounced: ``X-bar grammars'') of the style that was developed in the late 1970s and the early 1980s
 \citep{Jackendoff77a}. The structures argued for in this chapter will also play a role in later
 chapters, but the lexical items will be much richer: they will contain valence information playing a
 crucial role in licensing syntactic structure.
@@ -18,7 +18,7 @@ Much time is spent on the structure of noun phrases. The main insights on the sy
 phrases can be carried over to other Germanic languages. Later chapters will deal with the
 differences of the Germanic languages with respect to clause level syntax.
 
-This chapter heavily draws from \citew[Chapter~2]{MuellerGT-Eng4}, which is an updated translation of
+This chapter heavily draws on \citew[Chapter~2]{MuellerGT-Eng4}, which is an updated translation of
 \citew[Chapter~2]{MuellerGTBuch2}. Knowledge about basic concepts like part of speech and
 constituency tests is presupposed. Readers who feel the need to refresh their knowledge in these
 areas are referred to Chapter~1 of the Grammatical Theory textbooks.
@@ -37,7 +37,7 @@ and \emph{gibt} `gives' is a verb\is{verb}.
 \glt `because he gives the child the book'
 \z
 Using the constituency tests introduced in \citew[Chapter~1]{MuellerGT-Eng4}, one can show that
-individual words as well as the strings \emph{das Buch} `the book' and \emph{dem Kind} `the child',
+individual words as well as the strings \emph{das Buch} `the book' and \emph{dem Kind} `the child'
 form constituents. These get then assigned certain symbols. Since nouns form an important part of
 the phrases \emph{das Buch} and \emph{dem Kind}, these are referred to as \emph{noun phrases} or
 NPs, for short. The pronoun \emph{er} `he' can occur in the same positions as full NPs and can
@@ -154,24 +154,24 @@ structure. Two constituents are said to be \emph{adjacent}\is{adjacency}
 if they are directly next to each other.
 
 Phrase structure rules are often omitted in linguistic publications. Instead, authors opt for tree diagrams or the compact equivalent bracket notation
-such as (\mex{1}).
+as in (\mex{1}).
 \ea
 \gll {}[\sub{S} [\sub{NP} er] [\sub{NP} [\sub{Det} das] [\sub{N} Buch]]  [\sub{NP} [\sub{Det} dem] [\sub{N} Kind]] [\sub{V} gibt]]\\
      {}         {}        he  {}        {}       the  {}       book    {}        {}       the  {}       child     {}      gives\\  
 \z
-Nevertheless, it is the grammatical rules which are actually important since these represent grammatical knowledge which is independent of specific structures.
+Nevertheless, it is the grammatical rules which are actually important because these represent grammatical knowledge which is independent of specific structures.
 In this way, we can use the grammar in (\ref{bsp-grammatik-psg}) to parse or generate the sentence
 in (\mex{1}), which differs from (\ref{bsp-weil-er-das-buch-dem-mann-gibt}) in the order of objects: 
 \ea
-\gll {}[weil] er dem Kind das Buch gibt\\
-	 {}\spacebr{}because he.\NOM{} the.\DAT{} child the.\ACC{} book gives\\
+\gll {}(weil) er dem Kind das Buch gibt\\
+     {}\spacebr{}because he.\NOM{} the.\DAT{} child the.\ACC{} book gives\\
 \glt `because he gives the child the book'
 \z
 The rules for replacing determiners and nouns are simply applied in a different order than in (\ref{bsp-weil-er-das-buch-dem-mann-gibt}). Rather than replacing the first Det with \emph{das} `the' and the first noun with \emph{Buch} `book', the first Det is replaced with \emph{dem} `the' and the first noun with \emph{Kind}.
 
 At this juncture, I should point out that the grammar in (\ref{bsp-grammatik-psg}) is not the only possible grammar for the example sentence in
 (\ref{bsp-weil-er-das-buch-dem-mann-gibt}). There is an infinite\label{page-unendlich-viele-grammatiken} number of possible grammars which could
-be used to analyze these kinds of sentences (see \citew[Chapter~2]{MuellerGT-Eng} exercise~1). Another possible grammar is given in (\mex{1}):
+be used to analyze these kinds of sentences (see \citealt[Chapter~2, exercise~1]{MuellerGT-Eng}). Another possible grammar is given in (\mex{1}):
 
 \ea\label{psg-binaer}
 \begin{tabular}[t]{@{}l@{ }l@{}}
@@ -189,7 +189,7 @@ V  & $\to$ NP V\\
 {V} & {$\to$ gibt}\\
 \end{tabular}
 \z
-This grammar licenses binary branching structures as shown in Figure~\vref{er-das-buch-dem-mann-gibt-bin}.
+This grammar licenses binary branching structures, as shown in Figure~\vref{er-das-buch-dem-mann-gibt-bin}.
 \begin{figure}
 \centerline{
 \begin{forest}
@@ -211,11 +211,12 @@ sm edges
   binary branching structure}
 \end{figure}%
 
-Both the grammar in (\mex{0}) and (\ref{bsp-grammatik-psg}) are too imprecise.
+Both the grammar in (\mex{0}) and the one in (\ref{bsp-grammatik-psg}) are too imprecise.
 If we adopt additional lexical entries for \emph{ich} `I' and \emph{den} `the' (accusative) in our grammar, then we would incorrectly
 license the ungrammatical sentences in (\mex{1}b--d):\footnote{\label{fn-ex-das-kind-erwartet}%
 	With the grammar in (\ref{psg-binaer}), we also have the additional problem that we cannot determine when an utterance is complete
-	since the symbol V is used for all combinations of V and NP. Therefore, we can also analyze the sentence in (i) with this grammar:
+	since the symbol V is used for all combinations of V and NP. Therefore, we can also analyze
+        the sentences in (i) with this grammar provided we add the respective words to the lexicon:
   
 \eal
 \ex[*]{
@@ -252,8 +253,8 @@ how the selection of arguments by a verb (valence) is captured in HPSG.
 In (\mex{0}b), subject"=verb agreement\is{agreement|(} has been violated, in other words: \emph{ich} `I' and \emph{gibt} `gives' do not fit together.
 (\mex{0}c) is ungrammatical because the case requirements of the verb have not been satisfied: \emph{gibt} `gives' requires a dative object. Finally, (\mex{0}d) is ungrammatical
 because there is a lack of agreement between the determiner and the noun. It is not possible to combine \emph{den} `the', which is masculine and bears accusative case, 
-and \emph{Buch} `book' because \emph{Buch} is neuter gender. For this reason, the gender properties
-of these two elements are not the same and the elements can therefore not be combined.
+and \emph{Buch} `book' because \emph{Buch} is neuter gender. As the gender properties
+of these two elements are not the same, the elements cannot be combined.
 
 In the following, we will consider how we would have to change our grammar to stop it from licensing the sentences in (\mex{0}b--d).
 If we want to capture subject"=verb agreement, then we have to cover the following six cases in German, as the verb has to agree with the
@@ -329,7 +330,8 @@ we have to increase the number of symbols we assume for verbs.\is{valence}
 	 Aicke knows\\
 }
 \zl
-In the rules above, the information about the number of arguments required by a verb is included in the marking `nom\_dat\_acc'.
+In the rules above, the information about the number of arguments required by a verb is included in
+the atomic symbols, \eg `nom\_dat\_acc'.
 
 In order to capture the determiner"=noun agreement in (\mex{1}), we have to incorporate information about gender\is{gender} (fem, mas, neu),
 number\is{number} (sg, pl), case\is{case} (nom, gen, dat, acc) and the inflectional classes (strong, weak)\footnote{%
@@ -605,7 +607,7 @@ For the other NPs, the values of these features are irrelevant. The case of thes
 
 \section{Phrase structure rules for some aspects of German syntax}
 
-Whereas determining the direct constituents of a sentence is relative easy, since we can very much rely on the movement test due to the
+Whereas determining the direct constituents of a sentence is relatively easy, since we can very much rely on the movement test due to the
 somewhat flexible order of constituents in German, it is more difficult to identify the parts of the noun phrase. This is the problem
 we will focus on in this section. To help motivate assumptions about \xbar~syntax to be discussed in Section~\ref{sec-xbar},
 we will also discuss prepositional phrases.
@@ -621,10 +623,12 @@ noun. Noun phrases can have a distinctly more complex structure than (\mex{1}a).
 \ex 
 \gll ein Buch\\
      a   book\\
-\ex 
+\ex
+\label{ex-ein-Buch-das-wir-kennen} 
 \gll ein Buch, das  wir kennen\\
      a   book  that we  know\\
 \ex 
+\label{ex-ein-Buch-aus-Japan}
 \gll ein Buch aus  Japan\\
      a   book from Japan\\
 \ex 
@@ -645,9 +649,9 @@ noun. Noun phrases can have a distinctly more complex structure than (\mex{1}a).
 \zl
 
 \noindent
-As well as determiners and nouns, noun phrases can also contain adjectives, prepositional phrases and relative clauses. 
+In addition to determiners and nouns, noun phrases can also contain adjectives, prepositional phrases and relative clauses. 
 The additional elements in (\mex{0}) are adjuncts\is{adjunct|(}. They restrict the set of objects which the noun phrase 
-refers to. Whereas (\mex{0}a) refers to a being which has the property of being a book, the referent of (\mex{0}b) must
+refers to. Whereas (\mex{0}a) refers to an entity which has the property of being a book, the referent of (\mex{0}b) must
 also have the property of being known to us.
 
 Our previous rules for noun phrases simply combined a noun and a determiner and can therefore only be used to
@@ -685,12 +689,13 @@ NP $\to$ Det A* N
 The asterisk\is{*} in (\mex{0}) stands for any number of iterations. Therefore, (\mex{0}) encompasses rules with no adjectives
 as well as those with one, two or more.
 
-The problem is that according to the rule in (\mex{0}) adjectives and nouns do not form a constituent and we can therefore not explain why coordination 
+The problem is that according to the rule in (\mex{0}), adjectives and nouns do not form a constituent and we therefore cannot explain why coordination 
 is still possible in (\mex{1}):
 \ea
+\label{ex-alle-grossen-Seeelefanten-und}
 \gll alle [[großen Seeelefanten] und [grauen Eichhörnchen]]\\
-     all  \spacebr{}\spacebr{}big elephant.seals and  \spacebr{}grey squirrels\\
-\glt `all the big elephant seals and grey squirrels'	 
+     all  \spacebr{}\spacebr{}big elephant.seals and  \spacebr{}gray squirrels\\
+\glt `all the big elephant seals and gray squirrels'	 
 \z
 If we assume that coordination involves the combination of two or more word strings with the same syntactic properties, then we would have to assume
 that the adjective and noun form a unit.
@@ -729,7 +734,7 @@ sm edges
 [NP
    [Det [ein;a] ]
    [\nbar
-      [A [graues;grey] ]
+      [A [graues;gray] ]
       [\nbar
         [N [Eichhörnchen;squirrel] ] ] ] ]
 \end{forest}}
@@ -743,7 +748,7 @@ sm edges
     [\nbar
     [A [großes;big] ]
        [\nbar
-       [A [graues;grey] ]
+       [A [graues;gray] ]
          [\nbar
          [N [Eichhörnchen;squirrel] ] ] ] ] ]
 \end{forest}}
@@ -752,29 +757,29 @@ sm edges
 %
 \caption{\label{Abbildung-Adjektive-in-NP}Noun phrases with differing numbers of adjectives}
 \end{figure}%
-The adjective \emph{grau} `grey' restricts the set of referents for the noun phrase. If we assume an
-additional adjective such as \emph{groß} `big', then it only refers to those squirrels who are grey
+The adjective \emph{grau} `gray' restricts the set of referents for the noun phrase. If we assume an
+additional adjective such as \emph{groß} `big', then it only refers to those squirrels who are gray
 as well as big. These kinds of noun phrases can be used in contexts such as the following:
 
 \ea
 \label{Beispiel-Iteration-Adjektive}
 \gll A: Alle grauen Eichhörnchen sind groß.\\
-\spacebr{} all grey squirrels are big\\
-\glt \hphantom{A:~}`All grey squirrels are big.'\\
+\spacebr{} all gray squirrels are big\\
+\glt \hphantom{A:~}`All gray squirrels are big.'\\
 \gll B: Nein, ich habe ein kleines graues Eichhörnchen gesehen.\\
-	\spacebr{} no I have a small grey squirrel seen\\
-\glt \hphantom{B:~}`No, I saw a small grey squirrel.'
+	\spacebr{} no I have a small gray squirrel seen\\
+\glt \hphantom{B:~}`No, I saw a small gray squirrel.'
 \z
 We observe that this discourse can be continued with \emph{Aber alle kleinen grauen Eichhörnchen
-  sind krank} `but all small grey squirrels are ill' and a corresponding answer. The possibility
+  sind krank} `but all small gray squirrels are ill' and a corresponding answer. The possibility
   to have even more adjectives in noun phrases such as \emph{ein kleines graues Eichhörnchen} `a
-  small grey squirrel' is accounted for in our rule system in (\mex{-1}). In the rule
-  (\ref{NP-Regeln-Adj}), \nbar occurs on the left as well as the right"=hand 
+  small gray squirrel' is accounted for in our rule system in (\mex{-1}). In the rule
+  (\ref{NP-Regeln-Adj}), \nbar occurs on the left"=hand as well as the right"=hand 
   side of the rule. This kind of rule is referred to as \emph{recursive}\is{recursion}.
 \is{adjunct|)}
 
 We have now developed a nifty little grammar that can be used to analyze noun phrases containing
-adjectival modifiers. As a result, the combination of an adjective and noun is given constituent
+adjectival modifiers. As a result, the combination of an adjective and a noun is given constituent
 status. One may wonder at this point if it would not make sense to also assume that determiners and
 adjectives form a constituent, as we also have the following kind of noun phrases: 
 \ea
@@ -783,11 +788,13 @@ adjectives form a constituent, as we also have the following kind of noun phrase
 \z
 Here, we are dealing with a different structure, however. Two full NPs have been
 conjoined\is{coordination} and part of the first conjunct has been deleted.
+\itdopt{M: Couldn't \emph{alle} have been deleted in (\ref{ex-alle-grossen-Seeelefanten-und})?}
+
 \ea
 \gll diese schlauen \st{Eichhörnchen} und diese neugierigen Eichhörnchen\\
      these smart    squirrels         and these curious     squirrels\\
 \z
-One can find similar phenomena at the sentence and even word level:
+One can find similar phenomena at the sentence level (\mex{1}a) and even at the word level (\mex{1}b):
 \eal
 \ex 
 \gll dass Conny dem Kind  das Buch \st{gibt} und Aicke der Frau die Schallplatte gibt\\
@@ -808,7 +815,7 @@ One can find similar phenomena at the sentence and even word level:
 
 \noindent
 Thus far, we have discussed how we can ideally integrate adjectives into our rules for the structure of noun phrases.
-Other adjuncts such as prepositional phrases or relative clauses can be combined with \nbar in an analogous way to adjectives:
+Other adjuncts such as prepositional phrases (\ref{ex-ein-Buch-aus-Japan}) or relative clauses (\ref{ex-ein-Buch-das-wir-kennen}) can be combined with \nbar in an analogous way to adjectives:
 \eal
 \ex\label{xbar-PP-Adjunkt-an-N} \nbar $\to$ \nbar PP
 \ex \nbar $\to$ \nbar relative clause
@@ -871,9 +878,10 @@ sm edges
 \end{figure}%
 
 
-In addition to the previously discussed NP structures, there are other structures where the determiner or noun is missing.
-Nouns can be omitted via ellipsis. (\mex{1}) gives an example of noun phrases, where a noun that does not require a complement
-has been omitted. The examples in (\mex{2}) show NPs in which only one determiner and complement of the noun has been realized,
+In addition to the previously discussed NP structures, there are other structures where the
+determiner or the noun is missing.
+Nouns can be omitted via ellipsis. (\mex{1}) gives an example of noun phrases where a noun that does not require a complement
+has been omitted. The examples in (\mex{2}) show NPs in which only a determiner and a complement of the noun has been realized,
 but not the noun itself. The underscore marks the position where the noun would normally occur. 
 \eal
 \label{ex-nounless-np}
@@ -957,10 +965,10 @@ Going back to boxes, the rules in (\mex{0}) correspond to empty boxes with the s
 of ordinary nouns. As we have considered previously, the actual content of the boxes is unimportant when
 considering the question of where we can incorporate them. In this way, the noun phrases in (\ref{Beispiele-NP-Adjunkte})
 can occur in the same sentences. The empty noun box also behaves like one with a genuine noun. If we
-do not open the empty box, we will not be able to ascertain the difference to a filled box. 
+do not open the empty box, we will not be able to notice the difference to a filled box. 
 
 It is not only possible to omit the noun from noun phrases, but the determiner can also remain unrealized in certain contexts.
-(\mex{1}) shows noun phrases in plural\is{plural}:
+(\mex{1}) shows noun phrases in the plural\is{plural}:
 \eal
 \ex 
 \gll Bücher\\
@@ -975,7 +983,7 @@ It is not only possible to omit the noun from noun phrases, but the determiner c
 \gll interessante Bücher, die  wir kennen\\
      interesting  books   that we know\\
 \zl
-The determiner can also be omitted in singular if the noun denotes a mass noun\is{noun!mass}: 
+The determiner can also be omitted in the singular if the noun denotes a mass noun\is{noun!mass}: 
 
 \eal
 \ex 
@@ -1030,7 +1038,7 @@ sm edges
 \caption{\label{Abbildung-NP-ohne-Det}Noun phrases without overt determiner}
 \end{figure}%
 
-It is necessary to add two further comments to the rules were developed up to this point: up to now, I have
+It is necessary to add two further comments to the rules that were developed up to this point: up to now, I have
 always spoken of adjectives. However, it is possible to have very complex adjective phrases in pre"=nominal position.
 These can be adjectives with complements (\mex{1}a,b) or adjectival participles (\mex{1}c,d):
 
@@ -1063,13 +1071,13 @@ An adjective phrase (AP) can consist of an NP and an adjective, a PP and an adje
 \ex AP $\to$ PP A
 \ex AP $\to$ A
 \zl
-There are two imperfections resulting from the rules were developed thus far. These are the rules for adjectives
+There are two imperfections resulting from the rules that were developed thus far. These are the rules for adjectives
 or nouns without complements in (\mex{0}c) as well as (\ref{NP-Regeln-Nbar-N}) -- repeated here as (\mex{1}):
 \ea
 \nbar $\to$ N
 \z
 If we apply these rules, then we will generate unary branching subtrees, that is trees with a mother that
-only has one daughter. See Figure~\ref{Abbildung-NP-ohne-Det} for an example of this. If we maintain the
+only has one daughter. (See Figure~\ref{Abbildung-NP-ohne-Det} for an example of this.) If we maintain the
 parallel to the boxes, this would mean that there is a box which contains another box which is the one with 
 the relevant content.
 
@@ -1088,7 +1096,7 @@ the rules in (\mex{1}), we will simply use the rules in (\mex{2}):
 with a complement. This is parallel to the categorization of the pronoun \emph{er} `he' as an NP in the grammars
 (\ref{bsp-grammatik-psg}) and (\ref{psg-binaer}).
 
-Assigning \nbar to nouns which do not require a complement has the advantage that we do not have to explain why the analysis in (\mex{1}b) is possible as well
+Assigning the category \nbar to nouns which do not require a complement has the advantage that we do not have to explain why the analysis in (\mex{1}b) is possible as well
 as (\mex{1}a) despite there not being any difference in meaning.
 \eal
 \ex 
@@ -1105,8 +1113,25 @@ of two constituents of the same category is always a new constituent with that c
 is also \nbar. This constituent is then combined with the adjective and the determiner. In (\mex{0}b), the nouns themselves
 have been coordinated. The result of this is always another constituent which has the same category as its parts. In this case,
 this would be N. This N becomes \nbar and is then combined with the adjective. If nouns which do not require complements were
-categorized as \nbar rather than N, we would not have the problem of spurious ambiguities\is{ambiguity!spurious}. The
-structure in (\mex{1}) shows the only possible analysis.
+categorized as \nbar rather than N, we would not have the problem of spurious
+ambiguities\is{ambiguity!spurious}.\footnote{
+Natural language utterances are often ambiguous. For example, the following sentence has two
+readings.
+\ea
+\gll Unbekannte haben Mittwochabend bei einer FDP-Wahlkampfveranstaltung mit FDP-Chef Guido Westerwelle Farbbeutel geworfen. (taz, 21.5.2004, p.\,7)\\
+     strangers  have  Wednesday.evening at a FDP-campaign.rally  with FDP-leader Guido Westerwelle
+     paint.bombs thrown\\
+\glt `Strangers threw paint bombs Wednesday evening during a FDP campaign rally with FDP leader
+Guido Westerwelle.' or `Together with FDP leader Guido Westerwelle, strangers threw paint bombs Wednesday evening during a FDP campaign rally.'
+\z
+The two readings correspond to two different structures. In the first reading, the \emph{with} PP
+attaches to the campaign rally, which means that Guido Westerwelle was at the rally. In the second
+reading, the PP modifies the verb \emph{threw}, which corresponds to a meaning in which Guido
+Westerwelle threw paint bombs together with strangers. This is normal ambiguity. What linguists
+usually want to avoid is spurious ambiguity: cases in which we have the same semantics but two
+different syntactic structures.
+}
+The structure in (\mex{1}) shows the only possible analysis.
 \ea
 \gll {}[\sub{NP} einige [\sub{\nbar} kluge [\sub{\nbar} [\sub{\nbar} Frauen ] und [\sub{\nbar} Männer
 ]]]]\\
@@ -1226,7 +1251,7 @@ sm edges
 \end{figure}%
 
 At this point, the attentive reader is probably wondering why there is no empty measurement phrase in
-the left figure of Figure~\ref{Abbildung-PP}, which one might expect in analogy to the empty determiner in Figure~\ref{Abbildung-NP-ohne-Det}.
+the left"=hand figure of Figure~\ref{Abbildung-PP}, which one might expect in analogy to the empty determiner in Figure~\ref{Abbildung-NP-ohne-Det}.
 The reason for the empty determiner in Figure~\ref{Abbildung-NP-ohne-Det} is that the entire noun phrase
 without the determiner has a meaning similar to those with a determiner. The meaning normally contributed
 by the visible determiner has to somehow be incorporated in the structure of the noun phrase. This
