@@ -53,11 +53,11 @@
 
 
 %% now loaded by the langsci class
-\iftoggle{draft}{
-\usepackage{todonotes}
-}{
-\usepackage[disable]{todonotes}
-}
+% \iftoggle{draft}{
+% \usepackage{todonotes}
+% }{
+% \usepackage[disable]{todonotes}
+% }
 
 \iftoggle{draft}{}{
 \presetkeys{todonotes}{disable}{}
@@ -73,9 +73,9 @@
 \newcommand{\inlinetodoopt}[1]{\todo[color=green!40,inline]{\footnotesize #1}\xspace}
 \newcommand{\inlinetodoobl}[1]{\todo[color=red!40,inline]{\footnotesize #1}\xspace}
 
-\newcommand{\itd}[1]{\iftoggle{draft}{\inlinetodoobl{#1}}}
-\newcommand{\itdobl}[1]{\iftoggle{draft}{\inlinetodoobl{#1}}}
-\newcommand{\itdopt}[1]{\iftoggle{draft}{\inlinetodoopt{#1}}}
+\newcommand{\itd}[1]{\iftoggle{draft}{\inlinetodoobl{#1}}{}}
+\newcommand{\itdobl}[1]{\iftoggle{draft}{\inlinetodoobl{#1}}{}}
+\newcommand{\itdopt}[1]{\iftoggle{draft}{\inlinetodoopt{#1}}{}}
 
 \newcommand{\addpages}{\iftoggle{draft}{\todostefan{add pages}}}
 \newcommand{\addsource}{\iftoggle{draft}{\todostefan{add source}}}
