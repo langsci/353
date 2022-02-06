@@ -187,6 +187,13 @@ Abbildung~\ref{#1}\vpageref[]{#1} und Abbildung~\ref{#2} \vpageref{#2}%
 {\pageref{#1}--\pageref{#2}}%
 }
 
+%\let\reftextfaceafter\reftextafter
+%\let\reftextfacebefore\reftextbefore
+
+\addto\extrasenglish{%
+     \renewcommand\reftextfaceafter {\reftextafter}%
+     \renewcommand\reftextfacebefore {\reftextbefore}%
+}
 
 
 % draw a grid for getting the coordinates
