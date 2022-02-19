@@ -452,8 +452,8 @@ for the valence list. So the question is: How does the analysis of German relate
 English using \spr and \comps? A lot of researchers from various frameworks have argued that it is not
 useful to distinguish the subjects of finite verbs from other arguments. All the tests that have
 been used to show that subjects in English differ from complements do not apply to the arguments of
-finite verbs in German. Hence, researchers like \citet{Pollard90a}, \citet{Haider93a}, 
-\citet[\page 376]{Eisenberg94b}, and \citet{Kiss95a} argued for so-called ``subject as complement''
+finite verbs in German. Hence, researchers like \citet[\page 295]{Pollard90a}, \citet[Section~6.3.2]{Haider93a}, 
+\citet[\page 376]{Eisenberg94b}, and \citet[\page 57, 78]{Kiss95a} argued for so-called ``subject as complement''
 analyses.\itdopt{Provide examples.}
 Figure~\vref{fig-spr-german} shows the adapted analysis of
 (\ref{ex-dass-niemand-ihn-kennt}) -- repeated here as
@@ -471,10 +471,10 @@ sm edges
 [{V[\spr \eliste, \comps \eliste]}, name=S
         [{NP[\type{nom}]} [niemand;nobody] ]
         [{V\feattab{
-              \spr \sliste{ }, \comps \sliste{ NP[\type{nom}] } }}, name = Vs
+              \spr \eliste, \comps \sliste{ NP[\type{nom}] } }}, name = Vs
           [{NP[\type{acc}]} [ihn;him] ] 
           [V\feattab{
-              \spr \sliste{  },\\
+              \spr \eliste,\\
               \comps \sliste{ NP[\type{nom}], NP[\type{acc}]}} [kennt;knows] ]
 ] ]
 \node [right=4cm] at (S)
@@ -1046,14 +1046,14 @@ sm edges
 [{V[\spr \eliste, \comps \eliste]}
     [{\ibox{1} NP[\type{nom}]} [jeder;everybody] ]
       [V\feattab{
-         \spr \sliste{ }, \comps \sliste{ \ibox{1} } }, s sep+=1em
+         \spr \eliste, \comps \sliste{ \ibox{1} } }, s sep+=1em
          [{\ibox{2} NP[\type{acc}]} [das Buch;the book, roof] ] 
            [V\feattab{
-              \spr \sliste{  },\\
+              \spr \eliste,\\
               \comps \sliste{ \ibox{1}, \ibox{2} }}, schema 
              [{Adv[\textsc{mod} \ibox{3} V]} [sofort;promptly] ]
              [\ibox{3} V\feattab{
-                 \spr \sliste{  },\\
+                 \spr \eliste,\\
                  \comps \sliste{ \ibox{1}, \ibox{2} }} [liest;reads] ] ] ] ]
 \end{forest}}
 \caption{\label{fig-j-b-m-l}Analysis of [\emph{dass}] \emph{jeder das Buch sofort liest} `that everybody reads the
@@ -1237,7 +1237,8 @@ all other arguments to \comps, while the finite verbs of OV languages have all a
 
 \section{Alternatives}
 
-\inlinetodostefan{Advanced stuff. Ignore if you do not dare.}
+This section is for advanced readers. It compares the theory developed here with approaches to
+German developed in the theory of Government \& Binding \citep{Chomsky81a,Chomsky86b}.
 
 \subsection{CP/TP/VP models}
 \label{sec-cp-tp-vp}
@@ -1247,7 +1248,7 @@ all other arguments to \comps, while the finite verbs of OV languages have all a
 sentences have a constituent structure that is parallel to the structure that is assumed for English. As for English, the verb is
 assumed to form a phrase with its objects and this VP functions as the argument of a Tense head to
 form a maximal projection together with the subject of the verb, which is realized in the specifier
-position of the TP. Figure~\ref{fig-cp-tp-vp} shows the analysis of (\mex{1}) with the respective
+position of the TP. (The Tense Phrase was called Inflection Phrase (IP) in earlier publications.) Figure~\ref{fig-cp-tp-vp} shows the analysis of (\mex{1}) with the respective
 VP, TP, and CP layers.
 \ea
 \gll dass jeder dieses Buch kennt\\

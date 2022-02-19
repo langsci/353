@@ -21,14 +21,11 @@
 \provideboolean{draft}
 \setboolean{draft}{false}
 
-\newtoggle{draft}\togglefalse{draft}
+%\newtoggle{draft}\togglefalse{draft}
+\newtoggle{draft}\toggletrue{draft}
 %\newtoggle{finished}\togglefalse{finished}
 
 
-\newcommand{\NOTE}[1]{}
-%\newcommand{\NOTE}[1]{\marginpar{#1}}
-
-\newcommand{\LATER}[1]{}
 
 % load memoize before german.sty
 
@@ -39,6 +36,9 @@
 \input{localmetadata.tex}
 \input{localpackages.tex}
 \input{localcommands.tex}
+
+
+\input{locallangscifixes.tex}
 
 \memoizeset{
   memo filename prefix={germanic.memo.dir/},

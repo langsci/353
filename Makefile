@@ -10,25 +10,37 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib $(wildcard *
 .SUFFIXES: .tex
 
 
-%.pdf: %.tex $(SOURCE)
-	xelatex -shell-escape -no-pdf $* |grep -v math
-	biber $*
-	xelatex -shell-escape -no-pdf $* |grep -v math
-	biber $*
-	xelatex $* -shell-escape -no-pdf |egrep -v 'math|PDFDocEncod' |egrep 'Warning|label|aux'
+germanic.pdf: germanic.tex $(SOURCE)
+	xelatex -shell-escape -no-pdf germanic |grep -v math
+	biber germanic
+	xelatex -shell-escape -no-pdf germanic |grep -v math
+	biber germanic
+	xelatex germanic -shell-escape -no-pdf |egrep -v 'math|PDFDocEncod' |egrep 'Warning|label|aux'
 	correct-toappear
 	correct-index
-	sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' *.adx
-	sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' *.ldx
-	sed -i.backup 's/\\protect \\active@dq \\dq@prtct {=}/"=/g' *.adx
-	sed -i.backup 's/{\\O }/Oe/' *.adx
-	python3 fixindex.py
-	mv $*mod.adx $*.adx
-	sed -i.backup 's/\\MakeCapital //g' *.adx
-	makeindex -gs index.format-plus -o $*.and $*.adx
-	makeindex -gs index.format -o $*.ind $*.idx
-	makeindex -gs index.format -o $*.lnd $*.ldx
-	xelatex -shell-escape $* | egrep -v 'math|PDFDocEncod|\\mark' |egrep 'Warning|label'
+	sed -i.backup s/.*\\emph.*// germanic.adx #remove titles which biblatex puts into the name index
+# sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' germanic.sdx # ordering of references to footnotes
+# sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' germanic.adx
+# sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' germanic.ldx
+	sed -i.backup 's/\\MakeCapital //g' germanic.adx
+	python3 fixindex.py a germanic
+	mv germanicmod.adx germanic.adx
+	sed -i.backup 's/\\MakeCapital //g' germanic.adx
+	footnotes-index.pl germanic.ldx
+	footnotes-index.pl germanic.sdx
+	footnotes-index.pl germanic.adx 
+	makeindex -o germanic.and germanic.adx
+	makeindex -gs index.format -o germanic.lnd germanic.ldx
+	makeindex -gs index.format -o germanic.snd germanic.sdx 
+	xelatex -shell-escape germanic | egrep -v 'math|PDFDocEncod|\\mark' |egrep 'Warning|label'
+
+
+
+#	sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' *.adx
+#	sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' *.ldx
+#	sed -i.backup 's/\\protect \\active@dq \\dq@prtct {=}/"=/g' *.adx
+#	sed -i.backup 's/{\\O }/Oe/' *.adx
+#	python3 fixindex.py
 
 
 

@@ -101,7 +101,7 @@ sm edges
 a. & laugh      & \spr \sliste{ NP[\type{nom}] }\\
 b. & eat        & \spr \sliste{ NP[\type{nom}] }, \comps \sliste{ NP[\type{acc}] }\\
 c. & to douse   & \spr \sliste{ NP[\type{nom}] }, \comps \sliste{ NP[\type{acc}] }\\
-d. & bezichtigen& \spr \sliste{}, \comps \sliste{ NP[\type{nom}], NP[\type{gen}] } &(German)\\
+d. & bezichtigen& \spr \eliste, \comps \sliste{ NP[\type{nom}], NP[\type{gen}] } &(German)\\
    & accuse\\ 
 e. & he  & \spr \eliste, \comps \eliste\\
 f. & the & \spr \eliste, \comps \eliste\\
@@ -268,15 +268,15 @@ and maybe easier to grasp because of this.
 \centerfit{%
 \begin{forest}
 sm edges
-[{C[\spr \eliste, \comps \sliste{ }]}
+[{C[\spr \eliste, \comps \eliste]}
   [{C[\spr \eliste, \comps \sliste{ \ibox{1} }]} [weil;because]]
   [{\ibox{1} V[\spr \eliste, \comps \eliste]}
       [{\ibox{2} NP[\type{nom}]} [Aicke;Aicke] ]
       [V\feattab{
-            \spr \sliste{ }, \comps \sliste{ \ibox{2} }}
+            \spr \eliste, \comps \sliste{ \ibox{2} }}
         [{\ibox{3} NP[\type{dat}]} [dem Kind;the child,roof] ] 
         [V\feattab{
-              \spr \sliste{ }, \comps \sliste{ \ibox{2}, \ibox{3} }}
+              \spr \eliste, \comps \sliste{ \ibox{2}, \ibox{3} }}
           [{\ibox{4} NP[\type{acc}]} [ein Buch;a book,roof] ] 
           [V\feattab{
               \spr \sliste{  },\\
@@ -291,15 +291,15 @@ sm edges
 \centerfit{%
 \begin{forest}
 sm edges
-[{C[\spr \eliste, \comps \sliste{ }]}
+[{C[\spr \eliste, \comps \eliste]}
   [{C[\spr \eliste, \comps \sliste{ \ibox{1} }]} [weil;because]]
   [{\ibox{1} V[\spr \eliste, \comps \eliste]}
       [{\ibox{2} NP[\type{acc}]} [solch ein Buch;such a book,roof] ] 
       [V\feattab{
-            \spr \sliste{ }, \comps \sliste{ \ibox{2} }}
+            \spr \eliste, \comps \sliste{ \ibox{2} }}
         [{\ibox{3} NP[\type{dat}]} [dem Kind;the child,roof] ] 
         [V\feattab{
-              \spr \sliste{ }, \comps \sliste{ \ibox{3}, \ibox{2} }}
+              \spr \eliste, \comps \sliste{ \ibox{3}, \ibox{2} }}
           [{\ibox{4} NP[\type{nom}]} [niemand;nobody] ]
           [V\feattab{
               \spr \sliste{  },\\
@@ -314,15 +314,15 @@ sm edges
 \centerfit{%
 \begin{forest}
 sm edges
-[{C[\spr \eliste, \comps \sliste{ }]}
+[{C[\spr \eliste, \comps \eliste]}
   [{C[\spr \eliste, \comps \sliste{ \ibox{1} }]} [weil;because]]
   [{\ibox{1} V[\spr \eliste, \comps \eliste]}
       [{\ibox{4} NP[\type{acc}]} [solch ein Buch;such a book,roof] ] 
       [V\feattab{
-            \spr \sliste{ }, \comps \sliste{ \ibox{4} }}
+            \spr \eliste, \comps \sliste{ \ibox{4} }}
         [{\ibox{3} NP[\type{dat}]} [dem Kind;the child,roof] ] 
         [V\feattab{
-              \spr \sliste{ }, \comps \sliste{ \ibox{3}, \ibox{4} }}
+              \spr \eliste, \comps \sliste{ \ibox{3}, \ibox{4} }}
           [{\ibox{2} NP[\type{nom}]} [niemand;nobody] ]
           [V\feattab{
               \spr \sliste{  },\\
@@ -338,12 +338,12 @@ sm edges
 \centerfit{%
 \begin{forest}
 sm edges
-[{C[\spr \eliste, \comps \sliste{ }]}
+[{C[\spr \eliste, \comps \eliste]}
   [{C[\spr \eliste, \comps \sliste{ \ibox{1} }]} [because]]
   [{\ibox{1} V[\spr \eliste, \comps \eliste]}
       [{\ibox{2} NP[\type{nom}]} [Kim] ]
       [V\feattab{
-            \spr \sliste{ \ibox{2} }, \comps \sliste{ }}
+            \spr \sliste{ \ibox{2} }, \comps \eliste}
         [V\feattab{
                 \spr \sliste{ \ibox{2} }, \comps \sliste{ \ibox{3} }}
            [V\feattab{
@@ -362,9 +362,9 @@ sm edges
 [{V[\spr \eliste, \comps \eliste]}
    [{\ibox{1} NP[\type{nom}]} [Sandy] ]
    [V\feattab{
-      \spr \sliste{ \ibox{1} }, \comps \sliste{}}
+      \spr \sliste{ \ibox{1} }, \comps \eliste}
      [\ibox{2} V\feattab{
-        \spr \sliste{ \ibox{1} }, \comps \sliste{}}
+        \spr \sliste{ \ibox{1} }, \comps \eliste}
        [V\feattab{
            \spr \sliste{ \ibox{1} },\\
            \comps \sliste{ \ibox{3} }} [saw] ]
@@ -378,12 +378,12 @@ sm edges
 \centerfit{%
 \begin{forest}
 sm edges
-[{C[\spr \eliste, \comps \sliste{ }]}
+[{C[\spr \eliste, \comps \eliste]}
   [{C[\spr \eliste, \comps \sliste{ \ibox{1} }]} [at;that]]
   [{\ibox{1} V[\spr \eliste, \comps \eliste]}
     [{\ibox{2} NP[\type{nom}]} [Bjarne;Bjarne] ]
     [V\feattab{
-       \spr \sliste{ \ibox{2} }, \comps \sliste{}}
+       \spr \sliste{ \ibox{2} }, \comps \eliste}
        [V\feattab{
            \spr \sliste{ \ibox{2} },\\
            \comps \sliste{ \ibox{3} }} [læste;read] ]
@@ -423,22 +423,22 @@ You may omit the \spr values, since they are the empty list for all German verbs
 \begin{figure}
 \begin{forest}
 sm edges
-[C\feattab{%\spr \sliste{},\\
-             \comps \sliste{ }}
-  [C\feattab{%\spr \sliste{},\\
+[C\feattab{%\spr \eliste,\\
+             \comps \eliste}
+  [C\feattab{%\spr \eliste,\\
              \comps \sliste{ \ibox{1} }} [dass;that]]
-  [{\ibox{1} V\feattab{%\spr \sliste{ },\\
-                       \comps \sliste{ }}}
+  [{\ibox{1} V\feattab{%\spr \eliste,\\
+                       \comps \eliste}}
      [{\ibox{2} NP[nom]} [sie;she]]
-     [V\feattab{%\spr  \sliste{ },\\
+     [V\feattab{%\spr  \eliste,\\
                 \comps \sliste{ \ibox{2} }}
        [\ibox{3} PP [darüber;there.about]]
-       [V\feattab{%\spr \sliste{ },\\
+       [V\feattab{%\spr \eliste,\\
                   \comps \sliste{ \ibox{2}, \ibox{3} }}
          [\ibox{4} V\feattab{\subj \sliste{ \ibox{2} },\\
-                             %\spr \sliste{ },\\
+                             %\spr \eliste,\\
                              \comps \sliste{ \ibox{3} }} [lachen;laugh]]
-         [V\feattab{%\spr \sliste{ },\\
+         [V\feattab{%\spr \eliste,\\
                     \comps \sliste{ \ibox{2}, \ibox{3}, \ibox{4} }} [muss;must]]]
 ]]]
 \end{forest}
@@ -450,28 +450,28 @@ sm edges
 \oneline{%
 \begin{forest}
 sm edges
-[C\feattab{%\spr \sliste{},\\
-             \comps \sliste{ }}
-  [C\feattab{%\spr \sliste{},\\
+[C\feattab{%\spr \eliste,\\
+             \comps \eliste}
+  [C\feattab{%\spr \eliste,\\
              \comps \sliste{ \ibox{1} }} [dass;that]]
-  [{\ibox{1} V\feattab{%\spr \sliste{ },\\
-                       \comps \sliste{ }}}
+  [{\ibox{1} V\feattab{%\spr \eliste,\\
+                       \comps \eliste}}
      [{\ibox{2} NP[nom]} [sie;she]]
-     [V\feattab{%\spr  \sliste{ },\\
+     [V\feattab{%\spr  \eliste,\\
                  \comps \sliste{ \ibox{2} }}
        [\ibox{3} PP [darüber;there.about]]
-       [V\feattab{%\spr \sliste{ },\\
+       [V\feattab{%\spr \eliste,\\
                   \comps \sliste{ \ibox{2}, \ibox{3} }}
-         [V\feattab{%\spr \sliste{ },\\
+         [V\feattab{%\spr \eliste,\\
                     \comps \sliste{ \ibox{2}, \ibox{3}, \ibox{4} }} [hat;has]]
            [\ibox{4} V\feattab{\subj \sliste{ \ibox{2} },\\
-                               %\spr \sliste{ },\\
+                               %\spr \eliste,\\
                                \comps \sliste{ \ibox{3} }}
              [\ibox{5} V\feattab{\subj \sliste{ \ibox{2} },\\
-                                 %\spr \sliste{ },\\
+                                 %\spr \eliste,\\
                                  \comps \sliste{ \ibox{3} }} [lachen;laugh]]
              [V\feattab{\subj \sliste{ \ibox{2} },\\
-                        %\spr \sliste{ },\\
+                        %\spr \eliste,\\
                         \comps \sliste{ \ibox{3}, \ibox{5} }} [müssen;must]]]]]]]
 \end{forest}}
 \caption{Analysis of \emph{dass sie darüber hat lachen müssen} `that she had to laugh about this'}
@@ -482,34 +482,34 @@ sm edges
 \oneline{%
 \begin{forest}
 sm edges
-[C\feattab{%\spr \sliste{},\\
-             \comps \sliste{ }}
-  [C\feattab{%\spr \sliste{},\\
+[C\feattab{%\spr \eliste,\\
+             \comps \eliste}
+  [C\feattab{%\spr \eliste,\\
              \comps \sliste{ \ibox{1} }} [dass;that]]
-  [{\ibox{1} V\feattab{%\spr \sliste{ },\\
-                       \comps \sliste{ }}}
+  [{\ibox{1} V\feattab{%\spr \eliste,\\
+                       \comps \eliste}}
      [{\ibox{2} NP[nom]} [sie;she]]
-     [V\feattab{%\spr  \sliste{ },\\
+     [V\feattab{%\spr  \eliste,\\
                  \comps \sliste{ \ibox{2} }}
        [\ibox{3} PP [darüber;there.about]]
-       [V\feattab{%\spr \sliste{ },\\
+       [V\feattab{%\spr \eliste,\\
                   \comps \sliste{ \ibox{2}, \ibox{3} }}
-         [V\feattab{%\spr \sliste{ },\\
+         [V\feattab{%\spr \eliste,\\
                     \comps \sliste{ \ibox{2}, \ibox{3}, \ibox{4} }} [wird;will]]
            [\ibox{4} V\feattab{\subj \sliste{ \ibox{2} },\\
-                              %\spr \sliste{ },\\
+                              %\spr \eliste,\\
                                \comps \sliste{ \ibox{3} }}
              [V\feattab{\subj \sliste{ \ibox{2} },\\
-                       %\spr \sliste{ },\\
+                       %\spr \eliste,\\
                         \comps \sliste{ \ibox{3}, \ibox{5} }} [haben;have]]
              [\ibox{5} V\feattab{\subj \sliste{ \ibox{2} },\\
-                                 %\spr \sliste{ },\\
+                                 %\spr \eliste,\\
                                  \comps \sliste{ \ibox{3} }}
                [\ibox{6} V\feattab{\subj \sliste{ \ibox{2} },\\
-                                   %\spr \sliste{ },\\
+                                   %\spr \eliste,\\
                                    \comps \sliste{ \ibox{3} }} [lachen;laugh]]
                [V\feattab{\subj \sliste{ \ibox{2} },\\
-                         %\spr \sliste{ },\\
+                         %\spr \eliste,\\
                           \comps \sliste{ \ibox{3}, \ibox{6} }} [müssen;must]]]]]]]]
 \end{forest}}
 \caption{Analysis of \emph{dass sie darüber wird haben lachen müssen} `that it will be the case that
@@ -638,7 +638,7 @@ sm edges
 \begin{forest}
 sm edges
 [S
-  [{V[\sliste{ S//V }]}
+  [V\sliste{ S//V }
     [V
       [wird;will]]]
   [S//V
@@ -688,17 +688,17 @@ sm edges
 \begin{figure}
 \begin{forest}
 sm edges
-[C\feattab{%\spr \sliste{},\\
-             \comps \sliste{ }}
-  [C\feattab{%\spr \sliste{},\\
+[C\feattab{%\spr \eliste,\\
+             \comps \eliste}
+  [C\feattab{%\spr \eliste,\\
              \comps \sliste{ \ibox{1} }} [dass;that]]
-  [{\ibox{1} V\feattab{%\spr \sliste{ },\\
-                       \comps \sliste{ }}}
+  [{\ibox{1} V\feattab{%\spr \eliste,\\
+                       \comps \eliste}}
      [{\ibox{2} NP[nom]} [sie;she]]
-     [V\feattab{%\spr  \sliste{ },\\
+     [V\feattab{%\spr  \eliste,\\
                  \comps \sliste{ \ibox{2} }}
        [\ibox{3} PP [darüber;there.about]]
-       [V\feattab{%\spr \sliste{ },\\
+       [V\feattab{%\spr \eliste,\\
                   \comps \sliste{ \ibox{2}, \ibox{3} }} [nachdenkt;\textsc{part}.thinks]]]]]
 \end{forest}
 \caption{Analysis of \emph{dass sie darüber nachdenkt} `that she thinks about this'}
@@ -708,22 +708,22 @@ sm edges
 \begin{figure}
 \begin{forest}
 sm edges
-[C\feattab{%\spr \sliste{},\\
-             \comps \sliste{ }}
-  [C\feattab{%\spr \sliste{},\\
+[C\feattab{%\spr \eliste,\\
+             \comps \eliste}
+  [C\feattab{%\spr \eliste,\\
              \comps \sliste{ \ibox{1} }} [dass;that]]
-  [{\ibox{1} V\feattab{%\spr \sliste{ },\\
-                       \comps \sliste{ }}}
+  [{\ibox{1} V\feattab{%\spr \eliste,\\
+                       \comps \eliste}}
      [{\ibox{2} NP[nom]} [sie;she]]
-     [V\feattab{%\spr  \sliste{ },\\
+     [V\feattab{%\spr  \eliste,\\
                  \comps \sliste{ \ibox{2} }}
        [\ibox{3} PP [darüber;there.about]]
-       [V\feattab{%\spr \sliste{ },\\
+       [V\feattab{%\spr \eliste,\\
                   \comps \sliste{ \ibox{2}, \ibox{3} }}
          [\ibox{4} V\feattab{\subj \sliste{ \ibox{2} },\\
-                             %\spr \sliste{ },\\
+                             %\spr \eliste,\\
                              \comps \sliste{ \ibox{3} }} [nachdenken;\textsc{part}.think]]
-         [V\feattab{%\spr \sliste{ },\\
+         [V\feattab{%\spr \eliste,\\
                     \comps \sliste{ \ibox{2}, \ibox{3}, \ibox{4} }} [wird;will]]]
 ]]]
 \end{forest}
@@ -734,24 +734,24 @@ sm edges
 \begin{figure}
 \begin{forest}
 sm edges
-[V\feattab{%\spr \sliste{},\\
-           \comps \sliste{ }}
-  [V\feattab{%\spr \sliste{},\\
+[V\feattab{%\spr \eliste,\\
+           \comps \eliste}
+  [V\feattab{%\spr \eliste,\\
              \comps \sliste{ \ibox{1} }}
     [V
       [wird;will]]]
-  [{\ibox{1} V//V\feattab{%\spr \sliste{ },\\
-                       \comps \sliste{ }}}
+  [{\ibox{1} V//V\feattab{%\spr \eliste,\\
+                       \comps \eliste}}
      [{\ibox{2} NP[nom]} [sie;she]]
-     [V//V\feattab{%\spr  \sliste{ },\\
+     [V//V\feattab{%\spr  \eliste,\\
                  \comps \sliste{ \ibox{2} }}
        [\ibox{3} PP [darüber;there.about]]
-       [V//V\feattab{%\spr \sliste{ },\\
+       [V//V\feattab{%\spr \eliste,\\
                   \comps \sliste{ \ibox{2}, \ibox{3} }}
          [\ibox{4} V\feattab{\subj \sliste{ \ibox{2} },\\
-                             %\spr \sliste{ },\\
+                             %\spr \eliste,\\
                              \comps \sliste{ \ibox{3} }} [nachdenken;\textsc{part}.think]]
-         [V//V\feattab{%\spr \sliste{ },\\
+         [V//V\feattab{%\spr \eliste,\\
                     \comps \sliste{ \ibox{2}, \ibox{3}, \ibox{4} }} [\trace]]]
 ]]]
 \end{forest}
@@ -767,7 +767,7 @@ sm edges
 \begin{figure}
 \begin{forest}
 sm edges
-[V\feattab{\comps \sliste{ }}
+[V\feattab{\comps \eliste}
   [V\feattab{\comps \sliste{ \ibox{1} }} 
     [V [arbejder;works]]]
   [\ibox{1} V//V\feattab{\spr   \eliste,\\
@@ -788,13 +788,13 @@ sm edges
 \begin{figure}
 \begin{forest}
 sm edges
-[V\feattab{\comps \sliste{ }}
+[V\feattab{\comps \eliste}
   [V\feattab{\comps \sliste{ \ibox{1} }} 
     [V [arbeitet;works]]]
   [\ibox{1} V//V\feattab{%\spr   \eliste,\\
                          \comps \eliste}
      [\ibox{2} NP [Bjarne;Bjarne]]
-     [V//V\feattab{%\spr   \sliste{ },\\
+     [V//V\feattab{%\spr   \eliste,\\
                     \comps \sliste{ \ibox{2} }}
        [{Adv[\textsc{mod} \ibox{3} V[\textsc{ini}$-$]]} [ernsthaft;seriously]]
        [\ibox{3} V//V\feattab{%\spr   \sliste{  },\\
@@ -878,20 +878,81 @@ sm edges
 
 \section{Passive}
 
+\begin{enumerate}
+\item Which NPs in (\mex{1}) do have structural and which lexical case?
+\eal
+\ex 
+\gll Der        Junge lacht.\\
+     the.\NOM{} boy   laughs\\
+\ex 
+\gll Mich friert.\\
+     I.\ACC{} freeze\\
+\glt `I am cold.'
+\ex 
+\gll Er zerstört die Umwelt.\\
+     he.\NOM{} destroys the.\ACC{} environment\\
+\glt `He destroys the environment.'
+\ex 
+\gll Das dauert ein ganzes Jahr.\\
+     this.\NOM{} takes  a.\ACC{} whole year\\
+\glt `This takes a whole year.'
+\ex 
+\gll Er hat nur einen Tag dafür gebraucht.\\
+     he.\NOM{} has just one.\ACC{}  day there.for needed\\
+\glt `He needed a day for this.'
+\ex 
+\gll Er denkt an den morgigen Tag.\\
+     he.\NOM{} thinks at the.\ACC{} tomorrow day\\
+\glt `He thinks about tomorrow.'
+\zl
+
+All nominatives in (\mex{0}) are structural cases. The accusatives in (\mex{0}b, d, f) are lexical,
+the ones in (\mex{0}c, e) are structural.
+
+\item Give \argst lists for the following verbs. Provide the \argstl with the maximum amount of arguments. 
+\eal
+\ex show, eat, meet \english
+\ex zeigen `show', essen `eat', begegnen `meet', treffen `meet' \german
+%\ex vise `show', spise `eat', møde `meet' \danish
+%\ex sýna `show', eta `eat', mæta `meet', hitta `meet' \icelandic
+\zl
+
+\eal
+\ex \emph{show}: \sliste{ NP[\str], NP[\str], NP[\type{lacc}] }
+\ex \emph{eat}: \sliste{ NP[\str], NP[\str] }
+\ex \emph{meet}: \sliste{ NP[\str], NP[\str] }
+\ex \emph{zeigen}: \sliste{ NP[\str], NP[\type{ldat}], NP[\str] }
+\ex \emph{essen}: \sliste{ NP[\str], NP[\str] }
+\ex \emph{begegnen}: \sliste{ NP[\str], NP[\type{ldat}] }
+\ex \emph{treffen}: \sliste{ NP[\str], NP[\str] }
+\zl
+If you are uncertain as far as case is concerned, you may use the
+  Wiktionary\footnote{
+\url{https://de.wiktionary.org/}, 2018-07-02.
+}.
+
+\item Draw the analysis tree for the following sentence:
+\ea
+that the box was opened
+\z
+Please provide valence features (\spr and \comps) and part of speech information. You may abbreviate
+the NP using a triangle.
+
+
 \begin{figure}
 \begin{forest}
 sm edges
-[{C[\comps \sliste{ }]}
+[{C[\comps \eliste]}
   [{C[\comps \sliste{ \ibox{1} }]} [that]]
-  [{\ibox{1} V\feattab{\spr \sliste{ },\\
-                       \comps \sliste{ }}}
+  [{\ibox{1} V\feattab{\spr \eliste,\\
+                       \comps \eliste}}
      [{\ibox{2} NP[nom]} [the box, roof]]
      [V\feattab{\spr  \sliste{ \ibox{2} },\\
-                 \comps \sliste{ }}
+                 \comps \eliste}
        [V\feattab{\spr  \sliste{ \ibox{2} },\\
                   \comps \sliste{ \ibox{3} }} [was]]
        [{\ibox{3} V\feattab{\spr \sliste{ \ibox{2} },\\
-                            \comps \sliste{}}} [opened]]]]]
+                            \comps \eliste}} [opened]]]]]
 \end{forest}
 \caption{Analysis of the passive sentences \emph{that the box was opened}}
 \end{figure}
@@ -903,6 +964,7 @@ leaves us with one element on the \argstl. This element gets mapped to the \sprl
 selecting for a specifier. The NP \emph{the box} functions as the specifier and the combination of
 \emph{the box} and \emph{was opened} is a complete sentence.
 
+\end{enumerate}
 
 %% \begin{figure}
 %% \begin{forest}
@@ -918,6 +980,81 @@ selecting for a specifier. The NP \emph{the box} functions as the specifier and 
 %% \end{figure}
 
 \section{Clause types and expletives}
+
+\begin{enumerate}
+\item Analyze the interrogative clauses in (\mex{1}):
+\eal
+\ex
+\gll Ich weiß, wen Kim kennt.\\
+     I   know  who Kim knows\\\german
+\glt `I know who Kim knows.'
+\ex 
+\gll Jeg ved, hvem det kende Kim\\
+     I know who  \expl{} knows Kim\\\danish
+\glt `I know who knows Kim.'
+\zl 
+
+
+\begin{figure}
+\centerline{\begin{forest}
+sm edges
+[S
+       [{NP[\sacc]} [wen;who] ]
+       [{S/NP[\sacc]} 
+         [{NP[\sacc]/NP[\sacc]}  [\trace] ]
+         [V$'$
+           [{NP[\snom]} [Kim;Kim] ]
+           [V [kennt;knows] ] ] ] ]
+\end{forest}}
+\caption{Analysis of \emph{wen Kim kennt} `who Kim knows'}
+\end{figure}
+
+
+\begin{figure}
+\centerline{\begin{forest}
+sm edges
+[S
+       [{NP[\snom]} [hvem;who] ]
+       [{S/NP[\snom]}
+         [{NP[\lnom]} [det;\textsc{expl}] ]
+         [{VP/NP[\snom]}
+           [{V$'$/NP[\snom]}
+             [V [kende;knows] ]
+             [{NP[\snom]/NP[\snom]} [\trace] ] ]
+           [{NP[\sacc]} [Kim;Kim ] ] ] ] ]
+\end{forest}}
+\caption{Analsis of \emph{hvem det knows Kim} `who knows Kim'}
+%\caption{Analysis of interrogative clauses in Danish with subject extraction}\label{fig-interrogative-Danish-subject-extraction}
+\end{figure}
+
+
+\item Analyze the clause in (\mex{1}). Use triangles for the NP and the PP.
+\ea
+\gll Es schwammen zwei Delphine neben dem Boot.\\
+     \expl{} swam two dolphins  next.to the boat\\
+\glt `Two dolphins were swimming next to the boat.'
+\z
+
+\begin{figure}
+
+\begin{forest}
+sm edges
+[S
+  [{NP[\lnom]} [es;\textsc{expl}]]
+  [{S/NP[\lnom]}
+     [V\sliste{ S$/\!/$V } [schwammen;swam]]
+     [{S$/\!/$V/NP[\lnom]}
+       [{NP[\lnom]/NP[\lnom]}  [\trace]]
+       [V$'$$/\!/$V
+         [{NP[\snom]} [zwei Delphine;two dolphins,roof]]
+         [V$'$$/\!/$V
+           [PP [neben dem Boot;next.to the boat,roof]]
+           [V$/\!/$V [\trace]]]]]]]
+\end{forest}
+
+\end{figure}
+
+\end{enumerate}
 
 
 
