@@ -4,7 +4,7 @@
 This book has two purposes: firstly the comparative analysis of the major syntactic properties of the
 Germanic languages and secondly the introduction of a specific format for the description and
 comparison of languages. The framework in which the analyses are couched is called \emph{HPSG
-  light}. It is based on Head-Driven Phrase Structure Grammar (HPSG) \citep{ps,ps2} in the specific version that is described in detail in
+  light}. It is based on Head-Driven Phrase Structure Grammar (HPSG) \citep{ps,ps2,HPSGHandbook} in the specific version that is described in detail in
 \citew{MuellerLehrbuch3}. However HPSG light does not contain any complicated attribute value
 matrices (AVMs). If AVMs are used at all, they are reduced to the minimum containing a reduced set
 of features like \argst for argument structure, \comps for complements and \spr for specifier. All
@@ -23,9 +23,24 @@ conference proceedings, journal articles and books, and the reader is invited to
 resources in case she or he is interested in the details. The implemented grammars are distributed
 with the Grammix virtual machine \citep{MuellerGrammix} and can be downloaded from the author's
 web-page.\footnote{
-\url{https://hpsg.hu-berlin.de/Software/Grammix/}, \today.} The appendix of
-this book contains a list of sentences that were discussed in the respective chapters of this book
-and which are covered by the grammars of the respective languages.\itdopt{This is still missing.} Readers are invited to enter the
+\url{https://hpsg.hu-berlin.de/Software/Grammix/}, \today.} Grammix contains the grammars for
+German\footnote{
+\url{https://hpsg.hu-berlin.de/Fragments/Berligram/}, \today. The German grammar is documented in
+\citew{MuellerLehrbuch,MuellerGS} and \citew{MOe2011a,MOe2013a}.
+},
+Danish\footnote{
+\url{https://hpsg.hu-berlin.de/Fragments/Danish/}, \today. The Danish grammar is documented in
+\citew{MOeDanish,MOe2013a,MOe2011a,MOe2013b}. 
+}, English\footnote{
+\url{https://hpsg.hu-berlin.de/Fragments/English/}, \today. The English grammar is smaller than the
+German and Danish grammar. It is a proof of concept of a lexicalist analysis of passive, benefactive
+constructons, resultative constructions. See \citew{MuellerLFGphrasal} and \citew{MOe2013a} for details.
+} and Yiddish\footnote{
+\url{https://hpsg.hu-berlin.de/Fragments/Yiddish/}, \today. The Yiddish grammar is based on
+\citew{MOe2011a} and unpublished work by Jong-Bok Kim, Alain Kihm, and me on predicate
+topicalization in Korean and Yiddish \citep*{MKK2019a}.
+} that were developed in the CoreGram project \citep{MuellerCoreGram}. The respective web-pages of the grammars contain a list of test items
+that are accepted or rejected by the grammars. Readers are invited to enter these
 sentences into the TRALE system \citep{DKMM2004a-u,Penn2004a-u} that comes with Grammix and inspect the complete AVMs.
 
 The book starts with two introductiory chapters: the first chapter introduces the Germanic languages

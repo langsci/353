@@ -77,9 +77,13 @@
 \newcommand{\itdobl}[1]{\iftoggle{draft}{\inlinetodoobl{#1}}{}}
 \newcommand{\itdopt}[1]{\iftoggle{draft}{\inlinetodoopt{#1}}{}}
 
-\newcommand{\addpages}{\iftoggle{draft}{\todostefan{add pages}}}
-\newcommand{\addsource}{\iftoggle{draft}{\todostefan{add source}}}
-\newcommand{\addglosses}{\iftoggle{draft}{\todostefan{add glosses}}}
+% for editing, remove later
+%\usepackage{xcolor}
+%\newcommand{\iaddpages}{\yel[add pages]{pages}\xspace}
+
+\newcommand{\addpages}{\iftoggle{draft}{\todostefan{add pages}}\xspace}
+\newcommand{\addsource}{\iftoggle{draft}{\todostefan{add source}}\xspace}
+\newcommand{\addglosses}{\iftoggle{draft}{\todostefan{add glosses}}\xspace}
 
 
 

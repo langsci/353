@@ -450,11 +450,34 @@ projection that has an empty \compsl (a VP).
 The analysis of our first German example in Figure~\ref{fig-niemand-ihn-kennt} did not use a name
 for the valence list. So the question is: How does the analysis of German relate to the analysis of
 English using \spr and \comps? A lot of researchers from various frameworks have argued that it is not
-useful to distinguish the subjects of finite verbs from other arguments. All the tests that have
+useful to distinguish the subjects of finite verbs from other arguments in grammars of German. All the tests that have
 been used to show that subjects in English differ from complements do not apply to the arguments of
-finite verbs in German. Hence, researchers like \citet[\page 295]{Pollard90a}, \citet[Section~6.3.2]{Haider93a}, 
-\citet[\page 376]{Eisenberg94b}, and \citet[\page 57, 78]{Kiss95a} argued for so-called ``subject as complement''
-analyses.\itdopt{Provide examples.}
+finite verbs in German. For example, it is argued that subjects – in contrast to objects – are extraction \isi{islands}, that is, nothing can be
+fronted out of a subject. But \citet[\page 173]{Haider93a} discussing the examples in (\mex{1}) shows that this is not true for
+German.
+\eal
+\ex 
+\gll [Über           Strauß]$_i$ hat [ein        Witz \_$_i$] die Runde gemacht.\\
+     \spacebr{}about Strauß      has \spacebr{}a.\NOM{} joke {}      the round made\\\hfill(German)
+\glt `A joke about Strauß went round.'
+
+\ex 
+\gll [Zu drastischeren Maßnahmen]$_i$ hat ihm [der Mut \_$_i$] gefehlt.\\
+     \spacebr{}to more.drastic measures has him \spacebr{}the.\NOM{} courage {} lacked\\
+\glt `He has lacked the courage for more drastic measures.'
+\ex 
+\gll [Zu diesem Problem]$_i$ haben uns noch [einige Briefe \_$_i$] erreicht.\footnotemark\\
+     \spacebr{}to this problem have us still \spacebr{}some.\NOM{} letters {} reached\\
+\footnotetext{\citew[\page 79]{Oppenrieder91a}
+}
+\glt `Some letters concerning this problem reached us afterwards.'
+\zl
+
+\noindent
+The \_$_i$ indicates the place where the fronted element, the element in the \vf, belongs to. It is
+within the subject NP in all three examples. Since no subject-object asymmetries exist in German,
+researchers like \citet[\page 295]{Pollard90a}, \citet[Section~6.3.2]{Haider93a}, \citet[\page
+376]{Eisenberg94b}, and \citet[\page 57, 78]{Kiss95a} argued for so-called ``subject as complement'' analyses. 
 Figure~\vref{fig-spr-german} shows the adapted analysis of
 (\ref{ex-dass-niemand-ihn-kennt}) -- repeated here as
 (\ref{ex-dass-niemand-ihn-kennt-two}):
@@ -1219,33 +1242,72 @@ The representations for the other languages mentioned above is entirely parallel
 possible to capture crosslinguistic generalizations. Nevertheless there are differences between the
 Germanic OV and VO languages. As was explained above the VO languages map their subject to \spr and
 all other arguments to \comps, while the finite verbs of OV languages have all arguments on \comps. 
-\inlinetodostefan{maybe add some examples}
-%% \eal
-%% \ex Linking and argument mapping in SVO languages:\\
-%% \ms{
-%% spr    & \sliste{ \ibox{1} }\\
-%%        & 
-%% arg-st & \sliste{ NP\ind{1}, NP\ind{2}, NP\ind{3} }\\
-%% cont   & \ms[give]{
-%%           agens & \ibox{1}\\
-%%           goal  & \ibox{2}\\
-%%           trans-obj & \ibox{3}\\
-%%         }\\
-%% }
+(\mex{1}) shows some examples.\footnote{%
+ For readability, I just listed the NPs on the respective lists. In
+actual analyses, the \argstl is split into two sublists \ibox{4} and \ibox{5} and \ibox{4} is the
+\sprl and \ibox{5} the \compsl. The \sprl contains just one element in languages like English and no
+element for finite verbs in languages like German.
+  See \citew[171]{GSag2000a-u}, \citew[12]{BMS2001a} and \citew[\page 17]{AB2021a} for details on argument realization.
+}
+\eal
+\ex Linking and argument mapping for English finite verb (SVO):\\
+\ms{
+spr    & \sliste{ NP\ind{1} }\\[2mm]
+comps  & \sliste{ NP\ind{2}, NP\ind{3} }\\[2mm]
+arg-st & \sliste{ NP\ind{1}, NP\ind{2}, NP\ind{3} }\\[2mm]
+cont   & \ms[give]{
+          agens     & \ibox{1}\\
+          goal      & \ibox{2}\\
+          trans-obj & \ibox{3}\\
+        }\\
+}
 
+\ex Linking and argument mapping for German finite verb (SOV):\\*
+\ms{
+spr    & \sliste{ }\\[2mm]
+comps  & \sliste{ NP\ind{1}, NP\ind{2}, NP\ind{3} }\\[2mm]
+arg-st & \sliste{ NP\ind{1}, NP\ind{2}, NP\ind{3} }\\[2mm]
+cont   & \ms[geben]{
+          agens     & \ibox{1}\\
+          goal      & \ibox{2}\\
+          trans-obj & \ibox{3}\\
+        }\\
+}
+\zl
+
+This provides a connection between arguments of a head and the semantic roles they fill. While this
+is a first step towards semantics, a lot remains to be said. For example, the contribution of
+quantifiers like \emph{every} and \emph{a} in (\mex{1}) and the determination of the scope they take is not explained yet. 
+\ea
+Every squirrel wants to eat a nut.
+\z
+But this introduction to syntax is not the place to do this. The reader is referred to
+\citew{KoenigRichter2021a} for an overview of approaches to semantics in HPSG. The implemented fragments of
+German, Danish, English and Yiddish mentioned in the preface assume Minimal Recursion Semantics (MRS; \citealt{CFPS2005a}), which is
+also covered by \citet[Section~6.1]{KoenigRichter2021a}.
 
 
 \section{Alternatives}
 
-This section is for advanced readers. It compares the theory developed here with approaches to
-German developed in the theory of Government \& Binding \citep{Chomsky81a,Chomsky86b}.
+This section is for advanced readers. Subsection~\ref{sec-cp-tp-vp} compares the theory developed here with approaches to
+German developed in the theory of Government \& Binding (GB)
+\citep{Chomsky81a,Chomsky86b}. Subsection~\ref{sec-down-to-arth-syntax} contains a comparison to
+certain approaches to syntax in GB and Minimalism \citep{Chomsky95a-u}. I argue for an approach to
+syntactic categories and phrases that is normally used rather than the more recent approaches that
+include semantic and pragmatic notions into syntactic structures. Like
+Subsection~\ref{sec-cp-tp-vp}, Subsection~\ref{sec-down-to-arth-syntax} is optional and it is
+possible to understand the rest of the book without reading it. I suggest to read it nevertheless
+since it may deepen the understanding of syntax in general.
+
+
 
 \subsection{CP/TP/VP models}
 \label{sec-cp-tp-vp}
 \label{sec-discussion-scope}
 
 \citet{Grewendorf88a,Grewendorf93}, \citet{Lohnstein2014a} and many others assume that German
-sentences have a constituent structure that is parallel to the structure that is assumed for English. As for English, the verb is
+sentences have a constituent structure that is parallel to the structure that is assumed by
+\citet{Chomsky86b} for English. As for English, the verb is
 assumed to form a phrase with its objects and this VP functions as the argument of a Tense head to
 form a maximal projection together with the subject of the verb, which is realized in the specifier
 position of the TP. (The Tense Phrase was called Inflection Phrase (IP) in earlier publications.) Figure~\ref{fig-cp-tp-vp} shows the analysis of (\mex{1}) with the respective
@@ -1333,8 +1395,530 @@ This means that one needs some way to determine the deviation with respect to an
 movement is not the solution. See \citew[Section~3.5]{MuellerGT-Eng4} for further discussion and
 \citet{Kiss2001a} for an approach to scope within the framework assumed here.
 
-\exercises{
+\subsection{Syntax and other levels of description}
+\label{sec-down-to-arth-syntax}
 
+Chapter~\ref{chap-psg} relied on constituent tests that are standardly assumed in the syntactic
+literature \parencites[24--31]{Borsley91a}[35--36]{Haegeman94a-u}[20--23]{HP2002a-ed}[29--33]{SWB2003a}[19--22]{KS2008a-u}[Chapter~1.3]{MuellerGT-Eng}{MyP2022a}.
+It is usually assumed that phrases are assigned categories that correspond to distribution
+classes. For example, a complex noun phrase can be replaced by other complex noun phrases or by
+pronouns. 
+\eal
+\label{ex-np-tisch}
+\ex 
+\gll der Tisch\\
+     the.\NOM{} table\\
+\ex 
+\gll der Tisch aus Japan\\
+     the.\NOM{} table from Japan\\
+\ex 
+\gll der alte Tisch aus Japan\\
+     the.\NOM{} old  table from Japan\\
+\ex 
+\gll er\\
+     he\\
+\zl
+Features like case, person, and gender are important for the distribution of noun
+phrases. An accusative pronoun cannot be replaced by a nominative pronoun. Similarly, person and
+number are important for the distribution of noun phrases since they have to match the properties of
+the verb. In fact, the reason for these features to be assumed in grammars is that they play a role
+in the distribution of words and larger units of words. If we were to discover the structure of an
+unknown language, this would be the task: replace certain units in an utterance and see how things
+change. Dan Everett did this when studying \ili{Pirahã}.\footnote{
+See \url{https://youtu.be/5NyB4fIZHeU?t=868}, 2022-03-31.
+} He first pointed at objects to learn the words used for them. Then he let a stick fall down and asked how this is
+expressed in Pirahã. Then he let a leaf fall down and asked for the expression. He can then try and
+identify the words he learned in other environments and maybe, depending on the language, with different inflections. So, syntax
+is about the distribution of words and groups of words. The classes that can be found this way
+correspond to parts of speech and morpho-syntactic features like gender, number, and case. The \xbar
+grammar introduced in Chapter~\ref{chap-psg} follows this tradition, which goes back to
+\citet{Bloomfield26a}. 
+
+\subsubsection{Autonomy of Syntax, resulting problems and syntactification of other descriptive levels}
+
+Chomsky argued for the autonomy of syntax and developed architectures in which there was a syntactic
+component that fed information into a phonology module and into a semantics
+module. Figure~\ref{Abb-T-Modell} shows the so-called T~model.
+\begin{figure}
+\centering
+\begin{forest}
+for tree = {edge={->},l=4\baselineskip}
+[D-structure
+     [S-structure,edge label={node[midway,right]{move $\alpha$}} 
+            [Deletion rules{,}\\Filter{,} phonol.\ rules
+                    [Phonetic\\Form (PF)]]
+            [Anaphoric rules{,}\\rules of quantification and control
+                    [Logical\\Form (LF)]]]]
+    \end{forest}
+
+\caption{\label{Abb-T-Modell}The T~model}
+\end{figure}%
+The problem with such an architecture is that syntax interacts with phonology, semantics, and information
+structure and that this cannot be captured if one deals with syntax alone. As a result of this,
+semantic and information structural notions entered certain flavors of syntax in the GB/Minimalism
+framework. For example, approaches in the tradition of \citet{CR2010a} assume phrases called Topic
+Phrase or Focus Phrase although these phrases are simply clausal projections. So, in ``normal''
+syntax they would be verb phrases (VPs) or sentences (S). Figure~\ref{Abbildung-Remnant-Movement-Satzstruktur} shows an analysis of a German clause in this
+tradition. The syntax tree contains a wild mix of categories including a Topic Phrase (TopP),
+Subject Phrase (SubjP), a Negation Phrase (NegP), an Auxiliary Phrase (AuxP), Manner Phrase (MannP),
+Aspect Phrase (AspP) and the more common Determiner Phrase (DP; our NP) and Verb Phrase (VP). 
+%
+Categories like Topic Phrase and Focus Phrase are information structural categories. The
+topic and focus of a phrase can be some parts of the phrase, for example, fronted constituents. The
+information that there is a topic within a phrase concerns the relevant parts and should not be the name of the complete phrase. See
+\citew{DeKuthy2021a} for an overview of the analyses of information structure in HPSG. Manner,
+aspect, negation are semantic categories and of course this
+information is important in grammatical theory and should be represented somewhere in a grammar, but
+it should not be the part of speech label (based on the meaning-contribution of a non-head). See Section~\ref{sec-linking} for the place of semantic information in
+HPSG and a sketch of the connection between syntax and semantics. Further details about semantics in
+HPSG can be found in \citew{KR2021a}.
+%
+Subject
+and object are grammatical functions. 
+Frameworks like Lexical Functional Grammar use grammatical
+functions as primitives of their theories. They state formally that a certain phrase is the subject or object
+of a head, but they do not assume Subject Phrases or Object Phrases. For more on \citeauthor{CR2010a} style analyses and part of speech information see \citew[Section~4.6.1.1]{MuellerGT-Eng4}.
+\begin{figure}
+\oneline{%
+\begin{forest}
+where n children=0{delay=with unaligned translation}{}
+[CP
+	[C$^0$[weil;because, tier=word]]
+	[TopP
+		[DP$_j$ [diese Sonate;this sonata,tier=below,l=31\baselineskip]]
+		[SubjP
+			[DP$_i$ [der Mann;the man,tier=word]]
+			[ModP
+				[AdvP [wahrscheinlich;probably,l=20\baselineskip]]
+				[ObjP
+					[DP$_j$ [diese Sonate;this sonata,tier=below]]
+					[NegP
+						[AdvP [nicht;not,tier=word]]
+						[AspP
+							[AdvP [oft;often,tier=word]]
+							[MannP
+								[AdvP [gut;well,tier=word]]
+								[AuxP
+									[VP$_k$ [gespielt;played,tier=word]]
+									[Aux+
+										[Aux [hat;has,tier=word]]
+										[vP
+											[DP$_i$]
+											[VP$_k$
+												[V]
+												[DP$_j$
+                                                                                                  [,phantom,tier=word]]]]]]]]]]]]]]
+\end{forest}%
+}
+\caption{\label{Abbildung-Remnant-Movement-Satzstruktur}Analysis of sentence structure with functional heads following \citet[\page 224]{Laenzlinger2004a}}
+\end{figure}%
+
+The model of syntax argued for in this book is very simple: categories stand for linguistic objects
+with certain properties that belong to the same distribution class. For example an NP with masculine
+gender in the third person singular (\ref{ex-np-tisch}) or an \nbar with masculine gender in the third person
+singular as in (\mex{1}).
+\eal
+\ex 
+\gll Vase\\
+     vase\\
+\ex 
+\gll Vase aus China\\
+     vase from China\\
+\ex 
+\gll alte Vase aus China\\
+     old  vase from China\\
+\zl
+Since the phrases/words in (\mex{-1}) and (\mex{0}) share the respective properties they can be
+exchanged. These categories can be selected by other heads. As was described in this chapter, a verb
+may select an NP in the nominative. This is not possible in theories with ``creative'' categories. I
+will explain this with respect to \citegen{Cinque99a-u} adverb analysis but there are analyses that
+make the problem even more obvious. The next subsection will deal with an analysis of coordination
+that assumes that the conjunction is a head projecting a Conjunction Phrase (ConjP).
+
+
+
+\subsubsection{Functional projections hosting an adverb in their specifier position}
+\label{sec-funct-proj-and-adverbs}
+\label{sec-major-minor-category}
+
+It is claimed by Cinque and Rizzi that the hierarchy of functional projections is the same across
+languages and in principle one could also imagine that this array of functional projections is just
+present in all languages and in all sentences even if some adverbs are not realized in a sentence or
+do not exist in
+the language under consideration \citep[\page 55]{CR2010a}. This of course requires a rather strong conception of Universal
+Grammar: it is assumed in Mainstream Generative Grammar that language acquisition is guided by
+innate knowledge about language, the so-called Universal Grammar (UG), and \citet{CR2010a} are proponents of a rather extreme position
+claiming that at least 400 syntactic categories are part of this genetically specified linguistic
+knowledge \citep[\page 57]{CR2010a}. Since there is no evidence for this and since it is rather unclear how and why categories
+like case, gender and even nationality \citep[\page 96, 99, 100]{Cinque94a-u} should enter the human genome\footnote{
+  See and \citet{Bishop2002a} and \citet*{EBJKSPP96a} about genetics and linguistic information. See
+  also \citet*{HCF2002a}.
+}, the overall approach seems
+dubious. But even if one followed \citeauthor{CR2010a}, the fixed battery of functional projections
+approach does not work without further add ons, as the following example by \citet{Haider2022a}\addpages shows:
+\ea
+The new theory certainly may possibly have indeed been badly formulated.
+\z
+The point here is that adverbs of the same type appear at various places in the sentence. They are
+attached to VPs whose head has different verb forms. These verb forms are selected by the governing
+head. Figure~\ref{fig-verbal-selection} shows the structure assumed in this book.
+\begin{figure}
+\oneline{%
+\begin{forest}
+sm edges
+[{S[\textit{fin}]}
+  [NP [the new theory,roof]]
+  [{VP[\textit{fin}]}
+    [Adv [certainly]]
+    [{VP[\textit{fin}]}
+       [{V[\textit{fin}]} [may]]
+       [{VP[\textit{bse}]}
+         [Adv [possibly]]
+         [{VP[\textit{bse}]}
+           [{V[\textit{bse}]} [have]]
+           [{VP[\textit{prf}]}
+             [Adv [indeed]]
+             [{VP[\textit{prf}]}
+               [{V[\textit{prf}]} [been]]
+               [{VP[\textit{pas}]}
+                 [Adv [badly]]
+                 [{VP[\textit{pas}]} [formulated]]]]]]]]]]
+\end{forest}}
+\caption{Cascade of selections including adverbs as suggested in this book}\label{fig-verbal-selection}
+\end{figure}
+Figure~\ref{fig-Cinque-AdvP-VP-selection} shows the structure with \citeauthor{Cinque99a-u} style
+empty adverbial heads. The actual adverbs are analyzed as specifiers of these heads.
+\begin{figure}
+\oneline{%
+\begin{forest}
+sm edges
+[??
+  [NP$_i$ [the new theory,roof]]
+  [F-AdvP
+    [AdvP [certainly,roof ]]
+    [F-Adv$'$
+      [F-Adv  [\trace]]
+      [TP 
+      [NP$_i$ [\trace]]
+      [T$'$
+        [T [may]]
+        [F-AdvP
+          [AdvP [possibly]]
+          [F-Adv$'$
+            [F-Adv  [\trace]]
+            [{VP[\textit{bse}]}
+              [{V[\textit{bse}]} [have]]
+              [F-AdvP
+                [AdvP [indeed]]
+                  [F-Adv$'$
+                    [F-Adv  [\trace]]
+                    [{VP[\textit{prf}]}
+                      [{V[\textit{prf}]} [been]]
+                      [F-AdvP
+                        [AdvP [badly]]
+                        [F-Adv$'$
+                          [F-Adv  [\trace]]
+                          [{VP[\textit{pas}]}
+                            [{V[\textit{pas}]} [formulated]]
+                            [NP$_i$ [\trace]]]]]]]]]]]]]]]]
+\end{forest}}
+\caption{VP cascade including empty functional head hosting adverbial phrases in specifier positions
+  as suggested by \citet{Cinque99a-u}}\label{fig-Cinque-AdvP-VP-selection}
+\end{figure}
+
+The analysis also contains some details that can be ignored here. For example, passive is analyzed
+as movement: the object of the verb \emph{formulated} moves to the specifier position of a Tense
+head. Auxiliaries are usually classified as Tense elements in grammars of English. Since the adverb
+\emph{certainly} attaches to T, the NP \emph{the new theory} has to move to a higher position at the
+beginning of the clause. The figure shows that we have four projections with the label F-AdvP. Three
+of them have the same semantic type (\emph{certainly}, \emph{possibly}, \emph{indeed}) and hence
+should have the same category label in a
+% probably Mod epistemic, possibly Mod possibility
+\citeauthor{CR2010a} system. But they do not have the same distribution. So even in a system with
+fixed arrays of functional projections, something would be missing.
+Even with different category labels for the respective adverbs, the problem would not be fixed since
+\emph{possibly}, \emph{certainly} and \emph{indeed} my all appear above and below the VP nodes in
+Figure~\ref{fig-Cinque-AdvP-VP-selection}. The only way to enforce correct distribution via a local
+selection mechanism would be to include the verb form into the category label. \citet{Grimshaw2000a}
+developing a theory of extended projections suggested something along these lines. One could have a
+category that is determined by the lexical head (noun, verb, adjective) and a second category
+determined by the functional head (determiner, I or T, or any of the \citeauthor{CR2010a}
+categories).\footnote{
+This idea is actually much older. Klaus Netter suggested an analysis of the DP in German assuming
+\textsc{major} and \textsc{minor} head features \citep[Section~9.3.1]{Netter94}.}  \citet[\page 122]{Grimshaw2000a} also states that symmetric coordination could be handled this
+way. She states that in coordinations functional and lexical information has to be identified. But
+note that this is actually not easy to establish if the conjunction is seen as a head contributing
+its part of speech information to a phrase. Consider the following example:
+\ea
+the president and the general
+\z
+Figure~\ref{fig-a-squirrel-DP} shows the analysis of the phrase \emph{the president} in the DP
+analysis, in which the determiner is assumed to be the head.
+\begin{figure}
+\begin{forest}
+sm edges
+[DP
+  [D$'$
+     [D [the]]
+     [NP
+       [N$'$
+         [N [president]]]]]] 
+\end{forest}
+\caption{\emph{a squirrel} in the DP analysis}\label{fig-a-squirrel-DP}
+\end{figure}
+Now, one could project information about the lexical category as well. This would make information
+about verbs and nouns available at the top node of the projection. Let us assume the feature \textsc{f} for
+functional categories and the feature \textsc{l} for lexical categories. 
+
+\begin{figure}
+\begin{forest}
+sm edges
+[\textsc{f}:DP\\\textsc{l}:NP
+  [\textsc{f}:D$'$\\\textsc{l}:NP
+     [\textsc{f}:D\\\textsc{l}:none [the]]
+     [\textsc{f}:none\\\textsc{l}:NP
+       [\textsc{f}:none\\\textsc{l}:N$'$
+         [\textsc{f}:none\\\textsc{l}:N [president]]]]]] 
+\end{forest}
+\end{figure}
+The phrase \emph{possibly have indeed been badly formulated} would then have the category
+\textsc{f}:Mod\sub{possibility},\textsc{l}:VP[\type{bse}]. This makes it possible to select for the
+correct part of speech and the correct verb form by looking at the \textsc{l} value. But this does
+not extend to the coordination problem. If the conjunction is treated as a functional head, the
+analysis in Figure~\ref{fig-coordination-of-two-DPs-withConjP} results:
+\begin{figure}
+\begin{forest}
+sm edges
+[\textsc{f}:ConjP\\\textsc{l}:NP
+  [\textsc{f}:DP\\\textsc{l}:NP
+     [\textsc{f}:D$'$\\\textsc{l}:NP
+       [\textsc{f}:D\\\textsc{l}:none [the]]
+       [\textsc{f}:none\\\textsc{l}:NP
+         [\textsc{f}:none\\\textsc{l}:N$'$
+           [\textsc{f}:none\\\textsc{l}:N [president]]]]]]
+  [\textsc{f}:Conj$'$\\\textsc{l}:NP 
+    [\textsc{f}:Conj\\\textsc{l}:none [and]]
+    [\textsc{f}:DP\\\textsc{l}:NP
+     [\textsc{f}:D$'$\\\textsc{l}:NP
+       [\textsc{f}:D\\\textsc{l}:none [the]]
+       [\textsc{f}:none\\\textsc{l}:NP
+         [\textsc{f}:none\\\textsc{l}:N$'$
+           [\textsc{f}:none\\\textsc{l}:N [general]]]]]]]] 
+\end{forest}
+\caption{Functional and lexical categories and coordination of two functional
+  projections}\label{fig-coordination-of-two-DPs-withConjP}
+\end{figure}
+Now, the interesting thing is that the coordination of two bare NPs without a determiner would have
+exactly the same category, which is wrong since they do not have the same distribution:
+\eal
+\ex[]{
+the president and general 
+%of Mexico
+}
+\ex[*]{
+a the president and general
+}
+\zl
+Figure~\ref{fig-coordination-of-two-NPs-withConjP} shows the coordination of two NPs.
+\begin{figure}
+\begin{forest}
+sm edges
+[\textsc{f}:ConjP\\\textsc{l}:NP
+  [\textsc{f}:none\\\textsc{l}:NP
+     [\textsc{f}:none\\\textsc{l}:N$'$
+     [\textsc{f}:none\\\textsc{l}:N [president]]]]
+  [\textsc{f}:Conj$'$\\\textsc{l}:NP 
+    [\textsc{f}:Conj\\\textsc{l}:none [and]]
+    [\textsc{f}:none\\\textsc{l}:NP
+      [\textsc{f}:none\\\textsc{l}:N$'$
+        [\textsc{f}:none\\\textsc{l}:N [general]]]]]]
+\end{forest}
+\caption{Functional and lexical categories and coordination of two lexical
+  projections}\label{fig-coordination-of-two-NPs-withConjP}
+\end{figure}
+The point is clear: a coordination has to reflect both the functional category and the lexical
+category of the conjunctions (as \citealt[\page 122]{Grimshaw2000a} pointed out). Making this information
+available is impossible if information about a conjunction is projected instead.
+
+Note also that verb phrases with different adverbials may be coordinated:
+\ea
+Kim [unfortunately sang a song] and [allegedly ruined the evening].
+\z
+According to \citet[\page 106]{Cinque99a-u} \emph{fortunately} is Mood\sub{evaluative} and
+\emph{allegedly} is Mood\sub{evidential}. Hence the two verb phrases in (\mex{0}) have different
+categories in Cinque's analysis. In the analysis suggested here, they are just verb phrases
+containing different adverbials. Since both verb phrases are finite in (\mex{0}) the coordination is
+an instance of symmetric coordination in the theory defended here. So, we are back at a point where
+Chomsky started: Syntax is about distribution of words and phrases, not about semantics. And hence
+it is clear that examples like \citegen[\page 15]{Chomsky57a} (\mex{1}) are syntactically wellformed although they do not
+make sense:
+\ea
+Colorless green ideas sleep furiously.
+\z
+Note that HPSG has semantic
+information and information concerning information structure within the information that can be
+selected by selecting heads \parencites[Section~2.4]{ps2}[\page 74]{BC2010a}. HPSG categories are complex, they contain phonological, morphological,
+syntactic, semantic and information structural properties. This means that relations between
+linguistic objects can refer to these properties. This is needed for approaches to language that
+take all these descriptive levels into account. What is not needed -- and in fact strongly rejected
+here -- is semantic or information structural information within syntactic categories.
+
+%This is a special case of what has been discussed above with respect to NegP.
+
+
+
+% 31.03.22
+% Man könnte F-AdvP-prf und F-Adv-P-bse für die verschiedenen Zwichenpositionen annehmen. Das wäre
+% aber wohl offensichtlicher Irrsin.
+
+For more on \citeauthor{CR2010a} style analyses and the locality of selection see \citew[Section~4.6.1.3]{MuellerGT-Eng4}.
+
+
+\subsubsection{Negation as adverb or as special projection}
+
+Now, returning to the \citeauthor{CR2010a} style analyses. \citet{Ernst92a} examined an analysis of
+negation in which the negation element is analyzed as the head. Ernst pointed out that it is
+not just verbs that can be negated. Negation can attach to different verbal projections (\mex{1}a,b), to adjectives (\mex{1}c)
+and adverbs (\mex{1}d).
+\eal
+\ex Ken could not have heard the news.
+\ex Ken could have not heard the news.
+\ex a [not unapproachable] figure
+\ex {}[Not always] has she seasoned the meat.
+\zl
+But the respective phrases have different distributions. They are not just NegPs. We need
+information about the part of speech of the head and about the verb form. It may be possible to
+solve these problems by using constraints that can search in trees for information and find out that
+the NegP \emph{not always} contains an adverb, that the NegP \emph{not have heard the news} contains
+a verb in the base form and that \emph{not heard the news} contains a verb in the participle perfect
+form, but any such approach would be more complicated than the approach taken here and all other
+non-Minimalist theories (for explicit discussion see \citealt{Sag2007a}) and also many Minimalist theories (\eg \citealt[\page
+  223]{Abraham2005a}). The approach that was discussed in this chapter just compares a requirement
+  of a head with the properties of the complement or specifier daughter. Or the other conjunct in
+  the case of examples like (\ref{ex-coordination-NegP}). In comparison, \citegen{Laenzlinger2004a}
+  approach has to find the verb in \emph{nicht oft gut gespielt hat} `not often well played has'
+  somewhere deeply embedded in a cascade of NegP, AspP, MannP, AuxP, Aux+. Note also that it is
+  unclear for an algorithm looking at structures like the one in Figure~\ref{Abbildung-Remnant-Movement-Satzstruktur} which daughter is the
+  head. It is just different material combined to some phrase whose label is determined by the
+  meaning of an adverbial.
+
+Concluding this subsection, I follow all work in GPSG and HPSG and other frameworks in assuming that
+negation particles are not heads but adjuncts. See \citew{KS2002a} and \citew[Section~6]{Sag2020a} on negation in English and
+\citew{Kim2021b} for an overview of analyses of negation in HPSG in general.
+
+\subsubsection{Coordination and the ConjP analysis}
+
+Figure~\ref{fig-coordination-conjp} shows a sketch of the analysis in which a ConjP is projected
+from the coordinating conjunction. This analysis is assumed by
+\citet[\page 596]{Larson90a-u}, \citet[\page 89]{Radford93a-u}, \citet[\page
+109]{Johannessen98a-u}, \citet[\page 8]{vanKoppen2005a-u}, \citet[\page 474]{Boskovic2009a-u}, \citet[\page
+27]{Citko2011a-u}, and others.
+%[Chapter~6]{Kayne94a-u}
+\begin{figure}
+\begin{forest}
+[{ConjP}
+ [X]
+ [Conj$'$
+   [Conj]
+   [Y]]]
+\end{forest}
+\caption{\label{fig-coordination-conjp}Analysis of coordination with ConjP}
+\end{figure}
+The problem is that the coordination of two NPs should be an NP, the coordination of two VPs a VP
+and so on. It should not be a ConjP since a ConjP is different from an NP or VP and selecting heads
+are requiring NPs or VPs.\footnote{
+  \citet[\page 669]{Johannessen96a-u} suggests an analysis in which a coordinate structure has the
+  features of the first conjunct. This does not help since a projection can be either an NP or a
+  ConjP. Approaches assuming two categories per head, a functional and a lexical, are discussed
+  below in Section~\ref{sec-major-minor-category}. They will not work either. Furthermore, the coordination of two singular NPs is a plural NP not a singular NP as would
+  be predicted by \citeauthor{Johannessen96a-u}'s account. See \citet{Borsley2005a} for
+  details. Approaches assuming two category features will be discussed in Subsection~\ref{sec-funct-proj-and-adverbs}
+}
+\eal
+\ex {}[\sub{NP} [\sub{NP} Kim] and [\sub{NP} Sandy]] laugh.
+\ex
+\label{ex-coordination-NegP}
+Kim wants to [\sub{VP} [\sub{VP} sing a song], [\sub{VP} dance], and [\sub{VP} not worry about tomorrow]].
+\zl
+Note also that the example in (\mex{0}b) shows that the assumption that a negated VP is a VP rather
+than a NegP provides for a simple analysis of coordination: it is just VPs that are coordinated and
+hence (\mex{0}b) is an instance of symmetric coordination. In a NegP approach, more would have to be
+said about matching categories in the coordination.
+See \citew{Borsley2005a} and \citew{BM2021a} for more on the ConjP approach.
+
+The points discussed so far in this subsection on coordination have to do with the status of the
+conjunction: Is it a head? What does it project? But there are questions concerning the conjuncts as
+well. As was pointed out at the beginning of this section, constituency tests determine distribution
+classes. Coordination is one of these tests and if we find to conjoinable constituents this
+indicates that they should be assigned to the same category.
+\citet[\page 106]{Cinque99a-u} suggests the following hierarchy of functional heads.
+\ea
+\label{ex-adjunct-hierarchy}
+The universal hierarchy of clausal functional projections \citep[\page 106]{Cinque99a-u}
+{}[ \emph{frankly} Mood\sub{speech act} [ \emph{fortunately} Mood\sub{evaluative} [ \emph{alledgedly}
+Mood\sub{evidential} [ \emph{probably} Mood\sub{epistemic} [ \emph{once} T(Past) [ \emph{then}
+T(Future) [ \emph{perhaps}
+Mood\sub{irrealis} [ \emph{necessarily} Mood\sub{necessity} [ \emph{possibly} Mod\sub{possibility} [ \emph{usually}
+Asp\sub{habitual} [ \emph{again} Asp\sub{repetitive(I)} [ \emph{often} Asp\sub{frequentative(I)} [ \emph{intentionally}
+Mod{volitional} [ \emph{quickly} Asp\sub{celerative(I)} [ \emph{already} T(Anterior) [ \emph{no longer}
+Asp\sub{terminative} [ \emph{still} Asp\sub{continuative} [ \emph{always} Asp\sub{perfect(?)} [ \emph{just}
+Asp\sub{retrospective} [ \emph{soon} Asp\sub{proximative} [ \emph{briefly} Asp\sub{durative} [
+\emph{characteristically}(?) Asp\sub{generic/progressive} [ \emph{almost} Asp\sub{prospective} [ \emph{completely}
+Asp\sub{SgCompletive(I)} [ \emph{tutto} Asp\sub{PICompletive} [ \emph{well} Voice [ \emph{fast}/\emph{early}
+Asp\sub{frequuentative(II)} [ \emph{completely} Asp\sub{SgCompletive(II)}
+\z 
+
+%\eal
+
+Consider the sentence in (\mex{1}):
+\ea
+She [probably goes by train] and [possibly changes in Ostkreuz].
+\z
+In the theory developed in this book, \emph{probably goes by train} and \emph{possibly changes in
+  Ostkreuz} are VPs they can be coordinated with unmodified VPs or with VPs modified with any of
+the adjuncts listed in (\ref{ex-adjunct-hierarchy}). But according to \citeauthor{Cinque99a-u} these phrases
+are of different categories: the first VP is Mood\sub{epistemic} and the second is
+Mood\sub{possibility}. Does this mean that these VPs cannot be coordinated? No it does not since the
+category of the second VP is below the category of the first in Cinque's hierarchy and since he
+assumes that all these nodes are present in all sentences even if the respective adverbial elements
+are not present. This means that \emph{possibly changes in Ostkreuz} is not just
+Mood\sub{possibility} but also Mood\sub{necessity}, Mood\sub{irrealis}, T(Future), T(Past),
+Mood\sub{epistemic}. Since it is Mood\sub{epistemic}, it can be coordinated with \emph{probably goes
+  by train}, which is Mood\sub{epistemic} as well. But apart from these categories, it is also
+Mood\sub{speech act}, Mood\sub{evaluative}, Mood\sub{evidential}. In fact both VPs are. All VPs are
+combined with all functional projections in Cinque's system. This means that VPs without adjuncts
+are combined with (at least) 27 empty heads and are (at least) 27fold ambiguous. When two such VPs are
+coordinated there are 27 ways of coordinating them without any difference in meaning that could be
+assigned to the different structures. Such ambiguities are calls \emph{spurious ambiguities} and
+they are generally frowned upon in syntactic research. See also \citew[\page 70--71]{MuellerGT-Eng1} on the
+N–\nbar projection in nominal structures without complements. This projection poses the same problem
+with coordinations as the one discussed in this subsection: whenever there are unary projections
+that do not add semantics, spurious ambiguities result in coordinations.
+
+\subsubsection{Reaching Cinque's goals}
+
+As was shown in the previous subsections, there are a lot of arguments against
+\citeauthor{CR2010a} approaches, but a lot of researchers assume such approaches anyway. Why? the
+advantage of these approaches is that they can relate linear order and semantics. As Felix Bildhauer
+pointed out to me a long time ago: they are entertaining some kind of Construction Grammar
+approach. There are slots for certain elements at a certain position in the sentence. We have seen
+many instances of these analyses above. Some categories are just unnecessary: SubjP and ObjP, for
+example. The effects could be done by adjunction, that is, nodes would be doubled as in
+Figure~\ref{fig-cp-tp-vp-scrambling}. Alternatively, one could assume what is called ``base
+generation'': rather than moving constituents they are licensed in the places they are visible.
+Furthermore, the information about adverbials could be made accessible
+within the semantic contribution of linguistic signs. One representation format of semantics in HPSG
+is Minimal Recursion Semantics. All semantic contribution are contained in lists of elementary
+predications. Such lists can be augmented by a pointer pointing to the elementary predication that
+was added by the last adverbial. Flickinger uses such a pointer. It is called \textsc{altkey}. Since
+a modifier selects the VP it modifies, it can also access the value of \textsc{altkey} and hence a
+modifying adverbial can state constraints on the adverbial that is to the right of it within the VP
+it modifies. The selection would refer to semantic properties of the selected linguistic
+object. This is, of course, also the case in the Cinque–Rizzi system, except that there the
+semantics is pushed into syntax.
+
+
+\exercises{
 
 \begin{enumerate}
 \item Provide the valence lists for the following words:
@@ -1376,15 +1960,15 @@ If you are uncertain as far as case assignment is concerned, you may use the
 
 \item Draw trees for the following examples. NPs can be abbreviated.
 \eal
-\ex 
+\ex\longexampleandlanguage{
 \gll weil    Aicke dem        Kind  ein      Buch schenkt\\
-     because Aicke the.\DAT{} child a.\ACC{} book gives.as.a.present\\ \german
+     because Aicke the.\DAT{} child a.\ACC{} book gives.as.a.present\\}{German}
 \glt `because Aicke gives the child a book as a present'
 \ex because Kim gave a book to him
 \ex Sandy saw this yesterday.
 \ex
 \gll at Bjarne læste bogen\\
-     that Bjarne read book.\textsc{def}\\
+     that Bjarne read book.\textsc{def}\\\hfill(Danish)
 \glt `that Bjarne read the book'
 \zl
 \end{enumerate}

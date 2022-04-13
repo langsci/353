@@ -48,12 +48,12 @@ In addition certain clausal arguments are treated as subjects.
 Genitives and datives as in (\mex{1}) are not counted among the subjects in German.
 \eal
 \ex 
-\gll Ihrer wurde gedacht.\\
-     they.\GEN{} was remembered\\\german
+\gll Ihrer       wurde gedacht.\\
+     they.\GEN{} \AUX{} remembered\\\german
 \glt `They were remembered.'
 \ex 
-\gll Ihm       wurde geholfen.\\
-     he.\DAT{} was   helped\\
+\gll Ihm       wurde  geholfen.\\
+     he.\DAT{} \AUX{} helped\\
 \glt `He/she was helped.'
 \zl
 
@@ -390,8 +390,8 @@ English and German only have the analytic variant:
 \eal
 \ex The paper was read.
 \ex 
-\gll Der Aufsatz wurde gelesen.\\
-     the.\NOM{} paper was read\\\german
+\gll Der        Aufsatz wurde  gelesen.\\
+     the.\NOM{} paper   \AUX{} read\\\german
 \zl    
 
 
@@ -410,8 +410,8 @@ example of which is given in (\mex{1}).
      relatives.\NOM{}  have  the.\ACC{} suspect      lastly  at.the Monday seen\\}{German}
 \glt `Relatives have seen the suspect for the last time on Monday.'
 \ex 
-\gll Der Verdächtige wurde zuletzt am Montag gesehen.\\
-     the\NOM{} suspect     was   lastly at.the Monday seen\\
+\gll Der        Verdächtige wurde  zuletzt am Montag gesehen.\\
+     the.\NOM{} suspect     \AUX{} lastly at.the Monday seen\\
 \glt `The suspect was seen for the last time on Monday.'
 \zl
 
@@ -435,8 +435,8 @@ passives.\footnote{
 The labels ``personal'' and ``impersonal passive'' are misnomers, since both passives share the property of
 demoting the subject. So-called personal passives can have animate subjects or inanimate subjects:
 \ea 
-\gll Der Diamant wurde zuletzt am Montag gesehen.\\
-     the.\NOM{} diamond was   lastly at.the Monday seen\\\hfill(German)
+\gll Der        Diamant wurde  zuletzt am Montag gesehen.\\
+     the.\NOM{} diamond \AUX{} lastly at.the Monday seen\\\hfill(German)
 \glt `The diamond was seen for the last time on Monday.'
 \z
 The big German grammar of the Institut für Deutsche Sprache tried to establish the new terms \emph{Zweitakt-Passiv} `two phase passive' and
@@ -450,8 +450,8 @@ impersonal passive.
 } Since German does not require a subject, impersonal passives like (\mex{1}) are expected:
 
 \ea
-\gll weil noch getanzt wurde\\
-     because still danced was\\\german
+\gll weil    noch  getanzt wurde\\
+     because still danced  \AUX\\\german
 \glt `because there was still dancing there'
 \z
 
@@ -493,8 +493,8 @@ inserting an expletive.
 Expletives are excluded in German impersonal constructions:
 \nocite{MOe2011a}
 \ea[*]{
-\gll weil es noch gearbeitet wurde\\
-     because it still worked was\\\german
+\gll weil    es noch  gearbeitet wurde\\
+     because it still worked     \AUX\\\german
 \glt Intended: `because there was still working there'
 }
 \z
@@ -533,13 +533,13 @@ shows that the accusative object can be realized as subject, but the dative obje
 \glt `because the man gives the boy a ball as a present'
 }
 \ex[]{
-\gll weil dem Jungen der Ball geschenkt wurde\\
-     because the.\DAT{} boy the.\NOM{} ball given was\\
+\gll weil    dem        Jungen der        Ball geschenkt wurde\\
+     because the.\DAT{} boy    the.\NOM{} ball given     \AUX\\
 \glt `because the ball was given to the boy'
 }
 \ex[*]{
 \gll weil der Junge den Ball geschenkt wurde\\
-     because the.\NOM{} boy the.\ACC{} ball given was\\
+     because the.\NOM{} boy the.\ACC{} ball given \AUX\\
 }
 \zl
 
@@ -855,14 +855,17 @@ that some are lexical and others are structural
 {Wegener90}% ganzes Papier 74--75, 79 100 Abschnitt 10 zu inheränten Dativen
 % Im Japanischen wird angehobenes Subjekt zum Dativ, wenn Verbalkomplexbildung
                       % zu NP, NP, NP führt.
-[\page 26]{denBesten85}%
+[\page 26]{denBesten85}% verbs like helfen, which assign dative case
+[page 55--56]{denBesten85b}% Für helfen sagt er in Fn, dass die auch mit V' kombiniert werden.
 [\page 286--287]{Czepluch88}%
 [\page 77, 80]{Sternefeld95a}% für bekommen-Passiv mit helfen ist es dann doch struktureller Kasus
                              % und Er wird geholfen ist immer noch ausgeschlossen, weil er das mit
                              % einem Dativ-pro macht.
 [\page 102--103]{Stechow96a}%
 [\page 48, 51]{Wunderlich97a}%
-[\page 161]{Fanselow87a}[\page 206]{Fanselow2003b},
+%[\page 107]{Wunderlich97c}% dative passive possible -> structural lexical datives are not mentioned
+%                          % but follow implicitely
+[\page 161]{Fanselow87a}[\page 178,205]{Fanselow2000b}[\page 181, 182, 206]{Fanselow2003b},% 181 lexical datives
 %-----------------------------------------------------------------------
 or that all datives are structural 
 \parencites[\page 80]{Sternefeld95a}%
@@ -873,8 +876,7 @@ or that all datives are structural
 % EA ist Nominativ, alle anderen sind -nom (und nicht Genitiv)
 % Das funktioniert nicht, wenn das Isländische auch Dativpassive hat.
 \todostefan{update references}
-%,denBesten85b,Fanselow2000b,%
-%Wunderlich97c,Molnarfi98a}
+%Molnarfi98a} muss noch kopiert werden
 
 I follow \citet{Haider86} and treat all datives as lexical cases. Under this assumption, the
 contrast in Haider's examples \citeyearpar[\page 20]{Haider86} in (\mex{1}) is explained immediately:
@@ -884,8 +886,8 @@ contrast in Haider's examples \citeyearpar[\page 20]{Haider86} in (\mex{1}) is e
      he.\NOM{} strokes the.\ACC{} dog\\
 }
 \ex[]{
-\gll Der Hund wurde gestreichelt.\\
-     the.\NOM{} dog  was   stroked\\
+\gll Der        Hund wurde  gestreichelt.\\
+     the.\NOM{} dog  \AUX{} stroked\\
 }
 \ex[]{
 \gll sein Streicheln des    Hundes\\
@@ -897,8 +899,8 @@ contrast in Haider's examples \citeyearpar[\page 20]{Haider86} in (\mex{1}) is e
      he helps the.\DAT{} children\\
 }
 \ex[]{
-\gll Den Kindern wurde geholfen.\\
-     the.\DAT{} children was helped\\
+\gll Den        Kindern  wurde  geholfen.\\
+     the.\DAT{} children \AUX{} helped\\
 }
 \ex[]{
 \gll das Helfen der Kinder\\
@@ -1032,15 +1034,15 @@ like (\mex{1}):
 }
 \ex[]{ 
 \gll dass dem Jungen der Ball gegeben wurde\\
-     that the.\DAT{} boy    the.\NOM{} ball given was\\
+     that the.\DAT{} boy    the.\NOM{} ball given \AUX\\
 }
 \ex[*]{ 
 \gll dass der Junge den Ball gegeben wurde\\
-     that the.\NOM{} boy   the.\ACC{} ball given was\\
+     that the.\NOM{} boy   the.\ACC{} ball given \AUX\\
 }
 \ex[*]{ 
 \gll dass den Junge der Ball gegeben wurde\\
-     that the.\ACC{} boy   the.\NOM{} ball given was\\
+     that the.\ACC{} boy   the.\NOM{} ball given \AUX\\
 }
 \zl
 They just stay in the dative. The only exception is the dative passive and this has to be regarded as an exception.
@@ -1449,11 +1451,11 @@ personal and the impersonal passive. The passives of \emph{schlafen} `to sleep' 
 \eal
 \ex 
 \gll dass geschlafen wurde\\
-     that slept was\\
+     that slept      \AUX\\
 \glt `that there was sleeping there'
 \ex
 \gll dass dem Mann geholfen wurde\\
-     that the.\DAT{} man helped was\\
+     that the.\DAT{} man helped \AUX\\
 \glt `that the man was helped'
 \zl
 The passives of \emph{unterstützen} `to support' and \emph{schenken} `to give as a present' do have
@@ -1461,11 +1463,11 @@ subjects, namely the arguments that are realized as accusative objects in the ac
 \eal
 \ex 
 \gll dass der Mann unterstützt wurde\\
-     that the.\NOM{} man supported was\\
+     that the.\NOM{} man supported \AUX\\
 \glt `that the man was supported'
 \ex
 \gll dass dem Jungen der Ball geschenkt wurde\\
-     that the.\DAT{} boy the\NOM{} ball given was\\
+     that the.\DAT{} boy the\NOM{} ball given \AUX\\
 \glt `that the ball was given to the boy as a present'
 \zl
 Those analyses that assign all cases lexically would have to assume that the case of the objects
@@ -1725,7 +1727,7 @@ passive cannot apply.
 }
 \ex[*]{
 \gll weil angekommen wurde\\
-     because arrived was\\
+     because arrived \AUX\\
 }
 \zl
 
@@ -1788,8 +1790,8 @@ hence the accusative object of \emph{lesen} in (\mex{1}a) is realized as nominat
 \gll Er liest den Aufsatz.\\
      he.\NOM{} reads the.\ACC{} paper\\\german
 \ex
-\gll Der Aufsatz wurde gelesen.\\
-     the.\NOM{} paper was read\\
+\gll Der        Aufsatz wurde  gelesen.\\
+     the.\NOM{} paper   \AUX{} read\\
 \zl
 
 English differs from German in not having a dative case at all. I am talking about morphological
@@ -1821,7 +1823,7 @@ accusative in English, as English is a VO language.
 \eal
 \ex 
 \gll dass dem Kind der Ball gegeben wurde\\
-     that the.\DAT{} child the.\NOM{} ball given was\\\german
+     that the.\DAT{} child the.\NOM{} ball given \AUX\\\german
 \glt `that the ball was given to the child'
 \ex because the child was given the ball
 \zl
@@ -1834,11 +1836,11 @@ because he was helped
 }
 \ex[]{
 \gll weil ihm geholfen wurde\\
-     because he.\DAT{} helped was\\\german
+     because he.\DAT{} helped \AUX\\\german
 }
 \ex[*]{
 \gll weil    er geholfen wurde\\
-     because he.\NOM{} helped was\\
+     because he.\NOM{} helped \AUX\\
 }
 \zl
 
@@ -2158,7 +2160,7 @@ is combined with \emph{the child} and we have a complete sentence.
 The analysis of the parallel German sentence in (\mex{1}) is shown in Figure~\vref{fig-dem-Kind-ein-Roman-gegeben-wurde}.
 \ea
 \gll dass dem Kind ein Roman gegeben wurde\\
-     that the child a novel  given    was\\\german
+     that the child a novel  given    \AUX\\\german
 \glt `that the child was given a novel'
 \z
 \begin{figure}
@@ -2188,7 +2190,7 @@ sm edges
 %            \da    \sliste{ \ibox{2} },\\
              \spr   \sliste{  },\\
              \comps \sliste{ \ibox{1}, \ibox{2}, \ibox{3} },\\
-             \argst \sliste{ \ibox{1}, \ibox{2}, \ibox{3} }}  [wurde;was]]]]]
+             \argst \sliste{ \ibox{1}, \ibox{2}, \ibox{3} }}  [wurde;\textsc{aux}]]]]]
 \end{forest}
 \caption{\label{fig-dem-Kind-ein-Roman-gegeben-wurde}Analysis of \emph{dass dem Kind ein Roman gegeben
     wurde} `that the child was given a novel'}
@@ -2226,11 +2228,11 @@ argument.
 \eal
 \ex
 \gll dass der        Aufsatz gelesen wurde\\
-     that the.\NOM{} paper   read    was\\
+     that the.\NOM{} paper   read    \AUX\\
 \glt `that the paper was read'
 \ex
 \gll dass Kirby den Aufsatz gelesen hat\\
-     that Kirby the.\ACC{} paper read has\\
+     that Kirby the.\ACC{} paper read \AUX\\
 \glt `that Kirby has read the paper'
 \zl
 
@@ -2353,14 +2355,14 @@ nominative in certain contexts. (\mex{1}) provides some constructed examples fro
 \eal
 \ex\iw{versuchen|(}
 \gll daß  er        auch von  mir zu überreden versucht wurde\footnotemark\\
-     that he.\NOM{} also from me  to persuade  tried    got\\\german
+     that he.\NOM{} also from me  to persuade  tried    \AUX\\\german
 \footnotetext{
         \citew*[\page 212]{Oppenrieder91a}.%
 }
 \glt `that an attempt to persuade him was also made by me'
 \ex 
 \gll weil    der        Wagen oft   zu reparieren versucht wurde\\
-     because the.\NOM{} car   often to repair     tried    was\\
+     because the.\NOM{} car   often to repair     tried    \AUX\\
 \glt `because many attempts were made to repair the car'\label{bsp-zu-reparieren-versucht-wurde}
 \zl
 The examples in (\mex{1}) are attested data collected from the COSMAS corpus by \citet[\page 136--137]{Mueller2002b}:
@@ -2411,8 +2413,8 @@ shows some of her examples with \emph{beginnen} `to start', \emph{vergessen} `to
 %%         \url{http://www.hollabrunn.noe.gv.at/mariathal/ortsvorsteher.html}, 28.07.2003.
 %% }
 \ex
-\gll \emph{der} \emph{zweite} \emph{Entwurf} wurde zu bauen begonnen,\footnotemark\\
-     the.\NOM{} second        plan           was   to build started\\ 
+\gll \emph{der} \emph{zweite} \emph{Entwurf} wurde  zu bauen begonnen,\footnotemark\\
+     the.\NOM{} second        plan           \AUX{} to build started\\ 
 \footnotetext{
 \url{http://www.waclawek.com/projekte/john/johnlang.html}, 28.07.2003.
 }
@@ -2463,28 +2465,28 @@ The remote passive is possible in verbal complexes only. If no verbal complex is
 (\mex{1}a,c), the object of \emph{reparieren} has to appear in the accusative:
 \eal
 \ex[]{
-\gll weil oft versucht wurde, den Wagen zu reparieren.\\
-     because often tried was  the.\ACC{} car   to repair\\
+\gll weil    oft   versucht wurde, den        Wagen zu reparieren.\\
+     because often tried    \AUX{} the.\ACC{} car   to repair\\
 \glt `because many attempts were made to repair the car.'
 }
 \ex[*]{
-\gll weil oft versucht wurde, der Wagen zu reparieren.\\
-     because often tried was  the.\NOM{} car   to repair\\
+\gll weil    oft   versucht wurde, der        Wagen zu reparieren.\\
+     because often tried    \AUX{} the.\NOM{} car   to repair\\
 }
 \ex[]{
-\gll Den Wagen zu reparieren wurde oft versucht.\\
-     the.\ACC{} car   to repair was often tried\\
+\gll Den        Wagen zu reparieren wurde  oft   versucht.\\
+     the.\ACC{} car   to repair     \AUX{} often tried\\
 }
 \ex[*]{
-\gll Der Wagen zu reparieren wurde oft versucht.\\
-     the.\NOM{} car   to repair was often tried\\
+\gll Der        Wagen zu reparieren wurde  oft   versucht.\\
+     the.\NOM{} car   to repair     \AUX{} often tried\\
 }
 \zl
 The difference between (\ref{bsp-zu-reparieren-versucht-wurde-two}) and (\mex{0}a,c) are explained by an analysis that treats the remote passive as a passivization
 of a predicate complex, \ie by an analysis that assigns the structure (\mex{1}) to \pref{bsp-zu-reparieren-versucht-wurde-two}.
 \ea
 \gll weil    der        Wagen oft   [[zu reparieren versucht] wurde].\\
-     because the.\NOM{} car   often \hphantom{[[}to repair   tried     was\\
+     because the.\NOM{} car   often \hphantom{[[}to repair   tried     \AUX\\
 \glt `because many attempts were made to repair the car.'\label{bsp-zu-reparieren-versucht-wurde-three}
 %
 \z
@@ -2545,7 +2547,7 @@ sm edges
         [V\feattab{
               \vform \type{fin},\\
               \comps \ibox{1} $\oplus$ \sliste{
-                \ibox{2} }} [wurde;was] ] 
+                \ibox{2} }} [wurde;\textsc{aux}] ] 
 ]
 \end{forest}
 \caption{\label{fig-zu-reparieren-versucht-wurde}The analysis of the remote passive as passivization of a complex forming verb}
@@ -2574,8 +2576,8 @@ of \emph{auszukosten} can be realized in the nominative, if the verbs are formin
 }
 \glt `She is not allowed to read any newspapers.'%
 \ex\iw{auskosten}
-\gll Der Erfolg         wurde uns      nicht auszukosten erlaubt.\footnotemark\\
-     the success.\NOM{} was   us.\DAT{} not   to.enjoy                  permitted\\
+\gll Der Erfolg         wurde  uns       nicht auszukosten erlaubt.\footnotemark\\
+     the success.\NOM{} \AUX{} us.\DAT{} not   to.enjoy    permitted\\
 \footnotetext{
         \citew[\page 110]{Haider86c}%
 }
@@ -2587,8 +2589,8 @@ of \emph{auszukosten} can be realized in the nominative, if the verbs are formin
 The passive of the construction without verbal complex is an impersonal passive:
 
 \ea
-\gll Uns wurde erlaubt, den Erfolg auszukosten.\\
-     us.\DAT{}  was   allowed  the.\ACC{} success to.enjoy\\
+\gll Uns       wurde  erlaubt, den        Erfolg  auszukosten.\\
+     us.\DAT{} \AUX{} allowed  the.\ACC{} success to.enjoy\\
 \z
 
 (\mex{1}) shows the \argstv of \stem{erlaub}: \emph{erlauben} takes a subject and a dative
@@ -2661,7 +2663,243 @@ first NP with structural case is the subject in German.
 
 \section{Alternatives}
 
+
+\subsection{Government \& Binding analyses}
+
+The analysis adopted here was developed out of proposals by Hubert Haider
+\citeyear{Haider86}. Haider developed analyses within the framework of Government \& Binding
+\citep{Chomsky81a} and his analyses are to a large extent compatible with HPSG views and are adopted
+by many researchers working in German within the framework of HPSG. The most common analysis of the
+passive in GB is different though. It was taken over from Chomsky's analysis of the passive in
+English \citep{Chomsky86a} and is based on the CP/TP/VP system (see Section~\ref{sec-cp-tp-vp} for a discussion of
+scrambling in this system).
+
+GB's passive analysis is similar to the analysis suggested here in that it is a lexical analysis:
+the lexical item for the participle is special in not assigning case to the accusative object. There
+is a Case Filter\is{case!filter} requiring that every NP in a sentence must have case. Since the verb does not
+assign case, the NP that would have accusative in the active has to get case elsewhere. There are two
+ways to get case: the subject receives case from (finite) T\is{category!functional!T} and
+that the case of the remaining arguments comes from V (\citealp[\page 50]{Chomsky81a}; \citealp[\page
+26]{Haider84b}; \citealp[\page 71--73]{FF87a}).
+\begin{principle-break}[Case Principle]\label{Kasusprinzip-GB}
+\begin{itemize}
+% hier stand `seinem', aber in den Abbildungen gibt es zwei Komplemente
+\item V assigns objective case (accusative) to its complement if it bears structural case.
+\item When finite, INFL assigns case to the subject.
+\end{itemize}
+\end{principle-break}
+
+
+Figure~\ref{Abb-GB-Aktiv} shows the Case Principle in action with the example in 
+(\mex{1}a).\footnote{\label{fn-semantic-role-phrase-boundary}%
+The figure does not correspond to \xbar theory in its classic form, since \emph{der Frau} `the woman' 
+is a complement which is combined with V$'$.  In classical \xbar theory, all complements have to be combined
+with \vnull. This leads to a problem in ditransitive\is{verb!ditransitive} structures since the structures have to be binary (see \citew{Larson88a} for a treatment of double object constructions).
+Furthermore, in the following figures the verb has been left in \vnull for reasons of clarity. In order
+to create a well"=formed S"=structure, the verb would have to move to its affix in \inull. Note also
+that the assignment of the subject theta-role by the verb crosses a phrase boundary. This problem
+can be solved by assuming that the subject is generated within the VP, gets a theta role there and
+then moves to SpecIP. An alternative suggestion was to assume that the VP assigns a semantic role to
+SpecIP \parencites[\page 104--105]{Chomsky81a}[\page 229]{AS83a}.%
+}
+\eal
+\ex 
+\gll {}[dass] der Delphin dem Kind den Ball gibt\\
+     \spacebr{}that the dolfin the.\DAT{} child the.\ACC{} ball gives\\
+\glt `that the dolfin gives the child the ball'
+\ex 
+\gll{}[dass] der Ball dem Kind gegeben wird\\
+      \spacebr{}that the ball.\NOM{} the.\DAT{} child given \AUX\\
+\glt `that the ball is given to the child'
+\zl
+%\fi
+\begin{figure}
+\hfill
+\begin{forest}
+sm edges
+[IP
+  [{NP[nom]}, name=subject [der Delphin;the dolfin, roof]]
+  [\hspaceThis{$'$}I$'$
+	[VP
+		[\hspaceThis{$'$}V$'$
+			[{NP[dat]}, name=dobject [dem Kind;the child, roof]]
+			[\hspaceThis{$'$}V$'$
+				[{NP[acc]},   name=aobject [den Ball;the ball, roof]]
+				[V ,name=verb    [gib-;give-]]]]]
+	[I , name=Infl [-t;-s]]]]
+\draw[->,dotted] (Infl.north) .. controls (3.5,-0.2) and (-1.5,0.4)  .. ($(subject.north)+(-.1,.1)$);
+\draw[->]        (verb.north) .. controls (2.8,-2.9) and (-.4,.5)   .. ($(subject.north)+(0,.1)$);
+\draw[->,dashed] (verb.north) .. controls (2.8,-3.0) and (0,-3.3)   .. ($(dobject.north)+(0,.1)$);
+\draw[->,dashed] (verb.north) .. controls (2.3,-4.2) and (1.8,-4.6) .. ($(aobject.north)+(0,.1)$);
+%\draw (-4,-7) to[grid with coordinates] (4,0.5);
+\end{forest}\hfill
+\begin{tabular}[b]{ll@{}}
+\tikz[baseline]\draw[dotted](0,1ex)--(1,1ex);&just case\\
+\tikz[baseline]\draw(0,1ex)--(1,1ex);&just theta"=role\\
+\tikz[baseline]\draw[dashed](0,1ex)--(1,1ex);&case and theta"=role
+\\
+\\
+\end{tabular}
+\caption{\label{Abb-GB-Aktiv}Case and theta-role assignment in active clauses}
+\end{figure}%
+%
+%\addlines
+The passive morphology blocks the subject and absorbs the structural accusative. The object that would get accusative in the active
+receives only a semantic role in its base position in the passive, but it does not get the
+absorbed case. Therefore, it has to move to a position where case can be assigned to it 
+\citep[\page 124]{Chomsky81a}. Figure~\ref{Abb-GB-Passiv} shows how this works for example
+(\mex{0}b).
+\begin{figure}[t]
+\hfill
+\begin{forest}
+sm edges
+[IP
+[{NP[nom]}, name=subject [der Ball$_i$;the boy ,roof]]
+[\hspaceThis{$'$}I$'$
+	[VP
+		[\hspaceThis{$'$}V$'$
+			[{NP[dat]}, name=dobject [dem Kind;the woman, roof]]
+			[\hspaceThis{$'$}V$'$
+				[NP,   name=aobject [\_$_i$]]
+				[V ,name=verb [gegeben wir-;given \textsc{aux}, roof]]]]]
+	[I  ,name=Infl [-\/d]]]]
+\draw[->,dotted] (Infl.north) .. controls (2.5,.3)   and (-1.5,-.05) .. ($(subject.north)+(0,.1)$);
+\draw[->,dashed] (verb.north) .. controls (2.2,-3.3)  and (0,-3.0)    .. ($(dobject.north)+(0,.1)$);
+\draw[->]        (verb.north) .. controls (2.0,-4.3) and (1.2,-4.3) .. ($(aobject.north)+(0,.1)$);
+%\draw (-3,-7) to[grid with coordinates] (3.6,0.5);
+\end{forest}\hspace{1cm}
+\begin{tabular}[b]{ll@{}}
+\tikz[baseline]\draw[dotted](0,1ex)--(1,1ex);&just case\\
+\tikz[baseline]\draw(0,1ex)--(1,1ex);&just theta"=role\\
+\tikz[baseline]\draw[dashed](0,1ex)--(1,1ex);&case and theta"=role
+\\
+\\
+\end{tabular}
+\caption{\label{Abb-GB-Passiv}Case and theta-role assignment in passive clauses}
+\end{figure}%
+%\if 0
+This movement"=based analysis works well for English\il{English} since the underlying object always has to move:
+
+\eal
+\ex[]{
+The dolfin gave [the child] [a ball].
+}
+\ex[]{
+{}[The child] was given [a ball] (by the dolphin).
+}
+\ex[*]{
+It was given [the child] [a ball].
+}
+\zl
+%
+(\mex{0}c) shows that filling the subject position with an expletive is not possible, so the object
+really has to move. However, \citet[Section~4.4.3]{Lenerz77} showed that such a movement is not
+obligatory in German. (\mex{1}) illustrates:
+
+\eal
+\label{ex-passive-German-no-movement}
+\ex 
+\gll weil der Delphin dem Kind den Ball schenkte\\
+     because the.\NOM{} dolfin the.\DAT{} child the.\ACC{} ball gave\\
+\glt `because the dolfin gave the ball to the child'
+\ex 
+\gll weil    dem        Kind  der        Ball geschenkt wurde\\
+     because the.\DAT{} child the.\NOM{} ball given \AUX\\
+\glt `because the ball was given to the child'
+\ex 
+\gll weil    der        Ball dem        Kind  geschenkt wurde\\
+     because the.\NOM{} ball the.\DAT{} child given     \AUX\\
+\zl
+%\addlines[1]
+%\largerpage
+In comparison to (\mex{0}c), (\mex{0}b) is the unmarked order. \emph{der Ball} `the ball' in (\mex{0}b) occurs
+in the same position as \emph{den Ball} in (\mex{0}a), that is, no movement is necessary. Only the case differs.
+(\mex{0}c) is, however, somewhat marked in comparison to (\mex{0}b). So, if one assumed (\mex{0}c) to
+be the normal order for passives and (\mex{0}b) is derived from this by movement of \emph{dem
+  Kind} `the child', (\mex{0}b) should be more marked than (\mex{0}c), contrary to the facts. To
+solve this problem, an analysis involving abstract movement has been proposed for
+cases such as (\mex{0}b): the elements stay in their positions, but are connected to
+the subject position and receive their case information from there. \parencites[155--157]{Grewendorf88a}[\page 1311]{Grewendorf93}
+assumes that there is an empty expletive pronoun\is{empty element}\is{pronoun!expletive}
+% Fanselow81a:152 Infl weist Kasus in die VP zu. Adjazens nicht nötig.
+in the subject position of sentences such as (\mex{0}b) as well as in the subject position of sentences with an
+impersonal passive\is{passive!impersonal} such as (\mex{1}):\footnote{%
+	See \citew[\page 11--12]{Koster86a} for a parallel analysis for Dutch\il{Dutch} as well as 
+	\citew[\page 180]{Lohnstein2014a} for a movement"=based account of the passive that also involves an
+        empty expletive for the analysis of the impersonal passive.
+}\todostefan{Gianina: to difficult to parse}
+\ea
+\gll weil    heute nicht gearbeitet wird\\
+     because today not   worked     \AUX\\
+\glt `because there will be no work done today'
+\z
+A silent expletive pronoun is something that one cannot see or hear and that does not carry any meaning. For discussion of 
+this kind of empty element, see \citep[]{MuellerGT-Eng4}.
+
+
+A further question which needs to be answered is why the accusative object does not receive case from the verb.
+This is captured by a constraint, which goes back to \citet[\page 178--185]{Burzio86a-u-gekauft} and is therefore
+referred to as \emph{Burzio's Generalization}.\is{Burzio's Generalization}\footnote{%
+Burzio's original formulation was equivalent to the following: a verb assigns accusative if and only if it assigns
+a semantic role to its subject.
+This claim is problematic from both sides. In (i), the verb does not assign a semantic role to the subject; however
+there is nevertheless accusative case:
+\ea
+\gll Mich friert.\\
+	 me.\ACC{} freezes\\
+\glt `I am freezing.'
+\z
+One therefore has to differentiate between structural and lexical accusative and modify Burzio's Generalization
+accordingly. The existence of verbs like \emph{begegnen} `to bump into' is problematic for the other side of
+the implication. \emph{begegnen} has a subject but still does not assign accusative but rather
+dative:
+\ea
+\gll Peter begegnete einem Mann.\\
+     Peter met a.\DAT{} man\\
+\glt `Peter met a man.'
+\z
+%% verschwinden is unaccusative and hence takes an object as argument.
+%%
+%% \citet[\page 185]{Burzio86a-u-gekauft} assumes that one"=place intransitive verbs have the potential to assign
+%% accusative. He supports this claim by pointing out the existence of the resultative
+%% constructions\is{resultative construction}, in which additional accusatives can be realized, as \eg
+%% in (iii):
+%% \ea
+%% He talked my head off.
+%% \z
+%% However, there are also verbs such as \emph{verschwinden} `to disappear' which never assign
+%% accusative, not even in such constructions.
+
+See \citew{Haider99a} and \citew[\page 89]{Webelhuth95a} as well as the references cited there for further problems
+with Burzio's Generalization.
+}
+\largerpage
+\ea
+Burzio's Generalization (modified):\\
+If V does not have an external argument, then it does not assign (structural) accusative case.
+\z
+
+\noindent
+%\interfootnotelinepenalty=100%
+\citet[\page 12]{Koster86a} has pointed out that the passive in English\il{English} cannot be derived by Case
+Theory since if one allowed empty expletive subjects for English as well as German and Dutch\il{Dutch}, then it would be possible
+to have analyses such as the following in (\mex{1}) where np is an empty expletive:
+\ea
+np was read the book.
+\z
+Koster rather assumes that subjects in English are either bound by other elements (that is, non"=expletive) or lexically filled, that
+is, filled by visible material.
+Therefore, the structure in (\mex{0}) would be ruled out and it would be ensured that \emph{the book} would have to be placed in front
+of the finite verb so that the subject position is filled.
+\is{passive|)}
+
+
+
+\subsection{HPSG analyses with additional features}
+
 \itdopt{Add GB and Gunkel and Ryu}
+
+
 
 
 \section{Summary}
