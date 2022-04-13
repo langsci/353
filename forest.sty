@@ -44,7 +44,7 @@
 %% - LICENCE
 %% To use the package, only the files marked with + need to be installed.
 %%
-\ProvidesPackage{forest}[2020/05/17 v2.1.5+wip Drawing (linguistic) trees]
+\ProvidesPackage{forest}[2020/05/06 v2.1.5+wip Drawing (linguistic) trees]
 
 \RequirePackage{tikz}[2013/12/13]
 \usetikzlibrary{shapes}
@@ -4615,6 +4615,9 @@
 }
 \def\forest@nodewalk@oninvalid@inherited@text{inherited}
 \def\forest@Nodewalk#1#2{% #1 = nodewalk, #2 = every step keylist
+  \ifforestdebugnodewalks
+    \typeout{About to start nodewalk "\detokenize{#1}" with every step = "\detokenize{#2}"}%
+  \fi
   \ifx\forest@nodewalk@config@oninvalid\forest@nodewalk@oninvalid@inherited@text
     \edef\forest@nodewalk@config@oninvalid{\forest@nodewalk@oninvalid}%
   \fi
@@ -4674,7 +4677,7 @@
 }
 \def\forest@nodewalk@makestep@debug{%
   \edef\forest@marshal{%
-    \noexpand\typeout{\ifforest@nodewalk@fake fake \fi "\forest@nodewalk@currentstepname" step to node id=\forest@cn, content=\forestoption{content}}%
+    \noexpand\typeout{\ifforest@nodewalk@fake fake \fi "\forest@nodewalk@currentstepname" step to node id=\forest@cn, content=\noexpand\unexpanded{\forestoption{content}}}%
   }\forest@marshal
 }%
 \def\forest@nodewalk@makestep@invalidtolastvalid@debug{%
@@ -4748,7 +4751,7 @@
     \pretotoks\forest@temp@toks{\appto\forest@nodewalk@currentstepname{,#1}}%
     \expandafter\forest@temp@toks\expandafter{\expandafter\forest@saveandrestoremacro\expandafter\forest@nodewalk@currentstepname\expandafter{\the\forest@temp@toks}}%
     \ifforestdebugnodewalks
-      \epretotoks\forest@temp@toks{\noexpand\typeout{Starting step "#1" from id=\noexpand\forest@cn
+      \epretotoks\forest@temp@toks{\noexpand\typeout{Starting step "#1" from id=\noexpand\forest@cn, content=\noexpand\forestoption{content}
           \ifnum\forest@nodewalkstephandler@nargs>0 \space with args \noexpand\unexpanded{####1}\fi
           \ifnum\forest@nodewalkstephandler@nargs>1 ,\noexpand\unexpanded{####2}\fi
           \ifnum\forest@nodewalkstephandler@nargs>2 ,\noexpand\unexpanded{####3}\fi
@@ -4939,6 +4942,9 @@
     \edef\forest@cn{%
       \forest@node@Ifnamedefined{#1}{\forest@node@Nametoid{#1}}{0}%
     }%
+  },
+  define long step={relative name}{autostep,n args=1,must start at valid node=false}{%
+    \forest@nameandgo{#1}%
   },
   define long step={id}{autostep,n args=1,must start at valid node=false}{%
     \forestOifdefined{#1}{@parent}{\edef\forest@cn{#1}}{\edef\forest@cn{0}}%
@@ -5795,6 +5801,7 @@
 \def\forest@create@node#1{% #1=bracket representation
   \bracketParse{\forest@create@collectafterthought}%
                \forest@last@node=#1\forest@end@create@node
+  \let\forest@last@created\forest@last@node
 }
 \def\forest@create@collectafterthought#1\forest@end@create@node{%
   \forest@node@Foreach{\forest@last@node}{%
@@ -5807,6 +5814,7 @@
 \def\forest@create@node@and@process@given@options#1{% #1=bracket representation
   \bracketParse{\forest@createandprocess@collectafterthought}%
                \forest@last@node=#1\forest@end@create@node
+  \let\forest@last@created\forest@last@node
 }
 \def\forest@createandprocess@collectafterthought#1\forest@end@create@node{%
   \forest@node@Compute@numeric@ts@info{\forest@last@node}%
@@ -5904,8 +5912,10 @@
    \forest@nodehandleby@name@nodewalk@or@bracket{#2}%
    \ifcase\forest@dynamics@copyhow\relax\or
      \forest@tree@copy{\forest@last@node}\forest@last@node
+     \let\forest@last@created\forest@last@node
    \or
      \forest@node@copy{\forest@last@node}\forest@last@node
+     \let\forest@last@created\forest@last@node
    \fi
    \forest@node@Ifnamedefined{forest@last@node}{%
      \forestOepreto{\forest@last@node}{delay}
@@ -6066,7 +6076,10 @@
 \forestset{
   define long step={last dynamic node}{style,must start at valid node=false}{%
     name=forest@last@node
-  }
+  },
+  define long step={last created}{style,must start at valid node=false}{%
+    id=\forest@last@created
+  },
 }
 \def\forest@root{0}
   %%% begin listing region: stages
@@ -6107,8 +6120,12 @@
   do dynamics/.code={%
     \the\forest@do@dynamics
     \forest@do@dynamics{}%
-    \forest@node@Compute@numeric@ts@info{\forest@root}%
+    \forest@forthis{%
+      \forest@nameandgo{#1}%
+      \forest@node@Compute@numeric@ts@info{\forest@cn}%
+    }%
   },
+  do dynamics/.default=!{root'},
   declare keylist={given options}{},
   declare keylist={before typesetting nodes}{},
   declare keylist={before packing}{},
@@ -6233,7 +6250,7 @@
   % note: this macro works on (nodewalk starting at) the current node
   \safeloop
     \forest@forthis{\forest@process@hook@keylist@{#1}{#2}}%
-  \forest@havedelayedoptions{#1}{#2}%
+    \forest@havedelayedoptions{#1}{#2}%
   \ifforest@havedelayedoptions
   \saferepeat
 }
@@ -6315,6 +6332,7 @@
   \gdef\forest@smuggle{}%
   \setbox0=\hbox{%
     \tikzset{every picture/.style={}}%
+    \forest@unmarknextpictureposition
     \begin{tikzpicture}[%
       /forest/copy command key={/tikz/anchor}{/tikz/forest@orig@anchor},
       anchor/.style={%
@@ -6331,6 +6349,9 @@
   \setbox\forestove{@box}=\box\forest@box % smuggle the box
   \forestolet{@boundary}\forest@global@boundary
   \forest@smuggle % ... and the rest
+}
+\def\forest@unmarknextpictureposition{%
+  \global\cslet{pgf@sys@pdf@mark@pos@pgfid\the\numexpr\pgf@picture@serial@count+1\relax}\relax
 }
 
 \forestset{
@@ -9383,6 +9404,7 @@
       \def\forest@pa@temp@name{later@name}%
     }%
   }{}%
+  \forest@unmarknextpictureposition
   \setbox0\hbox{%
     \begin{pgfpicture}%
       \if\relax\forestOve{#1}{#2}\relax
