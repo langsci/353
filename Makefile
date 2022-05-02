@@ -10,6 +10,7 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib $(wildcard *
 .SUFFIXES: .tex
 
 
+# for Stefan. Uses memoize.
 germanic.pdf: germanic.tex $(SOURCE)
 	xelatex -shell-escape -no-pdf germanic |grep -v math
 	biber germanic
@@ -41,6 +42,32 @@ germanic.pdf: germanic.tex $(SOURCE)
 #	sed -i.backup 's/\\protect \\active@dq \\dq@prtct {=}/"=/g' *.adx
 #	sed -i.backup 's/{\\O }/Oe/' *.adx
 #	python3 fixindex.py
+
+# for Sebastian and overleaf. Does not use memoize
+main.pdf: main.tex $(SOURCE)
+	xelatex -shell-escape -no-pdf main |grep -v math
+	biber main
+	xelatex -shell-escape -no-pdf main |grep -v math
+	biber main
+	xelatex main -shell-escape -no-pdf |egrep -v 'math|PDFDocEncod' |egrep 'Warning|label|aux'
+	correct-toappear
+	correct-index
+	sed -i.backup s/.*\\emph.*// main.adx #remove titles which biblatex puts into the name index
+# sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' main.sdx # ordering of references to footnotes
+# sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' main.adx
+# sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' main.ldx
+	sed -i.backup 's/\\MakeCapital //g' main.adx
+	python3 fixindex.py a main
+	mv mainmod.adx main.adx
+	sed -i.backup 's/\\MakeCapital //g' main.adx
+	footnotes-index.pl main.ldx
+	footnotes-index.pl main.sdx
+	footnotes-index.pl main.adx 
+	makeindex -o main.and main.adx
+	makeindex -gs index.format -o main.lnd main.ldx
+	makeindex -gs index.format -o main.snd main.sdx 
+	xelatex -shell-escape main | egrep -v 'math|PDFDocEncod|\\mark' |egrep 'Warning|label'
+
 
 
 

@@ -1,0 +1,66 @@
+%% -*- coding:utf-8 -*-
+\documentclass[output=book
+%                ,series=tbls,
+%		,modfonts
+%		,nonflat
+%		,multiauthors
+%	        ,collection
+%	        ,collectionchapter
+%	        ,collectiontoclongg
+ 	        ,biblatex  
+                ,babelshorthands
+%                ,showindex
+                ,newtxmath
+%                ,colorlinks, citecolor=brown % for drafts
+                ,draftmode
+% 	        ,coverus
+		  ]{langscibook} 
+
+
+\usepackage{ifthen}
+\provideboolean{draft}
+\setboolean{draft}{false}
+
+%\newtoggle{draft}\togglefalse{draft}
+\newtoggle{draft}\toggletrue{draft}
+%\newtoggle{finished}\togglefalse{finished}
+
+
+
+% load memoize before german.sty
+
+\usepackage{nomemoize} 
+%\memoizeset{readonly}
+% see below for further settings
+
+\input{localmetadata.tex}
+\input{localpackages.tex}
+\input{localcommands.tex}
+
+
+\input{locallangscifixes.tex}
+
+\memoizeset{
+  memo filename prefix={germanic.memo.dir/},
+  register=\todo{O{}+m},
+  prevent=\todo,
+}
+
+
+% \renewcommand{\itd}[1]{}
+% \renewcommand{\itdobl}[1]{}
+% \renewcommand{\itdopt}[1]{}
+
+% \renewcommand{\addpages}{}
+% \renewcommand{\addsource}{}
+% \renewcommand{\addglosses}{}
+
+
+
+\input germanic-include
+
+
+
+%%% Local Variables:
+%%% TeX-command-extra-options: "-shell-escape"
+%%% End:
