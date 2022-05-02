@@ -79,7 +79,7 @@
 
 % for editing, remove later
 %\usepackage{xcolor}
-%\newcommand{\iaddpages}{\yel[add pages]{pages}\xspace}
+\newcommand{\iaddpages}{\yel[add pages]{pages}\xspace}
 
 \newcommand{\addpages}{\iftoggle{draft}{\todostefan{add pages}}\xspace}
 \newcommand{\addsource}{\iftoggle{draft}{\todostefan{add source}}\xspace}
@@ -186,7 +186,7 @@
 % margin.
 % St.Mü. 17.06.2021
 \newcommand{\longexampleandlanguage}[2]{
-\begin{tabularx}{.999\linewidth}[t]{@{}X@{}p{\widthof{(#2)}}@{}}
+\begin{tabularx}{.99\linewidth}[t]{@{}X@{}p{\widthof{(#2)}}@{}}
 \begin{minipage}[t]{\linewidth-1em}
 #1
 \end{minipage} & (\ili{#2})

@@ -137,10 +137,11 @@ install:
 	cp -p ${STYLE-PATH}oneline.sty   styles/
 	cp -p ${STYLE-PATH}Ling/article-ex.sty           styles/
 	cp -p ${STYLE-PATH}Ling/merkmalstruktur.sty      styles/
-	cp -p ${STYLE-PATH}Ling/my-xspace.sty            styles/
+	cp -p ${STYLE-PATH}my-xspace.sty            styles/
 	cp -p ${STYLE-PATH}Ling/my-ccg-ohne-colortbl.sty styles/
-	cp -p ${STYLE-PATH}Ling/forest.sty               styles/
-	cp -p ${STYLE-PATH}Ling/my-gb4e-slides.sty       styles/
+	cp -p ${STYLE-PATH}Ling/forest.sty               .
+	cp -p ${STYLE-PATH}Ling/forest-lib-edges.sty     .
+	cp -p ${STYLE-PATH}Ling/forest-lib-linguistics.sty .
 	cp -p ${STYLE-PATH}Ling/cgloss.sty               styles/
 	cp -p ${STYLE-PATH}Ling/jambox.sty               styles/
 	cp -p ${LANGSCI-PATH}langsci-forest-setup.sty    .
