@@ -1,0 +1,110 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   $RCSfile: grammatiktheorie.tex,v $
+%%  $Revision: 1.3 $
+%%      $Date: 2010/01/18 14:55:27 $
+%%     Author: Stefan Mueller (CL Uni-Bremen)
+%%    Purpose: 
+%%   Language: LaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[output=book
+ 	        ,biblatex  
+                ,babelshorthands
+%                ,showindex
+                ,newtxmath
+                ,colorlinks, citecolor=brown % for drafts
+                ,draftmode
+% 	        ,coverus
+		  ]{langscibook} 
+
+
+\usepackage{ifthen}
+\provideboolean{draft}
+\setboolean{draft}{false}
+
+\usepackage{etoolbox}
+\newtoggle{draft}\toggletrue{draft}
+
+\newtoggle{finished}\togglefalse{finished}
+
+%\newcommand{\NOTE}[1]{}
+\newcommand{\NOTE}[1]{\marginpar{#1}}
+
+\newcommand{\LATER}[1]{}
+
+% load memoize before german.sty
+
+\usepackage{memoize} 
+%\memoizeset{readonly}
+% see below for further settings
+
+\input{localmetadata.tex}
+\input{localpackages.tex}
+\input{localcommands.tex}
+
+
+\input{locallangscifixes.tex}
+
+\memoizeset{
+  memo filename prefix={germanic.memo.dir/},
+  register=\todo{O{}+m},
+  prevent=\todo,
+}
+
+
+% https://tex.stackexchange.com/a/111851/18561
+\DeclareSourcemap{
+    \maps[datatype=bibtex]{
+      \map{
+        \step[fieldsource=checked]
+        \step[fieldset=usera,origfieldval]
+    }
+  }
+}
+
+%\DeclareFieldFormat{usera}{\red{#1}}
+
+% This shows the value of checked:
+%\AtEveryBibitem{
+%\csappto{blx@bbx@\thefield{entrytype}}{\iffieldundef{usera}{\space \red{Not checked!}}{\space\green{\printfield{usera}}}}
+%}
+% This just shows a warning for unchecked items
+\AtEveryBibitem{
+\csappto{blx@bbx@\thefield{entrytype}}{\iffieldundef{usera}{\space \red{Not checked!}}{}}
+}
+
+
+%\memoizeset{readonly}
+
+%\includeonly{preface}
+%% \includeonly{germanic-overview}
+
+%\includeonly{germanic-phenomena}
+
+%\includeonly{germanic-psg}
+%\includeonly{germanic-psg,germanic-solutions}
+
+%\includeonly{germanic-valence-scrambling}
+%\includeonly{germanic-valence-scrambling,germanic-solutions}
+%\includeonly{germanic-verbal-complex}
+%\includeonly{germanic-verbal-complex,germanic-solutions}
+\includeonly{germanic-verb-position}
+%\includeonly{germanic-verb-position,germanic-solutions}
+%% %% \includeonly{germanic-mehr-vf}
+
+%\includeonly{germanic-passive}
+%\includeonly{germanic-expletives}
+%\includeonly{germanic-expletives,germanic-solutions}
+
+%\includeonly{germanic-hpsg-light}
+%\includeonly{germanic-outlook}
+
+%\includeonly{germanic-solutions}
+
+%\includeonly{tsdb-examples}
+
+
+\input germanic-include
+
+
+%      <!-- Local IspellDict: en_US-w_accents -->
