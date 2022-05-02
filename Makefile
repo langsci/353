@@ -174,7 +174,15 @@ install:
 	cp -p ${LANGSCI-PATH}langsci-forest-setup.sty    .
 
 
-#bib-stuff
+
+# xelatex has to be run two times + biber to get "also printed as ..." right.
+germanic.bib: ../../Bibliographien/biblio.bib $(SOURCE) langsci.dbx bib-creation.tex
+	xelatex -no-pdf -interaction=nonstopmode -shell-escape bib-creation 
+	biber bib-creation
+	xelatex -no-pdf -interaction=nonstopmode -shell-escape bib-creation
+	biber --output_format=bibtex --output-resolve-xdata --output-legacy-date bib-creation.bcf -O gt_tmp.bib
+	biber --tool --configfile=biber-tool.conf --output-field-replace=location:address,journaltitle:journal --output-legacy-date gt_tmp.bib -O germanic.bib
+
 
 
 source: 
