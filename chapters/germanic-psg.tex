@@ -3,15 +3,13 @@
 \label{chap-psg-xbar}\label{chap-psg}
 \lehead{\thechapter~~Phrase structure grammars and $\skoverline{X}$ Theory}
 
-\itdopt{Compare with GT and do changes there. Mann/Kind}
-
 This chapter introduces phase structure grammars (PSGs), which play an important role in many
 theories that were developed since \citew{Chomsky57a}. The phrase structure grammar developed in
 this chapter will be the basis for more complicated phenomena covered in the chapters to come. This
 chapter deals mainly with German and English, which is sufficient for the introduction of the formal apparatus
 of phrase structure grammars. The result of this chapter is a phrase structure grammar that is
 similar to \xbar grammars (pronounced: ``X-bar grammars'') of the style that was developed in the late 1970s and the early 1980s
-\citep{Jackendoff77a}. The structures argued for in this chapter will also play a role in later
+\citep{Chomsky70a,Jackendoff77a}. The structures argued for in this chapter will also play a role in later
 chapters, but the lexical items will be much richer: they will contain valence information playing a
 crucial role in licensing syntactic structure.
 
@@ -43,6 +41,68 @@ form constituents. These get then assigned certain symbols. Since nouns form an 
 the phrases \emph{das Buch} and \emph{dem Kind}, these are referred to as \emph{noun phrases} or
 NPs, for short. The pronoun \emph{er} `he' can occur in the same positions as full NPs and can
 therefore also be assigned to the category NP.
+
+The grouping of constituents can be conceptualized and depicted by boxes. For example, \emph{er das
+  Buch dem Kind gibt} can be depicted as in Figure~\ref{fig-boxes}.
+\begin{figure}
+\centering
+\TZbox{%
+\TZbox{er}
+\TZbox{%
+       \TZbox{das}
+       \TZbox{Buch}}
+\TZbox{%
+       \TZbox{dem}
+       \TZbox{Kind}}
+\TZbox{gibt}}
+\caption{\label{fig-boxes}Words and phrases in boxes}
+\end{figure}%
+
+The categories mentioned above can be integrated into this picture. The resulting picture is given
+as Figure~\ref{fig-boxes-pos}.
+\begin{figure}
+\centering
+\TZbox{%
+\TZbox{\begin{tabular}{@{}l@{}}
+       NP\\
+       er
+       \end{tabular}}
+\TZbox{%
+       \begin{tabular}{@{}l@{}}
+       NP\\
+       \TZbox{\begin{tabular}{@{}l@{}}
+              Det\\
+              das
+              \end{tabular}}
+       \TZbox{\begin{tabular}{@{}l@{}}
+              N\\
+              Buch
+              \end{tabular}}
+       \end{tabular}}
+\TZbox{%
+       \begin{tabular}{@{}l@{}}
+       NP\\
+       \TZbox{\begin{tabular}{@{}l@{}}
+              Det\\
+              dem
+              \end{tabular}}
+       \TZbox{\begin{tabular}{@{}l@{}}
+              N\\
+              Kind
+              \end{tabular}}
+       \end{tabular}}
+\TZbox{\begin{tabular}{@{}l@{}}
+       V\\
+       gibt
+       \end{tabular}}}
+\caption{\label{fig-boxes-pos}Words and phrases in boxes with part of speech labels}
+\end{figure}
+Boxes with the same labels can be replaced by other boxes with the same label. For example, the box
+for \emph{dem Kind} `the child' can be replaced by \emph{dem Mädchen} `the girl'. \emph{Er} can be
+replaced by \emph{das Mädchen} `the girl'. This is very intuitive, but it is better to have a tool
+that can be used to actually derive structures that can be depicted as such boxes or as syntactic
+trees that you are familiar with from introductory courses. Therefore we will now look at phrsae
+structure grammars.
 
 Phrase structure grammars come with rules specifying which symbols are assigned to certain kinds of words and how these are combined to create more
 complex units. A simple phrase structure grammar which can be used to analyze (\mex{0}) is given in (\mex{1}):\footnote{%
@@ -983,10 +1043,10 @@ sm edges
 \mbox{}
 \caption{\label{Abbildung-NP-ohne-Nomen}Noun phrases without an overt head}
 \end{figure}%
-Going back to boxes, the rules in (\mex{0}) correspond to empty boxes with the same labels as the boxes
+Going back to boxes as the one in Figure~\ref{fig-boxes-pos}, the rules in (\mex{0}) correspond to empty boxes with the same labels as the boxes
 of ordinary nouns. As we have considered previously, the actual content of the boxes is unimportant when
-considering the question of where we can incorporate them. In this way, the noun phrases in (\ref{Beispiele-NP-Adjunkte})
-can occur in the same sentences. The empty noun box also behaves like one with a genuine noun. If we
+considering the question of where we can incorporate them. For example, the noun phrases in (\ref{Beispiele-NP-Adjunkte})
+can occur in the same sentences. Similarly, the empty noun box behaves like one with a genuine noun: if we
 do not open the empty box, we will not be able to notice the difference to a filled box. 
 
 It is not only possible to omit the noun from noun phrases, but the determiner can also remain unrealized in certain contexts.
