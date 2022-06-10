@@ -34,7 +34,7 @@
 
 % load memoize before german.sty
 
-\usepackage{memoize} 
+\usepackage{nomemoize} 
 %\memoizeset{readonly}
 % see below for further settings
 
@@ -76,32 +76,33 @@
 
 %\memoizeset{readonly}
 
-%\includeonly{preface}
-%% \includeonly{germanic-overview}
+%\includeonly{chapters/preface}
+%% \includeonly{chapters/germanic-overview}
 
-%\includeonly{germanic-phenomena}
+\includeonly{chapters/germanic-phenomena}
 
-%\includeonly{germanic-psg}
-%\includeonly{germanic-psg,germanic-solutions}
+%\includeonly{chapters/germanic-psg}
+%\includeonly{chapters/germanic-psg,chapters/germanic-solutions}
 
-%\includeonly{germanic-valence-scrambling}
-%\includeonly{germanic-valence-scrambling,germanic-solutions}
-%\includeonly{germanic-verbal-complex}
-%\includeonly{germanic-verbal-complex,germanic-solutions}
-\includeonly{germanic-verb-position}
-%\includeonly{germanic-verb-position,germanic-solutions}
-%% %% \includeonly{germanic-mehr-vf}
+%\includeonly{chapters/germanic-valence-scrambling}
+%\includeonly{chapters/germanic-valence-scrambling,chapters/germanic-solutions}
+%\includeonly{chapters/germanic-verbal-complex}
+%\includeonly{chapters/germanic-verbal-complex,chapters/germanic-solutions}
+%\includeonly{chapters/germanic-verb-position}
+%\includeonly{chapters/germanic-verb-position,chapters/germanic-solutions}
+%% %% \includeonly{chapters/germanic-mehr-vf}
 
-%\includeonly{germanic-passive}
-%\includeonly{germanic-expletives}
-%\includeonly{germanic-expletives,germanic-solutions}
+%\includeonly{chapters/germanic-passive}
+%\includeonly{chapters/germanic-expletives}
+%\includeonly{chapters/germanic-expletives,chapters/germanic-solutions}
 
-%\includeonly{germanic-hpsg-light}
-%\includeonly{germanic-outlook}
+%\includeonly{chapters/germanic-hpsg-light}
+%\includeonly{chapters/germanic-outlook}
 
-%\includeonly{germanic-solutions}
+%\includeonly{chapters/germanic-solutions}
 
-%\includeonly{tsdb-examples}
+%\bibliography{bib-abbr,biblio,biblio-xdata-en}
+\bibliography{germanic}
 
 
 \input germanic-include
