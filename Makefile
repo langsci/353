@@ -5,7 +5,7 @@ LANGSCI-PATH=~/Documents/Dienstlich/Projekte/LangSci/Git-HUB/latex/
 all: germanic.pdf
 
 
-SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib $(wildcard *.tex)
+SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib $(wildcard *.tex chapters/*.tex)
 
 .SUFFIXES: .tex
 
