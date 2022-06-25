@@ -749,10 +749,10 @@ Figure~\vref{fig-spr-head-head-comps-final} shows the final versions of the two 
 
 
 
-\section{Scrambling and free VO/OV order}
+\section{Scrambling}
 
-Now, in order to analyze languages with free constituent order, we need a more liberal variant of
-the schema in Figure~\ref{fig-head-comp}. Figure~\vref{fig-head-comp-free} splits the \compsl of a
+Now, in order to analyze languages with free constituent order, a more liberal variant of
+the schema in Figure~\ref{fig-head-comp} is needed. Figure~\vref{fig-head-comp-free} splits the \compsl of a
 head into three parts: a list \ibox{1}, a list containing exactly one element \sliste{ \ibox{3} }
 and a third list \ibox{2}. The element of the second list is realized as the complement of the head.
 \begin{figure}
@@ -782,37 +782,11 @@ order, if such a language would exist). Scrambling languages like German allow a
 complement to be combined with its head since there is neither a restriction on \ibox{1} nor one on \ibox{2}.
 
 
-\inlinetodostefan{Yiddish VO/OV}
-
-\if0
-
-dat V acc
-
-sukhr habn unzri bridr gigebn fil gelt  
-merchants have our brothers given much money
-'Merchants gave our brothers much money'
-(1692E-VILNA,217.134)
-
-drum hat er dem menshn gebn di turh ... 
-'therefore has he the people given the Torah'
-(1620E-LEVTOV1,4l.47)
-
-
-V dat acc
-
-hat gibrakht meyn oybrstn alirley shpetsirey '[who] brought my boss all kinds of spices'
-(1665W-COURT,221.246)
-(2) mer haben unzer formuner gegeben meinem stieffater tsvay hundert gulden
-'our guardians gave my stepfather 200 guilders' (1518W-GOETZ,.137)
-
-
-\fi
-
 
 \section{Linear precedence rules}
 \label{sec-lp-rules}
 
-The abstract schemata are similar to the schemata that we gained by abstracting over simple phrase
+The abstract schemata are similar to the schemata that were gained by abstracting over simple phrase
 structure rules in Chapter~\ref{chap-psg}. They are similar to abstract \xbar rules. However, there
 is an important difference: the elements at the right-hand side of a rule and the daughters in the
 corresponding treelets in the figures visualizing the schemata are not ordered. This means that a
@@ -891,7 +865,156 @@ German verbs are specified to be \textsc{initial}$-$, while English verbs are
 are always ordered after their complements in German (and other SOV languages) and before their
 complements in English (and other SVO languages). Of course, there are sentences in German in which
 the verb is in first or second position and there are sentences in the Germanic SVO languages in
-which the object precedes the verb. These sentences will be covered in Chapter~\ref{chap-verb-position}.
+which the object precedes the verb. These sentences will be covered in
+Chapter~\ref{chap-verb-position}.
+
+
+% erlier?
+%\cites{Haider2010a}
+\citet[\page 342]{Haider2020a} claims that scrambling is only possible in
+head-final projections. If this claim is correct (at least for the
+languages under consideration here), the Head-Complement Schema in Figure~\ref{fig-spr-head-head-comps-final} has to
+be restricted to head-initial projections and the Head-Complement Schema in Figure~\ref{fig-head-comp-free} to
+head-final projections. Nouns in all Germanic languages are head-initial, that is, they take their
+complements to the right and these are not allowed to scramble. Genitive NPs have to be adjacent to
+the noun that governs them:
+\eal
+\ex[]{ 
+\gll das Verlesen des    Entwurfes durch die Vorsitzende\\
+     the reading  of.the draft     by    the chair.woman\\\german
+}
+\ex[*]{ 
+\gll das Verlesen durch die Vorsitzende des Entwurfes\\
+     the reading  by    the chair.woman of.the draft  \\
+}
+\zl
+Verbs in SVO languages like English and the Scandinavian languages are \initial $+$ and hence form a
+VP via the schema in Figure~\ref{fig-spr-head-head-comps-final}, augmented as the left schema in Figure~\ref{fig-head-comps-schemata}. Verbs in SOV languages are \initial
+$-$ and combine with their complements via the schema in Figure~\ref{fig-head-comp-free}, augmented
+as the right schema in Figure~\ref{fig-head-comps-schemata}.
+
+\begin{figure}
+\hfill
+\begin{forest}
+[H\feattab{\spr \ibox{1},\\
+           \comps \ibox{2}}
+  [H\feattab{\ini $+$,\\
+             \spr \ibox{1},\\
+             \comps  \sliste{ \ibox{3} } $\oplus$ \ibox{2}  ]}]
+  [\ibox{3}]]
+\end{forest}
+\hfill
+\begin{forest}
+[H\feattab{\spr   \ibox{1},\\
+           \comps \ibox{2} $\oplus$ \ibox{3}]}
+  [\ibox{4}]
+  [H\feattab{\ini $-$,\\
+             \spr \ibox{1},\\
+             \comps  \ibox{2} $\oplus$ \sliste{ \ibox{4} } $\oplus$ \ibox{3}  ]}]]
+\end{forest}
+\hfill\mbox{}
+\caption{Head-Complement Schemata with ordered daughters and instantiated \initial values. Left
+  schema for SVO languages and NP structures (no scrambling), right schema for SOV languages (scrambling)}\label{fig-head-comps-schemata}
+\end{figure}
+
+Yiddish with its mix of VO and OV structures poses an interesting formal puzzle, which is addressed
+in the following section.
+
+\section{Free VO/OV order}
+
+% @ Haider2010a: 161
+As already mentioned in Section~\ref{sec-intro-svo}, Yiddish has mixed VO/OV properties and
+researchers like \parencites{Santorini93a-u}[\page 12]{Schallert2007a} and \cites[\page 161]{Haider2010a}{Haider2020a} see
+this language as belonging to a third type. Example (\ref{ex-yiddish-vo-ov}) from \citet[\page
+402]{Diesing97a}, which was discussed on p.\,\pageref{ex-yiddish-vo-ov} and is repeated
+below as (\mex{1}), shows that Yiddish can have the order usually observed in SVO languages
+(\mex{1}a) and the orders observed in SOV languages with scrambling (\mex{1}b, c). But it can also
+have the orders in (\mex{1}d) and (\mex{1}e), in which the verb is in the middle and either the
+direct object or the indirect object precedes the verb.
+\eal
+\ex
+\gll Maks hot nit gegebn Rifken dos bukh.\\
+     Max  has not given  Rifken the book\\\yiddish
+\glt `Max has not given Rifken the book.' 
+\ex 
+\gll Maks hot Rifken dos bukh nit gegebn.\\
+     Max  has Rifken the book not given\\
+\glt `Max has not given Rifken the book.'
+\ex
+\gll Maks hot dos bukh Rifken nit gegebn.\\
+     Max  has the book Rifken not given\\
+\glt `Max has not given Rifken the book.'
+\ex
+\gll Maks hot Rifken nit gegebn dos bukh.\\
+     Max  has Rifken not given  the book\\
+\glt `Max has not given Rifken the book.'
+\ex
+\glt Max hat dos bukh nit gegebn Rifken.\\
+     Max has the book not given  Rifken.\\
+\glt `Max has not given Rifken the book.'
+\zl
+\citet[\page 161]{Haider2010a} argues that Yiddish is a mixed VO/OV language and that heads just may
+combine with their complements in any order. Haider claims that scrambling is only possible in
+head-final projections. So, a variant of (\mex{0}a) with initial verb and scrambled objects is
+predicted to be impossible.
+ Now,
+freedom seems to be easy to achieve as the absence of constraints. Yiddish would be a language in
+which the \initial value is just unspecified. But this is not sufficient since if \emph{Rifken} is
+combined with \emph{nit gegebn} to form \emph{Rifken nit gegebn}, the result is an \initial $-$
+projection. This projection cannot be used as the daughter in the head-initial schema since it is
+incompatible with \initial $+$. 
+
+Fortunately, there is a solution to such problems that was developed
+for accounts of case syncretism \citep{Daniels2002a}. It makes use of the type system that is part of the formalism for
+specifying linguistic constraints \parencites[Section~3]{AB2021a}[Section~2]{Richter2021a}. Values like part of speech are types and types can have
+subtypes. For example, there can be a type \type{part-of-speech} with the subtypes \type{noun},
+\type{verb}, \type{adj}, \type{prep} and others. There can be a type \type{vform} with the subtypes \type{fin}, \type{bse},
+\type{ppp}, \type{inf} for finite verbs, infinitives without \emph{to}, participles, and infinitives
+with \emph{to}. For our problem at hand, one would need a type \type{bool} for boolean values ($+$ or
+$-$). Normally, the subtypes of \type{bool} would be just $+$ and $-$, but since the requirements
+from the schemata have to be allowed to be compatible, the type hierarchy has to be more complex.
+It is given in Figure~\ref{fig-extended-bool}.
+\begin{figure}
+\begin{forest}
+type hierarchy
+[bool
+  [$+$ or flex
+    [$+$]
+    [flex,name=flex]]
+  [$-$ or flex
+    [,identify=flex]
+    [$-$]]]
+\end{forest}
+\caption{Extended hierarchy for boolean types}\label{fig-extended-bool}
+\end{figure} 
+There are two new types \type{$+$ or flex} and \type{$-$ or flex}. \type{flex} is the \initial value
+of Yiddish verbs. The schemata require their head daughters to be of type \type{$+$ or flex} or
+\type{$-$ or flex}. SVO languages have verbs with \initial value $+$ and SOV languages have verbs
+with \initial value $-$. $+$ and $-$ are compatible with the requirements of the schemata but they
+do not allow a switch in the direction of government as is possible in Yiddish. 
+
+\if0
+dat V acc
+
+sukhr habn unzri bridr gigebn fil gelt  
+merchants have our brothers given much money
+'Merchants gave our brothers much money'
+(1692E-VILNA,217.134)
+
+drum hat er dem menshn gebn di turh ... 
+'therefore has he the people given the Torah'
+(1620E-LEVTOV1,4l.47)
+
+
+V dat acc
+
+hat gibrakht meyn oybrstn alirley shpetsirey '[who] brought my boss all kinds of spices'
+(1665W-COURT,221.246)
+(2) mer haben unzer formuner gegeben meinem stieffater tsvay hundert gulden
+'our guardians gave my stepfather 200 guilders' (1518W-GOETZ,.137)
+
+
+\fi
 
 
 \section{Adjuncts}
@@ -1213,6 +1336,8 @@ sm edges
 \caption{Analysis of an adverbial NP in \emph{dass jeder eine Stunde liest} `that everybody is reading
   for an hour'}\label{fig-dass-Aicke-eine-Stunde-liest}
 \end{figure}
+
+
 
 \section{Linking between syntax and semantics}
 \label{sec-linking}
