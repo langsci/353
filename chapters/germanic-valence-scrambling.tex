@@ -873,7 +873,11 @@ Chapter~\ref{chap-verb-position}.
 %\cites{Haider2010a}
 \citet[\page 342]{Haider2020a} claims that scrambling is only possible in
 head-final projections. If this claim is correct (at least for the
-languages under consideration here), the Head-Complement Schema in Figure~\ref{fig-spr-head-head-comps-final} has to
+languages under consideration here),\footnote{
+  \citet[\page 244]{Santorini93a} claims that \ili{Old French}, \ili{Old Spanish}, \ili{Middle English} and \ili{Russian}
+  are VO languages allowing for scrambling. More careful examination of the VO status and scrmabling
+  properties of these languages is needed. I leave this for further research.
+} the Head-Complement Schema in Figure~\ref{fig-spr-head-head-comps-final} has to
 be restricted to head-initial projections and the Head-Complement Schema in Figure~\ref{fig-head-comp-free} to
 head-final projections. Nouns in all Germanic languages are head-initial, that is, they take their
 complements to the right and these are not allowed to scramble. Genitive NPs have to be adjacent to
@@ -924,8 +928,15 @@ in the following section.
 
 % @ Haider2010a: 161
 As already mentioned in Section~\ref{sec-intro-svo}, Yiddish has mixed VO/OV properties and
-researchers like \parencites{Santorini93a-u}[\page 12]{Schallert2007a} and \cites[\page 161]{Haider2010a}{Haider2020a} see
-this language as belonging to a third type. Example (\ref{ex-yiddish-vo-ov}) from \citet[\page
+researchers like \citet[]{dBMvW86a}, \citet[\page 12]{Schallert2007a}, and \textcites[\page 161]{Haider2010a}{Haider2020a} see
+this language as belonging to a third type.\footnote{
+  \textcites{Santorini93a} also argues for a classification of Yiddish as a mixed VO/OV language
+  but assumes that this means that particular sentences may be either VO or OV, but verbs cannot
+  govern both to the left and to the right (p.\,240). The solution outlined below
+  will not assume this but rather assume that Yiddish verbs do neither have an \initial value of $+$
+  (VO) nor $-$ (OV) but a third value and hence can be placed in the middle of their arguments
+  without any movement.
+} Example (\ref{ex-yiddish-vo-ov}) from \citet[\page
 402]{Diesing97a}, which was discussed on p.\,\pageref{ex-yiddish-vo-ov} and is repeated
 below as (\mex{1}), shows that Yiddish can have the order usually observed in SVO languages
 (\mex{1}a) and the orders observed in SOV languages with scrambling (\mex{1}b, c). But it can also
@@ -980,7 +991,7 @@ type hierarchy
 [bool
   [$+$ or flex
     [$+$]
-    [flex,name=flex]]
+    [flex,name=flex, before drawing tree={x/.option=!uu.x}]]
   [$-$ or flex
     [,identify=flex]
     [$-$]]]
