@@ -970,7 +970,10 @@ head-final projections. So, a variant of (\mex{0}a) with initial verb and scramb
 predicted to be impossible.
  Now,
 freedom seems to be easy to achieve as the absence of constraints. Yiddish would be a language in
-which the \initial value is just unspecified. But this is not sufficient since if \emph{Rifken} is
+which the \initial value is just unspecified.\footnote{
+See for example \citew[\page 7]{Haider2010a} for the suggestion of an ``underspecification of the
+directionality feature''.} 
+But this is not sufficient since if \emph{Rifken} is
 combined with \emph{nit gegebn} to form \emph{Rifken nit gegebn}, the result is an \initial $-$
 projection. This projection cannot be used as the daughter in the head-initial schema since it is
 incompatible with \initial $+$. 
@@ -1495,13 +1498,13 @@ VP, TP, and CP layers.
 \begin{forest}
 sm edges
 [CP
-  [C$'$
+  [C\rlap{$'$}
     [C [dass;that]]
     [TP
       [NP [jeder;everybody,roof]]
-      [T$'$
+      [T\rlap{$'$}
 	[VP
-	  [V$'$
+	  [V\rlap{$'$}
 	    [NP [dieses Buch;this book, roof]]
 	    [V [\trace$_j$]]]]
 	[T [kenn-$_j$ -t;know- -s]]]]]]
@@ -1509,7 +1512,22 @@ sm edges
 \caption{\label{fig-cp-tp-vp}Sentence in the CP/TP/VP model}
 \end{figure}%
 
-The problem with such proposals is the claim that the subject is realized in the specifier position
+Such CP/TP/VP systems are motivated for \ili{English}, since auxiliary verbs and modals behave differently
+from main verbs. These verbs are assumed to be of category T. For finite verbs, T is assumed to hold
+inflectional affixes and the stem of the finite verb moves to T to ``check'' inflectional
+information. Such analyses are not just assumed within the Government \& Binding framework and in
+Minimalism (so-called Mainstream Generative Grammar) but also in frameworks like LFG (\citealp[Section~6.2]{Bresnan2001a}; \citealp[Section~3.2.1]{Dalrymple2001a-u}). However,
+languages like German differ from English in that the auxiliaries behave like main verbs, so placing
+them in T would not be warranted. For this reason and further points discussed below, researchers
+working on German in non-MGG never assume an IP or TP (see \citealt[Section~3.2.3.2]{Berman2003a} on LFG and
+\citealt{MuellerGS} on HPSG). \citet[Chapter~2]{Haider2010a} discusses IP/TP-based approaches in detail and
+shows their many problems. See \citet{BK90a}, \citew[\page 157]{Hoehle91},
+\textcites{Haider93a,Haider97a,Haider2010a}, \citet[Section~IV.3]{Sternefeld2006a-u}, and \citet[\page 172]{BG2014a-u} for
+MGG approaches without an IP or TP.
+
+In what follows, I want to discuss a problem with scrambling, the phenomenon discussed in the
+present chapter. See Section~\ref{sec-cp-tp-vp-and-verb-last-non-movement} for further problems.
+The problematic aspect of the TP analysis with respect to scrambling is the realization of the subject in the specifier position
 of TP. Therefore there is no way of serializing the accusative
 object before the subject unless one assumes that the 
 object is moved to a higher position in the tree, \eg adjoined to TP as in Figure~\ref{fig-cp-tp-vp-scrambling}.
@@ -1518,15 +1536,15 @@ object is moved to a higher position in the tree, \eg adjoined to TP as in Figur
 \begin{forest}
 sm edges
 [CP
-[C$'$
+[C\rlap{$'$}
 	[C [dass;that]]
         [TP
           [NP$_i$ [dieses Buch;this book, roof]]
 	  [TP
 	    [NP [jeder;everybody,roof]]
-	    [T$'$
+	    [T\rlap{$'$}
 	      [VP
-		[V$'$
+		[V\rlap{$'$}
 		  [NP [\trace$_i$]]
 		  [V [\trace$_j$]]]]
 	      [T [kenn-$_j$ -t;know- -s]]]]]]]
@@ -1728,11 +1746,11 @@ where n children=0{delay=with unaligned translation}{}
 [CP
 	[C$^0$[weil;because, tier=word]]
 	[TopP
-		[DP$_j$ [diese Sonate;this sonata,tier=below,l=31\baselineskip]]
+		[DP$_j$ [diese Sonate;this sonata,tier=below,l=28\baselineskip]]
 		[SubjP
 			[DP$_i$ [der Mann;the man,tier=word]]
 			[ModP
-				[AdvP [wahrscheinlich;probably,l=20\baselineskip]]
+				[AdvP [wahrscheinlich;probably,l=18\baselineskip]]
 				[ObjP
 					[DP$_j$ [diese Sonate;this sonata,tier=below]]
 					[NegP
@@ -1845,15 +1863,15 @@ languages are claimed to have structures as in Figure~\ref{fig-cinque-top} as pa
 \begin{forest}
 [Mood\sub{speech act}P
   [AdvP]
-  [Mood\sub{speech act}$'$
+  [Mood\sub{speech act}\rlap{$'$}
     [Mood\sub{speech act}]
     [Mood\sub{evaluative}P
       [AdvP]
-      [Mood\sub{evaluative}$'$
+      [Mood\sub{evaluative}\rlap{$'$}
         [Mood\sub{evaluative}]
         [Mood\sub{evidential}P
           [AdvP]
-          [Mood\sub{evidential}$'$
+          [Mood\sub{evidential}\rlap{$'$}
             [Mood\sub{evidential}]
             [\ldots]]]]]]]
 \end{forest}
@@ -1917,27 +1935,27 @@ sm edges
   [NP$_i$ [the new theory,roof]]
   [F-AdvP
     [AdvP [certainly,roof ]]
-    [F-Adv$'$
+    [F-Adv\rlap{$'$}
       [F-Adv  [\trace]]
       [TP 
       [NP$_i$ [\trace]]
-      [T$'$
+      [T\rlap{$'$}
         [T [may]]
         [F-AdvP
           [AdvP [possibly]]
-          [F-Adv$'$
+          [F-Adv\rlap{$'$}
             [F-Adv  [\trace]]
             [{VP[\textit{bse}]}
               [{V[\textit{bse}]} [have]]
               [F-AdvP
                 [AdvP [indeed]]
-                  [F-Adv$'$
+                  [F-Adv\rlap{$'$}
                     [F-Adv  [\trace]]
                     [{VP[\textit{prf}]}
                       [{V[\textit{prf}]} [been]]
                       [F-AdvP
                         [AdvP [badly]]
-                        [F-Adv$'$
+                        [F-Adv\rlap{$'$}
                           [F-Adv  [\trace]]
                           [{VP[\textit{pas}]}
                             [{V[\textit{pas}]} [formulated]]
@@ -1975,10 +1993,10 @@ analysis, in which the determiner is assumed to be the head.
 \begin{forest}
 sm edges
 [DP
-  [D$'$
+  [D\rlap{$'$}
      [D [the]]
      [NP
-       [N$'$
+       [N\rlap{$'$}
          [N [president]]]]]] 
 \end{forest}
 \caption{\emph{the president} in the DP analysis}\label{fig-the-president-DP}
@@ -1994,10 +2012,10 @@ with such features.
 \begin{forest}
 sm edges
 [\textsc{f}:DP\\\textsc{l}:NP
-  [\textsc{f}:D$'$\\\textsc{l}:NP
+  [\textsc{f}:D\rlap{$'$}\\\textsc{l}:NP
      [\textsc{f}:D\\\textsc{l}:none [the]]
      [\textsc{f}:none\\\textsc{l}:NP
-       [\textsc{f}:none\\\textsc{l}:N$'$
+       [\textsc{f}:none\\\textsc{l}:N\rlap{$'$}
          [\textsc{f}:none\\\textsc{l}:N [president]]]]]] 
 \end{forest}
 \caption{\emph{the president} in the DP analysis with functional and lexical features}\label{fig-the-president-DP-f-l}
@@ -2071,7 +2089,7 @@ from the coordinating conjunction. This analysis is assumed by
 \begin{forest}
 [{ConjP}
  [X]
- [Conj$'$
+ [Conj\rlap{$'$}
    [Conj]
    [Y]]]
 \end{forest}
@@ -2110,18 +2128,18 @@ analysis in Figure~\ref{fig-coordination-of-two-DPs-withConjP} results.
 sm edges
 [\textsc{f}:ConjP\\\textsc{l}:NP
   [\textsc{f}:DP\\\textsc{l}:NP
-     [\textsc{f}:D$'$\\\textsc{l}:NP
+     [\textsc{f}:D\rlap{$'$}\\\textsc{l}:NP
        [\textsc{f}:D\\\textsc{l}:none [the]]
        [\textsc{f}:none\\\textsc{l}:NP
-         [\textsc{f}:none\\\textsc{l}:N$'$
+         [\textsc{f}:none\\\textsc{l}:N\rlap{$'$}
            [\textsc{f}:none\\\textsc{l}:N [president]]]]]]
-  [\textsc{f}:Conj$'$\\\textsc{l}:NP 
+  [\textsc{f}:Conj\rlap{$'$}\\\textsc{l}:NP 
     [\textsc{f}:Conj\\\textsc{l}:none [and]]
     [\textsc{f}:DP\\\textsc{l}:NP
-     [\textsc{f}:D$'$\\\textsc{l}:NP
+     [\textsc{f}:D\rlap{$'$}\\\textsc{l}:NP
        [\textsc{f}:D\\\textsc{l}:none [the]]
        [\textsc{f}:none\\\textsc{l}:NP
-         [\textsc{f}:none\\\textsc{l}:N$'$
+         [\textsc{f}:none\\\textsc{l}:N\rlap{$'$}
            [\textsc{f}:none\\\textsc{l}:N [general]]]]]]]] 
 \end{forest}
 \caption{Functional and lexical categories and coordination of two functional
@@ -2144,12 +2162,12 @@ Figure~\ref{fig-coordination-of-two-NPs-withConjP} shows the coordination of two
 sm edges
 [\textsc{f}:ConjP\\\textsc{l}:NP
   [\textsc{f}:none\\\textsc{l}:NP
-     [\textsc{f}:none\\\textsc{l}:N$'$
+     [\textsc{f}:none\\\textsc{l}:N\rlap{$'$}
      [\textsc{f}:none\\\textsc{l}:N [president]]]]
-  [\textsc{f}:Conj$'$\\\textsc{l}:NP 
+  [\textsc{f}:Conj\rlap{$'$}\\\textsc{l}:NP 
     [\textsc{f}:Conj\\\textsc{l}:none [and]]
     [\textsc{f}:none\\\textsc{l}:NP
-      [\textsc{f}:none\\\textsc{l}:N$'$
+      [\textsc{f}:none\\\textsc{l}:N\rlap{$'$}
         [\textsc{f}:none\\\textsc{l}:N [general]]]]]]
 \end{forest}
 \caption{Functional and lexical categories and coordination of two lexical

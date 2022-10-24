@@ -361,8 +361,12 @@ The SOV languages (Afrikaans, Dutch, German, \ldots) combine a complementizer wi
 
 As in V1 or V2 clauses the order of the constituents in the \mf is free in languages like German:
 \eal
-\ex Ich weiß, dass das Buch Aicke heute gelesen hat.
-\ex Ich weiß, dass das Buch heute Aicke gelesen hat.
+\ex 
+\gll Ich weiß, dass das Buch Aicke heute gelesen hat.\\
+     I   know  that the book Aicke today read has\\
+\ex 
+\gll Ich weiß, dass das Buch heute Aicke gelesen hat.
+     I   know  that the book today Aicke read has\\
 \zl
 
 In English, the complementizer is combined with a clause in SVO order.
@@ -601,7 +605,7 @@ Yiddish complementizers select a V2 clause. The analysis of the example in (\mex
 \begin{forest}
 sm edges
 [CP
-        [C [az;dass] ]
+        [C [az;that] ]
         [S
           [{Adv$_i$} [haynt;today] ]
           [{S/Adv}
@@ -721,15 +725,15 @@ semantics in particular).
 sm edges
 [{S[\textsc{que} \sliste{ }, \slasch \sliste{ }]}
   [{PP\ibox{1}[\textsc{que} \sliste{ \ibox{2} }]} 
-     [P [über]]
+     [P [über;about]]
      [{NP[\textsc{que} \sliste{ \ibox{2} }]}
-       [{Det[\textsc{que} \sliste{ \ibox{2} }]} [welches]]
-       [N [Thema]]]]
+       [{Det[\textsc{que} \sliste{ \ibox{2} }]} [welches;which]]
+       [N [Thema;topic]]]]
   [{S[\slasch \sliste{ \ibox{1} }]}
     [{PP\ibox{1}[\slasch \sliste{ \ibox{1} }]} [\trace]]
     [V\rlap{$'$}
-      [NP [sie]]
-      [V [spricht]]]]]
+      [NP [sie;she]]
+      [V [spricht;speaks]]]]]
 \end{forest}}
 \caption{Analysis of simple interrogative clause using \slasch and \que}\label{fig-interrog-clause-simple-que-slash}
 \end{figure}
@@ -862,7 +866,7 @@ exactly what we want and what follows from the general mapping from \argst to \s
 languages. The analysis of (\mex{1}) is shown in
 Figure~\ref{fig-interrogative-Danish-subject-extraction}.
 \ea
-\gll hvem det læser bogen\\
+\gll hvem der læser bogen\\
      who  \expl{} reads book.\textsc{def}\\\danish
 \glt `who reads the book'
 \z
@@ -887,7 +891,7 @@ sm edges
 [S
        [{NP[\snom]} [hvem;who] ]
        [{S/NP[\snom]}
-         [{NP[\lnom]} [det;\textsc{expl}] ]
+         [{NP[\lnom]} [der;\textsc{expl}] ]
          [{VP/NP[\snom]}
            [{V$'$/NP[\snom]}
              [V [læser;reads] ]
@@ -1043,7 +1047,7 @@ Yiddish.
      I   know  who.\ACC{} Kim knows\\\german
 \glt `I know who Kim knows.'
 \ex
-\gll Jeg ved, hvem det kende Kim\\
+\gll Jeg ved, hvem der kende Kim\\
      I know who  \expl{} knows Kim\\\danish
 \glt `I know who knows Kim'
 
