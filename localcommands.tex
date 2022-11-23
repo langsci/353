@@ -63,12 +63,10 @@
 \presetkeys{todonotes}{disable}{}
 }
 
-\newcommand{\todostefan}[1]{{\memoizeset{disable}\todo[color=orange!80]{\footnotesize #1}}\xspace}
-\newcommand{\todosatz}[1]{{\memoizeset{disable}\todo[color=red!40]{\footnotesize #1}}\xspace}
+\newcommand{\todostefan}[1]{\todo[color=orange!80]{\footnotesize #1}\xspace}
+\newcommand{\todosatz}[1]{\todo[color=red!40]{\footnotesize #1}\xspace}
 
-\newcommand{\inlinetodostefan}[1]{{\memoizeset{disable}\todo[color=green!40,inline]{\footnotesize #1}}\xspace}
-
-\let\todostefaninline\inlinetodostefan
+\newcommand{\inlinetodostefan}[1]{\todo[color=green!40,inline]{\footnotesize #1}\xspace}
 
 \newcommand{\inlinetodoopt}[1]{\todo[color=green!40,inline]{\footnotesize #1}\xspace}
 \newcommand{\inlinetodoobl}[1]{\todo[color=red!40,inline]{\footnotesize #1}\xspace}
@@ -79,7 +77,7 @@
 
 % for editing, remove later
 %\usepackage{xcolor}
-\newcommand{\iaddpages}{\yel[add pages]{pages}\xspace}
+\newcommand{\iaddpages}{\iftoggle{draft}{\yel[add pages]{pages}\xspace}}
 
 \newcommand{\addpages}{\iftoggle{draft}{\todostefan{add pages}}\xspace}
 \newcommand{\addsource}{\iftoggle{draft}{\todostefan{add source}}\xspace}
@@ -185,12 +183,27 @@
 % This does a linebreak for \gll for long sentences leaving space for the language at the right
 % margin.
 % St.Mü. 17.06.2021
+% \newcommand{\longexampleandlanguage}[2]{
+% \begin{tabularx}{.99\linewidth}[t]{@{}X@{}p{\widthof{(#2)}}@{}}
+% \begin{minipage}[t]{\linewidth-1em}
+% #1
+% \end{minipage} & (\ili{#2})
+% \end{tabularx}}
+
+% From stackexchange:
+% https://tex.stackexchange.com/questions/600695/limiting-space-used-by-gb4e-and-adding-language-information-to-the-right/649414#649414
 \newcommand{\longexampleandlanguage}[2]{
-\begin{tabularx}{.99\linewidth}[t]{@{}X@{}p{\widthof{(#2)}}@{}}
-\begin{minipage}[t]{\linewidth-1em}
+%\begin{tabularx}{\linewidth}[t]{@{}X@{}p{\widthof{(#2)}}@{}}
+\begin{minipage}[t]{\linewidth-1em-\widthof{(#2)}}
 #1
-\end{minipage} & (\ili{#2})
-\end{tabularx}}
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{\widthof{(#2)}}
+ (\ili{#2})
+\end{minipage}
+%\end{tabularx}
+}
+
 
 % This is needed for the index since the ! will be interpreted as subitem.
 \newcommand{\dslmath}{$/\!/$}

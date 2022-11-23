@@ -90,10 +90,6 @@ public: germanic.pdf
 	cp $? /Users/stefan/public_html/Pub/
 
 
-/Users/stefan/public_html/Pub/germanic.pdf: germanic.pdf
-	cp -p $?                      /Users/stefan/public_html/Pub/
-
-
 commit:
 	svn commit -m "published version to the web"
 
@@ -101,6 +97,10 @@ forest-commit:
 	git add germanic.for.dir/*.pdf
 	git commit -m "forest trees" germanic.for.dir/*.pdf germanic.for
 	git push -u origin
+
+
+/Users/stefan/public_html/Pub/germanic.pdf: main.pdf
+	cp -p $?                      /Users/stefan/public_html/Pub/germanic.pdf
 
 
 o-public: o-public-lehrbuch 

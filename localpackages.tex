@@ -41,6 +41,8 @@
 % This has side effects on my-ccg commands do no know why
 %\usepackage{./langsci/langsci-optional}
 
+\usepackage{todonotes}
+
 % used to be in this package
 \providecommand{\citegen}{}
 \renewcommand{\citegen}[2][]{\citeauthor{#2}'s (\citeyear*[#1]{#2})}
@@ -61,8 +63,13 @@
 
 \usepackage{langsci-basic}
 %\usepackage{langsci-optional}
-\usepackage{langsci-lgr}
-\newcommand{\M}{\textsc{m}{}\xspace}        % use at own risk
+%\usepackage{langsci-lgr}
+%\newcommand{\M}{\textsc{m}{}\xspace}        % use at own risk
+
+
+
+\usepackage{langsci-branding}
+\usepackage[danger]{langsci-lgr}
 
 \usepackage{graphicx}
 

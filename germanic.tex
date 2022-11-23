@@ -14,6 +14,8 @@
 %                ,colorlinks, citecolor=brown % for drafts
                 ,draftmode
 % 	        ,coverus
+                ,uniformtopskip
+                ,tblseight % to get the fonts for the Chinese title of GT
 		  ]{langscibook} 
 
 
@@ -29,7 +31,8 @@
 
 % load memoize before german.sty
 
-\usepackage{nomemoize} 
+%\usepackage{nomemoize} 
+\usepackage{memoize} 
 %\memoizeset{readonly}
 % see below for further settings
 
@@ -55,7 +58,8 @@
 % \renewcommand{\addsource}{}
 % \renewcommand{\addglosses}{}
 
-\bibliography{germanic}
+%\bibliography{germanic}
+\bibliography{bib-abbr,biblio-xdata-en,biblio}
 
 \input germanic-include
 
