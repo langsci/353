@@ -15,7 +15,7 @@ crucial role in licensing syntactic structure.
 
 Much time is spent on the structure of noun phrases. The main insights on the syntax of German noun
 phrases can be carried over to other Germanic languages. Later chapters will deal with the
-differences of the Germanic languages with respect to clause level syntax.
+differences among the Germanic languages with respect to clause level syntax.
 
 This chapter heavily draws on \citew[Chapter~2]{MuellerGT-Eng4}, which is an updated translation of
 \citew[Chapter~2]{MuellerGTBuch2}. Knowledge of basic concepts like part of speech and
@@ -37,7 +37,7 @@ and \emph{gibt} `gives' is a verb\is{verb}.
 \z
 Using the constituency tests introduced in \citew[Chapter~1]{MuellerGT-Eng4}, one can show that
 individual words as well as the strings \emph{das Buch} `the book' and \emph{dem Kind} `the child'
-form constituents. These get then assigned certain symbols. Since nouns form an important part of
+form constituents. These then get assigned certain symbols. Since nouns form an important part of
 the phrases \emph{das Buch} and \emph{dem Kind}, these are referred to as \emph{noun phrases} or
 NPs, for short. The pronoun \emph{er} `he' can occur in the same positions as full NPs and can
 therefore also be assigned to the category NP.
@@ -208,7 +208,11 @@ The symbols in the tree are called \emph{nodes}\is{node}. We say that S immediat
 The other nodes in the tree are also dominated, but not immediately dominated, by S\is{dominance!immediate}. If we want to talk about the
 relationship between nodes, it is common to use kinship terms. In Figure~\ref{er-das-buch-dem-mann-gibt-flat}, S is the \emph{mother node}\is{node!mother}
 of the three NP nodes and the V node.
-The NP node and V are \emph{sisters}\is{node!sister} since they have the same mother node.
+The NP nodes and V are \emph{sisters}\is{node!sister} or \emph{daughters}\is{node!daughter}, since
+they have the same mother node.\footnote{\emph{Parent node}\is{node!parent} and \emph{child node}\is{node!child} are alternative
+  terms. I use \emph{mother} and \emph{daughter} here, since this terminology is also used in
+  formalizations of the theory developed later.
+}
 If a node has two daughters\is{node!daughter}, then we have a binary\is{binary} branching structure\is{branching}\is{branching!binary}.
 If there is exactly one daughter, then we have a unary\is{unary}\is{branching!unary} branching
 structure. Two constituents are said to be \emph{adjacent}\is{adjacency}
@@ -1520,12 +1524,11 @@ sm edges
 \end{figure}%
 
 Some categories do not have a specifier or have the option of having one. Adjuncts are optional and therefore
-not all structures have to contain an \xbar with an adjunct daughter.
- In addition to the branching shown in the right"=hand figure, adjuncts to
-XP and head"=adjuncts\is{adjunct!head} are sometimes possible. There is only a single rule in (\ref{psg-xbar-schema})
-for cases in which a head precedes the complements, however an order in which the complement precedes the head is
-of course also possible. 
-This is shown in Figure~\ref{Abb-GB-Min-Max}.
+not all structures have to contain an \xbar with an adjunct daughter. In addition to the branching
+shown in the right"=hand figure, adjuncts to XP and head"=adjuncts\is{adjunct!head} are sometimes
+possible. There is only a single rule in (\ref{psg-xbar-schema}) for cases in which a head precedes
+the complements, however an order in which the complement precedes the head is of course also
+possible. This is shown in Figure~\ref{Abb-GB-Min-Max}.
 
 Figure~\vref{Abb-das-schoene-Bild-von-Paris} shows the analysis of the NP structures \emph{das Bild} `the picture'
 and \emph{das schöne Bild von Paris} `the beautiful picture of Paris'. The NP structures in Figure~\ref{Abb-das-schoene-Bild-von-Paris}
@@ -1667,7 +1670,7 @@ Your answer should resemble the analysis in (\ref{bsp-anwendung-grammatik}).
 This chapter is in large part identical to Chapter~2 of \citet{MuellerGT-Eng4}. Since the focus of
 this book is different from the textbook about grammatical theory, I decided to provide a different
 set of exercises here. Those who are interested in doing more exercises may consult the grammatical
-theory text book in addition. It is published by Language Science Press and hence open access, that
+theory textbook in addition. It is published by Language Science Press and hence open access, that
 is, it is freely available.
 \begin{enumerate}
 \item\label{exercise-NP-PSG}

@@ -12,8 +12,10 @@
 %                ,showindex
                 ,newtxmath
 %                ,colorlinks, citecolor=brown % for drafts
-                ,draftmode
+%                ,draftmode
 % 	        ,coverus
+                ,uniformtopskip
+                ,tblseight % to get the fonts for the Chinese title of GT
 		  ]{langscibook} 
 
 
@@ -21,8 +23,8 @@
 \provideboolean{draft}
 \setboolean{draft}{false}
 
-%\newtoggle{draft}\togglefalse{draft}
-\newtoggle{draft}\toggletrue{draft}
+\newtoggle{draft}\togglefalse{draft}
+%\newtoggle{draft}\toggletrue{draft}
 %\newtoggle{finished}\togglefalse{finished}
 
 
@@ -36,6 +38,7 @@
 \input{localmetadata.tex}
 \input{localpackages.tex}
 \input{localcommands.tex}
+\input{localhyphenation.tex}
 
 
 \input{locallangscifixes.tex}
@@ -57,7 +60,8 @@
 
 
 %\bibliography{bib-abbr,biblio,biblio-xdata-en}
-\bibliography{germanic}
+%\bibliography{germanic}
+\bibliography{bib-abbr,biblio-xdata-en,biblio}
 
 
 \input germanic-include
