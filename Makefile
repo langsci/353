@@ -141,6 +141,10 @@ germanic.bib: ../../Bibliographien/biblio.bib $(SOURCE) langsci.dbx bib-creation
 	biber --tool --configfile=biber-tool.conf --output-field-replace=location:address,journaltitle:journal --output-legacy-date germanic_tmp.bib -O germanic.bib
 
 
+todo-bib.unique.txt: germanic.bcf
+	biber -V germanic | grep -i warn | sort -uf > todo-bib.unique.txt
+
+
 memos:
 	xelatex -shell-escape germanic
 	python3 styles/memoize/memomanager.py split germanic.mmz

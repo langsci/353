@@ -20,7 +20,7 @@ differences among the Germanic languages with respect to clause level syntax.
 This chapter heavily draws on \citew[Chapter~2]{MuellerGT-Eng4}, which is an updated translation of
 \citew[Chapter~2]{MuellerGTBuch2}. Knowledge of basic concepts like part of speech and
 constituency tests is presupposed. Readers who feel the need to refresh their knowledge in these
-areas are referred to Chapter~1 of the Grammatical Theory textbooks.
+areas are referred to Chapter~1 of these textbooks.
 
 \section{Symbols and rewrite rules}
 \label{sec-simple-psg}
@@ -224,7 +224,7 @@ as in (\mex{1}).
 \gll {}[\sub{S} [\sub{NP} er] [\sub{NP} [\sub{Det} das] [\sub{N} Buch]]  [\sub{NP} [\sub{Det} dem] [\sub{N} Kind]] [\sub{V} gibt]]\\
      {}         {}        he  {}        {}       the  {}       book    {}        {}       the  {}       child     {}      gives\\  
 \z
-Nevertheless, it is the grammatical rules which are actually important because these represent grammatical knowledge which is independent of specific structures.
+Nevertheless, it is the grammatical rules/""schemata which are actually important because these represent grammatical knowledge which is independent of specific structures.
 In this way, we can use the grammar in (\ref{bsp-grammatik-psg}) to parse or generate the sentence
 in (\mex{1}), which differs from (\ref{bsp-weil-er-das-buch-dem-mann-gibt}) in the order of objects: 
 \ea
@@ -235,7 +235,7 @@ in (\mex{1}), which differs from (\ref{bsp-weil-er-das-buch-dem-mann-gibt}) in t
 The rules for replacing determiners and nouns are simply applied in a different order than in (\ref{bsp-weil-er-das-buch-dem-mann-gibt}). Rather than replacing the first Det with \emph{das} `the' and the first noun with \emph{Buch} `book', the first Det is replaced with \emph{dem} `the' and the first noun with \emph{Kind}.
 
 At this juncture, I should point out that the grammar in (\ref{bsp-grammatik-psg}) is not the only possible grammar for the example sentence in
-(\ref{bsp-weil-er-das-buch-dem-mann-gibt}). There is an infinite\label{page-unendlich-viele-grammatiken} number of possible grammars which could
+(\ref{bsp-weil-er-das-buch-dem-mann-gibt}). There are an infinite\label{page-unendlich-viele-grammatiken} number of possible grammars which could
 be used to analyze these kinds of sentences (see \citealt[Chapter~2, exercise~1]{MuellerGT-Eng}). Another possible grammar is given in (\mex{1}):
 
 \ea\label{psg-binaer}
@@ -254,7 +254,7 @@ V  & $\to$ NP V\\
 {V} & {$\to$ gibt}\\
 \end{tabular}
 \z
-This grammar licenses binary branching structures, as shown in Figure~\vref{er-das-buch-dem-mann-gibt-bin}.
+This grammar licenses only binary branching structures, as shown in Figure~\vref{er-das-buch-dem-mann-gibt-bin}.
 \begin{figure}
 \centerline{
 \begin{forest}
@@ -275,9 +275,12 @@ sm edges
 \caption{\label{er-das-buch-dem-mann-gibt-bin}Analysis of \emph{er das Buch dem Kind gibt} with a
   binary branching structure}
 \end{figure}%
+Since the rule V $\to$ NP, V is recursive, arbitrarily many NPs can be combined with a V. The result
+of an NP-V combination is a V, which can be used as a daughter at the right-hand side of the rule again.
 
 Both the grammar in (\mex{0}) and the one in (\ref{bsp-grammatik-psg}) are too imprecise.
-If we adopt additional lexical entries for \emph{ich} `I' and \emph{den} `the' (accusative) in our grammar, then we would incorrectly
+If we adopt additional lexical entries for \emph{ich} `I' and \emph{den} `the' (accusative) in our
+grammar, then the grammar would incorrectly
 license the ungrammatical sentences in (\mex{1}b--d):\footnote{\label{fn-ex-das-kind-erwartet}%
 	With the grammar in (\ref{psg-binaer}), we also have the additional problem that we cannot determine when an utterance is complete
 	since the symbol V is used for all combinations of V and NP. Therefore, we can also analyze
@@ -315,7 +318,7 @@ how the selection of arguments by a verb (valence) is captured in HPSG.
      he.\NOM{} the.\mas{} book(\neu) the child  gives\\
 }
 \zl
-In (\mex{0}b), subject"=verb agreement\is{agreement|(} has been violated, in other words: \emph{ich} `I' and \emph{gibt} `gives' do not fit together.
+In (\mex{0}b), subject"=verb agreement\is{agreement|(} has been violated. In other words: \emph{ich} `I' and \emph{gibt} `gives' do not fit together.
 (\mex{0}c) is ungrammatical because the case requirements of the verb have not been satisfied: \emph{gibt} `gives' requires a dative object. Finally, (\mex{0}d) is ungrammatical
 because there is a lack of agreement between the determiner and the noun. It is not possible to combine \emph{den} `the', which is masculine and bears accusative case, 
 and \emph{Buch} `book' because \emph{Buch} is neuter gender. As the gender properties
@@ -399,11 +402,11 @@ In the rules above, the information about the number of arguments required by a 
 the atomic symbols, \eg `nom\_dat\_acc'.
 
 In order to capture the determiner"=noun agreement in (\mex{1}), we have to incorporate information about gender\is{gender} (fem, mas, neu),
-number\is{number} (sg, pl), case\is{case} (nom, gen, dat, acc) and the inflectional classes (strong, weak)\footnote{%
+number\is{number} (sg, pl), case\is{case} (nom, gen, dat, acc) and the inflectional classes (strong, weak).\footnote{%
 These are inflectional classes for adjectives which are also relevant for some nouns such as \emph{Beamter} `civil servant', 
 \emph{Verwandter} `relative', \emph{Gesandter} `envoy'.
 %For more on adjective classes see page~\pageref{page-Flexionsklasse-Wunderlich}.%
-}.
+}
 \eal\settowidth\jamwidth{(Inflectional class)}
 \ex 
 \gll der Mann, die Frau, das Buch\\
@@ -429,16 +432,7 @@ NP\_3\_sg\_nom  & $\to$ Det\_mas\_sg\_nom & N\_mas\_sg\_nom \\
 NP\_3\_sg\_nom  & $\to$ Det\_neu\_sg\_nom & N\_neu\_sg\_nom \\
 NP\_3\_pl\_nom  & $\to$ Det\_fem\_pl\_nom & N\_fem\_pl\_nom \\
 NP\_3\_pl\_nom  & $\to$ Det\_mas\_pl\_nom & N\_mas\_pl\_nom \\
-NP\_3\_pl\_nom  & $\to$ Det\_neu\_pl\_nom & N\_neu\_pl\_nom \\[2mm]
-\end{tabular}
-
-\begin{tabular}[t]{@{}l@{ }l@{~~}l}
-NP\_3\_sg\_nom  & $\to$ Det\_fem\_sg\_nom & N\_fem\_sg\_nom \\
-NP\_3\_sg\_nom  & $\to$ Det\_mas\_sg\_nom & N\_mas\_sg\_nom \\
-NP\_3\_sg\_nom  & $\to$ Det\_neu\_sg\_nom & N\_neu\_sg\_nom \\
-NP\_3\_pl\_nom  & $\to$ Det\_fem\_pl\_nom & N\_fem\_pl\_nom \\
-NP\_3\_pl\_nom  & $\to$ Det\_mas\_pl\_nom & N\_mas\_pl\_nom \\
-NP\_3\_pl\_nom  & $\to$ Det\_neu\_pl\_nom & N\_neu\_pl\_nom \\[2mm]
+NP\_3\_pl\_nom  & $\to$ Det\_neu\_pl\_nom & N\_neu\_pl\_nom \\
 \end{tabular}
 \z
 (\mex{0}) shows the rules for nominative noun phrases. We would need analogous rules for genitive,
@@ -720,7 +714,7 @@ refers to. Whereas (\mex{0}a) refers to an entity which has the property of bein
 also have the property of being known to us.
 
 Our previous rules for noun phrases simply combined a noun and a determiner and can therefore only be used to
-analyze (\mex{0}a). The question we are facing now is how we can modify this rule or which additional rules we would
+analyze (\mex{0}a). The questions we are facing now is how we can modify this rule or which additional rules we would
 have to assume in order to analyze the other noun phrases in (\mex{0}). In addition to rule (\mex{1}a), one could propose 
 a rule such as the one in (\mex{1}b).\footnote{%
 	See \citew[\page 238]{Eisenberg2004a} for the assumption of flat structures in noun phrases.
@@ -837,7 +831,7 @@ as well as big. These kinds of noun phrases can be used in contexts such as the 
 \z
 We observe that this discourse can be continued with \emph{Aber alle kleinen grauen Eichhörnchen
   sind krank} `but all small gray squirrels are ill' and a corresponding answer. The possibility
-  to have even more adjectives in noun phrases such as \emph{ein kleines graues Eichhörnchen} `a
+  of having even more adjectives in noun phrases such as \emph{ein kleines graues Eichhörnchen} `a
   small gray squirrel' is accounted for in our rule system in (\mex{-1}). In the rule
   (\ref{NP-Regeln-Adj}), \nbar occurs on the left"=hand as well as the right"=hand 
   side of the rule. This kind of rule is referred to as \emph{recursive}\is{recursion}.
@@ -996,6 +990,7 @@ but not the noun itself. The underscore marks the position where the noun would 
 \gll (Nein, nicht der Vater von Klaus), der \_ von Peter war gemeint.\\
 	\spacebr{}no not the father of Klaus the {} of Peter was meant\\
 \glt `No, it wasn't the father of Klaus, but rather the one of Peter that was meant.'
+\itdopt{that statt the one?}
 \ex 
 \gll (Nein, nicht das Bild von der Stadtautobahn), das \_ vom Gleimtunnel war beeindruckend.\\
 	 \spacebr{}no not the picture of the motorway the {} of.the Gleimtunnel was impressive\\
@@ -1435,6 +1430,7 @@ sm edges
 \caption{\label{Abbildung-AP}English adjective phrases}
 \end{figure}%
 
+\noindent
 As was shown in Section~\ref{sec-PSG-Merkmale}, it is possible to generalize over very specific
 phrase structure rules and thereby arrive at more general rules. In this way, properties such as
 person, number and gender are no longer encoded in the category symbols, but rather only simple
@@ -1468,6 +1464,7 @@ $\xbar \rightarrow$ \xbar~~$\overline{\overline{\mbox{adjunct}}}$            & \
 \end{tabular}}
 \z
 
+\noindent
 Any word class can replace X (\eg V, A or P). The X without the bar stands for a lexical item in
 the above rules. If one wants to make the bar level explicit, then it is possible to write \xnull. 
 Just as with the rule in (\ref{Regel-mit-Variablen}), where we did not specify the case value of the
