@@ -143,8 +143,10 @@ these words are replaced with the symbol on the left. This happens in lines 5, 8
 instance, in line 5 and 8, Det and N are rewritten as NP.
 %\begin{figure}
 \ea
+%\oneline
+{%
 \label{bsp-anwendung-grammatik}
-\begin{tabular}[t]{@{}r|llllll@{\hspace{1.7cm}}l@{}}
+\begin{tabular}[t]{@{}r|llllll@{\hspace{1.4cm}}l@{}}
  & \multicolumn{6}{l@{}}{words and symbols} & rules that are applied\\\midrule
  1 & er            & das          & Buch          & dem          & Kind & gibt                \\
  2 & {NP}          & das          & Buch          & dem          & Kind & gibt & {NP $\to$ er}  \\
@@ -156,7 +158,7 @@ instance, in line 5 and 8, Det and N are rewritten as NP.
  8 & NP            &              & NP            &              & NP   & gibt & {NP $\to$ Det N}\\
  9 & NP            &              & NP            &              & NP   & {V} & {V $\to$ gibt}  \\
 10 &               &              &               &              &      & {S} & {S $\to$ NP NP NP V}\\
-\end{tabular}
+\end{tabular}}
 \z
 %\vspace{-\baselineskip}\end{figure}%
 In (\mex{0}), we began with a string of words and it was shown that we can derive the structure of a sentence by applying the rules of
@@ -990,7 +992,7 @@ but not the noun itself. The underscore marks the position where the noun would 
 \gll (Nein, nicht der Vater von Klaus), der \_ von Peter war gemeint.\\
 	\spacebr{}no not the father of Klaus the {} of Peter was meant\\
 \glt `No, it wasn't the father of Klaus, but rather the one of Peter that was meant.'
-\itdopt{that statt the one?}
+%\itdopt{that statt the one?}
 \ex 
 \gll (Nein, nicht das Bild von der Stadtautobahn), das \_ vom Gleimtunnel war beeindruckend.\\
 	 \spacebr{}no not the picture of the motorway the {} of.the Gleimtunnel was impressive\\
