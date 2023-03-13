@@ -143,9 +143,16 @@
 
 \usepackage{langsci-avm}
 
+\let\vref\ref
+\newcommand\figuresref[2]{%
+Figure~\ref{#1} and Figure~\ref{#2}%
+}
+
+\if0
+
 % loaded in macros.2e \usepackage[english]{varioref}
 % do not stop and warn! This will be tested in the final version
-\usepackage[english]{varioref}
+%\usepackage[english]{varioref}
 %\vrefwarning
 
 \newcommand\thefiguresref[2]{%
@@ -206,6 +213,7 @@ Figure~\ref{#1}\vpageref[]{#1} and Figure~\ref{#2} \vpageref{#2}}}%
      \renewcommand\reftextfacebefore {\reftextbefore}%
 }
 
+\fi
 
 % draw a grid for getting the coordinates
 \usepackage{./styles/tikz-grid}
