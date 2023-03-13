@@ -170,7 +170,7 @@ interactions with morphology \citep[Section~5.5.1]{MuellerGT-Eng1}.\footnote{%
 ADT2008a,ADT2013a}.            % argue for a phrasal analysis of the (Swedish) caused motion construction. 
 The problems that led to the abandonment of GPSG are
   ignored in the literature and newly introduced ones are not properly addressed. See
-  \cites{Mueller2006d,MuellerPersian,MuellerUnifying,MWArgSt,MWArgStReply,MuellerFCG,MuellerLFGphrasal,MuellerPotentialStructure,MuellerGT-Eng4,MuellerCxG}
+  \cites{Mueller2006d,MuellerPersian,MuellerUnifying,MWArgSt,MWArgStReply,MuellerFCG,MuellerLFGphrasal,MuellerPotentialStructure,MuellerGT-Eng,MuellerCxG}
   for some discussion. Note that there are also lexical variants of Construction
   Grammar. \citet*{SBK2012a}, introducing \sbcg, explicitly argue for a
   lexical view citing some of the references just given. The framework underlying the proposals
@@ -190,10 +190,10 @@ d. & \emph{gibt} `gives':            & \sliste{ NP[\type{nom}], NP[\type{dat}], 
 e. & \emph{wartet} `waits':          & \sliste{ NP[\type{nom}], PP[\type{auf}] }\\
 \end{tabular}
 \z
-The elements in such lists come with a fixed order. The order corresponds to the order of the
+The elements in such lists come in a fixed order. The order corresponds to the order of the
 elements in English and to the so-called unmarked order in German, that is, for ditransitive verbs
 the order is usually nom, dat, acc (see \citew{Hoehle82a} for comments on the unmarked order). This
-fixed order is needed for establishing the link between syntax and
+fixed order is used to establish the link between syntax and
 semantics\is{semantics}.\is{linking} This will be briefly discussed in Section~\ref{sec-linking}.
 
 Given such a valence representation for a verb like \emph{kennen} `know', one can assume a schema
@@ -459,9 +459,12 @@ for the valence list. So the question is: How does the analysis of German relate
 English using \spr and \comps? A lot of researchers from various frameworks have argued that it is not
 useful to distinguish the subjects of finite verbs from other arguments in grammars of German. All the tests that have
 been used to show that subjects in English differ from complements do not apply to the arguments of
-finite verbs in German. For example, it is argued that subjects – in contrast to objects – are extraction \isi{islands}, that is, nothing can be
+finite verbs in German. For example, it is argued that subjects – in contrast to objects – are
+extraction \isi{islands} \parencites[\page 249--250]{Chomsky73a}[\page 76]{Fanselow87a}[\page 35--36]{Grewendorf89a}, that is, nothing can be
 fronted out of a subject. But \citet[\page 173]{Haider93a} discussing the examples in (\mex{1}) shows that this is not true for
 German.
+% Haider2010: 23 allgemein für OV/VO
+% Haider 2010: 40 zitiert Haider83 und Haider89
 \eal
 \ex 
 \gll [Über           Strauß]$_i$ hat [ein        Witz \_$_i$] die Runde gemacht.\\
@@ -653,7 +656,7 @@ used for the analysis of NPs in all the Germanic languages. Figure~\ref{fig-spr-
 \end{figure}
 \emph{squirrel} selects for a determiner and the result of combining \emph{squirrel} with a determiner is a
 complete nominal projection, that is, an NP. There are also nouns like \emph{picture} that take a
-complement:
+complement in addition to a determiner:
 \ea
 a picture of Kim
 \z
@@ -888,6 +891,7 @@ languages under consideration here),\footnote{
 } the Head-Complement Schema in Figure~\ref{fig-spr-head-head-comps-final} has to
 be restricted to head-initial projections and the Head-Complement Schema in Figure~\ref{fig-head-comp-free} to
 head-final projections. Nouns in all Germanic languages are head-initial, that is, they take their
+% AZ: what about nominalization?
 complements to the right and these are not allowed to scramble. Genitive NPs have to be adjacent to
 the noun that governs them:
 \eal
@@ -1105,6 +1109,7 @@ VP (see also Section~\ref{sec-phenomena-position-of-adverbials}):
 % \ex Kim will have been [[removing the evidence] promptly].
 % \zl
 
+\noindent
 For the selection of arguments the features \spr and \comps are used. In parallel there is a \modf
 that is part of the lexical description of a head of a phrase that can function as an adjunct (\textsc{mod} is
 an abbreviation for \emph{modified}). The value of  \textsc{mod} is a description of an appropriate head. 
@@ -1121,15 +1126,24 @@ Figure~\vref{fig-head-adj}.
 For instance, attributive adjectives have \nbar as their \modv, where \nbar is an abbreviation for a
 nominal projection that has an empty \compsl and a \sprl that contains a determiner. (\mex{1}) shows
 the lexical item for \emph{brown}:
-\eas
+\ea
 Lexical item for \emph{brown}:\\
 \avm{
-[ phon & \phonliste{ brown }\\
-  mod  & \nbar\\
-  spr  & <>\\
-  comps & <> ]
+ [ phon  & \phonliste{ brown }\\
+   mod   & \nbar\\
+   spr   & <>\\
+   comps & <> ]
 }
-\zs
+\z
+
+% \begin{tabular}{l}
+% \avm{
+%  [ spr   & <>\\
+%    comps & <> ]
+% }
+% \end{tabular}
+
+\noindent
 The analysis of the phrase \emph{brown squirrel} is shown in Figure~\vref{fig-brown-squirrel}.
 \begin{figure}
 \begin{forest}
@@ -1251,6 +1265,11 @@ sm edges
 \caption{\label{fig-j-b-m-l}Analysis of [\emph{dass}] \emph{jeder das Buch sofort liest} `that everybody reads the
   book promptly' with the adjunct attaching between object and verb}
 \end{figure}
+
+%\itdopt{Note that no reordering of adjuncts is suggested. They are simply combined with verbal projections
+%at the place they are in the clause. (See \citealt{Neeleman94b-u} for a similar analysis of adjuncts in Government \& Binding).
+%}
+
 The attentive reader will notice that there is a description following the \ibox{3} in the \modv of
 the adverbials, while there is no such description in the \modvs of the English examples that
 follow. Of course this is purely notational since the numbered boxes identify all values with the
@@ -1421,7 +1440,12 @@ and some authors just use \argone, \argtwo and \argthree to avoid the problems (
 for discussion).
 
 The representations for the other languages mentioned above is entirely parallel. Therefore it is
-possible to capture crosslinguistic generalizations. Nevertheless there are differences between the
+possible to capture crosslinguistic generalizations.\footnote{
+  See also \citegen[\page 14--15]{Haider2010a} Observation~3. The relative order of arguments in OV
+  and VO is identical. Haider also assumes that the ranking of arguments in the argument structure
+  of lexical items is identical in the Germanic languages. He assumes a different branching for OV
+  and VO languages though. See Section~\ref{sec-vo-derived-from-ov}.
+} Nevertheless there are differences between the
 Germanic OV and VO languages. As was explained above the VO languages map their subject to \spr and
 all other arguments to \comps, while the finite verbs of OV languages have all arguments on \comps. 
 (\mex{1}) shows some examples.\footnote{%
@@ -1540,7 +1564,13 @@ present chapter. See Section~\ref{sec-cp-tp-vp-and-verb-last-non-movement} for f
 The problematic aspect of the TP analysis with respect to scrambling is the realization of the subject in the specifier position
 of TP. Therefore there is no way of serializing the accusative
 object before the subject unless one assumes that the 
-object is moved to a higher position in the tree, \eg adjoined to TP as in Figure~\ref{fig-cp-tp-vp-scrambling}.
+object is moved to a higher position in the tree, \eg adjoined to TP as in
+Figure~\ref{fig-cp-tp-vp-scrambling}.\footnote{%
+  Note that this is a general property of analyses introducing arguments in different
+  projections. For example, analyses that introduce arguments in separate verb shells like \littlev
+  \parencites{Larson88a}[\page 331]{Adger2003a} are also forced to assume movement to account for
+  orders involving arguments licensed by different heads.
+}
 \begin{figure}
 \centering
 \begin{forest}
@@ -1594,7 +1624,7 @@ publisher'. However, this reading does not exist.
 \z
 
 This means that one needs some way to determine the deviation with respect to an unmarked order, but
-movement is not the solution. See \citew[Section~3.5]{MuellerGT-Eng4} for further discussion and
+movement is not the solution. See \citew[Section~3.5]{MuellerGT-Eng5} for further discussion and
 \citet{Kiss2001a} for an approach to scope within the framework assumed here.
 
 \subsection{Syntax and other levels of description}
@@ -1722,7 +1752,7 @@ for tree = {edge={->},l=4\baselineskip}
 The problem with such an architecture is that syntax interacts with phonology, semantics, and information
 structure and that this cannot be captured if one deals with syntax alone. As a result of this,
 semantic and information"=structural notions entered certain flavors of syntax in the GB/Minimalism
-framework. For example, approaches in the tradition of \citet{CR2010a} assume phrases called Topic
+framework. For example, so-called Cartographic approaches in the tradition of \citet{CR2010a} assume phrases called Topic
 Phrase or Focus Phrase although these phrases are simply clausal projections. So, in ``normal''
 syntax they would be verb phrases (VPs) or sentences
 (S). Figure~\ref{Abbildung-Remnant-Movement-Satzstruktur} shows an (abbreviated) analysis of a German clause in this
@@ -1748,7 +1778,7 @@ Subject
 and object are grammatical functions. 
 Frameworks like Lexical Functional Grammar use grammatical
 functions as primitives of their theories. They state formally that a certain phrase is the subject or object
-of a head, but they do not assume Subject Phrases or Object Phrases. For more on \citeauthor{CR2010a} style analyses and part of speech information see \citew[Section~4.6.1.1]{MuellerGT-Eng4}.
+of a head, but they do not assume Subject Phrases or Object Phrases. For more on \citeauthor{CR2010a} style analyses and part of speech information see \citew[Section~4.6.1.1]{MuellerGT-Eng5}.
 \begin{figure}
 \oneline{%
 \begin{forest}
@@ -1784,6 +1814,10 @@ where n children=0{delay=with unaligned translation}{}
 \caption{\label{Abbildung-Remnant-Movement-Satzstruktur}Analysis of sentence structure with functional heads following \citet[\page 224]{Laenzlinger2004a}}
 \end{figure}%
 
+The labels of the nodes are created according to the specifier and not to the most important element
+in the phrase. For example, the Subject Phrase is called Subject Phrase since a DP in its specifier
+position is the subject of the clause. Similarly Topic Phrases are called Topic Phrases since the DP
+in the specifier position is a topic. 
 In comparison to so-called Cartographic approaches, the model of syntax argued for in this book is very simple: categories stand for linguistic objects
 with certain properties that belong to the same distribution class. For example an NP with masculine
 gender in the third person singular (\ref{ex-np-tisch}) or an \nbar with feminine gender in the third person
@@ -1795,6 +1829,158 @@ respect to \citegen{Cinque99a-u} adverb analysis in Section~\ref{sec-funct-proj-
 before going into adverbs in general, I examine a specific case in Section~\ref{sec-NegP}: negation
 analyses with a Negation Phrase. Section~\ref{sec-ConjP} deals with Cartography and coordination in
 general and with approaches to coordination assuming a Conjunction Phrase in particular.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Information structure projections}
+
+Figure~\ref{Abbildung-Remnant-Movement-Satzstruktur} shows \citegen[\page 224]{Laenzlinger2004a} approach with a Topic Phrase at the
+beginning of the \mf. Similar suggestions were made by \citet[\page 485, 495]{MS93a-u}, \citet{Haftka95a}, \citet{Frey2004b-u} and
+\citet[\page 87]{Grewendorf2005a-u}. The assumption is that topics
+are initial in the \mf and that they are moved to the specifier position of a designated phrase. To
+falsify these approaches it is sufficient to point to the problems resulting from movement and
+reconstruction in terms of scope that were discussed in Section~\ref{sec-cp-tp-vp} with respect to TP–VP
+approaches. But Cartographic approaches face further problems, some of which will be
+discussed here.
+
+The analysis suggested in this chapter is based on ``pure syntax uncontaminated by information
+structure'' (to quote the title of a paper by \citealt{Fanselow2006a}). Syntax is a system of
+well-formedness constraints that is independent of the context of an utterance \citep{Fanselow2006a}\addpages. Information
+structure is context dependent. HPSG approaches to scrambling go back to \citet{Gunji86a} in assuming
+the view more recently expressed by \citet{Fanselow2003b,Fanselow2006a}, \citet{NK2008a-u}, \citet[\page 3]{Struckmeier2017a} and \citet{Haider2021a}: syntax is
+about distribution of material and category formation. Information structure constraints can be
+stated with respect to syntactic structure \citep{EV94a,EV96a,DeKuthy2021a} and to prosodic information, but the three components are
+not conflated. Topic and focus are not syntactic categories.  
+
+
+
+\citet{Fanselow2006a} pointed out that Frey's view that there is a designated
+position for sentence adverbials and topics have to move to a position left to it is considerably
+weakened by the existence of sentences with NPs between two sentence adverbs as in (\mex{1}):
+\ea
+\longexampleandlanguage{
+\gll Ich denke, dass wahrscheinlich mindestens zwei leider       ihren Vortrag absagen werden.\\
+     I   think  that probably       at.least   two unfortunately their talk    cancel  will\\
+\glt `I think that probably at least two will cancel their talks, unfortunately.'}{German}
+\z
+Frey notices these examples and says that these are unproblematic for his account since
+\emph{mindestens zwei} `at least two' is not a topic. But, as Fanselow points out, this means that there is a way
+to have non-topic NPs precede sentence adverbials and this makes sentences like (\mex{1}) with a topic to the left of a
+sentential adverb ambiguous: they can be analyzed as sentences with an NP in the specifier position
+of the Topic Phrase or as sentences with an NP adjoined to a projection hosting the sentential
+adverb (similar to the adjunction to TP in Figure~\ref{fig-cp-tp-vp-scrambling}).
+\ea
+\gll Ich denke, dass Julia leider        ihr Hund gebissen hat.\\
+     I   think  that Julia unfortunately her.\textsc{nom} dog bitten has\\\german
+\glt `I think that unfortunately, her dog bit Julia.'
+\z
+
+\noindent
+Similarly, non-referential quantified DPs can be placed to the left of sentence adverbs:
+\ea
+\longexampleandlanguage{
+\gll dass sie wen aus Hamburg wahrscheinlich / leider nicht heiraten würde\\
+     that she one from Hamburg probably      {} unfortunately not marry would\\
+\glt `Probably/unfortunately, she would not marry anybody from Hamburg.'}{German}
+\z
+Fanselow concludes that the existence of such examples undermine the predictive power of
+Cartographic approaches and that one could simply assume a more traditional scrambling approach
+using adjunction but avoiding information structural phrasal categories.
+
+\citet{Fanselow2006a} also points out that topics do not have to be placed in front of the sentence
+adverbs. One situation in which this is possible is the presence of a sentence adverb next to a
+narrow focus. In such situations, the topic is not in the way and fronting is unnecessary. (\mex{1})
+is Fanselow's example:
+\ea
+Gibt's was neues über das Stadtschloss? ``Any news about the city castle?''\\
+\gll Laut dem Bürgermeister wird man wahrscheinlich in Zukunft nur am SAMSTAG dieses Gebäude besichtigen können.\\ 
+     according the mayor will one probably in future only on Satursday this building visit can\\
+\glt `According to the mayor, one will only be able to visit that building on Saturdays in the future.'
+\z
+
+\noindent
+I already discussed examples in which the arguments are not sufficiently case marked for
+disambiguation. In such situations scrambling is strongly dispreferred. See example (\ref{ex-sie-mischt-dem-wein-wasser-bei}) on p.\,\pageref{ex-sie-mischt-dem-wein-wasser-bei}. Interestingly, this means
+that topics can stay in their normal positions despite being topics, as \citet{Fanselow2006a}
+pointed out:
+\ea
+Was schreiben die Zeitungen über Prinzessin Julia? ``What do the papers write about princess Julia?''\\
+\gll Der Hofkurier     schreibt, dass leider        erneut eine Maklerin    die Prinzessin um 100.000 Euro betrogen hat.\\
+     the Court.Courier writes    that unfortunately again  a    broker.\F{} the princess   by 100,000 Euro cheated has\\
+\glt `The Court Courier writes that unfortunately a broker cheated the princess once more out of 100,000 Euro.'
+\z
+\emph{Eine Maklerin} and \emph{die Prinzession} are both feminine NPs and both could be nominative or
+accusative. If the NP \emph{die Prinzessin} is palced to the left of \emph{eine Maklerin}, the reading changes so that the princess cheated the
+broker. In this situation, the topic \emph{die Prinzessin} `the princess' stays in its unmarked position to the right of the
+sentence adverb \emph{leider} `unfortunately'. 
+
+The examples discussed so far show that elements to the left of
+sentence adverbs do not have to be topics and that topics may not move that is they may stay to the
+right of the sentence adverb. It follows that the assumption of Topic positions in the clause is not
+really helpful and scrambling should be explained uniformly as a purely syntactic phenomenon.
+
+Before turning to functional adverbial projections in the next section, let us have a brief look at
+another problem with information structure in the Cinque \& Rizzi world \citep[\page
+297]{Rizzi97a-u}: several analyses of the left
+periphery assume that the \vf consists of Topic and Focus Phrases \parencites[\page 85,
+240]{Grewendorf2002a}[\page 87, 93]{Grewendorf2005a-u}{Grewendorf2009a}. \citet[\page
+87]{Grewendorf2005a-u} explicitly states that the Topic and Focus projections in the \mf are the same
+as in the \vf. According to him, the order in the \mf is as given in (\mex{1}) and Topic – Focus –
+Topic is the order that \citet[\page 297]{Rizzi97a-u} and \citet[\page 240]{Grewendorf2002a} assume for the left periphery of
+main clauses. 
+\ea
+C0 – Topic – Focus – Topic – sentence adverbial – subject
+\z
+If these phrase categories have anything to do with distribution and complementizers can combine with
+Topic Phrases as in Figure~\ref{Abbildung-Remnant-Movement-Satzstruktur}, then it follows that
+complementizers like \emph{dass} can be combined with the Topic Phrases that are parts of V2 sentences as for
+example (\mex{1}a). However, examples like (\mex{1}b) are ungrammatical.
+\eal
+\ex[]{
+\gll Den Roman hat Peter gelesen.\\
+     that the novel has Peter read\\\german
+\glt `Peter has read the novel.´
+}
+\ex[*]{
+\gll dass den Roman hat Peter gelesen\\
+     that the novel has Peter read\\
+\glt intended: `that Peter has read the novel´
+}
+\zl
+So phrases in the \mf with a topic in the specifier position crucially differ from phrases with a
+topic in specifier position that are part of a V2 clause. This is not captured by Cartographic approaches unless one assumes
+different syntactic categories for the respective phrases. Something like VF Topic Phrase and MF
+Topic Phrase, a rather ad hoc move to fix an otherwise inappropriate grammatical system. 
+
+\citet{Fanselow2006a} also has a look at fronted NPs in V2 sentences. According to Cartographic
+approaches the fronted elements should be topics or foci. However, the sentence in (\mex{1}) can be
+the answer to the question \emph{What have you done this morning?}.
+\ea
+\gll Ein Buch hab  ich gelesen.\\
+     a.\ACC{}   book have I.\NOM{}   read\\\german
+\glt `I've read a book.'
+\z
+The fronted NP \emph{ein Buch} `a book' is a part of the focus \emph{ein Buch gelesen} `a book read'
+rather than the complete focus. 
+
+Similarly, Fanselow's example in (\mex{1}) has a part of an idiom
+fronted:
+\ea
+\gll Den Nagel hat er auf den Kopf getroffen, als  er sagte, dass \ldots. \\
+     the.\ACC{} nail  has he.\NOM{} on  the head hit        when he.\NOM{} said   that\\
+\glt `He found the optimal expression when he said that \ldots'
+\z
+The fronted material does not contribute any meaning. It is neither the topic nor the focus of the
+utterance.
+
+I conclude with \citet{Fanselow2006a} that information structure categories should not be part of
+the syntax. Scrambling provides various constituent orders and creates structures that can be combined
+with constraints on prosody and information structure.
+
+The next two subsections deal with adverbs. We first look at negation and its Cartographic treatment
+and then at Rizzi-style analyzes of adverbs in the German \mf.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1840,9 +2026,8 @@ negation particles are not heads but adjuncts. See \citew{KS2002a} and \citew[Se
 The next subsection deals with Cinque's theory of adverbs in general. It examines similar problems
 of category labeling and selection.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Functional projections hosting an adverb in their specifier position}
 \label{sec-funct-proj-and-adverbs}
@@ -1994,7 +2179,15 @@ category that is determined by the lexical head (noun, verb, adjective) and a se
 determined by the functional head (determiner, I or T, or any of the \citeauthor{CR2010a}
 categories).\footnote{
 This idea is actually much older. Klaus Netter suggested an analysis of the DP in German assuming
-\textsc{major} and \textsc{minor} head features \citep[Section~9.3.1]{Netter94}.}  
+\textsc{major} and \textsc{minor} head features \citep[Section~9.3.1]{Netter94}.
+\textcites[\page 134]{Wolfe2015a-u}[\page 289]{Wolfe2016a-u} suggested the phrasal C hierarchy in (i): 
+\ea
+C\sub{Frame} > C\sub{Force} > C\sub{Top} > C\sub{Foc} > C\sub{Fin}
+\z
+These categories are closer to traditional conceptions of phrase structure systems. Of course, the
+approach is not fully formalized. So it remains unclear what the predictions with respect to
+coordination and other phenomena are.
+}
 
 
 Figure~\ref{fig-the-president-DP} may serve as an example. It shows the analysis of the phrase \emph{the president} in the DP
@@ -2039,7 +2232,7 @@ note two things: firstly, there is a much simpler -- and I would argue more appr
 Section~\ref{sec-Cinque-solution}) and secondly, the solution does not solve problems with coordination to be discussed in
 more detail in Section~\ref{sec-ConjP}.
 
-As a teaser for the section on corrdination consider the example in (\mex{1}), which shows that verb phrases with different adverbials may be coordinated:
+As a teaser for the section on coordination consider the example in (\mex{1}), which shows that verb phrases with different adverbials may be coordinated:
 \ea
 Kim [unfortunately sang a song] and [allegedly ruined the evening].
 \z
@@ -2065,12 +2258,12 @@ here -- is semantic or information"=structural information within part of speech
 %This is a special case of what has been discussed above with respect to NegP.
 
 
-
 % 31.03.22
 % Man könnte F-AdvP-prf und F-Adv-P-bse für die verschiedenen Zwichenpositionen annehmen. Das wäre
 % aber wohl offensichtlicher Irrsin.
 
-For more on \citeauthor{CR2010a}-style analyses and the locality of selection see \citew[Section~4.6.1.3]{MuellerGT-Eng4}.
+For further criticism of Cartographic approaches to scrambling see \citew{Struckmeier2017a} and \citew{Haider2021a}.
+For more on \citeauthor{CR2010a}-style analyses and the locality of selection see \citew[Section~4.6.1.3]{MuellerGT-Eng5}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2263,9 +2456,6 @@ to interact properly with approaches to coordination. While there may be ways to
 problems, it is clear that the traditional approach to syntax does not have such problems and is
 simpler and hence has to be preferred on Occamian grounds.
 
-\itdopt{
-Read \citet{Haider2021a-u}. 
-}
 
 \exercises{
 
@@ -2287,7 +2477,7 @@ Read \citet{Haider2021a-u}.
 \zl
 If you are uncertain as far as case assignment is concerned, you may use the Wiktionary: \url{https://de.wiktionary.org/}.
 
-\item Draw trees for the NPs that were also used in exercise~\ref{exercise-NP-PSG} on page~\pageref{exercise-NP-PSG} in Chapter~\ref{chap-psg}.
+\item Draw trees for the NPs that were also used in Exercise~\ref{exercise-NP-PSG} on page~\pageref{exercise-NP-PSG} in Chapter~\ref{chap-psg}.
 \eal
 \ex 
 \gll eine Stunde vor der Ankunft des Zuges\\
