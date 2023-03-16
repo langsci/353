@@ -31,7 +31,9 @@
 
 % load memoize before german.sty
 
-\usepackage{nomemoize} 
+%\usepackage{nomemoize} 
+\usepackage{memoize} % The figures have been created with an earlier version of texlive. Recreating
+                     % them changes the layout of the pages, so we have to rely on them. Unless ... 16.03.2023
 %\memoizeset{readonly}
 % see below for further settings
 
@@ -59,13 +61,13 @@
 % \renewcommand{\addglosses}{}
 
 
-\bibliography{germanic}
-%\bibliography{bib-abbr,biblio-xdata-en,biblio}
+%\bibliography{germanic}
+\bibliography{bib-abbr,biblio-xdata-en,biblio}
 
 
 \input germanic-include
 
-
+\end{document}
 
 %%% Local Variables:
 %%% TeX-command-extra-options: "-shell-escape"

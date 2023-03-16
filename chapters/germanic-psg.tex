@@ -238,7 +238,8 @@ The rules for replacing determiners and nouns are simply applied in a different 
 
 At this juncture, I should point out that the grammar in (\ref{bsp-grammatik-psg}) is not the only possible grammar for the example sentence in
 (\ref{bsp-weil-er-das-buch-dem-mann-gibt}). There are an infinite\label{page-unendlich-viele-grammatiken} number of possible grammars which could
-be used to analyze these kinds of sentences (see \citealt[Chapter~2, Exercise~1]{MuellerGT-Eng}). Another possible grammar is given in (\mex{1}):
+be used to analyze these kinds of sentences (see \citealt[Chapter~2,
+Exercise~1]{MuellerGT-Eng}). Another possible grammar is the following one:
 
 \ea\label{psg-binaer}
 \begin{tabular}[t]{@{}l@{ }l@{}}
@@ -423,9 +424,14 @@ These are inflectional classes for adjectives which are also relevant for some n
 \gll ein Beamter,     der Beamte\\
      a civil.servant~~ the civil.servant\\\jambox{(inflectional class)}
 \zl
-Instead of the rule NP $\to$ Det N, we will have to use rules such as those in (\mex{1}):\footnote{%
+\largerpage
+Instead of the rule NP $\to$ Det N, we will have to use rules such as those in (\mex{1}).\footnote{%
   To keep things simple, these rules do not incorporate information regarding the inflection class.
 }
+(\mex{1}) shows the rules for nominative noun phrases. We would need analogous rules for genitive,
+dative, and accusative. We would then require 24 symbols for determiners ($3*2*4$), 24 symbols for nouns and
+24 rules rather than one. If inflection class is taken into account, the number of symbols and the
+number of rules doubles.\is{agreement|)} 
 \ea
 %\resizebox{\linewidth}{!}{
 \begin{tabular}[t]{@{}l@{ }l@{~~}l}
@@ -437,10 +443,11 @@ NP\_3\_pl\_nom  & $\to$ Det\_mas\_pl\_nom & N\_mas\_pl\_nom \\
 NP\_3\_pl\_nom  & $\to$ Det\_neu\_pl\_nom & N\_neu\_pl\_nom \\
 \end{tabular}
 \z
-(\mex{0}) shows the rules for nominative noun phrases. We would need analogous rules for genitive,
-dative, and accusative. We would then require 24 symbols for determiners ($3*2*4$), 24 symbols for nouns and
-24 rules rather than one. If inflection class is taken into account, the number of symbols and the
-number of rules doubles.\is{agreement|)} 
+% moved before the example because of layout
+% (\mex{0}) shows the rules for nominative noun phrases. We would need analogous rules for genitive,
+% dative, and accusative. We would then require 24 symbols for determiners ($3*2*4$), 24 symbols for nouns and
+% 24 rules rather than one. If inflection class is taken into account, the number of symbols and the
+% number of rules doubles.\is{agreement|)} 
 
 \section{Expanding PSG with features}
 \label{sec-PSG-Merkmale}
@@ -468,6 +475,7 @@ NP(3,sg,nom)  & $\to$ Det(fem,sg,nom) N(fem,sg,nom)\\
 NP(3,sg,nom)  & $\to$ Det(mas,sg,nom) N(mas,sg,nom)\\
 \end{tabular}
 \z
+\largerpage
 If we were to use variables rather than the values in (\mex{0}), we would get rule schemata as the
 one in (\mex{1}):
 \ea
@@ -677,6 +685,7 @@ we will also discuss prepositional phrases.
 \subsection{Noun phrases}
 \label{sec-psg-np}
 
+\largerpage
 Up to now, we have assumed a relatively simple structure for noun phrases: our rules state that a noun phrase consists of a determiner and a
 noun. Noun phrases can have a distinctly more complex structure than (\mex{1}a). This is shown by the following examples in (\mex{1}):
 \eal
@@ -730,6 +739,7 @@ a rule such as the one in (\mex{1}b).\footnote{%
 \ex NP $\to$ Det N
 \ex NP $\to$ Det A N
 \zl
+\largerpage[2]
 However, this rule would still not allow us to analyze noun phrases such as (\mex{1}):
 \ea
 \label{Beispiel-alle-weitern-schlagkraeftigen-Argumente}
@@ -764,7 +774,8 @@ that the adjective and noun form a unit.
 %The noun phrases with adjectives discussed thus far can be captured by the following rules:
 %
 % Shorter for layout:
-The following rules capture the noun phrases with adjectives discussed thus far:
+%The following rules capture the noun phrases with adjectives discussed thus far:
+The rules in (\mex{1}) capture the noun phrases with adjectives discussed thus far:
 \eal
 \label{NP-Regeln}
 \ex NP $\to$ Det \nbar
@@ -772,6 +783,7 @@ The following rules capture the noun phrases with adjectives discussed thus far:
 \ex\label{NP-Regeln-Nbar-N} \nbar $\to$ N
 \zl
 
+\largerpage
 \noindent
 These rules state the following: a noun phrase consists of a determiner and a nominal element (\nbar). This nominal element
 can consist of an adjective and a nominal element (\mex{0}b), or just a noun (\mex{0}c). Since \nbar is also on the right"=hand side
@@ -839,6 +851,7 @@ We observe that this discourse can be continued with \emph{Aber alle kleinen gra
   side of the rule. This kind of rule is referred to as \emph{recursive}\is{recursion}.
 \is{adjunct|)}
 
+\largerpage
 We have now developed a nifty little grammar that can be used to analyze noun phrases containing
 adjectival modifiers. As a result, the combination of an adjective and a noun is given constituent
 status. One may wonder at this point if it would not make sense to also assume that determiners and
@@ -847,6 +860,7 @@ adjectives form a constituent, as we also have the following kind of noun phrase
 \gll diese schlauen und diese neugierigen Eichhörnchen\\
      these smart    and these curious     squirrels\\
 \z
+%\largerpage
 Here, we are dealing with a different structure, however. Two full NPs have been
 conjoined\is{coordination} and part of the first conjunct was not pronounced.\footnote{
   Note that one cannot claim that the second conjunct in (\ref{ex-alle-grossen-Seeelefanten-und}) is
@@ -959,7 +973,7 @@ sm edges
   \emph{vom Gleimtunnel} to the right with an adjunct PP}
 \end{figure}%
 
-
+\largerpage
 In addition to the previously discussed NP structures, there are other structures where the
 determiner or the noun is missing.
 Nouns can be omitted via ellipsis. (\mex{1}) gives an example of noun phrases where a noun that does not require a complement
@@ -1121,6 +1135,7 @@ sm edges
 \caption{\label{Abbildung-NP-ohne-Det}Noun phrases without overt determiner}
 \end{figure}%
 
+\largerpage
 It is necessary to add two further comments to the rules that were developed up to this point: up to now, I have
 always spoken of adjectives. However, it is possible to have very complex adjective phrases in pre"=nominal position.
 These can be adjectives with complements (\mex{1}a,b) or adjectival participles (\mex{1}c,d):
@@ -1179,6 +1194,7 @@ the rules in (\mex{1}), we will simply use the rules in (\mex{2}):
 with a complement. This is parallel to the categorization of the pronoun \emph{er} `he' as an NP in the grammars
 (\ref{bsp-grammatik-psg}) and (\ref{psg-binaer}).
 
+\largerpage[2]
 Assigning the category \nbar to nouns which do not require a complement has the advantage that we do not have to explain why the analysis in (\mex{1}b) is possible as well
 as (\mex{1}a) despite there not being any difference in meaning.
 \eal
@@ -1234,7 +1250,7 @@ PP $\to$ P NP
 This rule must, of course, also contain information about the case of the NP. I have omitted this for ease of exposition as I did
 with the NP"=rules and AP"=rules above.
 
-The Duden grammar \citep[\S 1300]{Duden2005-Authors} offers examples such as those in (\mex{1}), which show that certain prepositional phrases
+The Duden grammar \citep[§~1300]{Duden2005-Authors} offers examples such as those in (\mex{1}), which show that certain prepositional phrases
 serve to further define the semantic contribution of the preposition by indicating some measurement, for example:
 \eal
 \ex\label{Beispiel-Schritt-vor-dem-Abgrund} 
@@ -1449,6 +1465,7 @@ Structure Grammar\indexgpsg \citep{GKPS85a,Uszkoreit87a} and Lexical Functional 
 \citep{Bresnan82a-ed,BATW2016a}. In HPSG\indexhpsg, the theory assumed in this book, \xbar theory also plays
 a role, but not all restrictions of the \xbar schema have been adopted.
 
+\largerpage
 (\mex{1}) shows a possible instantiation of \xbar rules, where the category X has been used in place of N, as well as examples of word strings
 which can be derived by these rules:
 %\todostefan{martin meint ich solle hier NP statt Strichnotation verwenden}
@@ -1495,6 +1512,7 @@ and determiners are specifiers in NPs \citep[\page
 210]{Chomsky70a}. Furthermore, degree modifiers \citep[\page
 210]{Chomsky70a} in adjective phrases and measurement indicators in prepositional phrases are also counted as specifiers.
 
+\largerpage
 Non"=head positions can only host maximal projections and therefore complements, adjuncts and specifiers always have two bars. As already mentioned above,
 HPSG does not stick to the \xbart. For example, arguments maybe words or intermediate, non-complete
 phrases (see Chapter~\ref{chap-verbal-complex} about the verbal complex in Germanic SOV languages).  

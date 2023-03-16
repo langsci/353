@@ -12,8 +12,8 @@
                 ,babelshorthands
 %                ,showindex
                 ,newtxmath
-                ,colorlinks, citecolor=brown % for drafts
-                ,draftmode
+%                ,colorlinks, citecolor=brown % for drafts
+%                ,draftmode
 % 	        ,coverus
                 ,uniformtopskip
                 ,tblseight % to get the fonts for the Chinese title of GT
@@ -24,8 +24,9 @@
 \provideboolean{draft}
 \setboolean{draft}{false}
 
-\usepackage{etoolbox}
-\newtoggle{draft}\toggletrue{draft}
+%\usepackage{etoolbox}
+\newtoggle{draft}\togglefalse{draft}
+%\newtoggle{draft}\toggletrue{draft}
 
 \newtoggle{finished}\togglefalse{finished}
 
@@ -36,6 +37,7 @@
 
 % load memoize before german.sty
 
+%\usepackage{nomemoize} 
 \usepackage{memoize} 
 %\memoizeset{readonly}
 % see below for further settings
@@ -43,7 +45,7 @@
 \input{localmetadata.tex}
 \input{localpackages.tex}
 \input{localcommands.tex}
-
+\input{localhyphenation.tex}
 
 \input{locallangscifixes.tex}
 
@@ -105,11 +107,16 @@
 
 %\includeonly{tsdb-examples}
 
-%\bibliography{germanic}
+\bibliography{germanic} %\nocite{*}
 
-\bibliography{bib-abbr,biblio-xdata-en,biblio}
+
+%\bibliography{bib-abbr,biblio-xdata-en,biblio}
 
 \input germanic-include
+
+%\nocite{*}
+
+\end{document}
 
 
 %      <!-- Local IspellDict: en_US-w_accents -->

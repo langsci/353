@@ -147,7 +147,7 @@ todo-bib.unique.txt: germanic.bcf
 
 memos:
 	xelatex -shell-escape germanic
-	python3 styles/memoize/memomanager.py split germanic.mmz
+	python3 memomanager.py split germanic.mmz
 
 memo-install:
 	cp -pr ~/Documents/Dienstlich/Projekte/memoize/memoize* .

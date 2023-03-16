@@ -218,6 +218,12 @@ Figure~\ref{#1}\vpageref[]{#1} and Figure~\ref{#2} \vpageref{#2}}}%
 % draw a grid for getting the coordinates
 \usepackage{./styles/tikz-grid}
 
+% Adapted from https://tex.stackexchange.com/questions/255234/how-does-one-pick-control-points-to-control-b%C3%A9zier-curves-in-tikz
+% \DrawControl{(12,4)}{1}\DrawControl{(-4,4)}{2};  
+\newcommand\DrawControl[2]{
+  \node[circle,fill=red,inner sep=2pt,label={above:$#1$},label={[black]below:{\footnotesize#2}}] at #1 {};
+}
+
 % for offsets in trees
 %\newlength{\offset}
 %\newlength{\offsetup}
