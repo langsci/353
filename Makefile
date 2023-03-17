@@ -70,6 +70,17 @@ main.pdf: main.tex $(SOURCE)
 
 
 
+# just for quick comile and checking
+index: germanic.tex $(SOURCE)
+	xelatex germanic -shell-escape -no-pdf 
+	footnotes-index.pl germanic.ldx
+	footnotes-index.pl germanic.sdx
+	footnotes-index.pl germanic.adx 
+	makeindex -o germanic.and germanic.adx
+	makeindex -gs index.format -o germanic.lnd germanic.ldx
+	makeindex -gs index.format -o germanic.snd germanic.sdx 
+	xelatex -shell-escape germanic | egrep -v 'math|PDFDocEncod|\\mark' |egrep 'Warning|label'
+
 
 # http://stackoverflow.com/questions/10934456/imagemagick-pdf-to-jpgs-sometimes-results-in-black-background
 cover: germanic.pdf
@@ -148,6 +159,9 @@ todo-bib.unique.txt: germanic.bcf
 memos:
 	xelatex -shell-escape germanic
 	python3 memomanager.py split germanic.mmz
+
+languagecandidates:
+	ggrep -ohP "(?<=[a-z]|[0-9])(\))?(,)? (\()?[A-Z]['a-zA-Z-]+" chapters/*tex| grep -o  [A-Z].* |sort -u >languagelist.txt
 
 memo-install:
 	cp -pr ~/Documents/Dienstlich/Projekte/memoize/memoize* .
