@@ -676,6 +676,7 @@ which is given in Figure~\ref{fig-head-comp}.
 \end{forest}
 \caption{\label{fig-head-comp}Sketch of the Head-Complement\is{schema!Head-Complement} Schema (preliminary)}
 \end{figure}
+\largerpage
 The schema splits the \compsl of a head into an initial list with one element \iboxb{2}, which is
 realized as the complement daughter to the right.\footnote{%
   In principle, daughters are unordered in HPSG as they were in GPSG \citep{GKPS85a}. Special linearization rules are
@@ -840,7 +841,7 @@ But such a general schema without restrictions would also allow an analysis for 
 }
 \zl
 The structures licensed by the Head-Complement Schema without any restrictions are shown in \figuresref{fig-dem-kind-niemand-gab-ein-buch-head-comp}{fig-niemand-gab-dem-kind-ein-buch-head-comp}.
-\begin{figure}
+\begin{figure}[htb]
 \begin{forest}
 sm edges
 [{V[\comps \sliste{ }]},s sep+=1em
@@ -853,7 +854,7 @@ sm edges
 \caption{\label{fig-dem-kind-niemand-gab-ein-buch-head-comp}Unwanted analysis using the
   Head-Complement Schema without linearization constraints}
 \end{figure} 
-\begin{figure}
+\begin{figure}[htb]
 \begin{forest}
 sm edges
 [{V[\comps \sliste{ }]}
@@ -887,7 +888,7 @@ Chapter~\ref{chap-verb-position}.
 
 % erlier?
 %\cites{Haider2010a}
-\largerpage
+%\largerpage
 \citet[\page 342]{Haider2020a} claims that scrambling is only possible in
 head-final projections. If this claim is correct (at least for the
 languages under consideration here),\footnote{
@@ -1231,7 +1232,7 @@ sm edges
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[htb]
 \centerfit{%
 \begin{forest}
 sm edges
@@ -1254,7 +1255,7 @@ sm edges
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[htb]
 \centerfit{%
 \begin{forest}
 sm edges
@@ -1334,6 +1335,7 @@ sm edges
 \caption{\label{fig-vp-adj}Analysis of adjuncts in SVO languages: the adjunct is realized right-adjacent to the VP.}
 \end{figure}
 
+%\largerpage
 The values of \spr and \comps in the schema in Figure~\ref{fig-head-adj} on
 page~\pageref{fig-head-adj} have not been explained so far. First there is the sharing of the \spr
 and \compsvs between mother and head-daughter. Whatever element an adjunct attaches to, the valence
@@ -1357,6 +1359,7 @@ specify the \compsl of the adjunct daughter to be empty, a preposition could fun
 daughter and a structure for ungrammatical sentences like (\mex{0}) would be licensed by the
 grammar. 
 
+%\largerpage
 The specifier specification is as important as the specification of the \compsl. If non-empty \sprls
 were allowed, the contrast in (\mex{1}) could not be explained:
 
@@ -1406,6 +1409,7 @@ the selected arguments. For instance, the \argstl of \ili{English} \emph{give} a
 \ea
 \sliste{ NP, NP, NP }
 \z
+%\largerpage[2]
 The case systems of the languages in question vary a bit as will be explained in
 Chapter~\ref{chap-case}, but nevertheless the orders of the NPs in the \argstl are the same across these
 languages.\footnote{%
@@ -1428,11 +1432,12 @@ in \ili{English} (\mex{1}b):
 \glt `that the child gives the squirrel the nut'
 \ex that the child gives the squirrel the nut
 \zl
+\largerpage
 In addition to the syntactic features we have seen so far, semantic features are used to describe the
 semantic contribution of linguistic objects. (\mex{1}) shows some aspects of the description of the \ili{English} verb
 \emph{gives}:
 \ea
-lexical item for \emph{gives}:\\*
+Lexical item for \emph{gives}:\\*
 \ms{
 arg-st & \sliste{ NP\ind{1}, NP\ind{2}, NP\ind{3} }\\[2mm]
 cont   & \ms[give]{
@@ -1448,6 +1453,7 @@ identified with semantic roles of the verb \emph{give}. Finding reasonable role 
 and some authors just use \argone, \argtwo and \argthree to avoid the problems (see \citealp{Dowty91a}
 for discussion).
 
+\largerpage%[2]
 The representations for the other languages mentioned above is entirely parallel. Therefore it is
 possible to capture crosslinguistic generalizations.\footnote{
   See also \citegen[\page 14--15]{Haider2010a} Observation~3. The relative order of arguments in OV
@@ -1561,6 +1567,7 @@ sm edges
 \caption{\label{fig-cp-tp-vp}Sentence in the CP/TP/VP model}
 \end{figure}%
 
+\largerpage
 Such CP/TP/VP systems are motivated for \ili{English}, since auxiliary verbs and modals behave differently
 from main verbs. These verbs are assumed to be of category T. For finite verbs, T is assumed to hold
 inflectional affixes and the stem of the finite verb moves to T to ``check'' inflectional
@@ -1607,6 +1614,7 @@ sm edges
 \caption{\label{fig-cp-tp-vp-scrambling}Scrambling has to be movement in the CP/TP/VP model}
 \end{figure}%
 
+\largerpage
 While researchers like \citet[\page 185]{Frey93a} argued that quantifier scopings\is{quantification}\is{scope|(} are 
 evidence for movement-based approaches, they actually provide evidence against movement"=based approaches. Let us consider Frey's examples. Frey
 argues that sentences without movement have only one reading and sentences like (\mex{1}b) in which
@@ -1629,7 +1637,8 @@ approaches have problems with multiple moved constituents. For instance, in an e
 (\mex{1}), it should be possible to interpret \emph{mindestens einem Verleger} `at least one
 publisher' at the position of \_$_i$, which would lead to a reading where \emph{fast jedes Gedicht}
 `almost every poem' has scope over \emph{mindestens einem Verleger} `at least one
-publisher'. However, this reading does not exist.
+publisher'. However, this reading does not exist.%
+\largerpage
 
 
 \ea
@@ -1637,7 +1646,6 @@ publisher'. However, this reading does not exist.
      I believe that at.least one publisher almost every poem only this poet {} {} offered has\\
 \glt `I think that only this poet offered almost every poem to at least one publisher.'
 \z
-%\largerpage
 \noindent
 This means that one needs some way to determine the deviation with respect to an unmarked order, but
 movement is not the solution. See \citew[Section~3.5]{MuellerGT-Eng5} for further discussion and
@@ -1877,7 +1885,7 @@ stated with respect to syntactic structure \citep{EV94a,EV96a,DeKuthy2021a} and 
 not conflated. Topic and focus are not syntactic categories.  
 
 
-\largerpage
+%\largerpage
 \citet{Fanselow2006a} pointed out that Frey's view that there is a designated
 position for sentence adverbials and topics have to move to a position left to it is considerably
 weakened by the existence of sentences with NPs between two sentence adverbs as in (\mex{1}):
@@ -1911,7 +1919,7 @@ Fanselow concludes that the existence of such examples undermine the predictive 
 Cartographic approaches and that one could simply assume a more traditional scrambling approach
 using adjunction but avoiding information structural phrasal categories.
 
-\largerpage
+%\largerpage
 \citet{Fanselow2006a} also points out that topics do not have to be placed in front of the sentence
 adverbs. One situation in which this is possible is the presence of a sentence adverb next to a
 narrow focus. In such situations, the topic is not in the way and fronting is unnecessary. (\mex{1})
@@ -1928,6 +1936,7 @@ I already discussed examples in which the arguments are not sufficiently case ma
 disambiguation. In such situations scrambling is strongly dispreferred. See example (\ref{ex-sie-mischt-dem-wein-wasser-bei}) on p.\,\pageref{ex-sie-mischt-dem-wein-wasser-bei}. Interestingly, this means
 that topics can stay in their normal positions despite being topics, as \citet{Fanselow2006a}
 pointed out:
+\largerpage[2]
 \ea
 Was schreiben die Zeitungen über Prinzessin Julia? ``What do the papers write about princess Julia?''\\
 \gll Der Hofkurier     schreibt, dass leider        erneut eine Maklerin    die Prinzessin um 100.000 Euro betrogen hat.\\
@@ -1956,6 +1965,7 @@ main clauses.
 \ea
 C0 – Topic – Focus – Topic – sentence adverbial – subject
 \z
+\largerpage[2]
 If these phrase categories have anything to do with distribution and complementizers can combine with
 Topic Phrases as in Figure~\ref{Abbildung-Remnant-Movement-Satzstruktur}, then it follows that
 complementizers like \emph{dass} can be combined with the Topic Phrases that are parts of V2 sentences as for
@@ -1977,7 +1987,7 @@ topic in specifier position that are part of a V2 clause. This is not captured b
 different syntactic categories for the respective phrases. Something like VF Topic Phrase and MF
 Topic Phrase, a rather ad hoc move to fix an otherwise inappropriate grammatical system. 
 
-\largerpage
+%\largerpage
 \citet{Fanselow2006a} also has a look at fronted NPs in V2 sentences. According to Cartographic
 approaches the fronted elements should be topics or foci. However, the sentence in (\mex{1}) can be
 the answer to the question \emph{What have you done this morning?}.
@@ -2058,6 +2068,7 @@ of category labeling and selection.
 \label{sec-funct-proj-and-adverbs}
 \label{sec-major-minor-category}
 
+\largerpage
 It is claimed by \citeauthor{CR2010a} that the hierarchy of functional projections is the same across
 languages and in principle one could also imagine that this array of functional projections is 
 present in all languages and in all sentences even if some adverbs are not realized in a sentence or
@@ -2077,6 +2088,9 @@ Asp\sub{retrospective} [ \emph{soon} Asp\sub{proximative} [ \emph{briefly} Asp\s
 Asp\sub{SgCompletive(I)} [ \emph{tutto} Asp\sub{PICompletive} [ \emph{well} Voice [ \emph{fast}/\emph{early}
 Asp\sub{frequuentative(II)} [ \emph{completely} Asp\sub{SgCompletive(II)}
 \z 
+
+\largerpage
+\noindent
 Starting with some of the functional heads from the top of this hierarchy, all sentences in all
 languages are claimed to have structures as in Figure~\ref{fig-cinque-top} as part of their clausal structure.
 \begin{figure}[t]
@@ -2115,10 +2129,11 @@ like case, gender and even nationality \parencites[\page 96, 99, 100]{Cinque94a-
 dubious. But even if one follows \citeauthor{CR2010a}, the fixed battery of functional projections
 approach does not work without further add-ons, as the following example from
 \citet[\page 210]{Haider2022a} based on \citew[§ 8.20, 495]{QGLS85a-u} shows:
-\largerpage
+
 \eanoraggedright
 The new theory certainly may possibly have indeed been badly formulated.
 \z
+\largerpage
 The point here is that adverbs of the same type appear at various places in the sentence. They are
 attached to VPs whose heads differ in their verb forms. These verb forms are selected by the governing
 head. Figure~\ref{fig-verbal-selection} shows the structure assumed in this book.
@@ -2407,7 +2422,7 @@ The point is clear: a coordination has to reflect both the functional category a
 category of the conjunctions (as \citealt[\page 122]{Grimshaw2000a} pointed out). Making this information
 available is impossible if information about a conjunction is projected instead.
 
-\largerpage
+%\largerpage
 Note also that the example in (\ref{ex-coordination-NegP}) shows that the assumption that a negated VP is a VP rather
 than a NegP provides a simple analysis of coordination: it is just VPs that are coordinated and
 hence (\ref{ex-coordination-NegP}) is an instance of symmetric coordination. In a NegP approach, more would have to be
@@ -2430,7 +2445,7 @@ Now, consider the sentence in (\mex{1}):
 \ea
 She [probably goes by train] and [possibly changes in Ostkreuz].
 \z
-\largerpage
+%\largerpage
 In the theory developed in this book, \emph{probably goes by train} and \emph{possibly changes in
   Ostkreuz} are VPs. They can be coordinated with unmodified VPs or with VPs modified with any of
 the adjuncts listed in (\ref{ex-adjunct-hierarchy}). But according to \citeauthor{Cinque99a-u} these phrases
