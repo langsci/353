@@ -181,6 +181,7 @@ install:
 	cp -p ${STYLE-PATH}fixcitep.sty  styles/
 	cp -p ${STYLE-PATH}eng-date.sty   styles/
 	cp -p ${STYLE-PATH}oneline.sty   styles/
+	cp -p ${STYLE-PATH}my-theorems.sty   styles/
 	cp -p ${STYLE-PATH}Ling/article-ex.sty           styles/
 	cp -p ${STYLE-PATH}Ling/merkmalstruktur.sty      styles/
 	cp -p ${STYLE-PATH}my-xspace.sty            styles/
