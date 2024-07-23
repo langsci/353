@@ -293,15 +293,19 @@ help' that take a nominative and a dative are ruled out in this construction:
 \ex 
 \gll dass jemand ihm hilft\\
      that somebody him.\DAT{} helps\\\german
+\glt `that somebody helps him'
 \ex
 \gll dass jemand ihn unterstützt\\
      that somebody him.\ACC{} supports\\
+\glt `that somebody supports him'
 \ex
 \gll  dass ihm geholfen wird\\
       that him.\DAT{} helped \AUX\\
+\glt `that he is helped'
 \ex
 \gll  dass er unterstützt wird\\
       that he.\NOM{} supported \AUX\\
+\glt `that he is supported'
 \zl
 
 \eal
@@ -485,6 +489,7 @@ The following two examples from \ili{Icelandic} show that \ili{Icelandic} also h
 \ex 
 \gll Oft var   talað      um   þennan mann.\\
      often was talked about this Mann.\ACC.\SG.\M\\\icelandic
+\glt `This man was often talked about.'
 \ex
 \gll Aldrei hefur verið    sofið      í  þessu  rúmi.\\
      never    has   been slept in this bed.\DAT\\
@@ -514,7 +519,24 @@ that it requires an expletive\is{pronoun!expletive} subject:
 \zl
 Thus, \ili{Danish} is like \ili{English} in always requiring a subject, but, while this constraint results in the
 impossibility of impersonal passives in \ili{English}, \ili{Danish} found a solution to the subject problem by
-inserting an expletive.
+inserting an expletive. Interestingly, this solution is part of a more general ``strategy'' of
+expletive insertion. Danish allows the insertion of expletives to various types of verbs, provided
+they do not have a direct object. So passive verbs and intransitive verbs can be combined with
+expletives.
+\eal
+\ex 
+\gll at    der    ikke går   en mand på gaden\\
+     that \expl{} not  walks a  man  in street.\textsc{def}\\
+\ex 
+\gll at   der     ikke kommer to  nye medarbejdere\\
+     that \expl{} not  come   two new employees\\
+\ex
+\gll at   der     ikke venter nogle hårde forhandlinger\\
+     that \expl{} not  wait   some  tough negotiations\\
+\zl
+The examples in (\mex{0}) are embedded clauses with negations, which shows that the expletive is not
+fronted in a V2 clause but that we really have an expletive in subject position here.
+
 
 Expletives\is{pronoun!expletive} are excluded in \ili{German} impersonal constructions:
 \nocite{MOe2011a}
@@ -916,14 +938,15 @@ that some are lexical and others are structural
 %Molnarfi98a} muss noch kopiert werden
 
 I follow \citet{Haider86} and treat all datives as lexical cases. Under this assumption, the
-contrast in Haider's examples \citeyearpar[\page 20]{Haider86} in (\mex{1}) is explained immediately:
+contrast in the examples in (\mex{1}) is explained immediately \citep[\page 20]{Haider86}:
+% Haider hat andere Beispiele
 \eal
 \ex[]{
 \gll Er streichelt den Hund.\\
      he.\NOM{} strokes the.\ACC{} dog\\
 }
 \ex[]{
-\gll Der        Hund wurde  gestreichelt.\\
+\gll Der        Hund wird  gestreichelt.\\
      the.\NOM{} dog  \AUX{} stroked\\
 }
 \ex[]{
@@ -936,7 +959,7 @@ contrast in Haider's examples \citeyearpar[\page 20]{Haider86} in (\mex{1}) is e
      he helps the.\DAT{} children\\
 }
 \ex[]{
-\gll Den        Kindern  wurde  geholfen.\\
+\gll Den        Kindern  wird  geholfen.\\
      the.\DAT{} children \AUX{} helped\\
 }
 \ex[]{
@@ -1824,10 +1847,96 @@ arg-st & \ibox{2} \\
 \z
 This rule splits the \argstl of the input into two lists \ibox{1} and \ibox{2}. \ibox{1} is
 identical to the \dav. Therefore the designated argument is taken off the \argstl and is not present
-in the lexical item that is licensed by the rule.
+in the lexical item that is licensed by the rule. The lexical rule maps a \type{stem} to a
+\type{word}. For example, \stem{geb} `give-' is mapped to the participle \emph{gegeben} `given'. To
+keep things simple, the mapping of phonological information is not shown in the rule in
+(\mex{0}). %I will provide phonological information under \phon in the figures below. 
+The lexical rule creates new lexical items. It applies to stems that are listed in the lexicon and
+stems that are licensed by other lexical rules. For example, \stem{geb} `give' and \stem{säg} `to
+saw' are listed in the lexicon. The stem for \stem{zersäg} is derived from \stem{säg} by another
+lexical rule that adds the prefix \prefix{zer}. This stem can be input to the passivization lexical
+rule, which then outputs the participle form \emph{zersägt} as used in (\mex{1}c).
+\eal
+\ex 
+\gll Aicke sägt.\\
+     Aicke saws\\\german
+\glt `Aicke saws.'
+\ex
+\gll Aicke zersägt den Baum.\\
+     Aicke \textsc{prefix}.saws the.\ACC{} tree\\
+\glt `Aicke saws up the tree.'
+\ex
+\gll Der Baum wurde zersägt.\\
+     the.\NOM{} tree \AUX{}   \textsc{prefix}.sawed\\
+\glt `The tree was sawed up.'
+\zl
+Lexical rules as assumed here are fully integrated into HPSG and they can be depicted as unary
+branching trees. See \citet{Meurers2000b} and \citet{BC99a} for the technical details. Note that every node in the trees given in this book comes with its own
+phonological information. This deviates from normal phrase structure grammars where only the
+phonological information at the very bottom of the trees (the leaves) is relevant and the complete tree stands
+for a concatenation of all the phonological information of the leaves. Figure~\ref{fig-LR-as-tree}
+shows the tree representation for the mapping from the stem \stem{säg} via \stem{zersäg} to the
+passive participle \emph{zersägt}. Structure sharings are omitted to keep things readable.
 
+\begin{figure}
+%\vfill
+% \begin{forest}
+% %sm edges
+% [{\ms[word]{\phon  & \phonliste{ given }\\[2mm]
+%             \spr   & \sliste{ NP[\str]$_j$ }\\[2mm]
+%             \comps & \sliste{ NP[\type{lacc}]$_k$ }\\[2mm]
+%             \argst & \sliste{ NP[\str]$_j$, NP[\type{lacc}]$_k$ }}}
+%           [{\ms[stem]{
+%             \phon  & \phonliste{ give }\\[2mm]
+%             \da    & \sliste{ NP[\str]$_i$ }\\[2mm]
+%             \argst & \sliste{ NP[\str]$_i$, NP[\str]$_j$, NP[\type{lacc}]$_k$ }}}]]
+% \end{forest}
+\hfill
+%\scalebox{.8}{%
+\begin{forest}
+%sm edges
+[{\ms[stem]{\phon  & \phonliste{ gesägt }\\[2mm]
+            \da    & \sliste{ NP[\str]$_i$ }\\[2mm]
+            \argst & \sliste{ }}}
+       [{\ms[stem]{
+         \phon  & \phonliste{ säg }\\[2mm]
+         \da    & \sliste{ NP[\str]$_i$ } \\[2mm]
+         \argst & \sliste{ NP[\str]$_i$ } }}]]
+\end{forest}%}
+\hfill
+%\scalebox{.8}{%
+\begin{forest}
+%sm edges
+[{\ms[word]{\phon  & \phonliste{ zersägt }\\[2mm]
+            \da    & \sliste{ NP[\str]$_i$ }\\[2mm]
+%            comps  & \sliste{ NP[\str]$_j$ }\\
+            \argst & \sliste{ NP[\str]$_j$ }}}
+   [{\ms[stem]{\phon  & \phonliste{ zersäg }\\[2mm]
+               \da    & \sliste{ NP[\str]$_i$ }\\[2mm]
+               \argst & \sliste{ NP[\str]$_i$, NP[\str]$_j$ }}}
+          [{\ms[stem]{
+            \phon  & \phonliste{ säg }\\[2mm]
+            \da    & \sliste{ NP[\str]$_i$ } \\[2mm]
+            \argst & \sliste{ NP[\str]$_i$ } }}]]]
+\end{forest}%}
+\hfill\mbox{}
+\caption{Application of the Passive Lexical Rule depicted as tree, left side for an intransitive
+  verb, right side in interaction with the \prefix{zer} Prefixation Lexical Rule, which maps an
+  intransitive to a transitive verb}\label{fig-LR-as-tree}
+\end{figure}
 
-The \argstl of the participle that is licensed is either empty (\mex{1}a) or starts with an object of the active form:
+% 21.07.2024: seems to complicated.
+There is a convention that information that is not mentioned in lexical rules is taken
+over from the input to the output of the lexical rule unchanged. For our example above, this would
+mean that semantic information is taken over unchanged. See p.\,\pageref{le-gives} for the
+representation of semantic contributions. 
+% The bottom-most
+% nodes in the tree (the leaves) are lexical entries for stems and the participle forms are derived by
+% lexical rules and the new phonology values are provided at the licensed lexical items.
+
+Let us turn to some prototypical verbs and the results of the Passivization Lexical Rule: the
+\argstl of the participle that is licensed is either empty (\mex{1}a) or starts with an object of
+the active form: 
 \ea
 \label{partizipien-hm}
 %\resizebox{\linewidth}{!}{%
@@ -1851,6 +1960,7 @@ hence the accusative object of \emph{lesen} in (\mex{1}a) is realized as nominat
      the.\NOM{} paper   \AUX{} read\\
 \zl
 
+\noindent
 \ili{English} differs from \ili{German} in not having a dative case at all. I am talking about morphological
 markings here, not about semantics. Therefore, both objects of \ili{English} ditransitive verbs are
 accusative objects. However, only one of the objects can be promoted to subject. This is modeled in
@@ -2083,7 +2193,26 @@ subjectless construction will result.
 
 \ili{English} does not allow for impersonal passives as it requires an NP or a sentential argument that
 can serve as a subject. \ili{Danish} requires a subject as well, but allows for impersonal
-constructions. The trick that \ili{Danish} employs is the insertion of an expletive\is{pronoun!expletive}. I assume that the
+constructions. The trick that \ili{Danish} employs is the insertion of an
+expletive\is{pronoun!expletive}. The interesting thing is that the expletive can be inserted for all
+verbs that do not govern an object. That is passives like the example in (\ref) and intransitive
+verbs like those in (\mex{1}) can have an expletive subject and all the other arguments are realized
+postverbally.
+\eal
+\ex 
+\gll at    der    ikke går   en mand på gaden\\
+     that \expl{} not  walks a  man  in street.\textsc{def}\\\danish
+\ex 
+\gll at   der     ikke kommer to  nye medarbejdere\\
+     that \expl{} not  come   two new employees\\
+\ex
+\gll at   der     ikke venter nogle hårde forhandlinger\\
+     that \expl{} not  wait   some  tough negotiations\\
+\zl
+The examples in (\mex{0}) are embedded clauses with negations, which shows that the expletive is not
+fronted in a V2 clause but that we really have an expletive in subject position here.
+
+I assume that the
 expletive insertion happens during the mapping of the \argst elements to \spr and \comps. If there
 is an NP/VP/CP at the beginning of the \argstl, it is mapped to \spr and all other elements are
 mapped to \comps. If there is no element that can be mapped to \spr, an expletive is inserted.%
@@ -2167,8 +2296,8 @@ arguments of the participle (\ibox{1} and \ibox{2}) are attracted by the passive
 \citep{HN89a,HN94a}. 
 %The Verbal Complex Schema allows the combination of the auxiliary with an unsaturated
 %non-head daughter. The SVO languages do not have the verbal complex schema. They 
-Auxiliaries in the SVO languages embed a VP. This means that the \compsv of the embedded verb has to
-be the empty list. Therefore \ibox{2} is the empty list and only the specifier \iboxb{1} is taken
+Auxiliaries in the SVO languages embed a VP. This means that the \compsv of the embedded verbal
+projection has to be the empty list. Therefore \ibox{2} is the empty list and only the specifier \iboxb{1} is taken
 over from the embedded verb. 
 
 %% \item Hence, we have explained how
@@ -2205,6 +2334,7 @@ sm edges
             \comps  \sliste{ }}, s sep+=1em
         [V\feattab{
 %            \da     \sliste{ \ibox{3} },\\
+            \phon   \phonliste{ given },\\
             \spr    \sliste{ \ibox{1} },\\
             \comps  \sliste{ \ibox{3} },\\
             \argst \sliste{ \ibox{1}, \ibox{3} }} 
@@ -2259,6 +2389,7 @@ sm edges
             \comps  \sliste{ \ibox{1}, \ibox{2} }}
           [\ibox{3} V\feattab{                                  % gegeben
 %              \da    \sliste{ \ibox{3} },\\
+              \phon  \phonliste{ gegeben },\\
               \spr   \sliste{ },\\
               \comps \sliste{ \ibox{1}, \ibox{2} },\\
               \argst \sliste{ \ibox{1}, \ibox{2} }} 
@@ -2283,6 +2414,23 @@ the participle is forming a verbal complex. First, the passive lexical rule appl
   \ibox{1}, \ibox{2} }. The result of the combination of \emph{gegeben} and \emph{werden} has the
 \compsl \sliste{ \ibox{1}, \ibox{2} }.
 
+To complete the picture, I provide the \spr and \comps values for the participles of our
+prototypical verbs:
+\ea
+\label{partizipien-hm}%
+\resizebox{.99\linewidth}{!}{%
+\begin{tabular}[t]{@{}l@{ }l@{~~}l@{ }l@{~~}l@{}}
+  &                              & \textsc{arg-st} & \spr & \comps\\[2mm]
+a.&getanzt     (danced, unerg):  & \liste{}        & \liste{} & \liste{}\\[2mm]
+b.&gelesen     (read, trans):    & \liste{ NP[\type{str}] } & \liste{} & \liste{ NP[\type{str}] }\\[2mm]
+c.&geschenkt   (given, ditrans): & \liste{ NP[\type{ldat}], NP[\type{str}] } & \liste{} & \liste{ NP[\type{ldat}], NP[\type{str}] }\\[2mm]
+d.&geholfen    (helped, unerg):  & \liste{ NP[\type{ldat}] } & \liste{} & \liste{ NP[\type{ldat}] }\\
+\end{tabular}}
+\z
+
+Note that both members of the \argstl are mapped to \comps. So the \compsv is rather the one, one
+would suspect of the perfect participle. This will be discussed in Section~\ref{sec-perfect} in more detail.
+
 
 \subsubsection{The morphological passive}
 
@@ -2301,6 +2449,7 @@ unaccusatives\is{verb!unaccusative} and weather verbs\is{verb!weather}.
 
 
 \subsubsection{Perfect}
+\label{sec-perfect}
 
 \citegen{Haider86} analysis\is{perfect|(} of the passive is brilliant since it is sufficient to have one lexical
 item for the participle. The participle has a blocked designated argument, and the designated
@@ -2429,8 +2578,8 @@ phenomena interact in a non-trivial way. It was first discussed by \citet[\page
 nominative in certain contexts. (\mex{1}) provides some constructed examples from the literature:
 \eal
 \ex\iw{versuchen|(}
-\gll daß  er        auch von  mir zu überreden versucht wurde\footnotemark\\
-     that he.\NOM{} also from me  to persuade  tried    \AUX\\\german
+\gll daß  er        auch von mir zu überreden versucht wurde\footnotemark\\
+     that he.\NOM{} also by  me  to persuade  tried    \AUX\\\german
 \footnotetext{
         \citew*[\page 212]{Oppenrieder91a}.%
 }
