@@ -500,9 +500,9 @@ The following two examples from \ili{Icelandic} show that \ili{Icelandic} also h
 \ili{Danish} also allows for impersonal passives, but it differs from the languages discussed so far in
 that it requires an expletive\is{pronoun!expletive} subject:
 \eal
-\ex 
+\ex\label{ex-at-der-bliver-danset} 
 \gll at der bliver danset\\
-     that \textsc{expl} is danced\\\danish
+     that \textsc{expl} \AUX{} danced\\\danish
 \glt `that there is dancing'
 \ex
 \gll at der danses\\
@@ -510,7 +510,7 @@ that it requires an expletive\is{pronoun!expletive} subject:
 \glt `that there is dancing'
 \ex[*]{ 
 \gll Bliver danset?\\
-     is danced\\
+     \AUX{} danced\\
 }
 \ex[*]{
 \gll Danses?\\
@@ -644,7 +644,7 @@ clearly fixed: while (\mex{0}a) is possible, the reverse order of the objects is
 (\mex{1}) shows.
 \ea[*]{
 \gll fordi   manden           giver bolden            barnet \\
-     because man.\textsc{def} gives ball.\textsc{def} child.\textsc{def}\\
+     because man.\textsc{def} gives ball.\textsc{def} child.\textsc{def}\\\danish
 }
 \z
 
@@ -1519,7 +1519,7 @@ personal and the impersonal passive. The passives of \emph{schlafen} `to sleep' 
 \eal
 \ex 
 \gll dass geschlafen wurde\\
-     that slept      \AUX\\
+     that slept      \AUX\\\german
 \glt `that there was sleeping there'
 \ex
 \gll dass dem Mann geholfen wurde\\
@@ -1531,7 +1531,7 @@ subjects, namely the arguments that are realized as accusative objects in the ac
 \eal
 \ex 
 \gll dass der Mann unterstützt wurde\\
-     that the.\NOM{} man supported \AUX\\
+     that the.\NOM{} man supported \AUX\\\german
 \glt `that the man was supported'
 \ex
 \gll dass dem Jungen der Ball geschenkt wurde\\
@@ -1590,7 +1590,7 @@ elements that are raised. These restrictions have not been explained yet. Consid
 \eal
 \ex
 \gll Der Junge liest den Aufsatz.\\
-     the.\NOM{} boy reads the.\ACC{} paper\\
+     the.\NOM{} boy reads the.\ACC{} paper\\\german
 \glt `The boy reads the paper.'
 \ex\label{ex-the-man-lets-the-boy-read-the-book}
 \gll Der Mann lässt den Jungen den Aufsatz lesen.\\
@@ -1851,6 +1851,7 @@ in the lexical item that is licensed by the rule. The lexical rule maps a \type{
 \type{word}. For example, \stem{geb} `give-' is mapped to the participle \emph{gegeben} `given'. To
 keep things simple, the mapping of phonological information is not shown in the rule in
 (\mex{0}). %I will provide phonological information under \phon in the figures below. 
+\label{page-lexical-rule-explanation-start}%
 The lexical rule creates new lexical items. It applies to stems that are listed in the lexicon and
 stems that are licensed by other lexical rules. For example, \stem{geb} `give' and \stem{säg} `to
 saw' are listed in the lexicon. The stem for \stem{zersäg} is derived from \stem{säg} by another
@@ -1876,7 +1877,9 @@ phonological information. This deviates from normal phrase structure grammars wh
 phonological information at the very bottom of the trees (the leaves) is relevant and the complete tree stands
 for a concatenation of all the phonological information of the leaves. Figure~\ref{fig-LR-as-tree}
 shows the tree representation for the mapping from the stem \stem{säg} via \stem{zersäg} to the
-passive participle \emph{zersägt}. Structure sharings are omitted to keep things readable.
+passive participle \emph{zersägt}.\footnote{%
+See \citew[Chapter~19]{MuellerLehrbuch} for more on morphology\is{morphology} within HPSG.
+} Structure sharings are omitted to keep things readable.
 
 \begin{figure}
 %\vfill
@@ -1895,7 +1898,7 @@ passive participle \emph{zersägt}. Structure sharings are omitted to keep thing
 %\scalebox{.8}{%
 \begin{forest}
 %sm edges
-[{\ms[stem]{\phon  & \phonliste{ gesägt }\\[2mm]
+[{\ms[word]{\phon  & \phonliste{ gesägt }\\[2mm]
             \da    & \sliste{ NP[\str]$_i$ }\\[2mm]
             \argst & \sliste{ }}}
        [{\ms[stem]{
@@ -1929,7 +1932,8 @@ passive participle \emph{zersägt}. Structure sharings are omitted to keep thing
 There is a convention that information that is not mentioned in lexical rules is taken
 over from the input to the output of the lexical rule unchanged. For our example above, this would
 mean that semantic information is taken over unchanged. See p.\,\pageref{le-gives} for the
-representation of semantic contributions. 
+representation of semantic contributions.%
+\label{page-lexical-rule-explanation-end}
 % The bottom-most
 % nodes in the tree (the leaves) are lexical entries for stems and the participle forms are derived by
 % lexical rules and the new phonology values are provided at the licensed lexical items.
@@ -2058,7 +2062,7 @@ this would admit wrong realizations. In addition to the correct
 \eal
 \ex[*]{
 \gll fordi barnet giver manden bolden\\ 
-     because child.\textsc{def} gives man.\textsc{def} ball.\textsc{def}\\
+     because child.\textsc{def} gives man.\textsc{def} ball.\textsc{def}\\\danish
 }
 \ex[*]{
 \gll fordi   bolden         giver manden        barnet\\ 
@@ -2113,7 +2117,7 @@ the second corresponds to (\ref{ex-ball-was-given-child-danish}) -- repeated her
 \eal
 \ex\label{ex-child-was-given-ball-danish-two}
 \gll fordi barnet bliver givet bolden\\ 
-     because child.\textsc{def} is given ball.\textsc{def}\\
+     because child.\textsc{def} is given ball.\textsc{def}\\\danish
 \glt `because the child is given the ball'
 \ex\label{ex-ball-was-given-child-danish-two}
 \gll fordi bolden bliver givet barnet\\ 
@@ -2164,7 +2168,7 @@ here as (\mex{1}):
 \eal
 \ex\label{ex-were-the-king-given-the-slaves-two}
 \gll Voru konunginum gefnar ambáttir?\\
-     were the.king.\DAT{} given slaves.\NOM{}\\
+     were the.king.\DAT{} given slaves.\NOM{}\\\icelandic
 \glt `Was the king given slaves?'
 \ex\label{ex-were-the-slaves-given-the-king-two}
 \gll Var ambáttin gefin konunginum?\\
@@ -2195,10 +2199,11 @@ subjectless construction will result.
 can serve as a subject. \ili{Danish} requires a subject as well, but allows for impersonal
 constructions. The trick that \ili{Danish} employs is the insertion of an
 expletive\is{pronoun!expletive}. The interesting thing is that the expletive can be inserted for all
-verbs that do not govern an object. That is passives like the example in (\ref) and intransitive
+verbs that do not govern an object. That is passives like the example in (\ref{ex-at-der-bliver-danset}) and intransitive
 verbs like those in (\mex{1}) can have an expletive subject and all the other arguments are realized
 postverbally.
 \eal
+% Bjarne 26.07.2023
 \ex 
 \gll at    der    ikke går   en mand på gaden\\
      that \expl{} not  walks a  man  in street.\textsc{def}\\\danish
@@ -2212,11 +2217,21 @@ postverbally.
 The examples in (\mex{0}) are embedded clauses with negations, which shows that the expletive is not
 fronted in a V2 clause but that we really have an expletive in subject position here.
 
+% Das sollte eine Lexikonregel sein, die das Expletivum einführt. Die Idee wäre, dass man den
+% Lexikoneintrag ohne Expletivum hat, dass man den aber nicht benutzen kann. Das Problem ist aber,
+% dass man dann die Forderung nach dem Subjekt nicht in das Mapping einbauen kann, denn dann wäre
+% der Zwischenlexikoneintrag einfach schon inkonsistent und könnte nicht als Input für die
+% Expletivregel genommen werden.
+
 I assume that the
 expletive insertion happens during the mapping of the \argst elements to \spr and \comps. If there
 is an NP/VP/CP at the beginning of the \argstl, it is mapped to \spr and all other elements are
-mapped to \comps. If there is no element that can be mapped to \spr, an expletive is inserted.%
-\nocite{BB2007a}
+mapped to \comps. If there is no object, an expletive is inserted. This accounts for both
+subjectless passives and expletive constructions of intransitives like (\mex{1}).\footnote{%
+  \citet[Section~4.3]{BB2007a} assume that Danish weather verbs\is{verb!weather} do not have arguments on their
+  \argstl but that an expletive is inserted in the mapping from \argst to valence features. Without
+  providing details, they suggest that this also extends to the cases discussed above.
+}
 
 %\largerpage
 %\enlargethispage{5pt}
@@ -2239,6 +2254,74 @@ d.&hjulpet/-s    (trans):   & \liste{ NP[\type{str}]$_j$ }                     &
 \z
 
 
+\subsubsection{Mapping in the Germanic OV languages}
+\label{sec-Mapping in the Germanic OV languages}
+
+The Germanic OV languages differ from the VO languages in that they form a verbal complex with the
+auxiliary. This has consequences for the rest of the grammatical system, for example for
+frontings. (\mex{1}) shows the mappings from \argst to \spr and \comps for prototypical German verbs:
+\ea
+\label{partizipien-hm}%
+\resizebox{.99\linewidth}{!}{%
+\begin{tabular}[t]{@{}l@{ }l@{~~}l@{ }l@{~~}l@{}}
+  &                              & \textsc{arg-st} & \spr & \comps\\[2mm]
+a.&getanzt     (danced, unerg):  & \liste{}        & \liste{} & \liste{}\\[2mm]
+b.&gelesen     (read, trans):    & \liste{ NP[\type{str}] } & \liste{} & \liste{ NP[\type{str}] }\\[2mm]
+c.&geschenkt   (given, ditrans): & \liste{ NP[\type{ldat}], NP[\type{str}] } & \liste{} & \liste{ NP[\type{ldat}], NP[\type{str}] }\\[2mm]
+d.&geholfen    (helped, unerg):  & \liste{ NP[\type{ldat}] } & \liste{} & \liste{ NP[\type{ldat}] }\\
+\end{tabular}}
+\z
+Note that both members of the \argstl are mapped to \comps. So the \compsv is rather the one, one
+would suspect of the perfect participle. This will be discussed in Section~\ref{sec-perfect} in more detail.
+For now, I want to point out that any subset of the complements of non-finite verbs can be fronted
+together with the verb:
+\eal
+\ex 
+\gll Den        Wählern Märchen erzählen sollte man besser nicht.\\
+     the.\DAT{} voters fairy.tales tell should one.\NOM{} rather not\\
+\glt `It is better not to tell voters fairy tales.'
+\ex 
+\gll Den        Wählern erzählen sollte man solche Märchen     nicht.\\
+     the.\DAT{} voters  tell     should one.\NOM{} such   fairy.tales not\\
+\glt `One should not tell voters fairy tales.'
+\ex 
+\gll Märchen     erzählen sollte man den        Wählern nicht.\\
+     fairy.tales tell     should one.\NOM{} the.\DAT{} voters   not\\
+\glt `One should not tell voters fairy tales.'
+\zl
+The subject is not part of the \compsl of infinitives with or without \emph{zu} and hence the
+analysis in Chapter~\ref{chap-verbal-complex} predicts that examples like (\mex{1}) are
+ungrammatical:
+\eal
+\ex[*]{
+\gll Dieser Mann erzählen sollte den Wählern solche Geschichten besser nicht.\\
+     this.\NOM{} man tell should the.\DAT{} voters such stories rather not\\
+}
+\ex[*]{ 
+\gll Dieser      Mann den Wählern       erzählen sollte solche Geschichten besser nicht.\\
+     this.\NOM{} man  the.\DAT{} voters tell     should such   stories     rather not\\
+}
+\ex[*]{
+\gll Dieser      Mann solche Geschichten erzählen sollte den        Wählern besser nicht.\\
+     this.\NOM{} man  such   stories     tell     should the.\DAT{} voters  rather not\\
+}
+\zl
+The situation is different for the participles: independent of the question whether we have a
+perfect or a passive construction, the NP that is the accusative object in the active and the
+subject in the passive can be fronted:
+\eal
+\ex 
+\gll Diesen      Plan den        Wählern gegeben hat er nicht.\\
+     this.\ACC{} plan the.\DAT{} voters  given   has he not\\
+\glt `He didn't give this plan to the voters.'
+\ex 
+\gll Dieser Plan den Wählern gegeben wurde damals nicht.\\
+     this.\NOM{} plan the.\DAT{} voters given was back.than not\\
+\glt `This plan wasn't given to the voters back then.'
+\zl
+This is captured by mapping all non-suppressed arguments of participles to \comps. Due to space
+limitations the phenomenon of partial verb phrase fronting will not be covered here. The interested
+reader is referred to \citew{Mueller96a}, \citew[Chapter~2.2.2]{Mueller2002b}, or \citew[Chapter~15.2]{MuellerLehrbuch4}.
 
 
 
@@ -2247,10 +2330,10 @@ d.&hjulpet/-s    (trans):   & \liste{ NP[\type{str}]$_j$ }                     &
 %\if 0
 %\subsection{Variation and Generalizations}
 
-\subsubsection{The passive auxiliary}
+\subsection{The passive auxiliary}
 \label{sec-auxiliary}
 
-\largerpage
+%\largerpage
 We now saw what the participle forms of the languages under considerations look like and how they are
 licensed from lexical entries for stems via lexical rules. What is missing is the lexical items for
 the auxiliary verbs. Chapter~\ref{chap-verbal-complex} dealt with the analysis of verbal complexes in SOV languages like
@@ -2339,8 +2422,8 @@ sm edges
             \comps  \sliste{ \ibox{3} },\\
             \argst \sliste{ \ibox{1}, \ibox{3} }} 
           [V\feattab{
-            \da     \sliste{ \ibox{4} },\\
-            \argst \sliste{ \ibox{4}, \ibox{1}, \ibox{3} }} [{give-}]]]
+            \da    \ibox{4} \sliste{ NP[\str] },\\
+            \argst \ibox{4} $\oplus$ \sliste{ \ibox{1}, \ibox{3} }} [{give-}]]]
         [\ibox{3} \npacc [a novel,roof]]]]]
 \end{forest}}
 \caption{\label{fig-the-child-was-given-a-novel}Analysis of \emph{The child was given a novel.}}
@@ -2394,8 +2477,8 @@ sm edges
               \comps \sliste{ \ibox{1}, \ibox{2} },\\
               \argst \sliste{ \ibox{1}, \ibox{2} }} 
             [V\feattab{
-              \da    \sliste{ \ibox{4} },\\
-              \argst \sliste{ \ibox{4}, \ibox{1}, \ibox{2} }} [{geb-};{give-}]]]
+              \da    \ibox{4} \sliste{ NP[\str]  },\\
+              \argst \ibox{4} $\oplus$ \sliste{ \ibox{1}, \ibox{2} }} [{geb-};{give-}]]]
           [V\feattab{
 %            \da    \sliste{ \ibox{2} },\\
              \spr   \sliste{  },\\
@@ -2414,25 +2497,8 @@ the participle is forming a verbal complex. First, the passive lexical rule appl
   \ibox{1}, \ibox{2} }. The result of the combination of \emph{gegeben} and \emph{werden} has the
 \compsl \sliste{ \ibox{1}, \ibox{2} }.
 
-To complete the picture, I provide the \spr and \comps values for the participles of our
-prototypical verbs:
-\ea
-\label{partizipien-hm}%
-\resizebox{.99\linewidth}{!}{%
-\begin{tabular}[t]{@{}l@{ }l@{~~}l@{ }l@{~~}l@{}}
-  &                              & \textsc{arg-st} & \spr & \comps\\[2mm]
-a.&getanzt     (danced, unerg):  & \liste{}        & \liste{} & \liste{}\\[2mm]
-b.&gelesen     (read, trans):    & \liste{ NP[\type{str}] } & \liste{} & \liste{ NP[\type{str}] }\\[2mm]
-c.&geschenkt   (given, ditrans): & \liste{ NP[\type{ldat}], NP[\type{str}] } & \liste{} & \liste{ NP[\type{ldat}], NP[\type{str}] }\\[2mm]
-d.&geholfen    (helped, unerg):  & \liste{ NP[\type{ldat}] } & \liste{} & \liste{ NP[\type{ldat}] }\\
-\end{tabular}}
-\z
 
-Note that both members of the \argstl are mapped to \comps. So the \compsv is rather the one, one
-would suspect of the perfect participle. This will be discussed in Section~\ref{sec-perfect} in more detail.
-
-
-\subsubsection{The morphological passive}
+\subsection{The morphological passive}
 
 %\largerpage
 A lexical rule similar to the one accounting for the participle forms can be used for the
@@ -2448,7 +2514,7 @@ unaccusatives\is{verb!unaccusative} and weather verbs\is{verb!weather}.
 %% phrases as adjuncts.
 
 
-\subsubsection{Perfect}
+\subsection{The perfect auxiliary}
 \label{sec-perfect}
 
 \citegen{Haider86} analysis\is{perfect|(} of the passive is brilliant since it is sufficient to have one lexical
@@ -2466,7 +2532,7 @@ argument.
 \glt `that Kirby has read the paper'
 \zl
 
-\largerpage
+%\largerpage
 \noindent
 Deblocking of the designated argument is possible since the designated argument is encoded not just in the stem of a verb
 but also in the lexical item for the participle.   
@@ -2564,14 +2630,10 @@ in (\mex{0}c).%
 
 
 
-
-
-
-
-\subsubsection{The remote passive}
+\subsection{The remote passive}
 \label{sec-remote-passive-phen}
 
-\largerpage
+%\largerpage
 The so-called \emph{remote passive}\is{passive!remote} is a highlight of \ili{German} syntax since several
 phenomena interact in a non-trivial way. It was first discussed by \citet[\page
 175--176]{Hoehle78a}. Höhle observed that objects of \ili{German} infinitives with \emph{zu} appear in the
@@ -2758,11 +2820,10 @@ resulting lexical item for \emph{versucht} `tried' will have the following \args
 \sliste{ NP[\type{str}]$_j$, V[\type{inf}] } 
 \z
 
-\largerpage
+%\largerpage
 \noindent
-The first NP is mapped to \subj and V[\type{inf}] is mapped to \comps. After combination with
-\emph{zu reparieren}, we have a complex with NP[\type{str}]$_j$ in \subj and nothing in
-\comps. \emph{wurde} selects a verb or verbal complex with the verb form \type{ppp} and the
+The two remaining \argst members are mapped to \comps (see Section~\ref{sec-Mapping in the Germanic OV languages}). After combination with
+\emph{zu reparieren}, we have a complex with NP[\type{str}]$_j$ in \comps. \emph{wurde} selects a verb or verbal complex with the verb form \type{ppp} and the
 arguments of the embedded verb. Hence, NP[\type{str}]$_j$ ends up as the first element of the
 \argstl of \emph{werden} where it gets nominative. Since \emph{werden} is finite all \argst elements
 are mapped to \comps and have to be realized in the sentence. The analysis of the verbal complex in
@@ -2778,16 +2839,23 @@ sm edges
               \comps \ibox{1} } 
         [{\ibox{2} V\feattab{
               \vform \type{ppp},\\
-              \subj  \ibox{1},\\
-              \comps \eliste }} 
+              \da    \sliste{ NP[\str]$_i$ },\\
+              \comps \ibox{1} }} 
            [{\ibox{3} V\feattab{
               \vform \type{inf},\\
               \subj  \sliste{ NP[\str]$_i$ }, \\ 
               \comps \ibox{1} \sliste{ NP[\str]$_j$ } }} [zu reparieren;to repair] ]
            [V\feattab{
+              \phon \phonliste{ versucht }\\
               \vform \type{ppp},\\
-              \subj  \ibox{1},\\
-              \comps \sliste{ \ibox{3} } } [versucht;tried] ] ]
+              \da    \ibox{4},\\
+              \comps \ibox{1} $\oplus$ \sliste{ \ibox{3} },\\
+              \argst \ibox{1} $\oplus$ \sliste{ \ibox{3} } } 
+              [V\feattab{
+%              \phon \phonliste{ versuch }\\
+              \vform \type{ppp},\\
+              \da    \ibox{4} \sliste{ NP[\str]$_i$ },\\
+              \argst \ibox{4} $\oplus$ \ibox{1} $\oplus$ \sliste{ \ibox{3} } } [versuch-;try] ] ] ]
         [V\feattab{
               \vform \type{fin},\\
               \comps \ibox{1} $\oplus$ \sliste{
