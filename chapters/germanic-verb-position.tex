@@ -664,7 +664,7 @@ The\is{head-movement|(} analysis uses a special mechanism that passes up informa
 verbal trace\is{trace!head-movement|(} contains the
 information that a verb is missing locally. This information about the missing verb is passed up to
 the node that dominates the verbal trace. It is represented using a device that is called ``double
-slash'' and is written as $/\!/$\is{\dslmath}. The
+slash'' and is written as //\is{\dslmath}. The
 respective information is head-information and therefore it is passed up the head-path along with
 other information, such as part of speech. Figure~\vref{fig-analysis-German-verb-first}
 illustrates. The verbal trace is missing a V, the V$'$ is missing a V, and the S as well.
@@ -673,13 +673,13 @@ illustrates. The verbal trace is missing a V, the V$'$ is missing a V, and the S
 \begin{forest}
 sm edges
 [S
-  [{V \sliste{ S$/\!/$V }} 
+  [{V \sliste{ S//V }} 
     [V [liest$_j$;reads] ] ]
-       [{S$/\!/$V}
+       [{S//V}
            [NP [Conny;Conny] ]
-           [{V$'$$\!/\!/$V}
+           [\vbarDSLv
              [NP [das Buch;the book, roof] ]
-             [{\mybox[v1]{V}$\!/\!/$\mybox[v2]{V}} [\_$_j$] ] ] ] ] ]
+             [{\mybox[v1]{V}//\mybox[v2]{V}} [\_$_j$] ] ] ] ] ]
 %\draw[semithick,<->,color=green] (v1.south)--(v2.south);
 %% \draw[semithick,<->,color=green] (3.1,-3.9) ..controls +(south east:.5) and +(south west:.5)..(2.7,-3.9);
 %% \draw[semithick,<->,color=green] (3.5,-3.7) ..controls +(east:.5) and +(east:.5)..(2.8,-2.5);
@@ -690,11 +690,11 @@ sm edges
 \end{forest}
 \caption{\label{fig-analysis-German-verb-first}\label{fig-liest-jens-das-buch}Analysis of verb position in German}
 \end{figure}
-The initial verb selects for a sentence that is lacking a V \sliste{ S$/\!/$V }. The lexical item for
+The initial verb selects for a sentence that is lacking a V \sliste{ S//V }. The lexical item for
 the verb in initial position is licensed by a lexical rule that relates a verb to a verb that
 selects for a sentence that is lacking the input verb. Since the selectional requirement of this
-verb (S$/\!/$V) is identified with the sentence lacking a V (Conny das Buch \_$_j$), the information
-about the original verb \emph{liest} is identified with the V in S$/\!/$V. Since the double slash
+verb (S//V) is identified with the sentence lacking a V (Conny das Buch \_$_j$), the information
+about the original verb \emph{liest} is identified with the V in S//V. Since the double slash
 information is head information, it percolates down along the head path to the verbal trace. The
 information about the initial V is identified with the syntactic and semantic information of the
 verbal trace in final position, and hence this verbal trace behaves exactly like the verb in initial
@@ -727,15 +727,15 @@ are identical. This fact is important when it comes to the analysis of the scope
 \begin{forest}
 sm edges
 [S
-        [{V \sliste{ S$/\!/$V }} 
+        [{V \sliste{ S//V }} 
           [V [lacht$_j$;laughs] ] ]
-        [{S$/\!/$V}
+        [{S//V}
            [NP [er;he] ]
-           [{V$'$$\!/\!/$V}
+           [\vbarDSLv
              [Adv [nicht;not] ]
-             [{V$'$$\!/\!/$V}
+             [\vbarDSLv
                [Adv [absichtlich;deliberately] ]
-               [{V$\!/\!/$V} [\_$_j$] ] ] ] ] ]
+               [{V//V} [\_$_j$] ] ] ] ] ]
 \end{forest}
 \caption{\label{fig-analysis-German-verb-initial-scope}Analysis of sentences with adverbials in German}
 \end{figure}
@@ -755,12 +755,12 @@ it precedes it in \ili{Danish}.
 \begin{forest}
 sm edges
 [S
-        [{V \sliste{ S$/\!/$V }} 
+        [{V \sliste{ S//V }} 
           [V [læser$_j$;reads] ] ]
-        [{S$/\!/$V}
+        [{S//V}
            [NP [Conny;Conny] ]
-           [{VP$\!/\!/$V}
-             [{V$\!/\!/$V} [\_$_j$] ] 
+           [{VP//V}
+             [{V//V} [\_$_j$] ] 
              [NP [bogen;book.\textsc{def}] ] ] ] ]
 \end{forest}
 \caption{\label{fig-analysis-verb-first-Danish}Analysis of verb position in Danish}
@@ -775,14 +775,14 @@ the VP as in verb"=final clauses and the verb is fronted so that it appears to t
 \begin{forest}
 sm edges
 [S
-        [{V \sliste{ S$/\!/$V }} 
+        [{V \sliste{ S//V }} 
           [V [læser$_j$;reads] ] ]
-        [{S$/\!/$V}
+        [{S//V}
            [NP [Conny;Conny] ]
-           [{VP$\!/\!/$V}
+           [{VP//V}
              [Adv [ikke;not] ]
-             [{VP$\!/\!/$V}
-               [{V$\!/\!/$V} [\_$_j$] ] 
+             [{VP//V}
+               [{V//V} [\_$_j$] ] 
                [NP [bogen;book.\textsc{def}] ] ] ] ] ]
 \end{forest}
 \caption{\label{fig-analysis-verb-fronting-negation-Danish}The analysis of verb fronting and
@@ -898,15 +898,15 @@ sm edges
 [S
   [NP$_i$ [das Buch;the book, roof] ]
   [S/NP
-     [V \sliste{ S$/\!/$V } 
+     [V \sliste{ S//V } 
         [V [liest$_j$;reads] ] ]
-     [S$/\!/$V\!/NP
+     [S//\vSLASHnp
         [NP/NP [\trace$_i$] ]
-        [V$'$$\!/\!/$V
+        [\vbarDSLv
            [NP [Conny;Conny] ]
-           [V$\!/\!/$V [\_$_j$] ] ] ] ] ] ]
-%% \draw[connect] (NP/NP) [bend right] to (S//V\!/NP.south east);
-%% \draw[connect] (S//V\!/NP.north east) [bend right] to (S/NP.east);
+           [V//V [\_$_j$] ] ] ] ] ] ]
+%% \draw[connect] (NP/NP) [bend right] to (S//\vSLASHnp.south east);
+%% \draw[connect] (S//\vSLASHnp.north east) [bend right] to (S/NP.east);
 %% \draw[connect] (S/NP.north east) [bend right] to (NP);
 \end{forest}
 \caption{\label{fig-das-buch-liest-jens}Analysis of V2 in German (SOV)}
@@ -956,16 +956,16 @@ sm edges
 [S
    [NP$_i$ [bogen;book.\textsc{def}] ]
       [S/NP
-         [V \sliste{ S$/\!/$V }
+         [V \sliste{ S//V }
            [V [læser$_j$;reads] ] ]
-           [S$/\!/$V\!/NP
+           [S//\vSLASHnp
              [NP [Conny;Conny] ]
-             [VP$\!/\!/$V\!/NP
-               [V$\!/\!/$V  [\_$_j$] ]
+             [VP//\vSLASHnp
+               [V//V  [\_$_j$] ]
                [NP/NP [\trace$_i$ ] ] ] ] ] ] ] 
 %% \draw[connect] (NP/NP.north east) [bend right] to (V/V.south east);
-%% \draw[connect] (V/V.north east) [bend right] to (S//V\!/NP.south east);
-%% \draw[connect] (S//V\!/NP.north east) [bend right] to (S/NP.east);
+%% \draw[connect] (V/V.north east) [bend right] to (S//\vSLASHnp.south east);
+%% \draw[connect] (S//\vSLASHnp.north east) [bend right] to (S/NP.east);
 %% \draw[connect] (S/NP.north east) [bend right] to (NP);
 \end{forest}}
 \caption{\label{fig-bogen-laeser-jens}Analysis of V2 in Danish (SVO)}
@@ -1009,16 +1009,16 @@ sm edges
 [S
    [NP$_i$ [Conny;Conny] ]
       [S/NP
-         [V \sliste{ S$/\!/$V }
+         [V \sliste{ S//V }
            [V [læser$_j$;reads] ] ]
-           [S$/\!/$V\!/NP
+           [S//\vSLASHnp
              [NP/NP [\trace$_i$ ] ]
-             [VP$\!/\!/$V
-               [V$\!/\!/$V  [\_$_j$] ]
+             [VP//V
+               [V//V  [\_$_j$] ]
                [NP [en bog;a book,baseline,roof] ] ] ] ] ] 
 %% \draw[connect] (NP/NP.north east) [bend right] to (V/V.south east);
-%% \draw[connect] (V/V.north east) [bend right] to (S//V\!/NP.south east);
-%% \draw[connect] (S//V\!/NP.north east) [bend right] to (S/NP.east);
+%% \draw[connect] (V/V.north east) [bend right] to (S//\vSLASHnp.south east);
+%% \draw[connect] (S//\vSLASHnp.north east) [bend right] to (S/NP.east);
 %% \draw[connect] (S/NP.north east) [bend right] to (NP);
 \end{forest}}
 \hfill
@@ -1028,13 +1028,13 @@ sm edges
 [S
    [NP$_i$ [Conny;Conny] ]
       [S/NP
-         [V \sliste{ S$/\!/$V }
+         [V \sliste{ S//V }
            [V [liest$_j$;reads] ] ]
-           [S$/\!/$V\!/NP
+           [S//\vSLASHnp
              [NP/NP [\trace$_i$ ] ]
-             [V$'$$\!/\!/$V
+             [\vbarDSLv
                [NP [ein Buch;a book,baseline,roof] ] 
-               [V$\!/\!/$V  [\_$_j$] ] ] ] ] ] 
+               [V//V  [\_$_j$] ] ] ] ] ] 
 \end{forest}}
 \caption{\label{fig-English-Danish-German-declerative-main-clause}Declarative main clauses with
   subject in initial position in \ili{English}, \ili{Danish} and \ili{German}: despite similar appearance, the
@@ -1545,14 +1545,14 @@ sm edges
 [S
   [NP$_i$ [which book,roof]]
   [S/NP
-    [V \sliste{ S$/\!/$V }
+    [V \sliste{ S//V }
        [V [did$_j$] ] ]
-          [S$/\!/$V\!/NP
+          [S//\vSLASHnp
              [NP [Sandy]]
-             [VP$\!/\!/$V\!/NP
-               [V$\!/\!/$V  [\_$_j$] ]
+             [VP//\vSLASHnp
+               [V//V  [\_$_j$] ]
                [VP/NP, s sep*=2
-                 [V$'$/NP
+                 [\vbarSLASH NP
                    [V [give]]
                    [NP/NP [\trace$_i$ ]]]
                  [PP [to Kim,roof]]]]]]]
@@ -1858,6 +1858,8 @@ question formation in \ili{English}.
      books like this like I\\\danish
 \glt `I like such books.'
 \zl
+
+\item Sketch the analysis fo the example in (\mex{0}b) and include the \comps feature.
 
 \end{enumerate}
 

@@ -194,7 +194,10 @@ $%
 \let\tbox=\iboxt
 
 
-\newcommand{\type}[1]{\ifmmode\mathnormal{\mathit{#1}}\else\textnormal{\textit{#1}}\fi}
+%\newcommand{\type}[1]{\ifmmode\mathnormal{\mathit{#1}}\else\textnormal{\textit{#1}}\fi}
+% not related to the question but \mathnormal{\mathit{#1}} is the same as \mathit{#1} as math font commands don't combine. – 
+% David Carlisle
+\newcommand{\type}[1]{\ifmmode\mathit{#1}\else\textnormal{\textit{#1}}\fi}
 
 \newcommand{\typeSM}[1]{\ifmmode\mathnormal{\mathit{#1}}\else\textnormal{\textit{#1}}\fi}
 

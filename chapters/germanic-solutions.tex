@@ -643,9 +643,9 @@ sm edges
     [V [arbeitet;works]]]
   [S//V
      [NP [Bjarne;Bjarne]]
-     [V$'$//V
+     [\vbarDSLv
        [Adv [ernsthaft;seriously]]
-       [V$'$//V
+       [\vbarDSLv
          [PP [an dem Buch;at the book,roof]]
          [V//V [\trace]]]]]]
 \end{forest}
@@ -661,7 +661,7 @@ sm edges
       [wird;will]]]
   [S//V
      [NP [sie;she]]
-     [V$'$//V
+     [\vbarDSLv
        [PP [darüber;there.about]]
        [V//V
          [V [nachdenken;\textsc{part}.think]]
@@ -862,13 +862,13 @@ sm edges
 [S
   [NP$_i$ [solche Bücher;such books, roof] ]
   [S/NP
-     [V \sliste{ S$/\!/$V } 
+     [V \sliste{ S//V } 
         [V [mag$_j$;like] ] ]
-     [S$/\!/$V/NP
+     [S//\vSLASHnp
         [NP/NP [\trace$_i$] ]
-        [V$'$$\!/\!/$V
+        [\vbarDSLv
            [NP [ich;I] ]
-           [V$\!/\!/$V [\_$_j$] ] ] ] ] ] ]
+           [V//V [\_$_j$] ] ] ] ] ] ]
 \end{forest}}
 \caption{Analysis of the German example \emph{Solche Bücher mag ich.} `I like such books.'}
 \end{figure}
@@ -880,15 +880,35 @@ sm edges
 [S
    [NP$_i$ [boger som det;books like this,roof] ]
       [S/NP
-         [V \sliste{ S$/\!/$V }
+         [V \sliste{ S//V }
            [V [elsker$_j$;like] ] ]
-           [S$/\!/$V/NP
+           [S//\vSLASHnp
              [NP [jeg;I] ]
-             [VP$\!/\!/$V/NP
-               [V$\!/\!/$V  [\_$_j$] ]
+             [VP//\vSLASHnp
+               [V//V  [\_$_j$] ]
                [NP/NP [\trace$_i$ ] ] ] ] ] ] ] 
 \end{forest}
 \caption{\label{fig-boger-som-et-elsker-jeg}Analysis of the Danish example \emph{Boger som det elsker jeg.} `I like such books.'}
+\end{figure}
+
+\item Sketch the analysis fo the example in (\mex{0}b) and include the \comps feature.
+
+\begin{figure}
+\scalebox{1}{%
+\begin{forest}
+sm edges
+[S
+  [NP$_i$ [solche Bücher;such books, roof] ]
+  [S/NP
+     [{V[\comps \sliste{ \ibox{1} }]} 
+        [V [mag$_j$;like] ] ]
+     [{\ibox{1} S//\vSLASHnp[\comps \sliste{ }]}
+        [\ibox{3} NP/NP [\trace$_i$] ]
+        [{\vbarDSLv[\comps \sliste{ \ibox{3} }]}
+           [\ibox{2} NP [ich;I] ]
+           [{V//V[\comps \sliste{ \ibox{2}, \ibox{3} }]}  [\_$_j$] ] ] ] ] ] ]
+\end{forest}}
+\caption{Analysis of the German example \emph{Solche Bücher mag ich.} `I like such books.'}
 \end{figure}
 
 
@@ -1039,7 +1059,7 @@ sm edges
        [{S/NP[\snom]}
          [{NP[\lnom]} [det;\textsc{expl}] ]
          [{VP/NP[\snom]}
-           [{V$'$/NP[\snom]}
+           [{\vbarSLASH NP[\snom]}
              [V [kende;knows] ]
              [{NP[\snom]/NP[\snom]} [\trace] ] ]
            [{NP[\sacc]} [Kim;Kim ] ] ] ] ]
@@ -1063,14 +1083,14 @@ sm edges
 [S
   [{NP[\lnom]} [es;\textsc{expl}]]
   [{S/NP[\lnom]}
-     [V\sliste{ S$/\!/$V } [schwammen;swam]]
-     [{S$/\!/$V/NP[\lnom]}
+     [V\sliste{ S//V } [schwammen;swam]]
+     [{S//\vSLASHnp[\lnom]}
        [{NP[\lnom]/NP[\lnom]}  [\trace]]
-       [V$'$$/\!/$V
+       [\vbarDSLv
          [{NP[\snom]} [zwei Delphine;two dolphins,roof]]
-         [V$'$$/\!/$V
+         [\vbarDSLv
            [PP [neben dem Boot;next.to the boat,roof]]
-           [V$/\!/$V [\trace]]]]]]]
+           [V//V [\trace]]]]]]]
 \end{forest}
 \caption{Analysis of \emph{Es schwammen zwei Delphine neben dem Boot.} `Two dolphins were swimming next to the boat.'}
 \end{figure}
