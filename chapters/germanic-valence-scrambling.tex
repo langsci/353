@@ -62,14 +62,60 @@ are examples of adjuncts:
 \ex that the dolphin gives the child the ball quickly
 \zl
 The adverbials provide additional information about the giving event, but they do not fill a
-semantic role.
+semantic role. While the form of arguments is often determined by their
+heads, the form of adjuncts is never determined by the head they combine with. For example, the part
+of speech of subjects and objects, which are arguments, is determined by their
+heads. \emph{unterstützen} `to support' takes an NP in the nominative and an NP in the
+accusative (\mex{1}a). The verb \emph{helfen} `to help', which is semantically rather similar to
+\emph{unterstützen}, takes a nominative NP and a dative NP (\mex{1}b). Bivalent verbs usually take an accusative
+object, so learners of German have to explicitly learn the fact that \emph{helfen} takes a
+dative. (\mex{1}c) is an example with a prepositional object. The verb \emph{warten} `to wait'
+requires a PP with the preposition \emph{auf} `on' and an accusative NP within the PP.
+\eal
+\ex 
+\gll Ich unterstütze  \emph{ihn}.\\
+     I.\NOM{} support him.\ACC\\\german
+\ex 
+\gll Ich helfe \emph{ihm}.\\
+     I.\NOM{} help him.\DAT\\
+\ex 
+\gll Ich warte \emph{auf} \emph{ihn}.\\
+     I.\NOM{} wait on him\\
+\glt `I wait for him.'
+\zl
+The form of adjuncts are never determined by their heads. NPs, PPs, adjectives, adverbs, clauses can
+be adjuncts:
+\eal
+\ex 
+\gll Aicke redet \emph{den} \emph{ganzen} \emph{Tag}.\\
+     Aicke speaks the whole day\\\german
+\glt `Aicke speaks the whole day.'
+\ex 
+\gll Aicke redet \emph{vor} \emph{dem} \emph{Rathaus}.\\
+     Aicke speaks in.font of.the town.hall\\
+\glt `Aicke speaks in front of the town hall.'
+\ex 
+\gll Aicke redet \emph{laut}.\\
+     Aicke speaks loud\\
+\glt `Aicke speaks loudly.'
+\ex 
+\gll Aicke redet \emph{oft}.\\
+     Aicke speaks often\\
+\glt `Aicke speaks often.'
+\ex 
+\gll Aicke redet, \emph{weil Protest nötig ist}.\\
+     Aicke speaks since Protest necessary is\\
+\glt `Aicke speaks since protest is necessary.' 
+\zl
 
-To make things complicated not all arguments have to be realized in a sentence. The ditransitive verb \emph{geben} can be
+\noindent
+To make things complicated not all arguments have to be realized in a
+sentence.\label{page-optional-arguments} The ditransitive verb \emph{geben} `to give' can be
 realized with any subset of its arguments, provided the context fills in the missing information.
 \eal
 \ex 
 \gll Sie gibt Geld.\\
-     she gives money\\
+     she gives money\\\german
 \glt `She gives money.'
 \ex 
 \gll Sie gibt den Armen.\\
@@ -92,8 +138,21 @@ of the subject is obvious: it is the addressee of the utterance.
 
 The examples in (\mex{0}) show that the arguments of \emph{geben} `to give' may be omitted. This is
 not the case for the accusative object of \emph{erwarten} `to expect': it is obligatory. So
-arguments may be optional or obligatory, but adjuncts are always optional. While the number of
-arguments is limited (by the number of available slots), the number of adjuncts is not: there can be
+arguments may be optional or obligatory, but adjuncts are always optional. Figure~\ref{fig-optional-arguments-adjuncts}, which is
+taken from the Duden grammar \citep[§1182]{Duden2005} illustrates.
+\begin{figure}
+\begin{tikzpicture}
+\node[anchor=east](c1) at (-1,2) {not optional};
+\node[anchor=east](c2) at (-1,1) {optional};
+\node[anchor=west](c3) at (1,2) {argument};
+\node[anchor=west](c4) at (1,1) {adjunct};
+\draw (c1.east) -- (c3.west) -- (c2.east) -- (c4.west);
+\end{tikzpicture}
+\caption{\label{fig-optional-arguments-adjuncts}Adjuncts are always optional, arguments may be
+  optional or obligatory \citep[§1182]{Duden2005}} 
+\end{figure}
+
+While the number of arguments is limited (by the number of available slots), the number of adjuncts is not: there can be
 arbitrarily many adjuncts in a phrase. (\mex{1}) shows an example with two adjuncts:
 \ea
 \gll \dass{} der        Delphin jetzt dem        Kind  schnell den        Ball gibt\\
@@ -168,7 +227,7 @@ interactions with morphology \citep[Section~5.5.1]{MuellerGT-Eng1}.\footnote{%
   Starting with influential work by Adele \citet{Goldberg95a} in the framework of Construction
   Grammar\indexcxg, the phrasal approaches had a revival \citep{GJ2004a}. Phrasal approaches are widespread
   and also assumed in other frameworks 
-\citep{Haugereid2007a,Haugereid2009a,CJ2005a,Alsina96a,Christie2010a,% resultative constructions as phrasal constructions and 
+\citep{Haugereid2007a,Haugereid2009a,CJ2005a,CulicoverVaraschin2025a-u,Alsina96a,Christie2010a,% resultative constructions as phrasal constructions and 
 ADT2008a,ADT2013a}.            % argue for a phrasal analysis of the (\ili{Swedish}) caused motion construction. 
 The problems that led to the abandonment of GPSG are
   ignored in the literature and newly introduced ones are not properly addressed. See
@@ -341,7 +400,7 @@ sm edges
 \end{figure}
 Rather than combining the verb with the accusative argument (the object) first, it is combined with
 the nominative (the subject) and the accusative (the object) is added in a later step.%
-\is{scrambling|(}\is{order|(} 
+\is{scrambling|)}\is{order|)} 
 
 % only for unstressed pronouns.
 %Such an analysis predicts that reorderings of arguments are possible in principle and this is
@@ -354,7 +413,7 @@ the nominative (the subject) and the accusative (the object) is added in a later
 
 The last section demonstrated how verb-final sentences in \ili{German} can be analyzed. Of course it is
 easy to imagine how this extends to VSO languages: The head is initial and combines with the first
-element in the valence list first and then with all the other elements. However, nothing has been
+element in the valence list first and then with all the other elements \citep[347--348]{Borsley89b}. However, nothing has been
 said about SVO languages so far. In languages like \ili{Danish}, \ili{English}, and so on, all objects are
 realized after the verb, as in (\mex{1}); it is just the subject that precedes the verb.
 \ea
@@ -594,8 +653,8 @@ lists resulting in our list in the following ways:
 \ex \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] } $\oplus$ \eliste{} = \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] }
 \zl
 The schema in Figure~\ref{fig-spr-head} takes a list apart in such a way that a list with a
-singleton element ( \sliste{ \ibox{2} } ) and a remaining list \iboxb{1} results. Assuming the
-three-element list with nom, dat and acc elements, this would be the case in (\mex{0}c) and \ibox{2} would be NP[\type{acc}] and
+singleton element (\sliste{ \ibox{2} }) and a remaining list \iboxb{1} results. Assuming the
+three-element list with \type{nom}, \type{dat} and \type{acc} elements, this would be the case in (\mex{0}c) and \ibox{2} would be NP[\type{acc}] and
 \ibox{1} would be \sliste{ NP[\type{nom}], NP[\type{dat}] }. In this book, the \sprl has at most one element.\footnote{
   But see \citew{MOe2013b} for an analysis of \isi{object shift} in \ili{Danish} assuming multiple elements in
   the \sprl.
@@ -714,7 +773,7 @@ sm edges
         [{\ibox{3} NP[\type{acc}]} [the child,roof] ] ]
      [{\ibox{2} NP[\type{acc}]} [a book,roof ] ] ] ]
 \end{forest}}
-\caption{\label{fig-nobody-gave-the-child-a-book}Analysis of the sentences with a ditransitive verb}
+\caption{\label{fig-nobody-gave-the-child-a-book}Analysis of a sentence with a ditransitive verb}
 \end{figure}
 
 To keep things simple, the Specifier-Head\is{schema!Specifier-Head} Schema did not mention the \compsv of the mother. The
@@ -822,7 +881,7 @@ Schema is general enough to analyze the \ili{German} and \ili{English} phrases i
 \ex
 \gll dem Kind  ein Buch gibt\\
      the child the book gives\\
-\ex gives the child the book
+\ex gives the child a book
 \zl
 But such a general schema without restrictions would also allow an analysis for (\mex{1}b) and (\mex{1}c):
 \eal
@@ -844,7 +903,7 @@ The structures licensed by the Head-Complement Schema without any restrictions a
 \begin{figure}[htb]
 \begin{forest}
 sm edges
-[{V[\comps \sliste{ }]},s sep+=1em
+[{V[\comps \eliste]},s sep+=1em
   [{V[\comps \sliste{ \ibox{1} }]}
     [\ibox{2} \npdat [dem Kind;the child,roof]]
     [{V[\comps \sliste{ \ibox{2}, \ibox{1} }]} [\ibox{3} \npnom [niemand;nobody]]
@@ -857,7 +916,7 @@ sm edges
 \begin{figure}[htb]
 \begin{forest}
 sm edges
-[{V[\comps \sliste{ }]}
+[{V[\comps \eliste]}
   [{V[\comps \sliste{ \ibox{1} }]},s sep+=1em
     [{V[\comps \sliste{ \ibox{2}, \ibox{1} }]} [\ibox{3} \npnom [niemand;nobody]]
        [{V[\comps \sliste{ \ibox{3}, \ibox{2}, \ibox{1} }]}  [vorliest;\textsc{part}.reads]]]
@@ -1003,7 +1062,8 @@ incompatible with \initial{}$+$.
 
 Fortunately, there is a solution to such problems that was developed
 for accounts of case syncretism \citep{Daniels2002a}. It makes use of the type system that is part of the formalism for
-specifying linguistic constraints \parencites[Section~3]{AB2021a}[Section~2]{Richter2021a}. Values like part of speech are types and types can have
+specifying linguistic constraints \parencites[Section~3]{AB2021a}[Section~2]{Richter2021a}. Values
+of features like part of speech are types and types can have
 subtypes. For example, there can be a type \type{part-of-speech} with the subtypes \type{noun},
 \type{verb}, \type{adj}, \type{prep} and others. There can be a type \type{vform} with the subtypes \type{fin}, \type{bse},
 \type{ppp}, \type{inf} for finite verbs, infinitives without \emph{to}, participles, and infinitives
@@ -1160,7 +1220,7 @@ The analysis of the phrase \emph{brown squirrel} is shown in Figure~\vref{fig-br
 sm edges
 [{\nbar}
   [{Adj[\textsc{mod} \ibox{2}]} [brown]]
-  [{\ibox{2} \nbar} [squirrel]]]
+  [{\ibox{2} \nbar}\hphantom{~\ibox{2}} [squirrel]]]
 \end{forest}
 \caption{\label{fig-brown-squirrel}Analysis of the head-adjunct structure \emph{brown squirrel}}
 \end{figure}
@@ -1177,14 +1237,14 @@ instance, \emph{kleiner} selects a masculine noun and \emph{kleine} selects a fe
 \zl
 
 \noindent
-For \ili{German} adverbials, the value restricts the part of speech of the head to be verb (or rather
+For \ili{German} adverbials, the \modv restricts the part of speech of the head to be verb (or rather
 verbal since, as (\mex{1}b) shows, adjectival participles can be modified as
 well) and the value of \textsc{initial} to be $-$. 
 \eal
 \ex
-\gll dass es oft lacht\\
-     that it often laughs\\\german
-\glt `that he/she laughs often'
+\gll dass das Kind oft lacht\\
+     that the child often laughs\\\german
+\glt `that the child laughs often'
 \ex 
 \gll das oft lachende Kind\\
      the often laughing child\\
@@ -1220,7 +1280,7 @@ sm edges
         [{\ibox{3} V[\spr \eliste, \comps \eliste]}
           [{\ibox{1} NP[\type{nom}]} [jeder;everybody] ]
           [V\feattab{
-              \spr \sliste{ }, \comps \sliste{ \ibox{1} } }
+              \spr \eliste, \comps \sliste{ \ibox{1} } }
             [{\ibox{2} NP[\type{acc}]} [das Buch;the book, roof] ] 
             [V\feattab{
               \spr \sliste{  },\\
@@ -1239,10 +1299,10 @@ sm edges
 [{V[\spr \eliste, \comps \eliste]},s sep+=1.5em
           [{\ibox{1} NP[\type{nom}]} [jeder;everybody] ]
           [V\feattab{
-              \spr \sliste{ }, \comps \sliste{ \ibox{1} } }, schema
+              \spr \eliste, \comps \sliste{ \ibox{1} } }, schema
             [{Adv[\textsc{mod} \ibox{3} V]} [sofort;promptly] ]
             [\ibox{3} V\feattab{
-                \spr \sliste{ }, \comps \sliste{ \ibox{1} } }
+                \spr \eliste, \comps \sliste{ \ibox{1} } }
               [{\ibox{2} NP[\type{acc}]} [das Buch;the book, roof] ] 
               [V\feattab{
                 \spr \sliste{  },\\
@@ -1288,7 +1348,7 @@ given in other places where the box occurs. In the case of \ili{German}, the \mo
 \type{verb} without any restrictions regarding valence features. The valence features are given at
 the modified node (\eg \spr \eliste, \comps \sliste{ \ibox{1}, \ibox{2} } in
 Figure~\ref{fig-j-b-m-l}), but not in the \modv. Since \ili{English} adverbials modify VPs and since the
-modified node is a VP, the value of the \modv is not given in detail in the figures below, but is just shared with the
+modified node is a VP, the value of \textsc{mod} is not given in detail in the figures below, but is just shared with the
 properties of the modified node.
 
 
@@ -1448,6 +1508,8 @@ cont   & \ms[give]{
         }\\
 }
 \z
+\cont abbreviates \textsc{content} in (\mex{0}). Its value represents the semantic contribution of a
+lexical item or phrase.
 The lowered boxes refer to the referential indices of the NPs. One can imagine these indices as
 variables that refer to the object in the real world that the NP is referring to. These indices are
 identified with semantic roles of the verb \emph{give}. Finding reasonable role names is not trivial
@@ -1487,7 +1549,7 @@ cont   & \ms[give]{
 
 \ex Linking and argument mapping for a \ili{German} finite verb (SOV):\\*
 \ms{
-spr    & \sliste{ }\\[2mm]
+spr    & \eliste\\[2mm]
 comps  & \sliste{ NP\ind{1}, NP\ind{2}, NP\ind{3} }\\[2mm]
 arg-st & \sliste{ NP\ind{1}, NP\ind{2}, NP\ind{3} }\\[2mm]
 cont   & \ms[geben]{
@@ -1510,13 +1572,142 @@ But this introduction to syntax is not the place to do this. The reader is refer
 \ili{German}, \ili{Danish}, \ili{English} and \ili{Yiddish} mentioned in the preface assume Minimal Recursion Semantics (MRS; \citealt{CFPS2005a}), which is
 also covered by \citet[Section~6.1]{KoenigRichter2021a}.
 
+\section{Optional arguments}
+\label{sec-optional-arguments}
+
+As has been pointed out on p.\,\pageref{page-optional-arguments}, arguments may be optional. In
+fact, most arguments of verbs are. There are several ways of capturing this optionality in a
+linguistic theory. The most straightforward is to assume that there are several lexical items
+with different valence lists corresponding to the subsets that a specific lexical item can be
+combined with \parencites[296--297]{Jacobs94a}[393]{Jacobs2003a-u}. So, for example, the verb
+\emph{lesen} `to read' can be used with an object or without it.
+\eal
+\ex 
+\gll dass Kirby das Buch liest\\
+     that Kirby the book reads\\
+\glt `Kirby reads the book.'
+\ex 
+\gll dass Kirby liest\\
+     that Kirby reads\\
+\glt `that Kirby reads'
+\zl
+The valence lists are:
+\ea
+\label{le-liest-arg-st}
+\begin{tabular}[t]{@{}l@{~}l@{~}l@{~}l@{~}l@{}}
+%   &               & \argst & \spr & \comps\\
+a. & \emph{liest} `reads': & \argst \sliste{ NP[\type{nom}], NP[\type{acc}] } \\[2mm]%& \sliste{ NP[\type{nom}] } & \sliste{ NP[\type{acc}] }\\[2mm]
+b. & \emph{liest} `reads': & \argst \sliste{ NP[\type{nom}] } \\[2mm] %& \sliste{ NP[\type{nom}] }\\
+\end{tabular}
+\z
+The respective analyses are shown in Figure~\ref{fig-optional-argument}.
+\begin{figure}
+\hfill
+\scalebox{.8}{%
+\begin{forest}
+sm edges
+[{V[\comps \eliste]}
+   [{NP[\type{nom}]} [Kirby;Kirby] ]
+   [V\feattab{
+      \comps \sliste{ NP[\type{nom}] } }
+     [{NP[\type{acc}]} [das Buch;the book,roof] ]
+     [V\feattab{
+         \comps \sliste{ NP[\type{nom}], NP[\type{acc}] }} [liest;reads] ] ] ]
+\end{forest}}
+\hfill
+\scalebox{.8}{%
+\begin{forest}
+sm edges
+[{V[\comps \eliste]}
+   [{NP[\type{nom}]} [Kirby;Kirby] ]
+   [V\feattab{
+      \comps \sliste{ NP[\type{nom}] }} [liest;reads] ] ]
+\end{forest}}
+\hfill\mbox{}
+\caption{\label{fig-optional-argument}Analysis of sentences with bi-valent and mono-valent \emph{liest} `reads'}
+\end{figure}
+
+An alternative notation that is often found in the literature uses brackets to indicate optional
+arguments:
+\ea
+\begin{tabular}[t]{@{}l@{~}l@{~}l@{~}l@{~}l@{}}
+%   &               & \argst & \spr & \comps\\
+\emph{liest} `reads': & \argst \sliste{ NP[\type{nom}], (NP[\type{acc}]) }
+\end{tabular}
+\z
+The brackets in (\mex{0}) indicate that the NP[\type{acc}] is optional and may be omitted. (\mex{0})
+is equivalent to the disjunction of the two valence lists in (\ref{le-liest-arg-st}).
+
+A third alternative is to mark an argument as optional:
+\ea
+\begin{tabular}[t]{@{}l@{~}l@{~}l@{~}l@{~}l@{}}
+%   &               & \argst & \spr & \comps\\
+\emph{liest} `reads': & \argst \sliste{ NP[\type{nom}, \textsc{opt}$-$], NP[\type{acc}, \textsc{opt}$+$] }
+\end{tabular}
+\z
+The accusative object in (\mex{0}) is marked as optional. With such an explicit marking of
+optionality, one can use a schema that drops optional complements or one can set up the checking for
+completeness of projections in such a way that heads having only optional arguments on their valence
+lists count as complete. The two options are shown in Figure~\ref{fig-schema-for-optional-arguments}
+and Figure~\ref{fig-keep-optional-arguments}.
+
+\begin{figure}
+\centering{%
+\scalebox{.8}{%
+\begin{forest}
+sm edges
+[{V[\comps \eliste]}
+   [{NP[\type{nom}]} [Kirby;Kirby] ]
+   [V\feattab{
+      \comps \sliste{ NP[\type{nom}, \textsc{opt}$-$] } }
+     [V\feattab{
+         \comps \sliste{ NP[\type{nom}, \textsc{opt}$-$], NP[\type{acc}, \textsc{opt}$+$] }} [liest;reads] ]
+         ] ]
+\end{forest}}}
+\caption{\label{fig-schema-for-optional-arguments}Analysis with unary branching construction for discharging an optional argument}
+\end{figure}
+
+\begin{figure}
+\centering{%
+\scalebox{.8}{%
+\begin{forest}
+sm edges
+[{V[\comps \nliste{ NP[\type{acc}, \textsc{opt}$+$] }]}
+   [{NP[\type{nom}]} [Kirby;Kirby] ]
+   [V\feattab{
+     \comps \nliste{ NP[\type{nom}, \textsc{opt}$-$], NP[\type{acc}, \textsc{opt}$+$] }} [liest;reads] ]
+      ]
+\end{forest}}}
+\caption{\label{fig-keep-optional-arguments}Analysis without discharging optional arguments}
+\end{figure}
+
+
+Both options are suggested in the literature: \citet[52]{Michaelis2012a} and \citet[23]{Flickinger2000a} suggested a construction for
+omitting optional objects and \citet[23]{Flickinger2000a} and \citet[465]{MG2010a} set up systems in
+which (some) arguments are not discharged from valence lists. Arguments on valence lists
+have to be marked as realized or as optional for a projection of a head to count as complete. In
+\citeauthor{MG2010a}'s system the realization status of optional arguments can be left underspecified. This
+way they are compatible with being marked as realized and projections of heads selecting for them
+can count as complete. 
+
+Coming back to our analogy of valence and shopping with a shopping app (see p.\,\pageref{page-shopping-analogy}), the
+analysis in Figure~\ref{fig-schema-for-optional-arguments} is parallel to a situation in which tofu
+is just dropped from the shopping list without buying anything and Figure~\ref{fig-keep-optional-arguments} is parallel to a
+situation in which we keep tofu on the list but do not worry about it, since we know that we can do
+without it. I follow the approach in which arguments are marked as realized \parencites[465]{MG2010a}[Chapter~16.4]{MuellerLehrbuch4}, since this is needed
+for case assignment and partial verb phrase fronting \citep{Meurers99b}, but in what follows the
+approach using disjunctions is used to keep things simple.
+
+
+
+
+
 
 \section{Alternatives}
 
 %\largerpage[3]
 This section is for advanced readers. Subsection~\ref{sec-cp-tp-vp} compares the theory developed here with approaches to
-\ili{German} developed in the theory of Government \& Binding (GB)
-\citep{Chomsky81a,Chomsky86b}. Subsection~\ref{sec-down-to-earth-syntax} contains a comparison to
+\ili{German} developed in the theory of Government \& Binding (GB; \citealt{Chomsky81a,Chomsky86b}). Subsection~\ref{sec-down-to-earth-syntax} contains a comparison to
 certain approaches to syntax in GB and Minimalism \citep{Chomsky95a-u}. I argue for an approach to
 syntactic categories and phrases that is normally used rather than the more recent approaches that
 include semantic and pragmatic notions in syntactic structures. Reading this section is optional and it is
@@ -1572,12 +1763,13 @@ Such CP/TP/VP systems are motivated for \ili{English}, since auxiliary verbs and
 from main verbs. These verbs are assumed to be of category T. For finite verbs, T is assumed to hold
 inflectional affixes and the stem of the finite verb moves to T to ``check'' inflectional
 information. Such analyses are not just assumed within the Government \& Binding framework and in
-Minimalism (so-called Mainstream Generative Grammar) but also in frameworks like LFG (\citealp[Section~6.2]{Bresnan2001a}; \citealp[Section~3.2.1]{Dalrymple2001a-u}). However,
+Minimalism (so-called Mainstream Generative Grammar, MGG\indexmgg) but also in frameworks like LFG (\citealp[Section~6.2]{Bresnan2001a}; \citealp[Section~3.2.1]{Dalrymple2001a-u}). However,
 languages like \ili{German} differ from \ili{English} in that the auxiliaries behave like main verbs, so placing
 them in T would not be warranted. For this reason and further points discussed below, researchers
 working on \ili{German} in non-MGG never assume an IP or TP (see \citealt[Section~3.2.3.2]{Berman2003a} on LFG and
 \citealt{MuellerGS} on HPSG). \citet[Chapter~2]{Haider2010a} discusses IP/TP-based approaches in detail and
-shows their many problems. See \citet{BK90a}, \citew[\page 157]{Hoehle91},
+shows their many problems. See \citet{BK90a}, 
+%\citew[\page 157]{Hoehle91}, Höhle sagt, dass da auch I drin sein könnte.
 \textcites{Haider93a,Haider97a,Haider2010a}, \citet[Section~IV.3]{Sternefeld2006a-u}, and \citet[\page 172]{BG2014a-u} for
 MGG approaches without an IP or TP.
 
@@ -1590,7 +1782,7 @@ object is moved to a higher position in the tree, \eg adjoined to TP as in
 Figure~\ref{fig-cp-tp-vp-scrambling}.\footnote{%
   Note that this is a general property of analyses introducing arguments in different
   projections. For example, analyses that introduce arguments in separate verb shells like \littlev
-  \parencites{Larson88a}[\page 331]{Adger2003a} are also forced to assume movement to account for
+  \begin{NoHyper}\parencites{Larson88a}[\page 331]{Adger2003a}\end{NoHyper} are also forced to assume movement to account for
   orders involving arguments licensed by different heads.
 }
 \begin{figure}
@@ -1682,6 +1874,7 @@ pronouns.
 % \glt `The table is beautiful.'
 % \z
 
+\noindent
 Features like case, person, and gender are important for the distribution of noun
 phrases. An accusative pronoun cannot be replaced by a nominative pronoun. Similarly, person and
 number are important for the distribution of noun phrases since they have to match the properties of
@@ -1723,7 +1916,7 @@ correspond to parts of speech and morpho-syntactic features like gender, number,
 phrase structure grammar introduced in Chapter~\ref{chap-psg} follows this tradition, which goes back to
 \citet{Bloomfield26a}, \citet{Harris46a-u}, and \citet{Wells47a}. To give a simple example of a
 traditional phrase structure grammar, consider the grammar in (\ref{bsp-grammatik-psg}) on
-p.~\pageref{bsp-grammatik-psg} -- repeated here as (\mex{1}) for convenience:
+p.~\pageref{bsp-grammatik-psg} -- repeated here as (\mex{1}) for convenience:\todostefan{Das ist eine andere Grammatik.}
 \ea
 \label{bsp-grammatik-psg-two}
 \begin{tabular}[t]{@{}l@{ }l}
@@ -1760,7 +1953,7 @@ syntax should be about distribution classes rather than fixed cascades of functi
 \subsubsection{Autonomy of Syntax, resulting problems and syntactification of other descriptive levels}
 \label{sec-autonomy-of-syntax}
 
-Chomsky argued for the autonomy of syntax and developed architectures in which there was a syntactic
+Chomsky argued for the autonomy of syntax \citep[41--42]{Chomsky77c-u} and developed architectures in which there was a syntactic
 component that fed information into a phonology module and into a semantics
 module. Figure~\ref{Abb-T-Modell} shows the so-called T~model from \citet[\page 5]{Chomsky81a}.
 \begin{figure}
@@ -1872,7 +2065,7 @@ beginning of the \mf. Similar suggestions were made by \citet[\page 485, 495]{MS
 are initial in the \mf and that they are moved to the specifier position of a designated phrase. To
 falsify these approaches it is sufficient to point to the problems resulting from movement and
 reconstruction in terms of \isi{scope} that were discussed in Section~\ref{sec-cp-tp-vp} with respect to TP–VP
-approaches. But Cartographic approaches face further problems, some of which will be
+approaches.\todostefan{fix this} But Cartographic approaches face further problems, some of which will be
 discussed here.
 
 The analysis suggested in this chapter is based on ``pure syntax uncontaminated by information
@@ -1927,14 +2120,14 @@ is Fanselow's example:
 \ea
 Gibt's was neues über das Stadtschloss? ``Any news about the city castle?''\\
 \gll Laut dem Bürgermeister wird man wahrscheinlich in Zukunft nur am SAMSTAG dieses Gebäude besichtigen können.\\ 
-     according the mayor will one probably in future only on Satursday this building visit can\\
+     according the mayor will one probably in future only on Saturday this building visit can\\
 \glt `According to the mayor, one will only be able to visit that building on Saturdays in the future.'
 \z
 
 \noindent
 I already discussed examples in which the arguments are not sufficiently case marked for
 disambiguation. In such situations scrambling is strongly dispreferred. See example (\ref{ex-sie-mischt-dem-wein-wasser-bei}) on p.\,\pageref{ex-sie-mischt-dem-wein-wasser-bei}. Interestingly, this means
-that topics can stay in their normal positions despite being topics, as \citet{Fanselow2006a}
+that topics can stay in their normal positions despite being topics, as \citet[148]{Fanselow2006a}
 pointed out:
 \largerpage[2]
 \ea
@@ -1943,8 +2136,8 @@ Was schreiben die Zeitungen über Prinzessin Julia? ``What do the papers write 
      the Court.Courier writes    that unfortunately again  a    broker.\F{} the princess   by 100,000 Euro cheated has\\
 \glt `The Court Courier writes that unfortunately a broker cheated the princess once more out of 100,000 Euro.'
 \z
-\emph{Eine Maklerin} and \emph{die Prinzession} are both feminine NPs and both could be nominative or
-accusative. If the NP \emph{die Prinzessin} is palced to the left of \emph{eine Maklerin}, the reading changes so that the princess cheated the
+\emph{Eine Maklerin} and \emph{die Prinzessin} are both feminine NPs and both could be nominative or
+accusative. If the NP \emph{die Prinzessin} is placed to the left of \emph{eine Maklerin}, the reading changes so that the princess cheated the
 broker. In this situation, the topic \emph{die Prinzessin} `the princess' stays in its unmarked position to the right of the
 sentence adverb \emph{leider} `unfortunately'. 
 
@@ -2086,7 +2279,7 @@ Asp\sub{terminative} [ \emph{still} Asp\sub{continuative} [ \emph{always} Asp\su
 Asp\sub{retrospective} [ \emph{soon} Asp\sub{proximative} [ \emph{briefly} Asp\sub{durative} [
 \emph{characteristically}(?) Asp\sub{generic/progressive} [ \emph{almost} Asp\sub{prospective} [ \emph{completely}
 Asp\sub{SgCompletive(I)} [ \emph{tutto} Asp\sub{PICompletive} [ \emph{well} Voice [ \emph{fast}/\emph{early}
-Asp\sub{frequuentative(II)} [ \emph{completely} Asp\sub{SgCompletive(II)}
+Asp\sub{frequentative(II)} [ \emph{completely} Asp\sub{SgCompletive(II)}
 \z 
 
 \largerpage
@@ -2109,7 +2302,7 @@ languages are claimed to have structures as in Figure~\ref{fig-cinque-top} as pa
             [Mood\sub{evidential}]
             [\ldots]]]]]]]
 \end{forest}
-\caption{Topmost part of \citegen{Cinque99a-u} functional hierarchy of adverbial projections}\label{fig-cinque-top}
+\caption{Topmost part of \citegen[106]{Cinque99a-u} functional hierarchy of adverbial projections}\label{fig-cinque-top}
 \end{figure}
 The actual adverbs are assumed to be realized in specifier positions of the functional heads
 (Mood\sub{speech act}, Mood\sub{evaluative}, Mood\sub{evidential}).
@@ -2475,7 +2668,7 @@ that do not add semantics, the result is spurious ambiguities in coordinations.%
 As was shown in the previous subsections, there are a lot of arguments against
 \citeauthor{CR2010a} approaches, but a lot of researchers assume such approaches anyway. Why? The
 advantage of these approaches is that they can relate linear order and semantics. As Felix Bildhauer
-pointed out to me a long time ago: researchers assuming Cinque-style analyses are entertaining some kind of Construction Grammar
+pointed out to me in 2012: researchers assuming Cinque-style analyses are entertaining some kind of Construction Grammar
 approach. There are slots for certain elements at a certain position in the sentence. We have seen
 many instances of these analyses above. Some categories are just unnecessary: SubjP and ObjP, for
 example. The effects could be done by adjunction, that is, nodes would be doubled as in
@@ -2506,6 +2699,38 @@ to interact properly with approaches to coordination. While there may be ways to
 problems, it is clear that the traditional approach to syntax does not have such problems and is
 simpler and hence has to be preferred on Occamian grounds.
 
+\questions{
+
+\begin{enumerate}
+\item What distinguishes a head in a phrase from non-heads?
+\item What is the difference between arguments and adjuncts?
+\item Is \emph{unter der Brücke} `below the bridge' in (\mex{1}) an argument or an adjunct?
+\ea
+\gll Wir befinden uns unter der Brücke.\\
+     we  are.located \textsc{self} under the bridge\\
+\glt `We are located under the bridge.' 
+\z
+\item Is \emph{it} in (\mex{1}) an argument or an adjunct?
+\ea
+It rains.
+\z
+\item Is \emph{pizza} in (\mex{1}) an argument or an adjunct?
+\ea
+We eat pizza.
+\z
+Is \emph{pizza} optional or obligatory?
+
+\item Determine heads, adjuncts and arguments within the sentence in (\mex{1}) and within its constituents:
+  \ea
+  Aicke helps the little children in the classroom.
+  \z
+\end{enumerate}
+
+
+
+
+}
+
 
 \exercises{
 
@@ -2519,7 +2744,7 @@ simpler and hence has to be preferred on Occamian grounds.
 \ex 
 \gll bezichtigen\\
      accuse\\\german
-\ex he
+\ex she
 \ex the
 \ex 
 \gll Ankunft\\
@@ -2527,7 +2752,9 @@ simpler and hence has to be preferred on Occamian grounds.
 \zl
 If you are uncertain as far as case assignment is concerned, you may use the Wiktionary: \url{https://de.wiktionary.org/}.
 
-\item Draw trees for the NPs that were also used in Exercise~\ref{exercise-NP-PSG} on page~\pageref{exercise-NP-PSG} in Chapter~\ref{chap-psg}.
+\item Draw trees for the NPs that were also used in Exercise~\ref{exercise-NP-PSG} on
+  page~\pageref{exercise-NP-PSG} in Chapter~\ref{chap-psg}. Provide valence features and the
+  \textsc{mod} feature.
 \eal
 \ex 
 \gll eine Stunde vor der Ankunft des Zuges\\
@@ -2544,7 +2771,7 @@ If you are uncertain as far as case assignment is concerned, you may use the Wik
 \zl
 
 
-\item Draw trees for the following examples. NPs can be abbreviated.
+\item Draw trees for the following examples. NPs can be abbreviated by triangles. Provide valence features.
 \eal
 \ex
 \gll weil    Aicke dem        Kind  ein      Buch\\

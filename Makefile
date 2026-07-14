@@ -12,11 +12,11 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib $(wildcard *
 
 # for Stefan. Uses memoize.
 germanic.pdf: germanic.tex $(SOURCE)
-	xelatex -shell-escape -no-pdf germanic |grep -v math
+	lualatex -shell-escape -no-pdf germanic |grep -v math
 	biber germanic
-	xelatex -shell-escape -no-pdf germanic |grep -v math
+	lualatex -shell-escape -no-pdf germanic |grep -v math
 	biber germanic
-	xelatex germanic -shell-escape -no-pdf |egrep -v 'math|PDFDocEncod' |egrep 'Warning|label|aux'
+	lualatex germanic -shell-escape -no-pdf |egrep -v 'math|PDFDocEncod' |egrep 'Warning|label|aux'
 	correct-toappear
 	correct-index
 	sed -i.backup s/.*\\emph.*// germanic.adx #remove titles which biblatex puts into the name index
@@ -33,7 +33,7 @@ germanic.pdf: germanic.tex $(SOURCE)
 	makeindex -o germanic.and germanic.adx
 	makeindex -gs index.format -o germanic.lnd germanic.ldx
 	makeindex -gs index.format -o germanic.snd germanic.sdx 
-	xelatex -shell-escape germanic | egrep -v 'math|PDFDocEncod|\\mark' |egrep 'Warning|label'
+	lualatex -shell-escape germanic | egrep -v 'math|PDFDocEncod|\\mark' |egrep 'Warning|label'
 
 
 
@@ -45,11 +45,11 @@ germanic.pdf: germanic.tex $(SOURCE)
 
 # for Sebastian and overleaf. Does not use memoize
 main.pdf: main.tex $(SOURCE)
-	xelatex -shell-escape -no-pdf main |grep -v math
+	lualatex -shell-escape -no-pdf main |grep -v math
 	biber main
-	xelatex -shell-escape -no-pdf main |grep -v math
+	lualatex -shell-escape -no-pdf main |grep -v math
 	biber main
-	xelatex main -shell-escape -no-pdf |egrep -v 'math|PDFDocEncod' |egrep 'Warning|label|aux'
+	lualatex main -shell-escape -no-pdf |egrep -v 'math|PDFDocEncod' |egrep 'Warning|label|aux'
 	correct-toappear
 	correct-index
 	sed -i.backup s/.*\\emph.*// main.adx #remove titles which biblatex puts into the name index
@@ -66,20 +66,20 @@ main.pdf: main.tex $(SOURCE)
 	makeindex -o main.and main.adx
 	makeindex -gs index.format -o main.lnd main.ldx
 	makeindex -gs index.format -o main.snd main.sdx 
-	xelatex -shell-escape main | egrep -v 'math|PDFDocEncod|\\mark' |egrep 'Warning|label'
+	lualatex -shell-escape main | egrep -v 'math|PDFDocEncod|\\mark' |egrep 'Warning|label'
 
 
 
 # just for quick comile and checking
 index: germanic.tex $(SOURCE)
-	xelatex germanic -shell-escape -no-pdf 
+	lualatex germanic -shell-escape -no-pdf 
 	footnotes-index.pl germanic.ldx
 	footnotes-index.pl germanic.sdx
 	footnotes-index.pl germanic.adx 
 	makeindex -o germanic.and germanic.adx
 	makeindex -gs index.format -o germanic.lnd germanic.ldx
 	makeindex -gs index.format -o germanic.snd germanic.sdx 
-	xelatex -shell-escape germanic | egrep -v 'math|PDFDocEncod|\\mark' |egrep 'Warning|label'
+	lualatex -shell-escape germanic | egrep -v 'math|PDFDocEncod|\\mark' |egrep 'Warning|label'
 
 
 # http://stackoverflow.com/questions/10934456/imagemagick-pdf-to-jpgs-sometimes-results-in-black-background
@@ -143,11 +143,11 @@ $(PUB_FILE): ../hpsg/make_bib_header ../hpsg/make_bib_html_number  ../hpsg/.bibt
 
 
 
-# xelatex has to be run two times + biber to get "also printed as ..." right.
+# lualatex has to be run two times + biber to get "also printed as ..." right.
 germanic.bib: ../../Bibliographien/biblio.bib $(SOURCE) langsci.dbx bib-creation.tex
-	xelatex -no-pdf -interaction=nonstopmode -shell-escape bib-creation 
+	lualatex -no-pdf -interaction=nonstopmode -shell-escape bib-creation 
 	biber bib-creation
-	xelatex -no-pdf -interaction=nonstopmode -shell-escape bib-creation
+	lualatex -no-pdf -interaction=nonstopmode -shell-escape bib-creation
 	biber --output_format=bibtex --output-resolve-xdata --output-legacy-date bib-creation.bcf -O germanic_tmp.bib
 	biber --tool --configfile=biber-tool.conf --output-field-replace=location:address,journaltitle:journal --output-legacy-date germanic_tmp.bib -O germanic.bib
 
@@ -155,10 +155,6 @@ germanic.bib: ../../Bibliographien/biblio.bib $(SOURCE) langsci.dbx bib-creation
 todo-bib.unique.txt: germanic.bcf
 	biber -V germanic | grep -i warn | sort -uf > todo-bib.unique.txt
 
-
-memos:
-	xelatex -shell-escape germanic
-	python3 memomanager.py split germanic.mmz
 
 languagecandidates:
 	ggrep -ohP "(?<=[a-z]|[0-9])(\))?(,)? (\()?[A-Z]['a-zA-Z-]+" chapters/*tex| grep -o  [A-Z].* |sort -u >languagelist.txt
@@ -186,13 +182,13 @@ install:
 	cp -p ${STYLE-PATH}Ling/merkmalstruktur.sty      styles/
 	cp -p ${STYLE-PATH}my-xspace.sty            styles/
 	cp -p ${STYLE-PATH}Ling/my-ccg-ohne-colortbl.sty styles/
-	cp -p ${STYLE-PATH}Ling/forest.sty               .
-	cp -p ${STYLE-PATH}Ling/forest-lib-edges.sty     .
-	cp -p ${STYLE-PATH}Ling/forest-lib-linguistics.sty .
 	cp -p ${STYLE-PATH}Ling/cgloss.sty               styles/
 	cp -p ${STYLE-PATH}Ling/jambox.sty               styles/
 	cp -p ${LANGSCI-PATH}langsci-forest-setup.sty    .
-
+	cp -p ${STYLE-PATH}Ling/forest.sty               .
+	cp -p ${STYLE-PATH}Ling/forest-lib-edges.sty     .
+	cp -p ${STYLE-PATH}Ling/forest-lib-linguistics.sty .
+	cp -p ${STYLE-PATH}Ling/xparse-arglist.sty .
 
 
 
@@ -213,7 +209,7 @@ cleanmemo:
 	rm -f *.mmz chapters/*.mmz germanic.memo.dir/*
 
 realclean: clean
-	rm -f *.dvi *.ps *.pdf chapters/*.pdf
+#	rm -f *.dvi *.ps *.pdf chapters/*.pdf
 
 brutal-clean: realclean cleanmemo
 

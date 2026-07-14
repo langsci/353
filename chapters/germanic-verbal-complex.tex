@@ -19,7 +19,7 @@ the non"=verbal arguments of the verbs. For example, it is assumed that \emph{zu
 There are several indicators of verbal complex formation
 that were worked out in detail by Gunnar \citet{Bech55a}. As indicated above, one way to analyze such verbal
 complexes is to assume that the verbs in a sentence form a unit that basically behaves like a
-simplex verb. This explains for instance why the arguments of the three verbs in (\mex{0}) can be scrambled:
+single verb. This explains for instance why the arguments of the three verbs in (\mex{0}) can be scrambled:
 \emph{es} depends on \emph{zu lesen} `to read', \emph{ihr} `her' depends on \emph{versprochen}
 `promised' and \emph{jemand} is the subject and agrees with the finite verb \emph{hat} `has'
 (usually it is also treated as a dependent of the auxiliary \emph{hat}).
@@ -116,7 +116,7 @@ to those of the embedded verb. This will be parallel to a shopping event where t
 buys their own goods in addition to buying goods for somebody else.
 
 %Now, back to linguistics and to some details of the analysis: 
-The combination of \emph{lesen} and \emph{wird} behaves like a simplex verb in that it can be
+The combination of \emph{lesen} and \emph{wird} behaves like a single verb in that it can be
 combined with its arguments in any order. Figure~\ref{fig-vc-nom-acc} shows the analysis of (\mex{1}a) and
 Figure~\ref{fig-vc-acc-nom} shows the analysis of (\mex{1}b).
 \eal
@@ -135,7 +135,7 @@ Figure~\ref{fig-vc-acc-nom} shows the analysis of (\mex{1}b).
 \begin{forest}
 sm edges
 [V\feattab{
-              \sliste{ }}
+              \eliste}
         [{NP[\type{nom}]} [keiner;nobody] ]
         [V\feattab{
               \sliste{ NP[\type{nom}] }}, s sep+=1em
@@ -162,7 +162,7 @@ sm edges
 \begin{forest}
 sm edges
 [V\feattab{
-              \sliste{ }}
+              \eliste}
         [{NP[\type{acc}]} [das Buch;the book, roof] ]
         [V\feattab{
               \sliste{ NP[\type{acc}] }}
@@ -194,7 +194,7 @@ verb phrase. This is especially clear for infinitives with \emph{zu}:
 }
 \ex[*]{
 \gll Aicke hat Conny versprochen, [sie das Buch zu lesen].\\
-     Aicke has Conny promised     \spacebr{}the book to read\\
+     Aicke has Conny promised     \spacebr{}she the book to read\\
 \glt Intended: `Aicke promised Conny that she will read the book.'
 }
 \zl
@@ -247,7 +247,7 @@ which takes a nominative and a dative argument.
 Before I turn to the details of the analysis, I have to provide the lexical items for the finite
 form of auxiliaries. Since the subject of finite verbs can of course be realized, it has to be
 represented in one of the valence lists. As was discussed in Section~\ref{sec-intro-spr-comps},
-\ili{German} subjects are represented in the \compsl of finite verbs. Hence the lexical item for
+\ili{German} subjects are represented in the \comps list of finite verbs. Hence the lexical item for
 \emph{wird} `will' has the following form:
 \eas
 \emph{wird} `will' finite form:\\
@@ -258,7 +258,7 @@ comps & \ibox{1} $\oplus$ \ibox{2} $\oplus$ \sliste{ V[\vform \type{bse}, \texts
 \zs
 \largerpage
 This basically says that the valence of \emph{wird} consists of an embedded verb and whatever the
-\subjl of this verb is plus whatever the \compsl of this verb is. This is exemplified for
+\subjl of this verb is plus whatever the \comps list of this verb is. This is exemplified for
 \emph{lesen wird} in Figure~\vref{fig-lesen-wird-details}.\footnote{%
 The lexical items of complex"=forming predicates require their verbal argument to be \lex{}$+$. So in
 Figure~\ref{fig-lesen-wird-details}, \emph{lesen} `read' is \lex{}$+$ as well. Since this information
@@ -302,8 +302,6 @@ can will' in sentences like (\mex{1}):
      \spacebr{}that she the book read can will\\
 \z
 
-\noindent
-The analysis of (\mex{0}) is provided in Figure~\ref{fig-lesen-koennen-wird}.
 \begin{figure}
 \centerfit{%
 \begin{forest}
@@ -424,10 +422,11 @@ extracted from the VP and moved to the left periphery of the clause. This is sho
 \glt `that nobody will read the book'
 \z
 However, analyses that treat scrambling as movement are problematic since they predict additional
-readings of sentences that have quantifiers in their NPs (\citealp[\page 146]{Kiss2001a}; \citealp[Section~2.6]{Fanselow2001a}).
+readings of sentences that have quantifiers in their NPs (\citealp[\page 146]{Kiss2001a};
+\citealp[Section~2.6]{Fanselow2001a}).\todostefan{Change discussion}
 
 
-Before I turn to the analysis of the verb position, I want to show how sentences with several verbs
+Before I turn to the analysis of the verb position in the next chapter, I want to show how sentences with several verbs
 \label{page-English-Aux-VPs}
 in SVO languages can be analyzed. Figure~\vref{fig-vp-embedding-svo} shows the analysis of the \ili{English} version of sentence
 (\ref{ex-dass-keiner-das-buch-lesen-wird}).
@@ -526,7 +525,7 @@ object position.
 \glt `that she will have had to laugh about it'
 %\glt `that there will be a state in the future where she had to laugh about it'
 \zl
-You may omit the \spr values, since they are the empty list for all \ili{German} verbs anyway.
+Please, provide the \subj and the \comps values. You may omit the \spr values, since they are the empty list for all \ili{German} verbs anyway.
 
 
 \item Search for two sentences with a verbal complex in a newspaper or in corpora (for example the

@@ -8,17 +8,7 @@
 %%   Licence:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-% texlive 2015 is broken (in comparison to texlive 2013)
-% a workaround is to use a different pgf driver.
-% See email from Akira Kakuto to Stefan Müller 15.01.2016
-
-% Do we need this for 2017?
-% We seem to be better off without it 31.10.2017
-%deceive the driver
-%\def\pdftexversion{140}
-%use the old driver for dvipdfm
-%\def\pgfsysdriver{pgfsys-dvipdfm.def}
+% use lualatex for subnodes in trees. St. Mü. 2025-04-07
 
 % http://en.wikibooks.org/wiki/LaTeX/Linguistics#Syntactic_trees
 \usepackage{tikz-dependency}
@@ -42,7 +32,7 @@
 % specification for all trees, "default preamble" appends to existing specification.
 % The version with apostrophe replaces it.
 \forestset{default preamble'={
-    for tree={/tikz/align=center,parent anchor=south, child anchor=north,base=bottom},   
+    for tree={align=center,parent anchor=south, child anchor=north,base=bottom,anchor=north},   
 % anchor=north was introduced to get alignments of AVMs right.
 % used to be anchor=north but this fails on trees in \ea \z examples, St. Mü. 02.05.2020 or may be not
 %
@@ -318,15 +308,21 @@ substitution/.style={edge={<-,dashed},l+=\baselineskip},
 
 \forestset{
   % Easy extra edges
+%  edge to'/.style 2 args={
+%    tikz+={\path[#2](#1.parent anchor)--(.child anchor);}
+%  },
   edge to'/.style 2 args={
-    tikz+={\path[#2](#1.parent anchor)--(.child anchor);}
-  },
+   tikz+={\path[#2](#1.parent anchor)--([yshift=\forestoption{child anchor yshift}].child anchor);},
+  }, 
   edge to/.style={
     edge to'/.expanded={\unexpanded{#1}}{\forestoption{edge}},
   },
+%  edge from'/.style 2 args={
+%    tikz+={\path[#2](.parent anchor)--(#1.child anchor);}
+%  },
   edge from'/.style 2 args={
-    tikz+={\path[#2](.parent anchor)--(#1.child anchor);}
-  },
+   tikz+={\path[#2](.parent anchor)--(\forestoption{child anchor yshift}]#1.child anchor);}
+  }, 
   edge from/.style={
     edge from'/.process=_O{#1}{#1.edge},
   },
@@ -383,25 +379,22 @@ typehierarchy/.style={for tree={parent anchor=south, child
 instance/.style={edge=dotted}
 }
 
-% Type hierarchy (Saso 2020)
-\forestset{
-  type hierarchy/.style={
-    for tree={
-      anchor=base,
-      content format={\noexpand\type{\unexpanded{#1}\forestoption{content}}},
-    },
-  },
-  attrib/.style={
-    content format={\noexpand\attrib{\forestoption{content}}},
-    draw,
-  },
-}
+% Use
+% type hierarchy=\vphantom{d} 
+% if needed to pass the phantom command to the style
+% It is then included into every content cell.
+% Saso 29.07.2024
 
 % Type hierarchy (Saso 2020)
 \forestset{
   type hierarchy/.style={
     for tree={
-      anchor=base,
+      anchor=base, % does not work for AVMs in hierarchies St. Mü. 10.02.2021
+      %anchor=north, % does not work either since "case" would be higher than "vform" I fixed this
+                    % with \vphantom{vform} next to the "case" type. St. Mü. 27.07.2021
+                    % but this would have to be done for all type hierarchies (e.g. also for simple
+                    % ones with noun and verb, so, I stick to anchor=base and fix it for hierarchies
+                    % with AVMs seperately.
       content format={\noexpand\type{\unexpanded{#1}\forestoption{content}}},
     },
     % The \ldots should not be in italics, so we add \normalfont to the original definition. Saso 27.05.2020
@@ -412,6 +405,17 @@ instance/.style={edge=dotted}
     % Saso suggested the above rather than looking at the content, but we may use looking at the
     % content for replacing "...":
     delay={where content={...}{content=\normalfont\ldots}{}},
+  },
+% https://tex.stackexchange.com/a/722485/18561
+  auto name/.style={
+    before typesetting nodes={
+    for tree={alias/.option=content}, % give the nodes the name of the type, so that we can
+                             % draw additional lines with \draw instead of doing intransparent
+                             % node walks. 
+    }},
+  attrib/.style={
+    content format={\noexpand\attrib{\forestoption{content}}},
+    draw,
   },
   % Partitions are typeset in small caps (\textsc) and put in boxes (draw).
   partition/.style={
@@ -432,4 +436,8 @@ instance/.style={edge=dotted}
   }},
 }
 
+% to add lines in hierarchies that leave in the south and go into north
+% can be used in connection with "auto name" for types and then \draw (type1) to (type2);
+% Example picture of Haugereid's hierarchy in GT book. 24.05.2025
+\tikzset{from south line to north/.style={to path=(\tikztostart.south)--(\tikztotarget.north)\tikztonodes}}
 

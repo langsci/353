@@ -67,8 +67,8 @@
 \newcommand{\pos}{$_{pos}$}
 
 % used to be \ind, \ind used by LGR
-\providecommand\ind[1]{}% does nothing, if already defined
-\renewcommand{\ind}[1]{\mbox{$_{\ibox{#1}}$}}
+%\providecommand\ind[1]{}% does nothing, if already defined
+\newcommand{\ind}[1]{\mbox{$_{\ibox{#1}}$}}
 %\def\th{\ifmmode\theta\else$\theta$\fi}
 
 
@@ -141,6 +141,8 @@
 \newcommand{\auxf}{\textsc{aux} feature\xspace}
 \newcommand{\auxv}{\textsc{aux} value\xspace}
 
+\newcommand{\body}{\textsc{body}\xspace}
+
 \newcommand{\casev}{\textsc{case} value\xspace}
 \newcommand{\casew}{\textsc{case}\hyp Wert\xspace}
 \newcommand{\casef}{\textsc{case} feature\xspace}
@@ -170,6 +172,8 @@
 
 \newcommand{\ccont}{\textsc{c-cont}\xspace}
 \newcommand{\ccontf}{\textsc{c-cont} feature\xspace}
+\newcommand{\ccontw}{\textsc{c-cont}\hyp Wert\xspace}
+\newcommand{\ccontwes}{\textsc{c-cont}\hyp Wertes\xspace}
 \newcommand{\cont}{\textsc{cont}\xspace}
 \newcommand{\content}{\textsc{content}\xspace}
 \newcommand{\contv}{\textsc{cont} value\xspace}
@@ -202,9 +206,11 @@
 \newcommand{\dslfs}{\textsc{dsl} features\xspace}
 \newcommand{\dslv}{\textsc{dsl} value\xspace}
 \newcommand{\dslvs}{\textsc{dsl} values\xspace}
+\newcommand{\dslm}{\textsc{dsl}\hyp Merkmal\xspace}
 \newcommand{\dslw}{\textsc{dsl}\hyp Wert\xspace}
 \newcommand{\dslwe}{\textsc{dsl}\hyp Werte\xspace}
 \newcommand{\dslwes}{\textsc{dsl}\hyp Wertes\xspace}
+\newcommand{\dslwen}{\textsc{dsl}\hyp Werten\xspace}
 \newcommand{\dtrs}{\textsc{dtrs}\xspace}
 \iflanguage{german}{%
 \newcommand{\dtrsl}{\textsc{dtrs}\hyp Liste\xspace}}{%
@@ -238,9 +244,14 @@
 \newcommand{\gapf}{\textsc{gap} feature\xspace}
 \newcommand{\gtop}{\textsc{gtop}\xspace}
 \newcommand{\hcons}{\textsc{hcons}\xspace}
-\newcommand{\hconsl}{\textsc{hcons} list\xspace}
+\iflanguage{german}{%
+\newcommand{\hconsl}{\textsc{hcons}\hyp Liste\xspace}}{%
+\newcommand{\hconsl}{\textsc{hcons} list\xspace}}
 \newcommand{\hconsv}{\textsc{hcons} value\xspace}
 \newcommand{\hconsvs}{\textsc{hcons} values\xspace}
+\newcommand{\hconsw}{\textsc{hcons}\hyp Wert\xspace}
+\newcommand{\hconswe}{\textsc{hcons}\hyp Werte\xspace}
+\newcommand{\hconswes}{\textsc{hcons}\hyp Wertes\xspace}
 \newcommand{\head}{\textsc{head}\xspace}
 \newcommand{\headdtr}{\textsc{head-dtr}\xspace}
 \newcommand{\headf}{\textsc{head} feature\xspace}
@@ -248,13 +259,19 @@
 \newcommand{\headv}{\textsc{head} value\xspace}
 \newcommand{\headvs}{\textsc{head} values\xspace}
 \newcommand{\headw}{\textsc{head}\hyp Wert\xspace}
+\newcommand{\hook}{\textsc{hook}\xspace}
 \newcommand{\hookv}{\textsc{hook} value\xspace}
+\newcommand{\hookw}{\textsc{hook}\hyp Wert\xspace}
+\newcommand{\hookwes}{\textsc{hook}\hyp Wertes\xspace}
 \newcommand{\indv}{\textsc{ind} value\xspace}
+\newcommand{\indw}{\textsc{ind}\hyp Wert\xspace}
 \newcommand{\indexv}{\textsc{index} value\xspace}
+\newcommand{\indexwes}{\textsc{index}\hyp Wertes\xspace}
 \newcommand{\islw}{\textsc{inher$|$"-slash}\hyp Wert\xspace}
 \newcommand{\isll}{\textsc{inher$|$"-slash}\hyp Liste\xspace}
 \newcommand{\inv}{\textsc{inv}\xspace}
 \newcommand{\ini}{\textsc{ini}\xspace}
+\newcommand{\iniw}{\textsc{ini}\hyp Wert\xspace}
 \newcommand{\initial}{\textsc{initial}\xspace}
 \newcommand{\initialv}{\textsc{initial} value\xspace}
 \newcommand{\initialf}{\textsc{initial} feature\xspace}
@@ -308,7 +325,12 @@
 \newcommand{\localwes}{\textsc{local}\hyp Wertes\xspace}
 % conflict with some package loaded by langsci.cls
 \newcommand{\ltop}{\textsc{ltop}\xspace}
+\newcommand{\ltopm}{\textsc{ltop}\hyp Merkmal\xspace}
 \newcommand{\ltopv}{\textsc{ltop} value\xspace}
+\newcommand{\ltopw}{\textsc{ltop}-Wert\xspace}
+\newcommand{\ltopwe}{\textsc{ltop}\hyp Werte\xspace}
+\newcommand{\ltopwes}{\textsc{ltop}\hyp Wertes\xspace}
+\newcommand{\ltopwen}{\textsc{ltop}-Werten\xspace}
 % Konflikt mit Beamer
 %\newcommand{\mod}{\textsc{mod}\xspace}
 \newcommand{\modf}{\textsc{mod} feature\xspace}
@@ -317,6 +339,8 @@
 \newcommand{\modv}{\textsc{mod} value\xspace}
 \newcommand{\modvs}{\textsc{mod} values\xspace}
 \newcommand{\modw}{\textsc{mod}\hyp Wert\xspace}
+\newcommand{\modwes}{\textsc{mod}\hyp Wertes\xspace}
+\newcommand{\modew}{\textsc{mode}\hyp Wert\xspace}
 \newcommand{\mother}{\textsc{mother}\xspace}
 \newcommand{\motherf}{\textsc{mother} feature\xspace}
 \newcommand{\movealpha}{Move-$\alpha$\xspace}
@@ -343,6 +367,7 @@
 \newcommand{\phonvs}{\textsc{phon} values\xspace}
 \newcommand{\phonw}{\textsc{phon}\hyp Wert\xspace}
 \newcommand{\phonwe}{\textsc{phon}\hyp Werte\xspace}
+\newcommand{\phonwen}{\textsc{phon}\hyp Werten\xspace}
 \newcommand{\phonwes}{\textsc{phon}\hyp Wertes\xspace}
 \newcommand{\phonm}{\textsc{phon}\hyp Merkmal\xspace}
 \newcommand{\phonf}{\textsc{phon} feature\xspace}
@@ -374,8 +399,15 @@
 \newcommand{\relsvs}{\textsc{rels} values\xspace}
 \newcommand{\relsw}{\textsc{rels}\hyp Wert\xspace}
 \newcommand{\relswe}{\textsc{rels}\hyp Werte\xspace}
+\newcommand{\relswes}{\textsc{rels}\hyp Wertes\xspace}
+\iflanguage{german}{%
+\newcommand{\rell}{\textsc{rel}\hyp Liste\xspace}}{%
+\newcommand{\rell}{\textsc{rel} list\xspace}}
 \newcommand{\relw}{\textsc{rel}\hyp Wert\xspace}
 \newcommand{\relwe}{\textsc{rel}\hyp Werte\xspace}
+\newcommand{\restr}{\textsc{rstr}\xspace}
+\newcommand{\rstr}{\textsc{rstr}\xspace}
+\newcommand{\rstrw}{\textsc{rstr}\hyp Wert\xspace}
 \newcommand{\sbcg}{Sign\hyp Based Construction Grammar\indexsbcg}
 \newcommand{\self}{\textsc{self}\xspace}
 \newcommand{\SLASH}{\textsc{slash}\xspace}
@@ -392,6 +424,9 @@
 \newcommand{\slashws}{\textsc{slash}\hyp Wertes\xspace}
 \newcommand{\slashv}{\textsc{slash} value\xspace}
 \newcommand{\slashvs}{\textsc{slash} values\xspace}
+\newcommand{\specm}{\textsc{spec}\hyp Merkmal\xspace}
+\newcommand{\specms}{\textsc{spec}\hyp Merkmals\xspace}
+\newcommand{\spec}{\textsc{spec}\xspace}
 \newcommand{\specv}{\textsc{spec} value\xspace}
 \newcommand{\specw}{\textsc{spec}\hyp Wert\xspace}
 \newcommand{\specwes}{\textsc{spec}\hyp Wertes\xspace}
@@ -512,7 +547,7 @@ Derivation}{derivation}\xspace}
 \newcommand{\ungs}{-\mbox{\emph{ung}}\hyp nominalizations\xspace}
 
 
-\newcommand{\bars}{"~\emph{bar}\xspace}
+\newcommand{\bars}{-\emph{bar}\xspace}
 \newcommand{\baradj}{\iflanguage{german}{%
 \mbox{-\emph{bar}}\hyp Adjektiv\xspace}{%
 \mbox{-\emph{bar}}\hyp adjective\xspace}%
@@ -754,6 +789,7 @@ Derivation}{derivation}\xspace}
 \newcommand{\vbarDSLv}{V$'$\kern-0.2em//V}
 \newcommand{\vbarSLASH}{V$'$\kern-0.2em/}
 \newcommand{\vSLASHnp}{V\kern-0.1em/NP}
+\newcommand{\vSLASH}{V\kern-0.1em/}
 
 \iflanguage{german}{
 \newcommand{\xbart}{\texorpdfstring{\xbar-Theo\-rie\is{X-Theorie@\xbar-Theorie}}{X̄-Theo\-rie}\xspace}
@@ -805,6 +841,7 @@ Derivation}{derivation}\xspace}
 \newcommand{\that}{\spacebr{}that\xspace}
 
 
+\newcommand{\argzero}{\textsc{arg0}\xspace}
 \newcommand{\argone}{\textsc{arg1}\xspace}
 \newcommand{\argtwo}{\textsc{arg2}\xspace}
 \newcommand{\argthree}{\textsc{arg3}\xspace}

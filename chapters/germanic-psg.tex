@@ -186,27 +186,12 @@ sm edges
   [V [gibt;gives] ]
 ]
 \end{forest}
-%
-%% \begin{tikzpicture}
-%% \tikzset{level 1+/.style={level distance=3\baselineskip}}
-%% \tikzset{level 2+/.style={level distance=2\baselineskip}}
-%% \tikzset{frontier/.style={distance from root=8\baselineskip}}
-%% \tikzset{every leaf node/.append style={text depth=0pt}}
-%% \Tree[.S
-%%        [.NP er\\he ]
-%%        [.NP
-%%          [.Det das\\the ]
-%%          [.N Buch\\book ] ]
-%%        [.NP
-%%          [.Det der\\the ]
-%%          [.N Frau\\woman ] ]
-%%        [.V gibt\\gives ] ]
-%% \end{tikzpicture}
 }
 \caption{\label{er-das-buch-dem-mann-gibt-flat}Analysis of \emph{er das Buch dem Kind gibt} `he the
 book the child gives'}
 \end{figure}%
-The symbols in the tree are called \emph{nodes}\is{node}. We say that S immediately dominates the NP nodes and the V node\is{dominance}.
+The symbols in the tree are called \emph{nodes}\is{node}. We say that S immediately dominates the NP
+nodes and the V node\is{dominance}.\todostefan{Blätter erklären}
 The other nodes in the tree are also dominated, but not immediately dominated, by S\is{dominance!immediate}. If we want to talk about the
 relationship between nodes, it is common to use kinship terms. In Figure~\ref{er-das-buch-dem-mann-gibt-flat}, S is the \emph{mother node}\is{node!mother}
 of the three NP nodes and the V node.
@@ -687,7 +672,8 @@ we will also discuss prepositional phrases.
 
 \largerpage
 Up to now, we have assumed a relatively simple structure for noun phrases: our rules state that a noun phrase consists of a determiner and a
-noun. Noun phrases can have a distinctly more complex structure than (\mex{1}a). This is shown by the following examples in (\mex{1}):
+noun. Noun phrases can have a distinctly more complex structure than (\mex{1}a) as is demonstrated
+by the other examples in (\mex{1}):
 \eal
 \label{Beispiele-NP-Adjunkte}
 \ex 
@@ -843,7 +829,7 @@ as well as big. These kinds of noun phrases can be used in contexts such as the 
 	\spacebr{} no I have a small gray squirrel seen\\
 \glt \hphantom{B:~}`No, I saw a small gray squirrel.'
 \z
-We observe that this discourse can be continued with \emph{Aber alle kleinen grauen Eichhörnchen
+This discourse can be continued with \emph{Aber alle kleinen grauen Eichhörnchen
   sind krank} `but all small gray squirrels are ill' and a corresponding answer. The possibility
   of having even more adjectives in noun phrases such as \emph{ein kleines graues Eichhörnchen} `a
   small gray squirrel' is accounted for in our rule system in (\mex{-1}). In the rule
@@ -1466,7 +1452,7 @@ Structure Grammar\indexgpsg \citep{GKPS85a,Uszkoreit87a} and Lexical Functional 
 a role, but not all restrictions of the \xbar schema have been adopted.
 
 \largerpage
-(\mex{1}) shows a possible instantiation of \xbar rules, where the category X has been used in place of N, as well as examples of word strings
+(\mex{1}) shows a possible instantiation of \xbar rules, where the category N has been used in place of X, as well as examples of word strings
 which can be derived by these rules:
 %\todostefan{martin meint ich solle hier NP statt Strichnotation verwenden}
 \eanoraggedright
@@ -1661,7 +1647,7 @@ sm edges
 \begin{enumerate}
 \item Why are phrase structure grammars that use only atomic categories inadequate for the description of natural languages?
 \item Assuming the grammar in (\ref{psg-binaer}), state which steps (replacing symbols) one has to take to get to the symbol 
-	 V in the sentence (\mex{1}).
+	 V in an analysis of the sentence (\mex{1}).
 \ea
 \gll er das Buch dem Kind gibt\\
 	 he the book the child gives\\
@@ -1707,6 +1693,9 @@ Draw trees for the following phrases. You may use the symbol NP for proper names
      this a song  singing child from the Allgäu\\
 \glt `the child from the Allgäu singing a song'
 \zl
+\item Write a phrase structure grammar for the example sentences in (\mex{0}). Use categories like
+  Det, A, N, and P for the phrase structure rules.
+
 \item Use the online version of SWI-Prolog\footnote{%
   \url{https://swish.swi-prolog.org/}, 2020-06-07.
 }
@@ -1724,10 +1713,10 @@ The phrase structure grammar for noun phrases discussed in this chapter covers a
 of noun phrases but cannot explain certain NP structures. Furthermore, it has the problem, which Exercise~3 of \citet[Chapter~2]{MuellerGT-Eng5}
 is designed to show. A discussion of these phenomena and a solution in the framework of HPSG can be
 found in \citew{Netter98a}. For a discussion of the question whether Det or N is the head in nominal
-structures see \citet{MuellerHeadless} and \citet{MyPM2021a}. \citet{VanEynde2021a} is an overview of work on the NP in HPSG.
+structures see \citet{MuellerHeadless} and \citet{MyPM2021a}. \citet{VanEynde2021a} is an overview of work on the NP in HPSG.}
 
-The discussion of the integration of semantic information into phrase structure grammars was very short. A detailed discussion of predicate logic and
-its integration into phrase structure grammars -- as well as a discussion of quantifier scope\is{scope} -- can be found in \citew{BB2005a}.}
+% The discussion of the integration of semantic information into phrase structure grammars was very short. A detailed discussion of predicate logic and
+% its integration into phrase structure grammars -- as well as a discussion of quantifier scope\is{scope} -- can be found in \citew{BB2005a}.}
 
 
 % reset to show the chapter heading

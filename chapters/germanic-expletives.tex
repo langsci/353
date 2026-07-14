@@ -135,7 +135,7 @@ Most interrogative pronouns start with \emph{w} in \ili{German} and \emph{wh} in
 containing an interrogative pronoun are called \emph{w}"=phrases or \emph{wh}"=phrases,
 respectively. Interrogative clauses are sometimes called \emph{w}"=clauses or \emph{wh}"=clauses.
 } from an
-otherwise SOV clause. (\mex{1}) shows a \ili{German} example:
+otherwise SOV clause. (\mex{1}) shows \ili{German} examples:
 \eal
 \ex 
 \gll Ich weiß, wer heute das Buch gelesen hat.\\
@@ -292,10 +292,7 @@ constituent is to be fronted.
 
 \noindent
 \ili{Danish} uses the expletive \emph{der} to make it clear that an extraction of a constituent took place
-\citep[\page 169]{MOe2011a}:\footnote{
-  Examples marked with DK are extracted from KorpusDK, a corpus of 56 Million words documenting
-  contemporary \ili{Danish} (\url{http://ordnet.dk/korpusdk}).
-}
+\citep[\page 169]{MOe2011a}:
 \eal
 \label{ex-danish-interrogative-expletive}
 \ex[]{
@@ -331,6 +328,7 @@ the hearer or reader of the clause marking it as an embedded interrogative claus
 }
 \zl
 
+\noindent
 Similarly, \ili{Yiddish} uses an expletive in embedded interrogatives (\emph{w} + V2) if 
 %the subject is extracted and 
 there is no other element that is information"=structurally appropriate for the preverbal position.
@@ -709,7 +707,7 @@ top-most node is the empty list.
 \begin{figure}
 \begin{forest}
 sm edges
-[{S[\slasch \sliste{ }]}
+[{S[\slasch \eliste]}
   [PP\ibox{1} [worüber;where.about]]
   [{S[\slasch \sliste{ \ibox{1} }]}
     [{PP\ibox{1}[\slasch \sliste{ \ibox{1} }]} [\trace]]
@@ -739,7 +737,7 @@ semantics in particular).
 \begin{figure}
 \centerline{\begin{forest}
 sm edges
-[{S[\textsc{que} \sliste{ }, \slasch \sliste{ }]}
+[{S[\textsc{que} \eliste, \slasch \eliste]}
   [{PP\ibox{1}[\textsc{que} \sliste{ \ibox{2} }]} 
      [P [über;about]]
      [{NP[\textsc{que} \sliste{ \ibox{2} }]}
@@ -761,17 +759,17 @@ that the filler has to contain a \emph{w}"=word.
 \begin{figure}
 \centerline{
 \begin{forest}
-[{H[\textsc{que} \sliste{ }, \slasch \sliste{ }]}
+[{H[\textsc{que} \eliste, \slasch \eliste]}
   [\ibox{1}{[\textsc{que} \sliste{ \etag{} }]}]
   [H{[\slasch \sliste{ \ibox{1} }]} ]]
 \end{forest}
 }
-\caption{Interrogative Clause Schema}\label{fig-interrogative-clause-schema}
+\caption{Constraints of the Interrogative Clause Schema that hold for all Germanic languages}\label{fig-interrogative-clause-schema}
 \end{figure}
 
-The languages differ as far as the order of the verb and its arguments are concerned, so further
-specifications have to be added to what is given in
-Figure~\ref{fig-interrogative-clause-schema}. For example, \ili{German} interrogative clauses are verb
+In addition to the constraints in Figure~\ref{fig-interrogative-clause-schema} constraints on the
+right daughter are needed. The order of verbs with respect to their arguments has to be specified.
+For example, \ili{German} interrogative clauses are verb
 final, while \ili{Yiddish} interrogatives involve an extraction out of a V2 clause. In addition,
 constraints regarding the verb form have to be specified. \ili{German} allows for finite verbs only, while
 \ili{English} allows for finite verbs and infinitives with \emph{to} (see (\ref{ex-what-to-read}) on p.\,\pageref{ex-what-to-read}).
@@ -858,6 +856,7 @@ the verb agrees with objects in the nominative \citep[\page 460]{ZMT85a}.
 \glt `The king was given female slaves.'
 \zl
 
+\noindent
 And the approach to agreement also works for cases of remote passive in \ili{German}, where the subject is not the first element
 in an \argstl. One of the examples in (\ref{bsp-auskosten-fernpassiv}) on
 p.\,\pageref{bsp-auskosten-fernpassiv} is repeated below:

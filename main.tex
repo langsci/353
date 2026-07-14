@@ -8,6 +8,7 @@
 %	        ,collectionchapter
 %	        ,collectiontoclongg
  	        ,biblatex  
+                ,decapbib 
                 ,babelshorthands
 %                ,showindex
                 ,newtxmath
@@ -15,7 +16,7 @@
 %                ,draftmode
 % 	        ,coverus
                 ,uniformtopskip
-                ,tblseight % to get the fonts for the Chinese title of GT
+%                ,tblseight % to get the fonts for the Chinese title of GT
 		  ]{langscibook} 
 
 
@@ -27,7 +28,9 @@
 %\newtoggle{draft}\toggletrue{draft}
 %\newtoggle{finished}\togglefalse{finished}
 
-
+% uncomment if biblatex causes problems
+%\hypersetup{draft} 
+% check for NoHyper in the final version
 
 % load memoize before german.sty
 
@@ -45,10 +48,15 @@
 
 \input{locallangscifixes.tex}
 
-\memoizeset{
-  memo filename prefix={germanic.memo.dir/},
-  register=\todo{O{}+m},
-  prevent=\todo,
+
+% use germanic.tex to play with this, so that main.tex is always the correct file for final compilations
+%\hypersetup{draft} % can be used to find errors with biblatex references linked to two different
+                   % pages 10.07.2025
+
+\mmzset{
+  prefix={germanic.memo.dir/},
+%  register=\todo{O{}+m},
+%  prevent=\todo,
 }
 
 
@@ -61,8 +69,8 @@
 % \renewcommand{\addglosses}{}
 
 
-\bibliography{germanic}
-%\bibliography{bib-abbr,biblio-xdata-en,biblio}
+%\bibliography{germanic}
+\bibliography{bib-abbr,biblio-xdata-en,biblio}
 
 
 \input germanic-include

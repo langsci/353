@@ -7,7 +7,8 @@
 %	        ,collection
 %	        ,collectionchapter
 %	        ,collectiontoclongg
- 	        ,biblatex  
+ 	        ,biblatex 
+                ,decapbib 
                 ,babelshorthands
 %                ,showindex
                 ,newtxmath
@@ -15,9 +16,8 @@
                 ,draftmode
 % 	        ,coverus
                 ,uniformtopskip
-                ,tblseight % to get the fonts for the Chinese title of GT
+%                ,tblseight % to get the fonts for the Chinese title of GT
 		  ]{langscibook} 
-
 
 \usepackage{ifthen}
 \provideboolean{draft}
@@ -44,10 +44,14 @@
 
 \input{locallangscifixes.tex}
 
-\memoizeset{
-  memo filename prefix={germanic.memo.dir/},
-  register=\todo{O{}+m},
-  prevent=\todo,
+%\hypersetup{draft} % can be used to find errors with biblatex references linked to two different
+                   % pages 10.07.2025
+
+
+\mmzset{
+  prefix={germanic.memo.dir/},
+%  register=\todo{O{}+m},
+%  prevent=\todo,
 }
 
 
@@ -59,8 +63,8 @@
 % \renewcommand{\addsource}{}
 % \renewcommand{\addglosses}{}
 
-\bibliography{germanic}
-%\bibliography{bib-abbr,biblio-xdata-en,biblio}
+%\bibliography{germanic}
+\bibliography{bib-abbr,biblio-xdata-en,biblio}
 
 \input germanic-include
 
